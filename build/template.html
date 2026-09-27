@@ -52,6 +52,11 @@ button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 /* snapshot tiles */
+.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.lang{display:inline-flex;border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:var(--panel)}
+.lang button{border:0;background:none;padding:5px 12px;font:500 12px var(--sans);color:var(--ink-2);cursor:pointer}
+.lang button+button{border-left:1px solid var(--rule)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .snaps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .snap{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:6px;transition:border-color .15s}
 .snap:hover{border-color:var(--ink-2)}
@@ -150,16 +155,17 @@ tbody tr.row:hover td{background:var(--accent-soft)}
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">COMM 371 · Student Managed Portfolio Trust</div>
+    <div class="topline"><div class="eyebrow">COMM 371 · Student Managed Portfolio Trust</div>
+      <div class="lang" role="group" aria-label="Language / 语言"><button type="button" id="lang-zh" data-l="zh" lang="zh-CN">中文</button><button type="button" id="lang-en" data-l="en" lang="en">EN</button></div></div>
     <h1>SMPT Portfolio Ledger</h1>
-    <p class="sub">四个持仓快照（RBC 报表）加上 2024-11 至 2026-04 的交易提案。点击日期切换快照，点击代码查看该证券的历史。</p>
+    <p class="sub" data-i18n="intro"></p>
   </header>
 
-  <section class="snaps" id="snaps" aria-label="快照"></section>
+  <section class="snaps" id="snaps" data-i18n-aria="snapsAria"></section>
 
   <section class="card" aria-labelledby="mixh">
     <div class="chart-head">
-      <div><h2 id="mixh">资产配置</h2><div class="sub" style="margin:2px 0 0;font-size:12.5px">占组合总市值 (CAD) 的比例</div></div>
+      <div><h2 id="mixh" data-i18n="mixTitle"></h2><div class="sub" style="margin:2px 0 0;font-size:12.5px" data-i18n="mixSub"></div></div>
       <div class="legend" id="legend"></div>
     </div>
     <div class="mix" id="mix"></div>
@@ -167,24 +173,24 @@ tbody tr.row:hover td{background:var(--accent-soft)}
 
   <section>
     <div class="tabs" role="tablist">
-      <button class="tab" role="tab" id="tab-h" aria-selected="true">持仓<span class="c" id="hc"></span></button>
-      <button class="tab" role="tab" id="tab-t" aria-selected="false">交易时间线<span class="c" id="tc"></span></button>
+      <button class="tab" role="tab" id="tab-h" aria-selected="true"><span data-i18n="tabHold"></span><span class="c" id="hc"></span></button>
+      <button class="tab" role="tab" id="tab-t" aria-selected="false"><span data-i18n="tabTrades"></span><span class="c" id="tc"></span></button>
     </div>
 
     <div id="pane-h">
       <div class="toolbar">
-        <input class="search" id="hq" type="search" placeholder="搜索代码或名称…" aria-label="搜索持仓">
+        <input class="search" id="hq" type="search" data-i18n-ph="holdSearch">
         <div class="chips" id="hcls"></div>
       </div>
       <div class="tbl-wrap"><table id="ht"><thead><tr>
-        <th data-k="t">代码</th><th data-k="n">名称</th><th class="r" data-k="q">数量</th><th class="r" data-k="v">市值 CAD</th><th class="r" data-k="w">权重</th><th data-k="chg">相比上一期</th>
+        <th data-k="t" data-i18n="colTicker"></th><th data-k="n" data-i18n="colName"></th><th class="r" data-k="q" data-i18n="colQty"></th><th class="r" data-k="v" data-i18n="colMv"></th><th class="r" data-k="w" data-i18n="colW"></th><th data-k="chg" data-i18n="colChg"></th>
       </tr></thead><tbody></tbody></table></div>
       <div class="exited" id="exited"></div>
     </div>
 
     <div id="pane-t" hidden>
       <div class="toolbar">
-        <input class="search" id="tq" type="search" placeholder="搜索代码、公司或报告…" aria-label="搜索交易">
+        <input class="search" id="tq" type="search" data-i18n-ph="tradeSearch">
         <div class="chips" id="tact"></div>
         <div class="chips" id="tex"></div>
       </div>
@@ -193,20 +199,62 @@ tbody tr.row:hover td{background:var(--accent-soft)}
   </section>
 
   <footer class="foot">
-    <span>来源：portfolioAnalysis/ 下的 Portfolio Holdings &amp; Analysis 表（sheet 01 Holdings），以及 InvestoryReport/ 下的提案 PDF。</span>
-    <span>交易日期是提案日期，不是成交日期；“执行情况”是用前后快照的持仓数量推断的。FI→FISV、ERJ→EMBJ 视为代码变更合并。</span>
+    <span data-i18n="foot1"></span>
+    <span data-i18n="foot2"></span>
   </footer>
 </div>
 
 <div class="tip" id="tip" hidden></div>
 <div class="scrim" id="scrim" hidden></div>
-<aside class="drawer" id="drawer" hidden aria-label="证券详情"></aside>
+<aside class="drawer" id="drawer" hidden data-i18n-aria="drawerAria"></aside>
 
 <script>
 const DATA = __DATA__;
 const $ = s => document.querySelector(s);
 const CLS = DATA.classes;
-const CN = {'Cash':'现金','Money Market':'货币基金','Bonds':'债券','REITs':'REITs','Canadian Equity':'加拿大股票','US Equity':'美国股票','ADRs (Intl)':'ADR（国际）'};
+const I18N = {
+  zh: {
+    intro:'四个持仓快照（RBC 报表）加上 2024-11 至 2026-04 的交易提案。点击日期切换快照，点击代码查看该证券的历史。',
+    snapsAria:'快照', mixTitle:'资产配置', mixSub:'占组合总市值 (CAD) 的比例',
+    tabHold:'持仓', tabTrades:'交易时间线', holdSearch:'搜索代码或名称…', tradeSearch:'搜索代码、公司或报告…',
+    colTicker:'代码', colName:'名称', colQty:'数量', colMv:'市值 CAD', colW:'权重', colChg:'相比上一期',
+    foot1:'来源：各期 RBC “Portfolio Holdings & Analysis” 持仓表（sheet 01 Holdings），以及 SMPT 的交易提案报告。',
+    foot2:'交易日期是提案日期，不是成交日期；“执行情况”是用前后快照的持仓数量推断的。FI→FISV、ERJ→EMBJ 视为代码变更合并。',
+    drawerAria:'证券详情',
+    nPos:n=>`<b>${n}</b> 个持仓`, valChg:d=>`${d} 市值变化`, firstSnap:'第一份快照', newExit:(a,b)=>`<b>+${a}</b> 新 / <b>−${b}</b> 清`,
+    newPos:'新建仓', noHold:'没有符合条件的持仓。', earliest:'这是最早的快照，没有可比较的上一期。',
+    exitedSince:d=>`自 ${d} 起清仓：`, noExits:'上一期以来没有清仓。',
+    act_BUY:'买入', act_SELL:'卖出', act_MATURED:'到期', 'act_CORP ACTION':'公司行动', act_POLICY:'政策', act_WITHDRAWAL:'提款',
+    ex_ok:'已执行', ex_part:'有出入', ex_no:'未见执行', ex_na:'不适用', all:'全部', other:'其他',
+    month:(y,m)=>`${y} 年 ${m} 月`, yearN:(yr,n)=>`${yr} 学年 · ${n} 条`,
+    proposed:'提案', actual:'实际', noTrades:'没有符合条件的交易。',
+    close:'关闭', notHeld:'不在任何快照中', bySnap:'各快照持仓', date:'日期', related:'相关交易',
+    notHeldRow:'未持有', noRelated:'文件夹里没有与它相关的提案，应是在 2024-11 之前就已持有。',
+    cls:{'Cash':'现金','Money Market':'货币基金','Bonds':'债券','REITs':'REITs','Canadian Equity':'加拿大股票','US Equity':'美国股票','ADRs (Intl)':'ADR（国际）'}
+  },
+  en: {
+    intro:'Four holdings snapshots from the RBC statements, plus the trade proposals from Nov 2024 to Apr 2026. Pick a date to switch snapshots; click a ticker to see its history.',
+    snapsAria:'Snapshots', mixTitle:'Asset mix', mixSub:'Share of total portfolio market value (CAD)',
+    tabHold:'Holdings', tabTrades:'Trade timeline', holdSearch:'Search ticker or name…', tradeSearch:'Search ticker, company or report…',
+    colTicker:'Ticker', colName:'Name', colQty:'Quantity', colMv:'Market value CAD', colW:'Weight', colChg:'vs previous',
+    foot1:'Sources: the RBC "Portfolio Holdings & Analysis" workbooks for each snapshot (sheet 01 Holdings) and the SMPT trade proposal reports.',
+    foot2:'Trade dates are proposal dates, not execution dates. Execution status is inferred from share counts in the snapshots before and after. FI→FISV and ERJ→EMBJ are merged as ticker changes.',
+    drawerAria:'Security details',
+    nPos:n=>`<b>${n}</b> positions`, valChg:d=>`${d} value change`, firstSnap:'First snapshot', newExit:(a,b)=>`<b>+${a}</b> new / <b>−${b}</b> exited`,
+    newPos:'New', noHold:'No holdings match these filters.', earliest:'This is the earliest snapshot, so there is nothing to compare against.',
+    exitedSince:d=>`Exited since ${d}:`, noExits:'No positions exited since the previous snapshot.',
+    act_BUY:'Buy', act_SELL:'Sell', act_MATURED:'Matured', 'act_CORP ACTION':'Corp. action', act_POLICY:'Policy', act_WITHDRAWAL:'Withdrawal',
+    ex_ok:'Executed', ex_part:'Differs', ex_no:'Not seen', ex_na:'N/A', all:'All', other:'Other',
+    month:(y,m)=>`${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1]} ${y}`, yearN:(yr,n)=>`${yr} year · ${n} ${n===1?'entry':'entries'}`,
+    proposed:'Proposed', actual:'Actual', noTrades:'No trades match these filters.',
+    close:'Close', notHeld:'Not in any snapshot', bySnap:'Holdings by snapshot', date:'Date', related:'Related trades',
+    notHeldRow:'Not held', noRelated:'No proposal in the folder mentions it, so it was probably held before Nov 2024.',
+    cls:{'Cash':'Cash','Money Market':'Money market','Bonds':'Bonds','REITs':'REITs','Canadian Equity':'Canadian equity','US Equity':'US equity','ADRs (Intl)':'ADRs (intl)'}
+  }
+};
+let LANG = (()=>{ try{ const v=localStorage.getItem('smpt-lang'); if(v==='zh'||v==='en') return v; }catch(e){} return /^zh/i.test(navigator.language||'')?'zh':'en'; })();
+function T(k,...a){ const v = I18N[LANG][k] ?? I18N.en[k] ?? k; return typeof v==='function' ? v(...a) : v; }
+const CN = () => I18N[LANG].cls;
 const COL = c => `var(--s${CLS.indexOf(c)+1})`;
 const fmt = (v,d=0) => v==null?'—':v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
 const money = v => '$'+fmt(v);
@@ -229,7 +277,7 @@ function renderSnaps(){
     return `<button class="snap" aria-pressed="${i===cur}" data-i="${i}">
       <span class="d">${s.date}</span>
       <span class="v">${money(s.total)}</span>
-      <span class="m"><span><b>${n}</b> 个持仓</span>${d?`<span>${d} 市值变化</span>`:'<span>第一份快照</span>'}${prev?`<span><b>+${nw}</b> 新 / <b>−${ex}</b> 清</span>`:''}</span>
+      <span class="m"><span>${T('nPos',n)}</span>${d?`<span>${T('valChg',d)}</span>`:`<span>${T('firstSnap')}</span>`}${prev?`<span>${T('newExit',nw,ex)}</span>`:''}</span>
     </button>`;}).join('');
   document.querySelectorAll('.snap').forEach(b=>b.onclick=()=>{cur=+b.dataset.i;renderAll();});
 }
@@ -237,7 +285,7 @@ function renderSnaps(){
 /* ---------- asset mix ---------- */
 function mixOf(i){ const m={}; S[i].h.forEach(h=>m[h.c]=(m[h.c]||0)+h.v); return m; }
 function renderMix(){
-  $('#legend').innerHTML = CLS.map(c=>`<span><i style="background:${COL(c)}"></i>${CN[c]}</span>`).join('');
+  $('#legend').innerHTML = CLS.map(c=>`<span><i style="background:${COL(c)}"></i>${CN()[c]}</span>`).join('');
   $('#mix').innerHTML = S.map((s,i)=>{
     const m = mixOf(i);
     return `<div class="lab ${i===cur?'sel':''}">${s.date}</div><div class="bar" data-i="${i}">${CLS.map(c=>{
@@ -251,7 +299,7 @@ function renderMix(){
       const seg = e.target.closest('.seg'); const hc = seg?.dataset.c;
       bar.querySelectorAll('.seg').forEach(x=>x.classList.toggle('dim', !!hc && x.dataset.c!==hc));
       tip.innerHTML = `<div class="num" style="font-weight:600;margin-bottom:4px">${S[i].date}</div>` + CLS.filter(c=>m[c]).map(c=>
-        `<div class="r" style="${c===hc?'font-weight:600':'color:var(--ink-2)'}"><span><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${COL(c)};margin-right:6px"></i>${CN[c]}</span><span class="num">${pct(m[c]/t)} · ${money(m[c])}</span></div>`).join('');
+        `<div class="r" style="${c===hc?'font-weight:600':'color:var(--ink-2)'}"><span><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${COL(c)};margin-right:6px"></i>${CN()[c]}</span><span class="num">${pct(m[c]/t)} · ${money(m[c])}</span></div>`).join('');
       tip.hidden=false;
       const x=Math.min(e.clientX+14, innerWidth-tip.offsetWidth-8); tip.style.left=x+'px'; tip.style.top=(e.clientY+14)+'px';
     };
@@ -263,7 +311,7 @@ function renderMix(){
 function chgOf(h){
   if(cur===0) return {txt:'—',cls:'p-na',s:0};
   const p = byT[cur-1][h.t];
-  if(!p) return {txt:'新建仓',cls:'p-buy',s:3};
+  if(!p) return {txt:T('newPos'),cls:'p-buy',s:3};
   const d = h.q-p.q;
   if(h.c==='Cash'||h.c==='Money Market') return {txt:'—',cls:'p-na',s:0};
   if(Math.abs(d)<1e-6) return {txt:'—',cls:'p-na',s:0};
@@ -271,7 +319,7 @@ function chgOf(h){
 }
 function renderHold(){
   const s=S[cur], q=$('#hq').value.trim().toLowerCase();
-  $('#hcls').innerHTML = CLS.map(c=>`<button class="chip" aria-pressed="${hcls.has(c)}" data-c="${esc(c)}"><i style="background:${COL(c)}"></i>${CN[c]}</button>`).join('');
+  $('#hcls').innerHTML = CLS.map(c=>`<button class="chip" aria-pressed="${hcls.has(c)}" data-c="${esc(c)}"><i style="background:${COL(c)}"></i>${CN()[c]}</button>`).join('');
   document.querySelectorAll('#hcls .chip').forEach(b=>b.onclick=()=>{const c=b.dataset.c; hcls.has(c)?hcls.delete(c):hcls.add(c); renderHold();});
   let rows = s.h.map(h=>({...h,w:h.v/s.total,chg:chgOf(h)}))
     .filter(h=>(!hcls.size||hcls.has(h.c)) && (!q || h.t.toLowerCase().includes(q) || h.n.toLowerCase().includes(q)));
@@ -289,15 +337,15 @@ function renderHold(){
     tb.innerHTML = CLS.map(c=>{
       const g=rows.filter(h=>h.c===c).sort((a,b)=>b.v-a.v); if(!g.length) return '';
       const tot=s.h.filter(h=>h.c===c).reduce((a,h)=>a+h.v,0);
-      return `<tr class="grp"><td colspan="6"><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${COL(c)};margin-right:8px"></i>${CN[c]} <span style="color:var(--muted);font-weight:500">· ${g.length}</span><span class="tot">${money(tot)} · ${pct(tot/s.total)}</span></td></tr>`+g.map(row).join('');
+      return `<tr class="grp"><td colspan="6"><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${COL(c)};margin-right:8px"></i>${CN()[c]} <span style="color:var(--muted);font-weight:500">· ${g.length}</span><span class="tot">${money(tot)} · ${pct(tot/s.total)}</span></td></tr>`+g.map(row).join('');
     }).join('');
   }
-  if(!rows.length) tb.innerHTML=`<tr><td colspan="6" style="color:var(--muted);padding:20px">没有符合条件的持仓。</td></tr>`;
+  if(!rows.length) tb.innerHTML=`<tr><td colspan="6" style="color:var(--muted);padding:20px">${T('noHold')}</td></tr>`;
   document.querySelectorAll('#ht th').forEach(th=>{th.dataset.dir = th.dataset.k===hsort.k?hsort.dir:'';});
   $('#hc').textContent = s.h.filter(h=>h.c!=='Cash').length;
   const ex = cur>0 ? S[cur-1].h.filter(h=>h.c!=='Cash'&&!byT[cur][h.t]) : [];
-  $('#exited').innerHTML = cur===0 ? '<span>这是最早的快照，没有可比较的上一期。</span>' :
-    (ex.length? `<span>自 ${S[cur-1].date} 起清仓：</span>`+ex.map(h=>`<button class="pill p-sell tk" style="color:var(--sell);text-decoration:none" data-t="${esc(h.t)}">${esc(h.t)}</button>`).join('') : '<span>上一期以来没有清仓。</span>');
+  $('#exited').innerHTML = cur===0 ? `<span>${T('earliest')}</span>` :
+    (ex.length? `<span>${T('exitedSince',S[cur-1].date)}</span>`+ex.map(h=>`<button class="pill p-sell tk" style="color:var(--sell);text-decoration:none" data-t="${esc(h.t)}">${esc(h.t)}</button>`).join('') : `<span>${T('noExits')}</span>`);
   bindTk();
 }
 document.querySelectorAll('#ht th').forEach(th=>th.onclick=()=>{
@@ -310,21 +358,22 @@ document.querySelectorAll('#ht th').forEach(th=>th.onclick=()=>{
 $('#hq').oninput = renderHold;
 
 /* ---------- trades ---------- */
-const ACT = {BUY:['买入','p-buy'],SELL:['卖出','p-sell'],MATURED:['到期','p-na'],'CORP ACTION':['公司行动','p-warn'],POLICY:['政策','p-na'],WITHDRAWAL:['提款','p-na']};
+const ACTC = {BUY:'p-buy',SELL:'p-sell',MATURED:'p-na','CORP ACTION':'p-warn',POLICY:'p-na',WITHDRAWAL:'p-na'};
+const actOf = a => [T('act_'+a), ACTC[a]];
 function exOf(t){
   const e=t.ex;
-  if(e==='n/a') return ['na','不适用','p-na'];
-  if(/^Not/.test(e)) return ['no','未见执行','p-sell'];
-  if(/^Yes$/.test(e)) return ['ok','已执行','p-buy'];
-  if(/^Yes \((900|~)/.test(e)) return ['ok','已执行','p-buy'];
-  return ['part','有出入','p-warn'];
+  if(e==='n/a') return ['na',T('ex_na'),'p-na'];
+  if(/^Not/.test(e)) return ['no',T('ex_no'),'p-sell'];
+  if(/^Yes$/.test(e)) return ['ok',T('ex_ok'),'p-buy'];
+  if(/^Yes \((900|~)/.test(e)) return ['ok',T('ex_ok'),'p-buy'];
+  return ['part',T('ex_part'),'p-warn'];
 }
-const EXF = [['ALL','全部'],['ok','已执行'],['part','有出入'],['no','未见执行']];
-const ACTF = [['ALL','全部'],['BUY','买入'],['SELL','卖出'],['OTHER','其他']];
+const EXF = () => [['ALL',T('all')],['ok',T('ex_ok')],['part',T('ex_part')],['no',T('ex_no')]];
+const ACTF = () => [['ALL',T('all')],['BUY',T('act_BUY')],['SELL',T('act_SELL')],['OTHER',T('other')]];
 const tks = t => t.tk.split('/').map(x=>x.trim()).filter(x=>x&&x!=='—'&&x!=='CAD');
 function renderTrades(){
-  $('#tact').innerHTML = ACTF.map(([k,l])=>`<button class="chip" aria-pressed="${tAct===k}" data-k="${k}">${l}</button>`).join('');
-  $('#tex').innerHTML = EXF.map(([k,l])=>`<button class="chip" aria-pressed="${tEx===k}" data-k="${k}">${l}</button>`).join('');
+  $('#tact').innerHTML = ACTF().map(([k,l])=>`<button class="chip" aria-pressed="${tAct===k}" data-k="${k}">${l}</button>`).join('');
+  $('#tex').innerHTML = EXF().map(([k,l])=>`<button class="chip" aria-pressed="${tEx===k}" data-k="${k}">${l}</button>`).join('');
   document.querySelectorAll('#tact .chip').forEach(b=>b.onclick=()=>{tAct=b.dataset.k;renderTrades();});
   document.querySelectorAll('#tex .chip').forEach(b=>b.onclick=()=>{tEx=b.dataset.k;renderTrades();});
   const q=$('#tq').value.trim().toLowerCase();
@@ -338,19 +387,18 @@ function renderTrades(){
   $('#tc').textContent = DATA.trades.filter(t=>t.act==='BUY'||t.act==='SELL').length;
   const months = {};
   list.forEach(t=>{const m=t.date.slice(0,7); (months[m]=months[m]||[]).push(t);});
-  const MN=['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
   $('#tl').innerHTML = Object.keys(months).map(m=>{
-    const [y,mo]=m.split('-'); const lbl = /^\d{4}-\d{2}$/.test(m) ? `${y} 年 ${MN[+mo-1]}` : m;
-    return `<div class="month"><div class="mh">${lbl}<small>${months[m][0].yr} 学年 · ${months[m].length} 条</small></div><div>${months[m].map(t=>{
-      const [a,ac]=ACT[t.act]; const [,el,ec]=exOf(t);
+    const [y,mo]=m.split('-'); const lbl = /^\d{4}-\d{2}$/.test(m) ? T('month',+y,+mo) : m;
+    return `<div class="month"><div class="mh">${lbl}<small>${T('yearN',months[m][0].yr,months[m].length)}</small></div><div>${months[m].map(t=>{
+      const [a,ac]=actOf(t.act); const [,el,ec]=exOf(t);
       return `<div class="tr"><div class="dt">${esc(t.date.length>7?t.date.slice(5):t.date)}</div>
         <div><span class="pill ${ac}">${a}</span></div>
         <div class="body"><div class="t1">${tks(t).map(k=>`<button class="tk" data-t="${esc(k)}">${esc(k)}</button>`).join('<span style="color:var(--muted)">/</span>')||''}<span class="sec">${esc(t.sec)}</span></div>
           <div class="rep">${esc(t.rep)}</div>
-          <div class="pa"><b>提案</b><span>${esc(t.prop)}</span><b>实际</b><span>${esc(t.act_)}</span></div>
+          <div class="pa"><b>${T('proposed')}</b><span>${esc(t.prop)}</span><b>${T('actual')}</b><span>${esc(t.act_)}</span></div>
           ${t.note?`<div class="note">${esc(t.note)}</div>`:''}</div>
         <div class="st"><span class="pill ${ec}" title="${esc(t.ex)}">${el}</span></div></div>`;}).join('')}</div></div>`;
-  }).join('') || '<div style="padding:20px;color:var(--muted)">没有符合条件的交易。</div>';
+  }).join('') || `<div style="padding:20px;color:var(--muted)">${T('noTrades')}</div>`;
   bindTk();
 }
 $('#tq').oninput = renderTrades;
@@ -364,30 +412,42 @@ $('#tab-h').onclick=()=>setTab(true); $('#tab-t').onclick=()=>setTab(false);
 
 /* ---------- drawer ---------- */
 const ALIAS = {FI:'FISV',ERJ:'EMBJ'};
+let openT = null;
 function openTk(t){
-  t = ALIAS[t]||t;
+  t = ALIAS[t]||t; openT = t;
   const hist = S.map((s,i)=>({d:s.date,h:byT[i][t],tot:s.total}));
   const any = hist.find(x=>x.h)?.h;
   const rel = DATA.trades.filter(x=>tks(x).map(k=>ALIAS[k]||k).includes(t)).sort((a,b)=>a.date.localeCompare(b.date));
   const d=$('#drawer');
-  d.innerHTML = `<button class="x" id="dx">关闭</button>
-    <div><div class="eyebrow">${any?esc(CN[any.c]):'不在任何快照中'}</div><h2 style="font-size:24px;margin-top:4px" class="num">${esc(t)}</h2><div class="nm">${esc(any?.n || rel[0]?.sec || '')}</div></div>
-    <div><h3>各快照持仓</h3><table style="margin-top:6px"><thead><tr><th>日期</th><th class="r">数量</th><th class="r">市值 CAD</th><th class="r">权重</th></tr></thead><tbody>
-      ${hist.map(x=>`<tr><td class="num">${x.d}</td>${x.h?`<td class="r num">${fmt(x.h.q,x.h.q%1?2:0)}</td><td class="r num">${money(x.h.v)}</td><td class="r num">${pct(x.h.v/x.tot,2)}</td>`:'<td class="r" colspan="3" style="color:var(--muted)">未持有</td>'}</tr>`).join('')}
+  d.innerHTML = `<button class="x" id="dx">${T('close')}</button>
+    <div><div class="eyebrow">${any?esc(CN()[any.c]):T('notHeld')}</div><h2 style="font-size:24px;margin-top:4px" class="num">${esc(t)}</h2><div class="nm">${esc(any?.n || rel[0]?.sec || '')}</div></div>
+    <div><h3>${T('bySnap')}</h3><table style="margin-top:6px"><thead><tr><th>${T('date')}</th><th class="r">${T('colQty')}</th><th class="r">${T('colMv')}</th><th class="r">${T('colW')}</th></tr></thead><tbody>
+      ${hist.map(x=>`<tr><td class="num">${x.d}</td>${x.h?`<td class="r num">${fmt(x.h.q,x.h.q%1?2:0)}</td><td class="r num">${money(x.h.v)}</td><td class="r num">${pct(x.h.v/x.tot,2)}</td>`:'<td class="r" colspan="3" style="color:var(--muted)">'+T('notHeldRow')+'</td>'}</tr>`).join('')}
     </tbody></table></div>
-    <div><h3>相关交易</h3>${rel.length?rel.map(x=>{const [a,ac]=ACT[x.act];const [,el,ec]=exOf(x);return `<div style="padding:10px 0;border-bottom:1px solid var(--rule-2);display:flex;flex-direction:column;gap:3px">
+    <div><h3>${T('related')}</h3>${rel.length?rel.map(x=>{const [a,ac]=actOf(x.act);const [,el,ec]=exOf(x);return `<div style="padding:10px 0;border-bottom:1px solid var(--rule-2);display:flex;flex-direction:column;gap:3px">
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="num" style="color:var(--muted);font-size:12px">${esc(x.date)}</span><span class="pill ${ac}">${a}</span><span class="pill ${ec}">${el}</span></div>
-      <div style="font-size:13px">${esc(x.rep)}</div><div class="nm">提案：${esc(x.prop)}<br>实际：${esc(x.act_)}</div>${x.note?`<div class="nm" style="font-style:italic">${esc(x.note)}</div>`:''}</div>`;}).join(''):'<p class="nm">文件夹里没有与它相关的提案，应是在 2024-11 之前就已持有。</p>'}</div>`;
+      <div style="font-size:13px">${esc(x.rep)}</div><div class="nm">${T('proposed')}: ${esc(x.prop)}<br>${T('actual')}: ${esc(x.act_)}</div>${x.note?`<div class="nm" style="font-style:italic">${esc(x.note)}</div>`:''}</div>`;}).join(''):`<p class="nm">${T('noRelated')}</p>`}</div>`;
   d.hidden=false; $('#scrim').hidden=false; $('#dx').focus();
   $('#dx').onclick=closeTk;
 }
-function closeTk(){$('#drawer').hidden=true;$('#scrim').hidden=true;}
+function closeTk(){$('#drawer').hidden=true;$('#scrim').hidden=true;openT=null;}
 $('#scrim').onclick=closeTk;
 addEventListener('keydown',e=>{if(e.key==='Escape')closeTk();});
 function bindTk(){document.querySelectorAll('.tk').forEach(b=>b.onclick=()=>openTk(b.dataset.t));}
 
 function renderAll(){renderSnaps();renderMix();renderHold();}
-renderAll(); renderTrades();
+function applyLang(l){
+  LANG = l; try{ localStorage.setItem('smpt-lang', l); }catch(e){}
+  document.documentElement.lang = l==='zh'?'zh-CN':'en';
+  document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=T(el.dataset.i18n));
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{el.placeholder=T(el.dataset.i18nPh);el.setAttribute('aria-label',T(el.dataset.i18nPh));});
+  document.querySelectorAll('[data-i18n-aria]').forEach(el=>el.setAttribute('aria-label',T(el.dataset.i18nAria)));
+  document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.l===l));
+  renderAll(); renderTrades();
+  if(openT) openTk(openT);
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>applyLang(b.dataset.l));
+applyLang(LANG);
 </script>
 </body>
 </html>
