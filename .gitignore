@@ -1,0 +1,7 @@
+# Raw source files contain the RBC account number and student names
+*.xlsx
+*.xls
+*.pdf
+~$*
+.DS_Store
+__pycache__/

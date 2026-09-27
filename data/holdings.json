@@ -1,0 +1,2395 @@
+{
+ "2025-08-31": {
+  "total": 6509574.143930899,
+  "hold": [
+   {
+    "sec": "I. Cash Holdings",
+    "sym": "CAD",
+    "name": "Canadian Cash",
+    "qty": 260536.03,
+    "mv": 260536.03
+   },
+   {
+    "sec": "I. Cash Holdings",
+    "sym": "USD",
+    "name": "US Dollar Cash",
+    "qty": 25855.77,
+    "mv": 35496.0938445
+   },
+   {
+    "sec": "II. Money Market Funds",
+    "sym": "RBF2010",
+    "name": "Rbc Investment Savings Account Sr A (2010), $Cad Denominated",
+    "qty": 4477.932,
+    "mv": 44779.32
+   },
+   {
+    "sec": "II. Money Market Funds",
+    "sym": "RBF2014",
+    "name": "Rbc Investment Savings Account Sr A (2014), $Us Denominated",
+    "qty": 4418.764,
+    "mv": 60663.001573999994
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5CPMFB0",
+    "name": "Brookfield Renewable Partnr Sr Unsecured Mtn",
+    "qty": 102000,
+    "mv": 100942.26
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5692134",
+    "name": "Cu Inc",
+    "qty": 90000,
+    "mv": 100737.9
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5CXCYM5",
+    "name": "Smartcentres Reit Sr Unsec Sr X",
+    "qty": 50000,
+    "mv": 49811
+   },
+   {
+    "sec": "IV. Bonds denominated in US Dollars",
+    "sym": "5CRPDN9",
+    "name": "General Mtrs Finl Co Inc Senior Unsecured",
+    "qty": 45000,
+    "mv": 62916.205364999994
+   },
+   {
+    "sec": "IV. Bonds denominated in US Dollars",
+    "sym": "5CJZFD2",
+    "name": "Toronto Dominion Bank Sr Unsecured",
+    "qty": 68000,
+    "mv": 70611.880782
+   },
+   {
+    "sec": "IV. Bonds denominated in US Dollars",
+    "sym": "7000979",
+    "name": "United States Treasury Bond Stripped Int Pmt",
+    "qty": 69685,
+    "mv": 66048.53287339999
+   },
+   {
+    "sec": "V. Real Estate Investment Trusts (REITS)",
+    "sym": "DIR.UN",
+    "name": "Dream Indl Real Estate Invt Tr Tr Unit",
+    "qty": 3319,
+    "mv": 40690.94
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "ABX",
+    "name": "Barrick Mng Corp Com",
+    "qty": 500,
+    "mv": 18315
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "ATD",
+    "name": "Alimentation Couche-Tard Inc Com",
+    "qty": 600,
+    "mv": 41766
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "BMO",
+    "name": "Bank Of Montreal",
+    "qty": 600,
+    "mv": 99714
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CNQ",
+    "name": "Canadian Natural Resources Ltd",
+    "qty": 2000,
+    "mv": 86980
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CNR",
+    "name": "Canadian National Railway Co",
+    "qty": 400,
+    "mv": 53180
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CPX",
+    "name": "Capital Power Corporation",
+    "qty": 1197,
+    "mv": 68552.19
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CSU",
+    "name": "Constellation Software Inc",
+    "qty": 20,
+    "mv": 91006.8
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CU",
+    "name": "Canadian Utilities Ltd Cl-A Non-Voting Shares",
+    "qty": 821,
+    "mv": 31386.83
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "EMA",
+    "name": "Emera Inc",
+    "qty": 400,
+    "mv": 26164
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "ENB",
+    "name": "Enbridge Inc",
+    "qty": 450,
+    "mv": 29902.5
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "EQB",
+    "name": "Eqb Inc Com",
+    "qty": 929,
+    "mv": 84028.05
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "JWEL",
+    "name": "Jamieson Wellness Inc Common",
+    "qty": 2268,
+    "mv": 84596.4
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "MFC",
+    "name": "Manulife Financial Corp",
+    "qty": 1900,
+    "mv": 80275
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "MG",
+    "name": "Magna International Inc Com",
+    "qty": 600,
+    "mv": 37824
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "NTR",
+    "name": "Nutrien Ltd Com",
+    "qty": 750,
+    "mv": 59362.5
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "QSR",
+    "name": "Restaurant Brands International Inc Com",
+    "qty": 200,
+    "mv": 17394
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "RCI.B",
+    "name": "Rogers Communications Inc Cl B Non-Vtg",
+    "qty": 900,
+    "mv": 44289
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "RY",
+    "name": "Royal Bank Of Canada",
+    "qty": 660,
+    "mv": 131722.8
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "SU",
+    "name": "Suncor Energy Inc",
+    "qty": 1700,
+    "mv": 96509
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "T",
+    "name": "Telus Corporation",
+    "qty": 1700,
+    "mv": 38488
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "TD",
+    "name": "Toronto-Dominion Bank",
+    "qty": 1000,
+    "mv": 103120
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "TOU",
+    "name": "Tourmaline Oil Corp",
+    "qty": 1450,
+    "mv": 84564
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "TRP",
+    "name": "Tc Energy Corp Com",
+    "qty": 250,
+    "mv": 17880
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "WFG",
+    "name": "West Fraser Timber Co Ltd",
+    "qty": 615,
+    "mv": 61524.6
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "AAPL",
+    "name": "Apple Inc",
+    "qty": 600,
+    "mv": 191216.03939999998
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "ABBV",
+    "name": "Abbvie Inc",
+    "qty": 125,
+    "mv": 36105.954999999994
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "AMT",
+    "name": "American Tower Corporation Reit",
+    "qty": 100,
+    "mv": 27985.54725
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "AMZN",
+    "name": "Amazon.Com Inc",
+    "qty": 400,
+    "mv": 125753.06
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "BAC",
+    "name": "Bank Of America Corp",
+    "qty": 630,
+    "mv": 43884.79767
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "BRKB",
+    "name": "Berkshire Hathaway Inc Del Cl B",
+    "qty": 100,
+    "mv": 69051.6093
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "COST",
+    "name": "Costco Wholesale Corp-New",
+    "qty": 160,
+    "mv": 207205.89792
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "DAL",
+    "name": "Delta Air Lines Inc Del Com",
+    "qty": 400,
+    "mv": 33925.8692
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "DE",
+    "name": "Deere & Co",
+    "qty": 200,
+    "mv": 131420.1848
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "EXP",
+    "name": "Eagle Materials Inc",
+    "qty": 200,
+    "mv": 63398.212999999996
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "FDX",
+    "name": "Fedex Corp",
+    "qty": 150,
+    "mv": 47583.667425
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "FI",
+    "name": "Fiserv Inc Common Stock",
+    "qty": 200,
+    "mv": 37940.082599999994
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "FMC",
+    "name": "FMC Corp New",
+    "qty": 1182,
+    "mv": 63447.91016999999
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "GOOG",
+    "name": "Alphabet Inc Class C Capital Stock",
+    "qty": 800,
+    "mv": 234515.7284
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HD",
+    "name": "Home Depot Inc",
+    "qty": 100,
+    "mv": 55843.419449999994
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HON",
+    "name": "Honeywell Intl Inc",
+    "qty": 100,
+    "mv": 30134.0575
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HWM",
+    "name": "Howmet Aerospace Inc Common Stock",
+    "qty": 370,
+    "mv": 88434.87844999999
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "INTC",
+    "name": "Intel Corp",
+    "qty": 400,
+    "mv": 13371.559
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "JCI",
+    "name": "Johnson Controls International Plc Ordinary Shares",
+    "qty": 700,
+    "mv": 102720.75554999999
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "JNJ",
+    "name": "Johnson & Johnson Common Stock",
+    "qty": 200,
+    "mv": 48645.5669
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "JPM",
+    "name": "Jpmorgan Chase & Co",
+    "qty": 500,
+    "mv": 206902.2235
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "KO",
+    "name": "Coca Cola Company (The)",
+    "qty": 500,
+    "mv": 47356.46075
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "LMT",
+    "name": "Lockheed Martin Corp",
+    "qty": 50,
+    "mv": 31275.582274999997
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MA",
+    "name": "Mastercard Incorporated",
+    "qty": 145,
+    "mv": 118500.3620925
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MCD",
+    "name": "Mcdonalds Corp",
+    "qty": 250,
+    "mv": 107610.84724999999
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "META",
+    "name": "Meta Platforms Inc Class A Common Stock",
+    "qty": 270,
+    "mv": 273813.55964999995
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MPC",
+    "name": "Marathon Pete Corp Com",
+    "qty": 300,
+    "mv": 74014.46205
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MSFT",
+    "name": "Microsoft Corp",
+    "qty": 450,
+    "mv": 313024.214925
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NFLX",
+    "name": "Netflix Inc Com",
+    "qty": 60,
+    "mv": 99524.76074999999
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NKE",
+    "name": "Nike Inc Class B Com",
+    "qty": 150,
+    "mv": 15932.610674999998
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NOC",
+    "name": "Northrop Grumman Corp",
+    "qty": 50,
+    "mv": 40501.8207
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "QCOM",
+    "name": "Qualcomm Inc",
+    "qty": 130,
+    "mv": 28685.563465
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "RJF",
+    "name": "Raymond James Financial Inc",
+    "qty": 751,
+    "mv": 174694.393704
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "UNP",
+    "name": "Union Pacific Corp",
+    "qty": 250,
+    "mv": 76732.018625
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "V",
+    "name": "Visa Inc Cl A Common Stock",
+    "qty": 300,
+    "mv": 144882.35189999998
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "VZ",
+    "name": "Verizon Communications",
+    "qty": 400,
+    "mv": 24288.462199999998
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "WMT",
+    "name": "Walmart Inc Common Stock",
+    "qty": 1000,
+    "mv": 133138.993
+   },
+   {
+    "sec": "VIII. American Depository Receipts (ADRs) of Common Shares in China",
+    "sym": "BABA",
+    "name": "Alibaba Group Holding Ltd Sponsored Adr",
+    "qty": 100,
+    "mv": 18533.475
+   },
+   {
+    "sec": "VIII. American Depository Receipts (ADRs) of Common Shares in China",
+    "sym": "TCEHY",
+    "name": "Tencent Holdings Limited Unsponsored Adr Representing B Shares",
+    "qty": 500,
+    "mv": 53314.62974999999
+   },
+   {
+    "sec": "VIII. American Depository Receipts (ADRs) of Common Shares in China",
+    "sym": "TCOM",
+    "name": "Trip.Com Group Limited American Depositary Shares",
+    "qty": 675,
+    "mv": 68342.1890625
+   },
+   {
+    "sec": "IX. American Depository Receipts (ADRs) of common shares in Europe",
+    "sym": "EADSY",
+    "name": "Airbus Se American Depositary Receipts Unsponsored",
+    "qty": 777,
+    "mv": 55628.6370675
+   },
+   {
+    "sec": "IX. American Depository Receipts (ADRs) of common shares in Europe",
+    "sym": "LVMUY",
+    "name": "Lvmh Moet Hennessy Louis Vuitton Sa Unsponsored Adr",
+    "qty": 425,
+    "mv": 68883.43517499999
+   },
+   {
+    "sec": "IX. American Depository Receipts (ADRs) of common shares in Europe",
+    "sym": "LYB",
+    "name": "Lyondellbasell Industries N V Cl A",
+    "qty": 200,
+    "mv": 15472.019499999999
+   },
+   {
+    "sec": "X. American Depository Receipts (ADRs) of common shares in India",
+    "sym": "HDB",
+    "name": "Hdfc Bk Ltd Adr Repstg 3 Shs",
+    "qty": 588,
+    "mv": 57442.899528
+   },
+   {
+    "sec": "X. American Depository Receipts (ADRs) of common shares in India",
+    "sym": "IBN",
+    "name": "Icici Bank Ltd Sponsored Adr",
+    "qty": 1222,
+    "mv": 53247.74449799999
+   },
+   {
+    "sec": "XI. American Depository Receipts (ADRs) of common shares in Brazil",
+    "sym": "ERJ",
+    "name": "Embraer S A Adr Each Rep 4 Com Stk Shs",
+    "qty": 602,
+    "mv": 46554.249581000004
+   },
+   {
+    "sec": "XII. American Depository Receipts (ADRs) of common shares in Japan",
+    "sym": "TM",
+    "name": "Toyota Motor Corporation Ads",
+    "qty": 80,
+    "mv": 21369.233959999998
+   },
+   {
+    "sec": "XIII. American Depository Receipts (ADRs) of common shares in Tiawan",
+    "sym": "TSM",
+    "name": "Taiwan Semiconductor Mfg Co Ltd-Sponsored Adr Repstg 5 Com",
+    "qty": 333,
+    "mv": 105544.3098735
+   },
+   {
+    "sec": "XIV. Other Assets (Warrants)",
+    "sym": "CSST.WT",
+    "name": "Wts Constellation Software Inc Exp 03/31/2040",
+    "qty": 20,
+    "mv": 0
+   }
+  ]
+ },
+ "2025-12-31": {
+  "total": 6780401.617719427,
+  "hold": [
+   {
+    "sec": "I. Cash Holdings",
+    "sym": "CAD",
+    "name": "Canadian Cash",
+    "qty": 2158.56,
+    "mv": 2158.56
+   },
+   {
+    "sec": "I. Cash Holdings",
+    "sym": "USD",
+    "name": "US Dollar Cash",
+    "qty": 17794.41,
+    "mv": 24413.0407995
+   },
+   {
+    "sec": "II. Money Market Funds",
+    "sym": "RBF2010",
+    "name": "Rbc Investment Savings Account Sr A (2010), $Cad Denominated",
+    "qty": 7169.186,
+    "mv": 71691.86
+   },
+   {
+    "sec": "II. Money Market Funds",
+    "sym": "RBF2014",
+    "name": "RBC U.S INVESTMENT SAVINGS ACCOUNT SR A U$ (2014)",
+    "qty": 580.826,
+    "mv": 7968.642307
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5CPMFB0",
+    "name": "Brookfield Renewable Partnr Sr Unsecured Mtn",
+    "qty": 102000,
+    "mv": 101416.56
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5692134",
+    "name": "Cu Inc",
+    "qty": 90000,
+    "mv": 100922.4
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5CHHQW0",
+    "name": "PROVINCE OF MANITOBA UNSECURED",
+    "qty": 100000,
+    "mv": 102715
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5CVPKV9",
+    "name": "EQUITABLE BANK SR UNSECURED",
+    "qty": 75000,
+    "mv": 75786.75
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5BFNGB0",
+    "name": "PROVINCE OF SASKATCHEWAN MEDIUM TERM NOTE",
+    "qty": 85000,
+    "mv": 98139.3
+   },
+   {
+    "sec": "IV. Bonds denominated in US Dollars",
+    "sym": "5CRPDN9",
+    "name": "General Mtrs Finl Co Inc Senior Unsecured",
+    "qty": 45000,
+    "mv": 62771.239935000005
+   },
+   {
+    "sec": "IV. Bonds denominated in US Dollars",
+    "sym": "5CJZFD2",
+    "name": "Toronto Dominion Bank Sr Unsecured",
+    "qty": 68000,
+    "mv": 70793.223658
+   },
+   {
+    "sec": "IV. Bonds denominated in US Dollars",
+    "sym": "7000979",
+    "name": "United States Treasury Bond Stripped Int Pmt",
+    "qty": 69685,
+    "mv": 67487.10060592499
+   },
+   {
+    "sec": "V. Real Estate Investment Trusts (REITS)",
+    "sym": "DIR.UN",
+    "name": "Dream Indl Real Estate Invt Tr Tr Unit",
+    "qty": 3319,
+    "mv": 41753.02
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CSU",
+    "name": "CONSTELLATION SOFTWARE INC",
+    "qty": 20,
+    "mv": 66028
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "RY",
+    "name": "ROYAL BANK OF CANADA",
+    "qty": 660,
+    "mv": 154433.4
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "BMO",
+    "name": "BANK OF MONTREAL",
+    "qty": 600,
+    "mv": 106950
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CNR",
+    "name": "CANADIAN NATIONAL RAILWAY CO",
+    "qty": 400,
+    "mv": 54300
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "TD",
+    "name": "TORONTO-DOMINION BANK",
+    "qty": 1000,
+    "mv": 129360
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "QSR",
+    "name": "RESTAURANT BRANDS INTERNATIONAL INC COM",
+    "qty": 200,
+    "mv": 18732
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "NTR",
+    "name": "NUTRIEN LTD COM",
+    "qty": 750,
+    "mv": 63540
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "WFG",
+    "name": "WEST FRASER TIMBER CO LTD",
+    "qty": 615,
+    "mv": 51641.55
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "TRP",
+    "name": "TC ENERGY CORP COM",
+    "qty": 250,
+    "mv": 18895
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "ATD",
+    "name": "ALIMENTATION COUCHE-TARD INC COM",
+    "qty": 600,
+    "mv": 44976
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "MG",
+    "name": "MAGNA INTERNATIONAL INC COM",
+    "qty": 600,
+    "mv": 43902
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "EMA",
+    "name": "EMERA INC",
+    "qty": 400,
+    "mv": 27056
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "ENB",
+    "name": "ENBRIDGE INC",
+    "qty": 450,
+    "mv": 29556
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "TOU",
+    "name": "TOURMALINE OIL CORP",
+    "qty": 1450,
+    "mv": 89276.5
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "SU",
+    "name": "SUNCOR ENERGY INC",
+    "qty": 1700,
+    "mv": 103564
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "ABX",
+    "name": "BARRICK MNG CORP COM",
+    "qty": 500,
+    "mv": 29895
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CPX",
+    "name": "CAPITAL POWER CORPORATION",
+    "qty": 1197,
+    "mv": 70084.35
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "RCI.B",
+    "name": "ROGERS COMMUNICATIONS INC CL B NON-VTG",
+    "qty": 900,
+    "mv": 46629
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "MFC",
+    "name": "MANULIFE FINANCIAL CORP",
+    "qty": 1900,
+    "mv": 94696
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CNQ",
+    "name": "CANADIAN NATURAL RESOURCES LTD",
+    "qty": 2000,
+    "mv": 92980
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CU",
+    "name": "CANADIAN UTILITIES LTD CL-A NON-VOTING SHARES",
+    "qty": 821,
+    "mv": 35081.33
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "JWEL",
+    "name": "JAMIESON WELLNESS INC COMMON",
+    "qty": 2268,
+    "mv": 76318.2
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "T",
+    "name": "TELUS CORPORATION",
+    "qty": 1700,
+    "mv": 30753
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "COST",
+    "name": "COSTCO WHOLESALE CORP-NEW",
+    "qty": 160,
+    "mv": 189293.97808
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "META",
+    "name": "META PLATFORMS INC CLASS A COMMON STOCK",
+    "qty": 270,
+    "mv": 244514.82838499997
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MA",
+    "name": "MASTERCARD INCORPORATED",
+    "qty": 145,
+    "mv": 113566.72832000001
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NOC",
+    "name": "NORTHROP GRUMMAN CORP",
+    "qty": 50,
+    "mv": 39114.980475
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "BRKB",
+    "name": "BERKSHIRE HATHAWAY INC DEL CL B",
+    "qty": 100,
+    "mv": 69106.49345
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "LMT",
+    "name": "LOCKHEED MARTIN CORP",
+    "qty": 50,
+    "mv": 33178.552825
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MSFT",
+    "name": "MICROSOFT CORP",
+    "qty": 450,
+    "mv": 298576.10655
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "DE",
+    "name": "DEERE & CO",
+    "qty": 200,
+    "mv": 127747.75230000001
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "V",
+    "name": "VISA INC CL A COMMON STOCK",
+    "qty": 300,
+    "mv": 144346.97535
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HD",
+    "name": "HOME DEPOT INC",
+    "qty": 100,
+    "mv": 47208.7995
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "JPM",
+    "name": "JPMORGAN CHASE & CO",
+    "qty": 500,
+    "mv": 221034.8645
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "GOOG",
+    "name": "ALPHABET INC CLASS C CAPITAL STOCK",
+    "qty": 800,
+    "mv": 344414.328
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MCD",
+    "name": "MCDONALDS CORP",
+    "qty": 250,
+    "mv": 104827.269625
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "FDX",
+    "name": "FEDEX CORP",
+    "qty": 150,
+    "mv": 59445.22155
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "AAPL",
+    "name": "APPLE INC",
+    "qty": 540,
+    "mv": 201408.29658
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "UNP",
+    "name": "UNION PACIFIC CORP",
+    "qty": 250,
+    "mv": 79339.8685
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "AMZN",
+    "name": "AMAZON.COM INC",
+    "qty": 400,
+    "mv": 126669.3996
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "ABBV",
+    "name": "ABBVIE INC",
+    "qty": 125,
+    "mv": 39184.6069375
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "LULU",
+    "name": "LULULEMON ATHLETICA INC",
+    "qty": 200,
+    "mv": 57020.9859
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "JNJ",
+    "name": "JOHNSON & JOHNSON COMMON STOCK",
+    "qty": 200,
+    "mv": 56785.0105
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "EXP",
+    "name": "EAGLE MATERIALS INC",
+    "qty": 200,
+    "mv": 56710.9252
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HWM",
+    "name": "HOWMET AEROSPACE INC COMMON STOCK",
+    "qty": 370,
+    "mv": 104072.55992999999
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HON",
+    "name": "HONEYWELL INTL INC",
+    "qty": 100,
+    "mv": 26765.37255
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MS",
+    "name": "MORGAN STANLEY",
+    "qty": 320,
+    "mv": 77939.93072
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "AMT",
+    "name": "AMERICAN TOWER CORPORATION REIT",
+    "qty": 100,
+    "mv": 24087.32615
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "QCOM",
+    "name": "QUALCOMM INC",
+    "qty": 130,
+    "mv": 30507.366175
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MPC",
+    "name": "MARATHON PETE CORP COM",
+    "qty": 300,
+    "mv": 66936.06855
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "RJF",
+    "name": "RAYMOND JAMES FINANCIAL INC",
+    "qty": 751,
+    "mv": 165461.4093255
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "JCI",
+    "name": "JOHNSON CONTROLS INTERNATIONAL PLC ORDINARY SHARES",
+    "qty": 700,
+    "mv": 115003.70875
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "WMT",
+    "name": "WALMART INC COMMON STOCK",
+    "qty": 1000,
+    "mv": 152848.9495
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NEM",
+    "name": "NEWMONT CORPORATION COMMON STOCK",
+    "qty": 880,
+    "mv": 120550.5026
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "KO",
+    "name": "COCA COLA COMPANY (THE)",
+    "qty": 500,
+    "mv": 47956.51225
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "DAL",
+    "name": "DELTA AIR LINES INC DEL COM",
+    "qty": 400,
+    "mv": 38085.332
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "FISV",
+    "name": "FISERV INC COMMON STOCK",
+    "qty": 200,
+    "mv": 18430.7763
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NKE",
+    "name": "NIKE INC CLASS B COM",
+    "qty": 150,
+    "mv": 13111.040175
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "BAC",
+    "name": "BANK OF AMERICA CORP",
+    "qty": 630,
+    "mv": 47538.0675
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "SOLS",
+    "name": "SOLSTICE ADVANCED MATERIALS INC COMMON STOCK",
+    "qty": 25,
+    "mv": 1666.233275
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "VZ",
+    "name": "VERIZON COMMUNICATIONS",
+    "qty": 400,
+    "mv": 22351.8094
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "FMC",
+    "name": "FMC CORP NEW",
+    "qty": 1182,
+    "mv": 22492.214763
+   },
+   {
+    "sec": "VIII. American Depository Receipts (ADRs) of Common Shares in China",
+    "sym": "BABA",
+    "name": "ALIBABA GROUP HOLDING LTD SPONSORED ADR",
+    "qty": 100,
+    "mv": 20110.0431
+   },
+   {
+    "sec": "VIII. American Depository Receipts (ADRs) of Common Shares in China",
+    "sym": "TCEHY",
+    "name": "TENCENT HOLDINGS LIMITED UNSPONSORED ADR REPRESENTING B SHARES",
+    "qty": 500,
+    "mv": 52511.38625
+   },
+   {
+    "sec": "VIII. American Depository Receipts (ADRs) of Common Shares in China",
+    "sym": "TCOM",
+    "name": "TRIP.COM GROUP LIMITED AMERICAN DEPOSITARY SHARES",
+    "qty": 675,
+    "mv": 66593.4240375
+   },
+   {
+    "sec": "IX. American Depository Receipts (ADRs) of common shares in Europe",
+    "sym": "EADSY",
+    "name": "AIRBUS SE AMERICAN DEPOSITARY RECEIPTS UNSPONSORED",
+    "qty": 777,
+    "mv": 61743.01828799999
+   },
+   {
+    "sec": "IX. American Depository Receipts (ADRs) of common shares in Europe",
+    "sym": "LVMUY",
+    "name": "LVMH MOET HENNESSY LOUIS VUITTON SA UNSPONSORED ADR",
+    "qty": 425,
+    "mv": 87974.9218
+   },
+   {
+    "sec": "IX. American Depository Receipts (ADRs) of common shares in Europe",
+    "sym": "LYB",
+    "name": "LYONDELLBASELL INDUSTRIES N V CL A",
+    "qty": 200,
+    "mv": 11881.087
+   },
+   {
+    "sec": "X. American Depository Receipts (ADRs) of common shares in India",
+    "sym": "HDB",
+    "name": "HDFC BK LTD ADR REPSTG 3 SHS",
+    "qty": 1176,
+    "mv": 58954.118328000004
+   },
+   {
+    "sec": "X. American Depository Receipts (ADRs) of common shares in India",
+    "sym": "IBN",
+    "name": "ICICI BANK LTD SPONSORED ADR",
+    "qty": 1222,
+    "mv": 49960.38242
+   },
+   {
+    "sec": "XI. American Depository Receipts (ADRs) of common shares in Brazil",
+    "sym": "EMBJ",
+    "name": "Embraer S A Adr Each Rep 4 Com Stk Shs",
+    "qty": 602,
+    "mv": 53164.077742999994
+   },
+   {
+    "sec": "XI. American Depository Receipts (ADRs) of common shares in Brazil",
+    "sym": "VALE",
+    "name": "VALE S A SPONSORED ADR",
+    "qty": 5550,
+    "mv": 99214.622175
+   },
+   {
+    "sec": "XII. American Depository Receipts (ADRs) of common shares in Japan",
+    "sym": "TM",
+    "name": "Toyota Motor Corporation Ads",
+    "qty": 80,
+    "mv": 23494.36936
+   },
+   {
+    "sec": "XIII. American Depository Receipts (ADRs) of common shares in Tiawan",
+    "sym": "TSM",
+    "name": "Taiwan Semiconductor Mfg Co Ltd-Sponsored Adr Repstg 5 Com",
+    "qty": 333,
+    "mv": 138834.9878715
+   },
+   {
+    "sec": "XIV. Other Assets (Warrants)",
+    "sym": "CSST.WT",
+    "name": "Wts Constellation Software Inc Exp 03/31/2040",
+    "qty": 20,
+    "mv": 0
+   }
+  ]
+ },
+ "2026-04-02": {
+  "total": 6913915.083525827,
+  "hold": [
+   {
+    "sec": "I. Cash Holdings",
+    "sym": "CAD",
+    "name": "Canadian Cash",
+    "qty": 108695.15,
+    "mv": 108695.15
+   },
+   {
+    "sec": "I. Cash Holdings",
+    "sym": "USD",
+    "name": "US Dollar Cash",
+    "qty": 17422.68,
+    "mv": 24258.468498
+   },
+   {
+    "sec": "II. Money Market Funds",
+    "sym": "RBF2010",
+    "name": "Rbc Investment Savings Account Sr A (2010), $Cad Denominated",
+    "qty": 107.177,
+    "mv": 1071.77
+   },
+   {
+    "sec": "II. Money Market Funds",
+    "sym": "RBF2014",
+    "name": "RBC U.S INVESTMENT SAVINGS ACCOUNT SR A U$ (2014)",
+    "qty": 56.307,
+    "mv": 783.9905145
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5CVPKV9",
+    "name": "EQUITABLE BANK SR UNSECURED",
+    "qty": 75000,
+    "mv": 75284.25
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5CPMFB0",
+    "name": "BROOKFIELD RENEWABLE PARTNR SR UNSECURED MTN",
+    "qty": 102000,
+    "mv": 100683.18
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5BFNGB0",
+    "name": "PROVINCE OF SASKATCHEWAN MEDIUM TERM NOTE",
+    "qty": 85000,
+    "mv": 97076.8
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5CHHQW0",
+    "name": "PROVINCE OF MANITOBA UNSECURED",
+    "qty": 100000,
+    "mv": 101966
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5692134",
+    "name": "CU INC",
+    "qty": 90000,
+    "mv": 100008
+   },
+   {
+    "sec": "IV. Bonds denominated in US Dollars",
+    "sym": "5CRPDN9",
+    "name": "General Mtrs Finl Co Inc Senior Unsecured",
+    "qty": 45000,
+    "mv": 63195.21600749999
+   },
+   {
+    "sec": "IV. Bonds denominated in US Dollars",
+    "sym": "5CJZFD2",
+    "name": "Toronto Dominion Bank Sr Unsecured",
+    "qty": 68000,
+    "mv": 69951.329836
+   },
+   {
+    "sec": "IV. Bonds denominated in US Dollars",
+    "sym": "7000979",
+    "name": "United States Treasury Bond Stripped Int Pmt",
+    "qty": 69685,
+    "mv": 68722.4816168275
+   },
+   {
+    "sec": "V. Real Estate Investment Trusts (REITS)",
+    "sym": "SRU.UN",
+    "name": "SMARTCENTRES REAL ESTATE INVESTMENT TRUST VAR VTG UNIT",
+    "qty": 2885,
+    "mv": 79077.85
+   },
+   {
+    "sec": "V. Real Estate Investment Trusts (REITS)",
+    "sym": "DIR.UN",
+    "name": "DREAM INDL REAL ESTATE INVT TR TR UNIT",
+    "qty": 3319,
+    "mv": 43379.33
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CSU",
+    "name": "CONSTELLATION SOFTWARE INC",
+    "qty": 20,
+    "mv": 48825.4
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "RY",
+    "name": "ROYAL BANK OF CANADA",
+    "qty": 1075,
+    "mv": 244390.5
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "BMO",
+    "name": "BANK OF MONTREAL",
+    "qty": 600,
+    "mv": 113784
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CNR",
+    "name": "CANADIAN NATIONAL RAILWAY CO",
+    "qty": 400,
+    "mv": 57972
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "TD",
+    "name": "TORONTO-DOMINION BANK",
+    "qty": 1000,
+    "mv": 132510
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "NTR",
+    "name": "NUTRIEN LTD COM",
+    "qty": 750,
+    "mv": 78840
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "WFG",
+    "name": "WEST FRASER TIMBER CO LTD",
+    "qty": 615,
+    "mv": 55792.8
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "GRGD",
+    "name": "GROUPE DYNAMITE INC SUB VTG SH",
+    "qty": 600,
+    "mv": 48048
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "ATD",
+    "name": "ALIMENTATION COUCHE-TARD INC COM",
+    "qty": 600,
+    "mv": 46980
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "MG",
+    "name": "MAGNA INTERNATIONAL INC COM",
+    "qty": 600,
+    "mv": 46038
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "ENB",
+    "name": "ENBRIDGE INC",
+    "qty": 450,
+    "mv": 33930
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "EMA",
+    "name": "EMERA INC",
+    "qty": 400,
+    "mv": 29328
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CPX",
+    "name": "CAPITAL POWER CORPORATION",
+    "qty": 1197,
+    "mv": 79385.04
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CNQ",
+    "name": "CANADIAN NATURAL RESOURCES LTD",
+    "qty": 2000,
+    "mv": 132300
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "TOU",
+    "name": "TOURMALINE OIL CORP",
+    "qty": 1450,
+    "mv": 93264
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "ABX",
+    "name": "BARRICK MNG CORP COM",
+    "qty": 500,
+    "mv": 29020
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CU",
+    "name": "CANADIAN UTILITIES LTD CL-A NON-VOTING SHARES",
+    "qty": 821,
+    "mv": 40762.65
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "RCI.B",
+    "name": "ROGERS COMMUNICATIONS INC CL B NON-VTG",
+    "qty": 900,
+    "mv": 43884
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "MFC",
+    "name": "MANULIFE FINANCIAL CORP",
+    "qty": 1900,
+    "mv": 92283
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "JWEL",
+    "name": "JAMIESON WELLNESS INC COMMON",
+    "qty": 2268,
+    "mv": 78518.16
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "RGSI",
+    "name": "ROCKPOINT GAS STORAGE INC CL A",
+    "qty": 2450,
+    "mv": 64753.5
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "COST",
+    "name": "COSTCO WHOLESALE CORP-NEW",
+    "qty": 160,
+    "mv": 226108.72896
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "LLY",
+    "name": "ELI LILLY & CO",
+    "qty": 60,
+    "mv": 78159.28878
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NOC",
+    "name": "NORTHROP GRUMMAN CORP",
+    "qty": 50,
+    "mv": 48906.29375
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "LMT",
+    "name": "LOCKHEED MARTIN CORP",
+    "qty": 50,
+    "mv": 43357.082825
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "DE",
+    "name": "DEERE & CO",
+    "qty": 200,
+    "mv": 160317.9637
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "META",
+    "name": "META PLATFORMS INC CLASS A COMMON STOCK",
+    "qty": 270,
+    "mv": 215959.33287
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MA",
+    "name": "MASTERCARD INCORPORATED",
+    "qty": 245,
+    "mv": 168325.09008
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "BRKB",
+    "name": "BERKSHIRE HATHAWAY INC DEL CL B",
+    "qty": 100,
+    "mv": 66463.82725
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MSFT",
+    "name": "MICROSOFT CORP",
+    "qty": 450,
+    "mv": 233994.16395
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HD",
+    "name": "HOME DEPOT INC",
+    "qty": 100,
+    "mv": 44782.15305
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MCD",
+    "name": "MCDONALDS CORP",
+    "qty": 250,
+    "mv": 106911.59475
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "V",
+    "name": "VISA INC CL A COMMON STOCK",
+    "qty": 300,
+    "mv": 125645.664
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "JPM",
+    "name": "JPMORGAN CHASE & CO",
+    "qty": 500,
+    "mv": 205093.155
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "GOOG",
+    "name": "ALPHABET INC CLASS C CAPITAL STOCK",
+    "qty": 800,
+    "mv": 327993.1048
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "AAPL",
+    "name": "APPLE INC",
+    "qty": 270,
+    "mv": 96209.15723999999
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "UNP",
+    "name": "UNION PACIFIC CORP",
+    "qty": 250,
+    "mv": 85180.492125
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "JNJ",
+    "name": "JOHNSON & JOHNSON COMMON STOCK",
+    "qty": 200,
+    "mv": 67679.34879999999
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HWM",
+    "name": "HOWMET AEROSPACE INC COMMON STOCK",
+    "qty": 370,
+    "mv": 119869.63926000001
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HON",
+    "name": "HONEYWELL INTL INC",
+    "qty": 100,
+    "mv": 31947.47075
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "AMZN",
+    "name": "AMAZON.COM INC",
+    "qty": 400,
+    "mv": 116829.3038
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "ABBV",
+    "name": "ABBVIE INC",
+    "qty": 125,
+    "mv": 36347.29675
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "EXP",
+    "name": "EAGLE MATERIALS INC",
+    "qty": 200,
+    "mv": 52341.2212
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NVDA",
+    "name": "NVIDIA CORP",
+    "qty": 375,
+    "mv": 92620.86243749999
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MS",
+    "name": "MORGAN STANLEY",
+    "qty": 320,
+    "mv": 73876.97712
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "TJX",
+    "name": "TJX COMPANIES INC NEW",
+    "qty": 300,
+    "mv": 67371.63945
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "XOM",
+    "name": "EXXON MOBIL CORP",
+    "qty": 760,
+    "mv": 170039.90834
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "LULU",
+    "name": "LULULEMON ATHLETICA INC",
+    "qty": 200,
+    "mv": 43363.3484
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "RJF",
+    "name": "RAYMOND JAMES FINANCIAL INC",
+    "qty": 751,
+    "mv": 148692.11967
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NEM",
+    "name": "NEWMONT CORPORATION COMMON STOCK",
+    "qty": 880,
+    "mv": 139741.8154
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "KO",
+    "name": "COCA COLA COMPANY (THE)",
+    "qty": 500,
+    "mv": 53410.546
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "SOLS",
+    "name": "SOLSTICE ADVANCED MATERIALS INC COMMON STOCK",
+    "qty": 25,
+    "mv": 2660.084675
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "DAL",
+    "name": "DELTA AIR LINES INC DEL COM",
+    "qty": 400,
+    "mv": 37181.3144
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "VZ",
+    "name": "VERIZON COMMUNICATIONS",
+    "qty": 400,
+    "mv": 27512.836
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "BAC",
+    "name": "BANK OF AMERICA CORP",
+    "qty": 630,
+    "mv": 43315.173090000004
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NKE",
+    "name": "NIKE INC CLASS B COM",
+    "qty": 150,
+    "mv": 9229.191975
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "FMC",
+    "name": "FMC CORP NEW",
+    "qty": 1182,
+    "mv": 29212.199174999998
+   },
+   {
+    "sec": "VIII. American Depository Receipts (ADRs) of Common Shares in China",
+    "sym": "BABA",
+    "name": "ALIBABA GROUP HOLDING LTD SPONSORED ADR",
+    "qty": 100,
+    "mv": 16993.63175
+   },
+   {
+    "sec": "VIII. American Depository Receipts (ADRs) of Common Shares in China",
+    "sym": "TCEHY",
+    "name": "TENCENT HOLDINGS LIMITED UNSPONSORED ADR REPRESENTING B SHARES",
+    "qty": 500,
+    "mv": 43350.81725
+   },
+   {
+    "sec": "VIII. American Depository Receipts (ADRs) of Common Shares in China",
+    "sym": "TCOM",
+    "name": "TRIP.COM GROUP LIMITED AMERICAN DEPOSITARY SHARES",
+    "qty": 675,
+    "mv": 47442.933899999996
+   },
+   {
+    "sec": "IX. American Depository Receipts (ADRs) of common shares in Europe",
+    "sym": "EADSY",
+    "name": "AIRBUS SE AMERICAN DEPOSITARY RECEIPTS UNSPONSORED",
+    "qty": 777,
+    "mv": 51669.440171999995
+   },
+   {
+    "sec": "IX. American Depository Receipts (ADRs) of common shares in Europe",
+    "sym": "LVMUY",
+    "name": "LVMH MOET HENNESSY LOUIS VUITTON SA UNSPONSORED ADR",
+    "qty": 425,
+    "mv": 64376.3465125
+   },
+   {
+    "sec": "X. American Depository Receipts (ADRs) of common shares in India",
+    "sym": "IBN",
+    "name": "ICICI BANK LTD SPONSORED ADR",
+    "qty": 1222,
+    "mv": 43574.178037
+   },
+   {
+    "sec": "X. American Depository Receipts (ADRs) of common shares in India",
+    "sym": "HDB",
+    "name": "HDFC BK LTD ADR REPSTG 3 SHS",
+    "qty": 300,
+    "mv": 10371.61515
+   },
+   {
+    "sec": "XI. American Depository Receipts (ADRs) of common shares in Brazil",
+    "sym": "EMBJ",
+    "name": "EMBRAER S A ADR EACH REP 4 COM STK SHS",
+    "qty": 1882,
+    "mv": 164456.473452
+   },
+   {
+    "sec": "XI. American Depository Receipts (ADRs) of common shares in Brazil",
+    "sym": "VALE",
+    "name": "VALE S A SPONSORED ADR",
+    "qty": 5550,
+    "mv": 125108.913075
+   },
+   {
+    "sec": "XII. American Depository Receipts (ADRs) of common shares in Japan",
+    "sym": "TM",
+    "name": "Toyota Motor Corporation Ads",
+    "qty": 80,
+    "mv": 23058.42988
+   },
+   {
+    "sec": "XIII. American Depository Receipts (ADRs) of common shares in Tiawan",
+    "sym": "TSM",
+    "name": "Taiwan Semiconductor Mfg Co Ltd-Sponsored Adr Repstg 5 Com",
+    "qty": 333,
+    "mv": 157196.76055200002
+   },
+   {
+    "sec": "XIV. American Depository Receipts (ADRs) of common shares in South Korea",
+    "sym": "KT",
+    "name": "KT CORP SPONSORED ADR",
+    "qty": 1500,
+    "mv": 44903.2875
+   },
+   {
+    "sec": "XV. Other Assets (Warrants)",
+    "sym": "CSST.WT",
+    "name": "Wts Constellation Software Inc Exp 03/31/2040",
+    "qty": 20,
+    "mv": 0
+   }
+  ]
+ },
+ "2026-08-31": {
+  "total": 7560708.627469408,
+  "hold": [
+   {
+    "sec": "I. Cash Holdings",
+    "sym": "CAD",
+    "name": "Canadian Cash",
+    "qty": 18907.24,
+    "mv": 18907.24
+   },
+   {
+    "sec": "I. Cash Holdings",
+    "sym": "USD",
+    "name": "US Dollar Cash",
+    "qty": 41255.04,
+    "mv": 57173.297184
+   },
+   {
+    "sec": "II. Money Market Funds",
+    "sym": "RBF2010",
+    "name": "Rbc Investment Savings Account Sr A (2010)",
+    "qty": 3818.796,
+    "mv": 38187.96
+   },
+   {
+    "sec": "II. Money Market Funds",
+    "sym": "RBF2014",
+    "name": "Rbc U.S Investment Savings Account Sr A U$ (2014)",
+    "qty": 419.47,
+    "mv": 5813.224995000001
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5BFNGB0",
+    "name": "Province Of Saskatchewan Medium Term Note",
+    "qty": 85000,
+    "mv": 95844.3
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5692134",
+    "name": "Cu Inc",
+    "qty": 90000,
+    "mv": 98587.8
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5CHHQW0",
+    "name": "Province Of Manitoba Unsecured",
+    "qty": 100000,
+    "mv": 101058
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5CVPKV9",
+    "name": "Equitable Bank Sr Unsecured",
+    "qty": 75000,
+    "mv": 75286.5
+   },
+   {
+    "sec": "III. Bonds denominated in CAD Dollars",
+    "sym": "5CPMFB0",
+    "name": "Brookfield Renewable Partnr Sr Unsecured Mtn",
+    "qty": 102000,
+    "mv": 100473.06
+   },
+   {
+    "sec": "IV. Bonds denominated in US Dollars",
+    "sym": "5CRPDN9",
+    "name": "General Mtrs Finl Co Inc Senior Unsecured",
+    "qty": 45000,
+    "mv": 62705.6242425
+   },
+   {
+    "sec": "IV. Bonds denominated in US Dollars",
+    "sym": "5CJZFD2",
+    "name": "Toronto Dominion Bank Sr Unsecured",
+    "qty": 68000,
+    "mv": 69602.154324
+   },
+   {
+    "sec": "IV. Bonds denominated in US Dollars",
+    "sym": "7000979",
+    "name": "United States Treasury Bond Stripped Int Pmt",
+    "qty": 69685,
+    "mv": 67067.0216214075
+   },
+   {
+    "sec": "V. Real Estate Investment Trusts (REITS)",
+    "sym": "SRU.UN",
+    "name": "Smartcentres Real Estate Investment Trust Var Vtg Unit",
+    "qty": 2885,
+    "mv": 79279.8
+   },
+   {
+    "sec": "V. Real Estate Investment Trusts (REITS)",
+    "sym": "DIR.UN",
+    "name": "Dream Indl Real Estate Invt Tr Tr Unit",
+    "qty": 3319,
+    "mv": 45105.21
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "RY",
+    "name": "Royal Bank Of Canada",
+    "qty": 1075,
+    "mv": 304655
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "BMO",
+    "name": "Bank Of Montreal",
+    "qty": 600,
+    "mv": 141744
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CNR",
+    "name": "Canadian National Railway Co",
+    "qty": 400,
+    "mv": 69220
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "TD",
+    "name": "Toronto-Dominion Bank",
+    "qty": 1000,
+    "mv": 167670
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "NTR",
+    "name": "Nutrien Ltd Com",
+    "qty": 750,
+    "mv": 78405
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "WFG",
+    "name": "West Fraser Timber Co Ltd",
+    "qty": 615,
+    "mv": 58080.6
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "MG",
+    "name": "Magna International Inc Com",
+    "qty": 600,
+    "mv": 54600
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "ATD",
+    "name": "Alimentation Couche-Tard Inc Com",
+    "qty": 600,
+    "mv": 50082
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "ENB",
+    "name": "Enbridge Inc",
+    "qty": 450,
+    "mv": 31599
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "EMA",
+    "name": "Emera Inc",
+    "qty": 400,
+    "mv": 27804
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CNQ",
+    "name": "Canadian Natural Resources Ltd",
+    "qty": 2000,
+    "mv": 138980
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CPX",
+    "name": "Capital Power Corporation",
+    "qty": 1197,
+    "mv": 76404.51
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "GRGD",
+    "name": "Groupe Dynamite Inc Sub Vtg Sh",
+    "qty": 1000,
+    "mv": 63270
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "TOU",
+    "name": "Tourmaline Oil Corp",
+    "qty": 1450,
+    "mv": 91553
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "ABX",
+    "name": "Barrick Mng Corp Com",
+    "qty": 500,
+    "mv": 31080
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "MFC",
+    "name": "Manulife Financial Corp",
+    "qty": 1900,
+    "mv": 111701
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "CU",
+    "name": "Canadian Utilities Ltd Cl-A Non-Voting Shares",
+    "qty": 821,
+    "mv": 42609.9
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "RCI.B",
+    "name": "Rogers Communications Inc Cl B Non-Vtg",
+    "qty": 900,
+    "mv": 46017
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "JWEL",
+    "name": "Jamieson Wellness Inc Common",
+    "qty": 2268,
+    "mv": 103670.28
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "RGSI",
+    "name": "Rockpoint Gas Storage Inc Cl A",
+    "qty": 2450,
+    "mv": 63112
+   },
+   {
+    "sec": "VI. Canadian Common Shares",
+    "sym": "DML",
+    "name": "Denison Mines Corp",
+    "qty": 10000,
+    "mv": 47100
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "ASML",
+    "name": "Asml Holding N V N Y Registry Shs 2012",
+    "qty": 26,
+    "mv": 61110.801921000006
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "LLY",
+    "name": "Eli Lilly & Co",
+    "qty": 60,
+    "mv": 96183.25623
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "COST",
+    "name": "Costco Wholesale Corp-New",
+    "qty": 160,
+    "mv": 209294.39304
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "DE",
+    "name": "Deere & Co",
+    "qty": 200,
+    "mv": 181521.4047
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MA",
+    "name": "Mastercard Incorporated",
+    "qty": 245,
+    "mv": 200090.33955750003
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "META",
+    "name": "Meta Platforms Inc Class A Common Stock",
+    "qty": 270,
+    "mv": 214157.89502999999
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "LMT",
+    "name": "Lockheed Martin Corp",
+    "qty": 50,
+    "mv": 38889.029775
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NOC",
+    "name": "Northrop Grumman Corp",
+    "qty": 50,
+    "mv": 37397.16225
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MSFT",
+    "name": "Microsoft Corp",
+    "qty": 450,
+    "mv": 316362.530925
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "BRKB",
+    "name": "Berkshire Hathaway Inc Del Cl B",
+    "qty": 100,
+    "mv": 69850.99755
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "V",
+    "name": "Visa Inc Cl A Common Stock",
+    "qty": 300,
+    "mv": 157724.97435
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "JPM",
+    "name": "Jpmorgan Chase & Co",
+    "qty": 500,
+    "mv": 246695.1585
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "GOOG",
+    "name": "Alphabet Inc Class C Capital Stock",
+    "qty": 800,
+    "mv": 371862.3588
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HD",
+    "name": "Home Depot Inc",
+    "qty": 100,
+    "mv": 45432.320550000004
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "AAPL",
+    "name": "Apple Inc",
+    "qty": 270,
+    "mv": 118558.774575
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "LRCX",
+    "name": "Lam Research Corporation Common Stock",
+    "qty": 163,
+    "mv": 68104.6463895
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "UNP",
+    "name": "Union Pacific Corp",
+    "qty": 250,
+    "mv": 104170.879875
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "JNJ",
+    "name": "Johnson & Johnson Common Stock",
+    "qty": 200,
+    "mv": 73685.6445
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MCD",
+    "name": "Mcdonalds Corp",
+    "qty": 250,
+    "mv": 91306.72725
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "AMZN",
+    "name": "Amazon.Com Inc",
+    "qty": 400,
+    "mv": 144000.9018
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "ABBV",
+    "name": "Abbvie Inc",
+    "qty": 125,
+    "mv": 44419.957125
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HWM",
+    "name": "Howmet Aerospace Inc Common Stock",
+    "qty": 370,
+    "mv": 125601.664275
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NVDA",
+    "name": "Nvidia Corp",
+    "qty": 375,
+    "mv": 114737.986125
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HON",
+    "name": "Honeywell International Inc Common Stock",
+    "qty": 50,
+    "mv": 14796.027525
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "MS",
+    "name": "Morgan Stanley",
+    "qty": 320,
+    "mv": 94601.44704
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "EXP",
+    "name": "Eagle Materials Inc",
+    "qty": 200,
+    "mv": 53843.044200000004
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "RJF",
+    "name": "Raymond James Financial Inc",
+    "qty": 751,
+    "mv": 185434.5877695
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "XOM",
+    "name": "Exxonmobil Holdings Corporation Common Stock",
+    "qty": 760,
+    "mv": 169519.9437
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "HONA",
+    "name": "Honeywell Aerospace Inc Common Stock",
+    "qty": 50,
+    "mv": 10955.837175
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "TJX",
+    "name": "Tjx Companies Inc New",
+    "qty": 300,
+    "mv": 55673.75205
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "NEM",
+    "name": "Newmont Corporation Common Stock",
+    "qty": 880,
+    "mv": 153736.22088
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "LULU",
+    "name": "Lululemon Athletica Inc",
+    "qty": 200,
+    "mv": 33332.4642
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "KO",
+    "name": "Coca Cola Company (The)",
+    "qty": 500,
+    "mv": 61441.65975
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "DAL",
+    "name": "Delta Air Lines Inc Del Com",
+    "qty": 400,
+    "mv": 43238.520000000004
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "SOLS",
+    "name": "Solstice Advanced Materials Inc Common Stock",
+    "qty": 25,
+    "mv": 2196.2257875
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "BAC",
+    "name": "Bank Of America Corp",
+    "qty": 630,
+    "mv": 54078.91587
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "VZ",
+    "name": "Verizon Communications",
+    "qty": 400,
+    "mv": 27728.0868
+   },
+   {
+    "sec": "VII. United States Common Shares",
+    "sym": "FMC",
+    "name": "Fmc Corp New",
+    "qty": 1182,
+    "mv": 18887.001291
+   },
+   {
+    "sec": "VIII. American Depository Receipts (ADRs) of Common Shares in China",
+    "sym": "BABA",
+    "name": "Alibaba Group Holding Ltd Sponsored Adr",
+    "qty": 100,
+    "mv": 15801.4617
+   },
+   {
+    "sec": "VIII. American Depository Receipts (ADRs) of Common Shares in China",
+    "sym": "TCEHY",
+    "name": "Tencent Holdings Limited Unsponsored Adr Rprsnting B Shares",
+    "qty": 500,
+    "mv": 39642.23925
+   },
+   {
+    "sec": "IX. American Depository Receipts (ADRs) of common shares in Europe",
+    "sym": "EADSY",
+    "name": "Airbus Se American Depositary Receipts Unsponsored",
+    "qty": 777,
+    "mv": 61302.5342685
+   },
+   {
+    "sec": "IX. American Depository Receipts (ADRs) of common shares in Europe",
+    "sym": "LVMUY",
+    "name": "Lvmh Moet Hennessy Louis Vuitton Sa Unsponsored Adr",
+    "qty": 425,
+    "mv": 61819.9968
+   },
+   {
+    "sec": "XI. American Depository Receipts (ADRs) of common shares in Brazil",
+    "sym": "EMBJ",
+    "name": "Embraer S A Adr Each Rep 4 Com Stk Shs",
+    "qty": 1882,
+    "mv": 186640.623732
+   },
+   {
+    "sec": "XI. American Depository Receipts (ADRs) of common shares in Brazil",
+    "sym": "VALE",
+    "name": "Vale S A Sponsored Adr",
+    "qty": 5550,
+    "mv": 116064.244575
+   },
+   {
+    "sec": "XII. American Depository Receipts (ADRs) of common shares in Japan",
+    "sym": "TM",
+    "name": "Toyota Motor Corporation Ads",
+    "qty": 80,
+    "mv": 21789.996720000003
+   },
+   {
+    "sec": "XIII. American Depository Receipts (ADRs) of common shares in Tiawan",
+    "sym": "TSM",
+    "name": "Taiwan Semiconductor Mfg Co Ltd-Sponsored Adr Repstg 5 Com",
+    "qty": 333,
+    "mv": 191665.216926
+   },
+   {
+    "sec": "XIV. American Depository Receipts (ADRs) of common shares in South Korea",
+    "sym": "KT",
+    "name": "Kt Corp Sponsored Adr",
+    "qty": 1500,
+    "mv": 40910.292
+   },
+   {
+    "sec": "XV. Other Assets (Warrants)",
+    "sym": "CSST.WT",
+    "name": "Wts Constellation Software Inc Exp 03/31/2040",
+    "qty": 20,
+    "mv": null
+   }
+  ]
+ }
+}
