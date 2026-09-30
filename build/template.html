@@ -53,10 +53,10 @@ button{font:inherit;color:inherit}
 
 /* snapshot tiles */
 .topline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
-.lang{display:inline-flex;border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:var(--panel)}
-.lang button{border:0;background:none;padding:5px 12px;font:500 12px var(--sans);color:var(--ink-2);cursor:pointer}
-.lang button+button{border-left:1px solid var(--rule)}
-.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.lang,.toggle{display:inline-flex;border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:var(--panel)}
+.lang button,.toggle button{border:0;background:none;padding:5px 12px;font:500 12px var(--sans);color:var(--ink-2);cursor:pointer}
+.lang button+button,.toggle button+button{border-left:1px solid var(--rule)}
+.lang button[aria-pressed="true"],.toggle button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .snaps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .snap{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:6px;transition:border-color .15s}
 .snap:hover{border-color:var(--ink-2)}
@@ -95,6 +95,9 @@ button{font:inherit;color:inherit}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .chip i{width:8px;height:8px;border-radius:2px;display:inline-block}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
+.toggle-wrap{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.dd{padding:6px 8px;border:1px solid var(--rule);border-radius:5px;background:var(--panel);font:inherit;font-size:12.5px;color:var(--ink)}
+.ind{display:inline-block;font:500 11px/1.3 var(--sans);color:var(--ink-2);background:var(--neutral-bg);border-radius:3px;padding:2px 6px;white-space:nowrap}
 
 .tbl-wrap{overflow-x:auto;background:var(--panel);border:1px solid var(--rule);border-radius:6px}
 table{border-collapse:collapse;width:100%;min-width:760px}
@@ -180,10 +183,11 @@ tbody tr.row:hover td{background:var(--accent-soft)}
     <div id="pane-h">
       <div class="toolbar">
         <input class="search" id="hq" type="search" data-i18n-ph="holdSearch">
+        <div class="toggle-wrap"><span data-i18n="grpBy"></span><div class="toggle" id="hgrp" role="group" data-i18n-aria="grpBy"><button type="button" data-g="cls" data-i18n="grpCls"></button><button type="button" data-g="ind" data-i18n="grpInd"></button></div></div>
         <div class="chips" id="hcls"></div>
       </div>
       <div class="tbl-wrap"><table id="ht"><thead><tr>
-        <th data-k="t" data-i18n="colTicker"></th><th data-k="n" data-i18n="colName"></th><th class="r" data-k="q" data-i18n="colQty"></th><th class="r" data-k="v" data-i18n="colMv"></th><th class="r" data-k="w" data-i18n="colW"></th><th data-k="chg" data-i18n="colChg"></th>
+        <th data-k="t" data-i18n="colTicker"></th><th data-k="n" data-i18n="colName"></th><th data-k="i" data-i18n="colInd"></th><th class="r" data-k="q" data-i18n="colQty"></th><th class="r" data-k="v" data-i18n="colMv"></th><th class="r" data-k="w" data-i18n="colW"></th><th data-k="chg" data-i18n="colChg"></th>
       </tr></thead><tbody></tbody></table></div>
       <div class="exited" id="exited"></div>
     </div>
@@ -193,6 +197,7 @@ tbody tr.row:hover td{background:var(--accent-soft)}
         <input class="search" id="tq" type="search" data-i18n-ph="tradeSearch">
         <div class="chips" id="tact"></div>
         <div class="chips" id="tex"></div>
+        <select class="dd" id="tind" data-i18n-aria="colInd"></select>
       </div>
       <div class="card" style="padding-block:4px"><div class="tl" id="tl"></div></div>
     </div>
@@ -219,7 +224,7 @@ const I18N = {
     tabHold:'持仓', tabTrades:'交易时间线', holdSearch:'搜索代码或名称…', tradeSearch:'搜索代码、公司或报告…',
     colTicker:'代码', colName:'名称', colQty:'数量', colMv:'市值 CAD', colW:'权重', colChg:'相比上一期',
     foot1:'来源：各期 RBC “Portfolio Holdings & Analysis” 持仓表（sheet 01 Holdings），以及 SMPT 的交易提案报告。',
-    foot2:'交易日期是提案日期，不是成交日期；“执行情况”是用前后快照的持仓数量推断的。FI→FISV、ERJ→EMBJ 视为代码变更合并。',
+    foot2:'交易日期是提案日期，不是成交日期；“执行情况”是用前后快照的持仓数量推断的。FI→FISV、ERJ→EMBJ 视为代码变更合并。行业取自 RBC 持仓表的行业表（各期可能不同）；只出现在交易里的代码是手工归类的。',
     drawerAria:'证券详情',
     nPos:n=>`<b>${n}</b> 个持仓`, valChg:d=>`${d} 市值变化`, firstSnap:'第一份快照', newExit:(a,b)=>`<b>+${a}</b> 新 / <b>−${b}</b> 清`,
     newPos:'新建仓', noHold:'没有符合条件的持仓。', earliest:'这是最早的快照，没有可比较的上一期。',
@@ -230,7 +235,9 @@ const I18N = {
     proposed:'提案', actual:'实际', noTrades:'没有符合条件的交易。',
     close:'关闭', notHeld:'不在任何快照中', bySnap:'各快照持仓', date:'日期', related:'相关交易',
     notHeldRow:'未持有', noRelated:'文件夹里没有与它相关的提案，应是在 2022-11 之前就已持有。',
-    cls:{'Cash':'现金','Money Market':'货币基金','Bonds':'债券','REITs':'REITs','Canadian Equity':'加拿大股票','US Equity':'美国股票','ADRs (Intl)':'ADR（国际）'}
+    colInd:'行业', grpBy:'分组', grpCls:'资产类别', grpInd:'行业', allInd:'全部行业',
+    cls:{'Cash':'现金','Money Market':'货币基金','Bonds':'债券','REITs':'REITs','Canadian Equity':'加拿大股票','US Equity':'美国股票','ADRs (Intl)':'ADR（国际）'},
+    ind:{BANK:'银行',NBF:'非银金融',TECH:'科技',TCOM:'电信',DISC:'消费',RTLR:'零售',REST:'餐饮',PHRM:'医药',INDS:'工业',MAT:'原材料','O&G':'油气',TRANS:'运输',UTIL:'公用事业',REIT:'房地产信托',BOND:'债券',MMF:'货币基金',CASH:'现金',WRNTS:'认股权证',ETF:'指数 ETF',OTHER:'其他'}
   },
   en: {
     intro:'Four holdings snapshots from the RBC statements, plus the trade proposals from Nov 2022 to Apr 2026. Pick a date to switch snapshots; click a ticker to see its history.',
@@ -238,7 +245,7 @@ const I18N = {
     tabHold:'Holdings', tabTrades:'Trade timeline', holdSearch:'Search ticker or name…', tradeSearch:'Search ticker, company or report…',
     colTicker:'Ticker', colName:'Name', colQty:'Quantity', colMv:'Market value CAD', colW:'Weight', colChg:'vs previous',
     foot1:'Sources: the RBC "Portfolio Holdings & Analysis" workbooks for each snapshot (sheet 01 Holdings) and the SMPT trade proposal reports.',
-    foot2:'Trade dates are proposal dates, not execution dates. Execution status is inferred from share counts in the snapshots before and after. FI→FISV and ERJ→EMBJ are merged as ticker changes.',
+    foot2:'Trade dates are proposal dates, not execution dates. Execution status is inferred from share counts in the snapshots before and after. FI→FISV and ERJ→EMBJ are merged as ticker changes. Industries come from the industry sheet in each RBC workbook and can change between snapshots; tickers that only appear in trades were classified by hand.',
     drawerAria:'Security details',
     nPos:n=>`<b>${n}</b> positions`, valChg:d=>`${d} value change`, firstSnap:'First snapshot', newExit:(a,b)=>`<b>+${a}</b> new / <b>−${b}</b> exited`,
     newPos:'New', noHold:'No holdings match these filters.', earliest:'This is the earliest snapshot, so there is nothing to compare against.',
@@ -249,12 +256,15 @@ const I18N = {
     proposed:'Proposed', actual:'Actual', noTrades:'No trades match these filters.',
     close:'Close', notHeld:'Not in any snapshot', bySnap:'Holdings by snapshot', date:'Date', related:'Related trades',
     notHeldRow:'Not held', noRelated:'No proposal in the folder mentions it, so it was probably held before Nov 2022.',
-    cls:{'Cash':'Cash','Money Market':'Money market','Bonds':'Bonds','REITs':'REITs','Canadian Equity':'Canadian equity','US Equity':'US equity','ADRs (Intl)':'ADRs (intl)'}
+    colInd:'Industry', grpBy:'Group by', grpCls:'Asset class', grpInd:'Industry', allInd:'All industries',
+    cls:{'Cash':'Cash','Money Market':'Money market','Bonds':'Bonds','REITs':'REITs','Canadian Equity':'Canadian equity','US Equity':'US equity','ADRs (Intl)':'ADRs (intl)'},
+    ind:{BANK:'Banks',NBF:'Non-bank financials',TECH:'Technology',TCOM:'Telecom',DISC:'Consumer',RTLR:'Retail',REST:'Restaurants',PHRM:'Pharma',INDS:'Industrials',MAT:'Materials','O&G':'Oil & gas',TRANS:'Transportation',UTIL:'Utilities',REIT:'REITs',BOND:'Bonds',MMF:'Money market',CASH:'Cash',WRNTS:'Warrants',ETF:'Index ETFs',OTHER:'Other'}
   }
 };
 let LANG = (()=>{ try{ const v=localStorage.getItem('smpt-lang'); if(v==='zh'||v==='en') return v; }catch(e){} return /^zh/i.test(navigator.language||'')?'zh':'en'; })();
 function T(k,...a){ const v = I18N[LANG][k] ?? I18N.en[k] ?? k; return typeof v==='function' ? v(...a) : v; }
 const CN = () => I18N[LANG].cls;
+const IN = c => I18N[LANG].ind[c] || c;
 const COL = c => `var(--s${CLS.indexOf(c)+1})`;
 const fmt = (v,d=0) => v==null?'—':v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
 const money = v => '$'+fmt(v);
@@ -262,8 +272,8 @@ const pct = (v,d=1) => (v*100).toFixed(d)+'%';
 const esc = s => String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const S = DATA.snaps;
 const byT = S.map(s => Object.fromEntries(s.h.map(h=>[h.t,h])));
-let cur = S.length-1, hcls = new Set(), hsort = {k:null,dir:'desc'};
-let tAct = 'ALL', tEx = 'ALL';
+let cur = S.length-1, hgrp = 'cls', hcls = new Set(), hind = new Set(), hsort = {k:null,dir:'desc'};
+let tAct = 'ALL', tEx = 'ALL', tInd = 'ALL';
 
 /* ---------- snapshot tiles ---------- */
 function renderSnaps(){
@@ -319,28 +329,40 @@ function chgOf(h){
 }
 function renderHold(){
   const s=S[cur], q=$('#hq').value.trim().toLowerCase();
-  $('#hcls').innerHTML = CLS.map(c=>`<button class="chip" aria-pressed="${hcls.has(c)}" data-c="${esc(c)}"><i style="background:${COL(c)}"></i>${CN()[c]}</button>`).join('');
-  document.querySelectorAll('#hcls .chip').forEach(b=>b.onclick=()=>{const c=b.dataset.c; hcls.has(c)?hcls.delete(c):hcls.add(c); renderHold();});
+  document.querySelectorAll('#hgrp button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.g===hgrp));
+  const itot = {}; s.h.forEach(h=>itot[h.i]=(itot[h.i]||0)+h.v);
+  const INDS = Object.keys(itot).sort((a,b)=>itot[b]-itot[a]);
+  const fset = hgrp==='cls' ? hcls : hind;
+  $('#hcls').innerHTML = hgrp==='cls'
+    ? CLS.map(c=>`<button class="chip" aria-pressed="${hcls.has(c)}" data-c="${esc(c)}"><i style="background:${COL(c)}"></i>${CN()[c]}</button>`).join('')
+    : INDS.map(c=>`<button class="chip" aria-pressed="${hind.has(c)}" data-c="${esc(c)}">${esc(IN(c))}</button>`).join('');
+  document.querySelectorAll('#hcls .chip').forEach(b=>b.onclick=()=>{const c=b.dataset.c; fset.has(c)?fset.delete(c):fset.add(c); renderHold();});
   let rows = s.h.map(h=>({...h,w:h.v/s.total,chg:chgOf(h)}))
-    .filter(h=>(!hcls.size||hcls.has(h.c)) && (!q || h.t.toLowerCase().includes(q) || h.n.toLowerCase().includes(q)));
+    .filter(h=>(!hcls.size||hcls.has(h.c)) && (!hind.size||hind.has(h.i)) && (!q || h.t.toLowerCase().includes(q) || h.n.toLowerCase().includes(q) || IN(h.i).toLowerCase().includes(q)));
   const maxW = Math.max(...s.h.filter(h=>h.c!=='Cash').map(h=>h.v/s.total));
   const tb = $('#ht tbody');
-  const row = h=>`<tr class="row"><td><button class="tk" data-t="${esc(h.t)}">${esc(h.t)}</button></td><td class="nm">${esc(h.n)}</td>
+  const row = h=>`<tr class="row"><td><button class="tk" data-t="${esc(h.t)}">${esc(h.t)}</button></td><td class="nm">${esc(h.n)}</td><td><span class="ind">${esc(IN(h.i))}</span></td>
     <td class="r num">${fmt(h.q, h.q%1?2:0)}</td><td class="r num">${money(h.v)}</td>
     <td class="r"><div class="wbar"><span style="width:${Math.max(2,Math.min(1,h.w/maxW)*60)}px"></span><span class="num" style="background:none;opacity:1;height:auto">${pct(h.w,2)}</span></div></td>
     <td><span class="pill ${h.chg.cls}">${h.chg.txt}</span></td></tr>`;
   if(hsort.k){
     const k=hsort.k, dir=hsort.dir==='asc'?1:-1;
-    rows.sort((a,b)=>{const A=k==='chg'?a.chg.s:a[k],B=k==='chg'?b.chg.s:b[k]; return (A>B?1:A<B?-1:0)*dir;});
+    const key = h => k==='chg'?h.chg.s : k==='i'?IN(h.i) : h[k];
+    rows.sort((a,b)=>{const A=key(a),B=key(b); return (A>B?1:A<B?-1:0)*dir;});
     tb.innerHTML = rows.map(row).join('');
+  } else if(hgrp==='ind'){
+    tb.innerHTML = INDS.map(c=>{
+      const g=rows.filter(h=>h.i===c).sort((a,b)=>b.v-a.v); if(!g.length) return '';
+      return `<tr class="grp"><td colspan="7">${esc(IN(c))} <span style="color:var(--muted);font-weight:500">· ${g.length}</span><span class="tot">${money(itot[c])} · ${pct(itot[c]/s.total)}</span></td></tr>`+g.map(row).join('');
+    }).join('');
   } else {
     tb.innerHTML = CLS.map(c=>{
       const g=rows.filter(h=>h.c===c).sort((a,b)=>b.v-a.v); if(!g.length) return '';
       const tot=s.h.filter(h=>h.c===c).reduce((a,h)=>a+h.v,0);
-      return `<tr class="grp"><td colspan="6"><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${COL(c)};margin-right:8px"></i>${CN()[c]} <span style="color:var(--muted);font-weight:500">· ${g.length}</span><span class="tot">${money(tot)} · ${pct(tot/s.total)}</span></td></tr>`+g.map(row).join('');
+      return `<tr class="grp"><td colspan="7"><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${COL(c)};margin-right:8px"></i>${CN()[c]} <span style="color:var(--muted);font-weight:500">· ${g.length}</span><span class="tot">${money(tot)} · ${pct(tot/s.total)}</span></td></tr>`+g.map(row).join('');
     }).join('');
   }
-  if(!rows.length) tb.innerHTML=`<tr><td colspan="6" style="color:var(--muted);padding:20px">${T('noHold')}</td></tr>`;
+  if(!rows.length) tb.innerHTML=`<tr><td colspan="7" style="color:var(--muted);padding:20px">${T('noHold')}</td></tr>`;
   document.querySelectorAll('#ht th').forEach(th=>{th.dataset.dir = th.dataset.k===hsort.k?hsort.dir:'';});
   $('#hc').textContent = s.h.filter(h=>h.c!=='Cash').length;
   const ex = cur>0 ? S[cur-1].h.filter(h=>h.c!=='Cash'&&!byT[cur][h.t]) : [];
@@ -350,12 +372,14 @@ function renderHold(){
 }
 document.querySelectorAll('#ht th').forEach(th=>th.onclick=()=>{
   const k=th.dataset.k;
-  if(hsort.k!==k) hsort={k,dir:(k==='t'||k==='n')?'asc':'desc'};
-  else if(hsort.dir==='desc'&&!(k==='t'||k==='n')||hsort.dir==='asc'&&(k==='t'||k==='n')) hsort.dir = hsort.dir==='asc'?'desc':'asc';
+  const txt = k==='t'||k==='n'||k==='i';
+  if(hsort.k!==k) hsort={k,dir:txt?'asc':'desc'};
+  else if(hsort.dir==='desc'&&!txt||hsort.dir==='asc'&&txt) hsort.dir = hsort.dir==='asc'?'desc':'asc';
   else hsort={k:null,dir:'desc'};
   renderHold();
 });
 $('#hq').oninput = renderHold;
+document.querySelectorAll('#hgrp button').forEach(b=>b.onclick=()=>{ if(hgrp===b.dataset.g) return; hgrp=b.dataset.g; hcls.clear(); hind.clear(); hsort={k:null,dir:'desc'}; renderHold(); });
 
 /* ---------- trades ---------- */
 const ACTC = {BUY:'p-buy',SELL:'p-sell',MATURED:'p-na','CORP ACTION':'p-warn',POLICY:'p-na',WITHDRAWAL:'p-na'};
@@ -371,18 +395,22 @@ function exOf(t){
 const EXF = () => [['ALL',T('all')],['ok',T('ex_ok')],['part',T('ex_part')],['no',T('ex_no')]];
 const ACTF = () => [['ALL',T('all')],['BUY',T('act_BUY')],['SELL',T('act_SELL')],['OTHER',T('other')]];
 const tks = t => t.tk.split('/').map(x=>x.trim()).filter(x=>x&&x!=='—'&&x!=='CAD');
+const indsOf = t => [...new Set(tks(t).map(k=>DATA.tind[ALIAS[k]||k]).filter(Boolean))];
 function renderTrades(){
   $('#tact').innerHTML = ACTF().map(([k,l])=>`<button class="chip" aria-pressed="${tAct===k}" data-k="${k}">${l}</button>`).join('');
   $('#tex').innerHTML = EXF().map(([k,l])=>`<button class="chip" aria-pressed="${tEx===k}" data-k="${k}">${l}</button>`).join('');
   document.querySelectorAll('#tact .chip').forEach(b=>b.onclick=()=>{tAct=b.dataset.k;renderTrades();});
   document.querySelectorAll('#tex .chip').forEach(b=>b.onclick=()=>{tEx=b.dataset.k;renderTrades();});
+  const ti = [...new Set(DATA.trades.flatMap(indsOf))].sort((a,b)=>IN(a).localeCompare(IN(b),LANG));
+  $('#tind').innerHTML = `<option value="ALL">${T('allInd')}</option>`+ti.map(c=>`<option value="${esc(c)}"${tInd===c?' selected':''}>${esc(IN(c))}</option>`).join('');
   const q=$('#tq').value.trim().toLowerCase();
   const list = DATA.trades.filter(t=>{
     if(tAct==='BUY'&&t.act!=='BUY') return false;
     if(tAct==='SELL'&&t.act!=='SELL') return false;
     if(tAct==='OTHER'&&(t.act==='BUY'||t.act==='SELL')) return false;
     if(tEx!=='ALL'&&exOf(t)[0]!==tEx) return false;
-    return !q || [t.tk,t.sec,t.rep,t.note].join(' ').toLowerCase().includes(q);
+    if(tInd!=='ALL'&&!indsOf(t).includes(tInd)) return false;
+    return !q || [t.tk,t.sec,t.rep,t.note,...indsOf(t).map(IN)].join(' ').toLowerCase().includes(q);
   }).sort((a,b)=>b.date.localeCompare(a.date));
   $('#tc').textContent = DATA.trades.filter(t=>t.act==='BUY'||t.act==='SELL').length;
   const months = {};
@@ -393,7 +421,7 @@ function renderTrades(){
       const [a,ac]=actOf(t.act); const [,el,ec]=exOf(t);
       return `<div class="tr"><div class="dt">${esc(t.date.length>7?t.date.slice(5):t.date)}</div>
         <div><span class="pill ${ac}">${a}</span></div>
-        <div class="body"><div class="t1">${tks(t).map(k=>`<button class="tk" data-t="${esc(k)}">${esc(k)}</button>`).join('<span style="color:var(--muted)">/</span>')||''}<span class="sec">${esc(t.sec)}</span></div>
+        <div class="body"><div class="t1">${tks(t).map(k=>`<button class="tk" data-t="${esc(k)}">${esc(k)}</button>`).join('<span style="color:var(--muted)">/</span>')||''}<span class="sec">${esc(t.sec)}</span>${indsOf(t).map(c=>`<span class="ind">${esc(IN(c))}</span>`).join('')}</div>
           <div class="rep">${esc(t.rep)}</div>
           <div class="pa"><b>${T('proposed')}</b><span>${esc(t.prop)}</span><b>${T('actual')}</b><span>${esc(t.act_)}</span></div>
           ${t.note?`<div class="note">${esc(t.note)}</div>`:''}</div>
@@ -402,6 +430,7 @@ function renderTrades(){
   bindTk();
 }
 $('#tq').oninput = renderTrades;
+$('#tind').onchange = e=>{tInd=e.target.value; renderTrades();};
 
 /* ---------- tabs ---------- */
 function setTab(h){
@@ -420,7 +449,7 @@ function openTk(t){
   const rel = DATA.trades.filter(x=>tks(x).map(k=>ALIAS[k]||k).includes(t)).sort((a,b)=>a.date.localeCompare(b.date));
   const d=$('#drawer');
   d.innerHTML = `<button class="x" id="dx">${T('close')}</button>
-    <div><div class="eyebrow">${any?esc(CN()[any.c]):T('notHeld')}</div><h2 style="font-size:24px;margin-top:4px" class="num">${esc(t)}</h2><div class="nm">${esc(any?.n || rel[0]?.sec || '')}</div></div>
+    <div><div class="eyebrow">${any?esc(CN()[any.c]):T('notHeld')}${DATA.tind[t]?' · '+esc(IN(DATA.tind[t])):''}</div><h2 style="font-size:24px;margin-top:4px" class="num">${esc(t)}</h2><div class="nm">${esc(any?.n || rel[0]?.sec || '')}</div></div>
     <div><h3>${T('bySnap')}</h3><table style="margin-top:6px"><thead><tr><th>${T('date')}</th><th class="r">${T('colQty')}</th><th class="r">${T('colMv')}</th><th class="r">${T('colW')}</th></tr></thead><tbody>
       ${hist.map(x=>`<tr><td class="num">${x.d}</td>${x.h?`<td class="r num">${fmt(x.h.q,x.h.q%1?2:0)}</td><td class="r num">${money(x.h.v)}</td><td class="r num">${pct(x.h.v/x.tot,2)}</td>`:'<td class="r" colspan="3" style="color:var(--muted)">'+T('notHeldRow')+'</td>'}</tr>`).join('')}
     </tbody></table></div>

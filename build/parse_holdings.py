@@ -3,6 +3,7 @@
 Usage: python build/parse_holdings.py <folder with the holdings workbooks>
 Writes data/holdings.json. Any file named "YYYY MM DD Portfolio Holdings*.xlsx"
 in the folder becomes one snapshot; sheet 1 must be the "01 Holdings" sheet.
+Industry codes (`ind`) come from the sheet whose title contains "Industries".
 """
 import glob
 import json
@@ -18,8 +19,29 @@ if len(sys.argv) < 2:
 SRC = sys.argv[1]
 
 
+def industries(wb, syms):
+    """Symbol -> RBC industry code, from the "Industries" sheet. Its layout varies
+    between workbooks, so find each row by its symbol and take the first text cell
+    after the name as the code."""
+    ws = next((w for w in wb.worksheets if 'industr' in w.title.lower()), None)
+    out = {}
+    if ws is None:
+        return out
+    for r in ws.iter_rows(values_only=True):
+        cells = [c for c in r if c is not None]
+        i = next((i for i, c in enumerate(cells) if isinstance(c, str) and c.strip() in syms), None)
+        if i is None:
+            continue
+        code = next((c.strip() for c in cells[i + 2:] if isinstance(c, str) and c.strip()
+                     and not re.fullmatch(r'[\d.,\s-]+', c.strip())), None)
+        if code:
+            out[cells[i].strip()] = code.upper()
+    return out
+
+
 def parse(path):
-    ws = openpyxl.load_workbook(path, data_only=True, read_only=True).worksheets[0]
+    wb = openpyxl.load_workbook(path, data_only=True, read_only=True)
+    ws = wb.worksheets[0]
     rows = [list(r) for r in ws.iter_rows(values_only=True)]
     hi = next(i for i, r in enumerate(rows) if 'Symbol' in [str(c).strip() if c else '' for c in r])
     hdr = [str(c).strip() if c else '' for c in rows[hi]]
@@ -34,6 +56,9 @@ def parse(path):
             break
         if r[sc] is not None and isinstance(r[qc], (int, float)):
             hold.append(dict(sec=sec, sym=str(r[sc]).strip(), name=str(r[sc + 1]).strip(), qty=r[qc], mv=r[mc]))
+    ind = industries(wb, {h['sym'] for h in hold})
+    for h in hold:
+        h['ind'] = ind.get(h['sym'])
     return dict(total=total, hold=hold)
 
 
