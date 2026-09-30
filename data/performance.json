@@ -1,0 +1,665 @@
+{
+ "hpr": {
+  "start": "2012-04-01",
+  "rows": [
+   {
+    "end": "2012-08-31",
+    "months": 5,
+    "smpt": 0.044500000000000005,
+    "tsx": -0.033405596656705505,
+    "sp": 0.0006206412203766387
+   },
+   {
+    "end": "2013-04-01",
+    "months": 7,
+    "smpt": 0.0529,
+    "tsx": 0.08302097879014902,
+    "sp": 0.1253692973149434
+   },
+   {
+    "end": "2013-08-31",
+    "months": 5,
+    "smpt": 0.02931785407014953,
+    "tsx": 0.0057560534894984805,
+    "sp": -0.031876511605138824
+   },
+   {
+    "end": "2014-04-01",
+    "months": 7,
+    "smpt": 0.16869999999999996,
+    "tsx": 0.16170007132243058,
+    "sp": 0.27326286929945476
+   },
+   {
+    "end": "2014-08-31",
+    "months": 5,
+    "smpt": 0.047085066417193566,
+    "tsx": 0.09778042155640199,
+    "sp": 0.07172504272674596
+   },
+   {
+    "end": "2014-11-30",
+    "months": 3,
+    "smpt": -0.011200000000000002,
+    "tsx": -0.04974561563562141,
+    "sp": 0.03722408559179202
+   },
+   {
+    "end": "2015-05-31",
+    "months": 6,
+    "smpt": 0.04418532328767124,
+    "tsx": 0.03336643690643548,
+    "sp": 0.02969600101615244
+   },
+   {
+    "end": "2015-08-31",
+    "months": 3,
+    "smpt": -0.045316312167610784,
+    "tsx": -0.0700133698736215,
+    "sp": -0.05921854039134655
+   },
+   {
+    "end": "2016-03-01",
+    "months": 7,
+    "smpt": 0.024674,
+    "tsx": -0.04788173238122495,
+    "sp": 0.014464249129276796
+   },
+   {
+    "end": "2016-08-01",
+    "months": 5,
+    "smpt": 0.058428091255008585,
+    "tsx": 0.13850503248274348,
+    "sp": 0.10651910493577832
+   },
+   {
+    "end": "2017-03-31",
+    "months": 7,
+    "smpt": 0.08916822570905358,
+    "tsx": 0.0865312527728399,
+    "sp": 0.10438081610403782
+   },
+   {
+    "end": "2017-08-31",
+    "months": 5,
+    "smpt": 0.012338187361577546,
+    "tsx": -0.010423843941382294,
+    "sp": 0.05530153959380457
+   },
+   {
+    "end": "2017-12-31",
+    "months": 4,
+    "smpt": 0.113703,
+    "tsx": 0.0764610189952053,
+    "sp": 0.08844520356303165
+   },
+   {
+    "end": "2018-03-31",
+    "months": 3,
+    "smpt": -0.00076483,
+    "tsx": -0.045195164388137865,
+    "sp": -0.007590988267252019
+   },
+   {
+    "end": "2018-08-31",
+    "months": 5,
+    "smpt": 0.075368,
+    "tsx": 0.07113336521726654,
+    "sp": 0.10778842455042259
+   },
+   {
+    "end": "2018-12-31",
+    "months": 4,
+    "smpt": -0.090421,
+    "tsx": -0.10910522942324619,
+    "sp": -0.13027500523487123
+   },
+   {
+    "end": "2019-03-31",
+    "months": 3,
+    "smpt": 0.09028130000000001,
+    "tsx": 0.13294788994539863,
+    "sp": 0.13647872686197626
+   },
+   {
+    "end": "2019-08-31",
+    "months": 5,
+    "smpt": 0.016049,
+    "tsx": 0.03384237292696257,
+    "sp": 0.04126960027963822
+   },
+   {
+    "end": "2019-12-31",
+    "months": 4,
+    "smpt": 0.068033,
+    "tsx": 0.0490732068227302,
+    "sp": 0.11110790864377962
+   },
+   {
+    "end": "2020-03-31",
+    "months": 3,
+    "smpt": -0.170332,
+    "tsx": -0.20896192126231694,
+    "sp": -0.19598020620821932
+   },
+   {
+    "end": "2020-08-31",
+    "months": 5,
+    "smpt": 0.258864,
+    "tsx": 0.25085162241073755,
+    "sp": 0.3649339558187201
+   },
+   {
+    "end": "2020-12-31",
+    "months": 4,
+    "smpt": 0.06991699999999999,
+    "tsx": 0.06723842465057306,
+    "sp": 0.07886976144691893
+   },
+   {
+    "end": "2021-03-31",
+    "months": 3,
+    "smpt": 0.076254,
+    "tsx": 0.08052563248547728,
+    "sp": 0.06174872895281158
+   },
+   {
+    "end": "2021-08-31",
+    "months": 5,
+    "smpt": 0.0672,
+    "tsx": 0.11202295260379502,
+    "sp": 0.14506316699196953
+   },
+   {
+    "end": "2021-12-31",
+    "months": 4,
+    "smpt": 0.038928,
+    "tsx": 0.04106312214407626,
+    "sp": 0.058633095813042324
+   },
+   {
+    "end": "2022-03-31",
+    "months": 3,
+    "smpt": 0.006974,
+    "tsx": 0.03817594855766049,
+    "sp": -0.04598516026315014
+   },
+   {
+    "end": "2022-10-31",
+    "months": 7,
+    "smpt": -0.079427,
+    "tsx": -0.09640572694726668,
+    "sp": -0.13736714717248866
+   },
+   {
+    "end": "2022-12-31",
+    "months": 2,
+    "smpt": 0.016303,
+    "tsx": 0.0037224428910203056,
+    "sp": -0.004949687906846578
+   },
+   {
+    "end": "2023-03-31",
+    "months": 3,
+    "smpt": 0.062279999999999995,
+    "tsx": 0.045539554990071895,
+    "sp": 0.07497046962467668
+   },
+   {
+    "end": "2023-08-31",
+    "months": 5,
+    "smpt": 0.060785,
+    "tsx": 0.02281153378009715,
+    "sp": 0.10448599895576582
+   },
+   {
+    "end": "2023-12-29",
+    "months": 4,
+    "smpt": 0.055569,
+    "tsx": 0.04499414001175106,
+    "sp": 0.06366327211607392
+   },
+   {
+    "end": "2024-03-28",
+    "months": 3,
+    "smpt": 0.096957,
+    "tsx": 0.06623042817058278,
+    "sp": 0.10555944472362544
+   },
+   {
+    "end": "2024-08-30",
+    "months": 5,
+    "smpt": 0.046868,
+    "tsx": 0.0659481366454775,
+    "sp": 0.08113483674504263
+   },
+   {
+    "end": "2024-12-31",
+    "months": 4,
+    "smpt": 0.09430899999999999,
+    "tsx": 0.07034766183628793,
+    "sp": 0.04596324010100106
+   },
+   {
+    "end": "2025-04-04",
+    "months": 3,
+    "smpt": -0.083848,
+    "tsx": -0.05475440304018864,
+    "sp": -0.13424443649307383
+   },
+   {
+    "end": "2025-08-31",
+    "months": 5,
+    "smpt": 0.162422,
+    "tsx": 0.24397552676918743,
+    "sp": 0.2796623512320102
+   },
+   {
+    "end": "2025-12-31",
+    "months": 4,
+    "smpt": 0.041604,
+    "tsx": 0.11982879817650915,
+    "sp": 0.06401890849707925
+   },
+   {
+    "end": "2026-04-02",
+    "months": 3,
+    "smpt": 0.019691,
+    "tsx": 0.05019251412376913,
+    "sp": -0.03529790512107067
+   },
+   {
+    "end": "2026-09-01",
+    "months": 5,
+    "smpt": 0.102586,
+    "tsx": 0.09118039042063275,
+    "sp": 0.1645819712324288
+   }
+  ]
+ },
+ "hpr_source": "2026-08-31",
+ "periods": [
+  {
+   "start": "2025-04-04",
+   "end": "2025-08-31",
+   "classes": [
+    {
+     "cls": "Cash",
+     "w": 0.04547641939380949,
+     "index": "Cash",
+     "ret": 0
+    },
+    {
+     "cls": "CAD Dollar Money Market Fund (RBF 2010)",
+     "w": 0.006878993772849074,
+     "index": "Same Money Market Fund (Note 1)",
+     "ret": 0.010654520547945207
+    },
+    {
+     "cls": "US Dollar Money Market Fund (RBF 2014)",
+     "w": 0.009319043033031308,
+     "index": "Same Money Market Fund (Note 1)",
+     "ret": 0.014060701369863014
+    },
+    {
+     "cls": "CAD Dollar Bonds and Bond Funds",
+     "w": 0.038634041865008,
+     "index": "iShares Core Canadian Universe Bond Index ETF (XBB)",
+     "ret": -0.011864739088439186
+    },
+    {
+     "cls": "Canadian Common Shares, unit trusts and ETFs",
+     "w": 0.23492099117201992,
+     "index": "S&P/TSX (^GSPTSE)",
+     "ret": 0.23157350119645592
+    },
+    {
+     "cls": "US Bond and Bond Funds",
+     "w": 0.030658936300229738,
+     "index": "iShare Core US Aggregate Bond ETF (AGG)",
+     "ret": 0.015593972602739726
+    },
+    {
+     "cls": "US Common Shares, unit trust and US ETFs",
+     "w": 0.5474188338140121,
+     "index": "S&P500(^GSPC)",
+     "ret": 0.2731884400718949
+    },
+    {
+     "cls": "ADRs of Chinese Common Shares",
+     "w": 0.021536016137584702,
+     "index": "Hang Seng (^HSI)",
+     "ret": 0.0974979660662385
+    },
+    {
+     "cls": "ADRs of Indian Common Shares",
+     "w": 0.01700428347209175,
+     "index": "NIFTY 50 (^NSEI)",
+     "ret": 0.06646743318438109
+    },
+    {
+     "cls": "ADRs of Japanese Common Shares",
+     "w": 0.0032827391604292994,
+     "index": "Nikkei 225(^N225)",
+     "ret": 0.26458663527979676
+    },
+    {
+     "cls": "ADRs of European Common Shares",
+     "w": 0.021504339400298864,
+     "index": "Sum of the Dax P and the CAC 40 returns divided by 2",
+     "ret": 0.10845945913601296
+    },
+    {
+     "cls": "ADR of Taiwan Common Shares",
+     "w": 0.016213704236229122,
+     "index": "TAIEX (Sinopac iex ETF) or TWSE Capitalization Weighted Stock Index (^TWII)",
+     "ret": 0.1637221981522778
+    },
+    {
+     "cls": "ADR of Brazil Common Shares",
+     "w": 0.007151658242406553,
+     "index": "IBOVESPA (^BVSP)",
+     "ret": 0.1113189162004149
+    }
+   ],
+   "bench": 0.21405553507138275,
+   "hpr": 0.18012946345111663,
+   "abn": -0.03392607162026612,
+   "abn_ann": -0.08310749088185995,
+   "hpr_gross": 0.16242184872315546,
+   "beta": {
+    "hist": 0.9213694153398155,
+    "exp": 0.9473175082776764
+   },
+   "snapshot": "2025-08-31"
+  },
+  {
+   "start": "2025-08-31",
+   "end": "2025-12-31",
+   "classes": [
+    {
+     "cls": "Cash",
+     "w": 0.003918883024577724,
+     "index": "Cash",
+     "ret": 0
+    },
+    {
+     "cls": "CAD Dollar Money Market Fund (RBF 2010)",
+     "w": 0.010573394327062502,
+     "index": "Same Money Market Fund (Note 1)",
+     "ret": 0.006994794520547945
+    },
+    {
+     "cls": "US Dollar Money Market Fund (RBF 2014)",
+     "w": 0.0011752463579996954,
+     "index": "Same Money Market Fund (Note 1)",
+     "ret": 0.010175271232876712
+    },
+    {
+     "cls": "CAD Dollar Bonds and Bond Funds",
+     "w": 0.0706418346589186,
+     "index": "iShares Core Canadian Universe Bond Index ETF (XBB) (see Note 2)",
+     "ret": 0.015329768627450968
+    },
+    {
+     "cls": "Canadian Common Shares, unit trusts and ETFs",
+     "w": 0.2242345565529175,
+     "index": "S&P/TSX (^GSPTSE)",
+     "ret": 0.1102172276777118
+    },
+    {
+     "cls": "US Bond and Bond Funds",
+     "w": 0.029651866590543977,
+     "index": "iShare Core US Aggregate Bond ETF (AGG) (see Note 2)",
+     "ret": 0.015593972602739726
+    },
+    {
+     "cls": "US Common Shares, unit trust and US ETFs",
+     "w": 0.5529615151767471,
+     "index": "S&P500(^GSPC)",
+     "ret": 0.0596322748620024
+    },
+    {
+     "cls": "ADRs of Chinese Common Shares",
+     "w": 0.020531947993122655,
+     "index": "Hang Seng (^HSI)",
+     "ret": 0.02204834430061542
+    },
+    {
+     "cls": "ADRs of Indian Common Shares",
+     "w": 0.01606313414582559,
+     "index": "NIFTY 50 (^NSEI)",
+     "ret": 0.06970812855525788
+    },
+    {
+     "cls": "ADRs of Japanese Common Shares",
+     "w": 0.003465040964328936,
+     "index": "Nikkei 225(^N225)",
+     "ret": 0.17840081819409725
+    },
+    {
+     "cls": "ADRs of European Common Shares",
+     "w": 0.02383325298396608,
+     "index": "Sum of the Dax P and the CAC 40 returns divided by 2",
+     "ret": 0.04122471850045106
+    },
+    {
+     "cls": "ADR of Taiwan Common Shares",
+     "w": 0.02047592394950151,
+     "index": "TAIEX (Sinopac iex ETF) or TWSE Capitalization Weighted Stock Index (^TWII)",
+     "ret": 0.19570162365675747
+    },
+    {
+     "cls": "ADRs of Brazil Common Shares",
+     "w": 0.022473403274488074,
+     "index": "IBOVESPA (^BVSP)",
+     "ret": 0.1393206148972579
+    }
+   ],
+   "bench": 0.06963138647377039,
+   "hpr": 0.03655901382815747,
+   "abn": -0.03307237264561292,
+   "abn_ann": -0.09976376872436955,
+   "hpr_gross": 0.04160448442251852,
+   "beta": null,
+   "snapshot": "2025-12-31"
+  },
+  {
+   "start": "2025-12-31",
+   "end": "2026-04-02",
+   "classes": [
+    {
+     "cls": "Cash",
+     "w": 0.019229859911759118,
+     "index": "Cash",
+     "ret": 0
+    },
+    {
+     "cls": "CAD Dollar Money Market Fund (RBF 2010)",
+     "w": 0.00015501636729004184,
+     "index": "Same Money Market Fund (Note 1)",
+     "ret": 0.004536986301369863
+    },
+    {
+     "cls": "US Dollar Money Market Fund (RBF 2014)",
+     "w": 0.00011339313616507355,
+     "index": "Same Money Market Fund (Note 1)",
+     "ret": 0.007939726027397261
+    },
+    {
+     "cls": "CAD Dollar Bonds and Bond Funds",
+     "w": 0.06870466649667893,
+     "index": "iShares Core Canadian Universe Bond Index ETF (XBB) (see Note 2)",
+     "ret": 0.0010653436363636457
+    },
+    {
+     "cls": "Canadian Common Shares, unit trusts and ETFs",
+     "w": 0.2477707940153646,
+     "index": "S&P/TSX (^GSPTSE)",
+     "ret": 0.04400179107489732
+    },
+    {
+     "cls": "US Bond and Bond Funds",
+     "w": 0.02919749881529962,
+     "index": "iShare Core US Aggregate Bond ETF (AGG) (see Note 2)",
+     "ret": -0.005528609371245399
+    },
+    {
+     "cls": "US Common Shares, unit trust and US ETFs",
+     "w": 0.520204449486578,
+     "index": "S&P500(^GSPC)",
+     "ret": -0.03839164414578922
+    },
+    {
+     "cls": "ADRs of Chinese Common Shares",
+     "w": 0.015589919979901262,
+     "index": "Hang Seng (^HSI)",
+     "ret": -0.013130429557863477
+    },
+    {
+     "cls": "ADRs of Indian Common Shares",
+     "w": 0.007802495769081639,
+     "index": "NIFTY 50 (^NSEI)",
+     "ret": -0.130752097238381
+    },
+    {
+     "cls": "ADRs of Japanese Common Shares",
+     "w": 0.0033350756556068516,
+     "index": "Nikkei 225(^N225)",
+     "ret": 0.06444921560572325
+    },
+    {
+     "cls": "ADRs of European Common Shares",
+     "w": 0.016784381248911892,
+     "index": "Average return of the Dax P and the CAC 40",
+     "ret": -0.03464754464031361
+    },
+    {
+     "cls": "ADR of Taiwan Common Shares",
+     "w": 0.02273628742223947,
+     "index": "TAIEX (Sinopac iex ETF) or TWSE Capitalization Weighted Stock Index (^TWII)",
+     "ret": 0.12459880677816293
+    },
+    {
+     "cls": "ADRs of Brazil Common Shares",
+     "w": 0.04188153644191605,
+     "index": "IBOVESPA (^BVSP)",
+     "ret": 0.16711882079131102
+    },
+    {
+     "cls": "ADRs of South Korean Companies",
+     "w": 0.006494625253207633,
+     "index": "Kospi Composite Index (KOSPI)",
+     "ret": 0.24201206880595705
+    }
+   ],
+   "bench": 0.000656626076147523,
+   "hpr": 0.005660676273734816,
+   "abn": 0.005004050197587293,
+   "abn_ann": 0.019853025240427848,
+   "hpr_gross": 0.019691084316630025,
+   "beta": {
+    "hist": 0.8822754158013537,
+    "exp": 0.9211245285869064
+   },
+   "snapshot": "2026-04-02"
+  },
+  {
+   "start": "2026-04-02",
+   "end": "2026-08-31",
+   "classes": [
+    {
+     "cls": "Cash",
+     "w": 0.010062619912052395,
+     "index": "Cash",
+     "ret": 0
+    },
+    {
+     "cls": "CAD Dollar Money Market Fund (RBF 2010)",
+     "w": 0.005050844025552883,
+     "index": "Same Money Market Fund (Note 1)",
+     "ret": 0.007446575342465753
+    },
+    {
+     "cls": "US Dollar Money Market Fund (RBF 2014)",
+     "w": 0.0007688730357733287,
+     "index": "Same Money Market Fund (Note 1)",
+     "ret": 0.013031506849315068
+    },
+    {
+     "cls": "CAD Dollar Bonds and Bond Funds",
+     "w": 0.062328768799245295,
+     "index": "iShares Core Canadian Universe Bond Index ETF (XBB) (see Note 2)",
+     "ret": 0.001931638640429367
+    },
+    {
+     "cls": "Canadian Common Shares, unit trusts and ETFs",
+     "w": 0.2544394176242555,
+     "index": "S&P/TSX (^GSPTSE)",
+     "ret": 0.09551344046886245
+    },
+    {
+     "cls": "US Bond and Bond Funds",
+     "w": 0.026369856320549525,
+     "index": "iShare Core US Aggregate Bond ETF (AGG) (see Note 2)",
+     "ret": -0.004938227451375675
+    },
+    {
+     "cls": "US Common Shares, unit trust and US ETFs",
+     "w": 0.5436823109670392,
+     "index": "S&P500(^GSPC)",
+     "ret": 0.16762903919218441
+    },
+    {
+     "cls": "ADRs of Chinese Common Shares",
+     "w": 0.007333135514383282,
+     "index": "Hang Seng (^HSI)",
+     "ret": 0.01079267810547968
+    },
+    {
+     "cls": "ADRs of Indian Common Shares",
+     "w": 0,
+     "index": "NIFTY 50 (^NSEI)",
+     "ret": 0.0601987399342232
+    },
+    {
+     "cls": "ADRs of Japanese Common Shares",
+     "w": 0.002882004557196272,
+     "index": "Nikkei 225(^N225)",
+     "ret": 0.23753644290384668
+    },
+    {
+     "cls": "ADRs of European Common Shares",
+     "w": 0.016284522673069797,
+     "index": "Average return of the Dax P and the CAC 40",
+     "ret": 0.08563404240298289
+    },
+    {
+     "cls": "ADR of Taiwan Common Shares",
+     "w": 0.025350165754258264,
+     "index": "TWII (TSEC Capitalization Weighted Stock Index",
+     "ret": 0.4161814147731686
+    },
+    {
+     "cls": "ADRs of Brazil Common Shares",
+     "w": 0.04003657371575186,
+     "index": "IBOVESPA (^BVSP)",
+     "ret": -0.05654297146076914
+    },
+    {
+     "cls": "ADRs of South Korean Companies",
+     "w": 0.00541090710087221,
+     "index": "Kospi Composite Index (KOSPI)",
+     "ret": 0.3030100973433574
+    }
+   ],
+   "bench": 0.12756141023389447,
+   "hpr": 0.09957542382466716,
+   "abn": -0.02798598640922731,
+   "abn_ann": -0.06720319104847347,
+   "hpr_gross": 0.1025856432022918,
+   "beta": null,
+   "snapshot": "2026-08-31"
+  }
+ ]
+}
