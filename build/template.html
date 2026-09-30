@@ -214,7 +214,7 @@ const $ = s => document.querySelector(s);
 const CLS = DATA.classes;
 const I18N = {
   zh: {
-    intro:'四个持仓快照（RBC 报表）加上 2024-11 至 2026-04 的交易提案。点击日期切换快照，点击代码查看该证券的历史。',
+    intro:'四个持仓快照（RBC 报表）加上 2022-11 至 2026-04 的交易提案。点击日期切换快照，点击代码查看该证券的历史。',
     snapsAria:'快照', mixTitle:'资产配置', mixSub:'占组合总市值 (CAD) 的比例',
     tabHold:'持仓', tabTrades:'交易时间线', holdSearch:'搜索代码或名称…', tradeSearch:'搜索代码、公司或报告…',
     colTicker:'代码', colName:'名称', colQty:'数量', colMv:'市值 CAD', colW:'权重', colChg:'相比上一期',
@@ -229,11 +229,11 @@ const I18N = {
     month:(y,m)=>`${y} 年 ${m} 月`, yearN:(yr,n)=>`${yr} 学年 · ${n} 条`,
     proposed:'提案', actual:'实际', noTrades:'没有符合条件的交易。',
     close:'关闭', notHeld:'不在任何快照中', bySnap:'各快照持仓', date:'日期', related:'相关交易',
-    notHeldRow:'未持有', noRelated:'文件夹里没有与它相关的提案，应是在 2024-11 之前就已持有。',
+    notHeldRow:'未持有', noRelated:'文件夹里没有与它相关的提案，应是在 2022-11 之前就已持有。',
     cls:{'Cash':'现金','Money Market':'货币基金','Bonds':'债券','REITs':'REITs','Canadian Equity':'加拿大股票','US Equity':'美国股票','ADRs (Intl)':'ADR（国际）'}
   },
   en: {
-    intro:'Four holdings snapshots from the RBC statements, plus the trade proposals from Nov 2024 to Apr 2026. Pick a date to switch snapshots; click a ticker to see its history.',
+    intro:'Four holdings snapshots from the RBC statements, plus the trade proposals from Nov 2022 to Apr 2026. Pick a date to switch snapshots; click a ticker to see its history.',
     snapsAria:'Snapshots', mixTitle:'Asset mix', mixSub:'Share of total portfolio market value (CAD)',
     tabHold:'Holdings', tabTrades:'Trade timeline', holdSearch:'Search ticker or name…', tradeSearch:'Search ticker, company or report…',
     colTicker:'Ticker', colName:'Name', colQty:'Quantity', colMv:'Market value CAD', colW:'Weight', colChg:'vs previous',
@@ -248,7 +248,7 @@ const I18N = {
     month:(y,m)=>`${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1]} ${y}`, yearN:(yr,n)=>`${yr} year · ${n} ${n===1?'entry':'entries'}`,
     proposed:'Proposed', actual:'Actual', noTrades:'No trades match these filters.',
     close:'Close', notHeld:'Not in any snapshot', bySnap:'Holdings by snapshot', date:'Date', related:'Related trades',
-    notHeldRow:'Not held', noRelated:'No proposal in the folder mentions it, so it was probably held before Nov 2024.',
+    notHeldRow:'Not held', noRelated:'No proposal in the folder mentions it, so it was probably held before Nov 2022.',
     cls:{'Cash':'Cash','Money Market':'Money market','Bonds':'Bonds','REITs':'REITs','Canadian Equity':'Canadian equity','US Equity':'US equity','ADRs (Intl)':'ADRs (intl)'}
   }
 };
