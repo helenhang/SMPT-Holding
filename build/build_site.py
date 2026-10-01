@@ -161,12 +161,24 @@ def weekly(series):
 site_px = dict(bench=prices['bench'], end=prices.get('end'), missing=prices['missing'],
                w={k: weekly(v) for k, v in PX.items()})
 
+# GICS sector data (see fetch_sectors.py): index sector caps and top 15 per sector, and the
+# sector of each equity holding.
+sec_path = os.path.join(ROOT, 'data', 'sectors.json')
+site_sec = None
+if os.path.exists(sec_path):
+    sec = json.load(open(sec_path))
+    site_sec = dict(asof=sec['asof'], gics=sec['gics'], idx=sec['idx'], hold=sec['hold'])
+    for snap in snaps:
+        for r in snap['h']:
+            if r['v'] and r['c'] not in IND_BY_CLASS and r['t'] not in sec['hold']:
+                print(f'WARNING: {snap["date"]} {r["t"]} has no GICS sector; rerun fetch_sectors.py')
+
 site_trades = [dict(date=t['date'], yr=t['year'], rep=t['report'], act=t['action'], tk=t['ticker'],
                     sec=t['security'], prop=t['proposed'], act_=t['actual'], ex=t['executed'], note=t['note'],
                     pp=post_perf(t))
                for t in trades]
 
-data = json.dumps(dict(snaps=snaps, trades=site_trades, classes=ORDER, tind=tick_ind, perf=site_perf, px=site_px), separators=(',', ':'), ensure_ascii=False)
+data = json.dumps(dict(snaps=snaps, trades=site_trades, classes=ORDER, tind=tick_ind, perf=site_perf, px=site_px, sec=site_sec), separators=(',', ':'), ensure_ascii=False)
 html = open(os.path.join(ROOT, 'build', 'template.html')).read().replace('__DATA__', data)
 open(os.path.join(ROOT, 'index.html'), 'w').write(html)
 print(f'index.html: {len(snaps)} snapshots, {len(site_trades)} trades')

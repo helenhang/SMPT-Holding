@@ -15,7 +15,7 @@
   --buy:#1f7a3d; --buy-bg:#e3f1e6; --sell:#b3401f; --sell-bg:#f8e5dd; --warn:#8a5a00; --warn-bg:#fbefd2; --neutral-bg:#eceee9;
   --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7;
   --gap:#ffffff;
-  --c-smpt:var(--s3); --c-tsx:var(--s1); --c-sp:var(--s2);
+  --c-smpt:var(--s3); --c-tsx:var(--s1); --c-sp:var(--s2); --c-over:var(--s7); --c-under:var(--s4);
   --sans:"IBM Plex Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
   --cond:"IBM Plex Sans Condensed","IBM Plex Sans","PingFang SC",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
@@ -173,6 +173,13 @@ tr.sub table{min-width:0;background:var(--panel)}
 .dbar::before{content:"";position:absolute;left:50%;top:-2px;bottom:-2px;border-left:1px solid var(--muted)}
 .dbar span{position:absolute;top:2px;height:10px}
 .dbar .pos{left:50%;border-radius:0 3px 3px 0;background:var(--buy)} .dbar .neg{right:50%;border-radius:3px 0 0 3px;background:var(--sell)}
+.dbar .ov{left:50%;border-radius:0 3px 3px 0;background:var(--c-over)} .dbar .un{right:50%;border-radius:3px 0 0 3px;background:var(--c-under)}
+.tops{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+.tops table{min-width:0}
+.tops h4{margin:0 0 6px;font:600 13px var(--cond);color:var(--ink-2)}
+.held{color:var(--accent);font-weight:600}
+.hchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.hchips span{font:500 12px var(--mono);background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:3px 7px}
 .ppbar{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin:4px 0 14px}
 .muted{color:var(--muted)}
 .notes{margin:12px 0 0;padding-left:18px;font-size:12.5px;color:var(--ink-2);display:flex;flex-direction:column;gap:3px}
@@ -185,6 +192,7 @@ tr.sub table{min-width:0;background:var(--panel)}
   .tr .st{grid-column:2;grid-row:1;justify-self:end}
   .mix{grid-template-columns:70px 1fr}
   .drawer th,.drawer td{padding-inline:6px}
+  .tops{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -248,6 +256,13 @@ tr.sub table{min-width:0;background:var(--panel)}
             <div class="toggle-wrap" style="margin-bottom:8px"><span data-i18n="vsLbl"></span><div class="toggle" id="abench" role="group" data-i18n-aria="vsLbl"><button type="button" data-b="t">S&amp;P/TSX</button><button type="button" data-b="p">S&amp;P 500</button></div></div></div>
           <div class="chart" id="pbars"></div>
           <details class="tv"><summary data-i18n="tableView"></summary><div class="tbl-wrap" id="ptable"></div></details>
+        </section>
+        <section class="card" aria-labelledby="sech">
+          <h2 id="sech" data-i18n="secTitle"></h2><p class="sub" style="font-size:12.5px;margin-bottom:12px" id="secsub"></p>
+          <div class="tbl-wrap"><table id="sect"></table></div>
+          <h3 class="sh" data-i18n="secTime"></h3><p class="note-s" data-i18n="secTimeSub"></p>
+          <div class="tbl-wrap"><table class="cmp" id="sectime"></table></div>
+          <ul class="notes" id="secnotes"></ul>
         </section>
         <section class="card" aria-labelledby="rbch">
           <h2 id="rbch" data-i18n="rbcTitle"></h2><p class="sub" style="font-size:12.5px;margin-bottom:12px" data-i18n="rbcSub"></p>
@@ -338,6 +353,12 @@ const I18N = {
     ppNotes:['方向超额：买入 = 股票收益 − 基准收益；卖出 = 基准收益 − 股票收益。为正表示这个决定在该观察期内是对的。','收益含股息，按上市地货币计算，不含汇率影响；起点是提案日当天或之后的第一个交易日。“至今”的长度因提案而异。','只写到月份的提案日期（如 2024-03）按当月 15 日计算，表中标 ≈。','评估的是提案本身，不管有没有执行；执行情况见最后一列。'],
     ppMissing:l=>`没有价格数据：${l}（已退市）。`, pxSrc:d=>`价格来自 Yahoo Finance，更新到 ${d}。`,
     pxTitle:'股价走势', pxSub:b=>`周收盘价（按股息和拆股调整）。虚线是基准 ${b}，与起点对齐。▲ 买入提案，▼ 卖出提案。`,
+    secTitle:'行业配置（GICS）', secSub:(d,a)=>`${d} 快照的股票持仓（不含现金、货币基金和债券），与 S&P 500、S&P/TSX 综合指数按市值计算的行业权重对比。混合基准按 SMPT 股票中加拿大上市 ${a} 的比例，把两个指数加权。点击行业可查看市值前 15 名。`,
+    colSector:'行业', colBlend:'混合基准', colOU:'超配 / 低配', colNHeld:'持仓数', r1Smpt:'1 年 · SMPT 持仓', r1Sp:'1 年 · S&P 500 行业', r1Tsx:'1 年 · TSX 行业',
+    secHeld:'SMPT 在该行业的持仓：', secNone:'SMPT 在该行业没有持仓。', topOf:(n,m)=>`${n} 市值前 ${m} 名`, colRank:'#', colCap:c=>`市值（十亿 ${c}）`, colR1:'1 年收益', heldMark:'已持有', topFew:n=>`该指数在此行业只有 ${n} 家公司。`,
+    secTime:'行业配置随时间变化', secTimeSub:'SMPT 各快照股票持仓中各行业的占比（按当前的 GICS 分类）。', colChange:'变化',
+    secNotes:(d)=>[`成分股和 GICS 行业来自维基百科，市值和价格来自 Yahoo Finance，数据日期 ${d}。`,'指数行业权重按总市值计算，没有做自由流通调整，会和官方权重略有出入。','SMPT 持仓如果是指数成分股，沿用指数的 GICS 行业；否则（主要是 ADR）用 Yahoo 的行业分类换算。','“1 年 · SMPT 持仓”是现有持仓过去一年的收益按当前市值加权，不是组合的实际收益（没有考虑期间的买卖）；指数行业收益按成员市值加权。都按上市地货币计算，含股息。'],
+    gics:{'Information Technology':'信息技术','Financials':'金融','Health Care':'医疗保健','Consumer Discretionary':'可选消费','Communication Services':'通信服务','Industrials':'工业','Consumer Staples':'必需消费','Energy':'能源','Materials':'原材料','Utilities':'公用事业','Real Estate':'房地产'},
     colInd:'行业', grpBy:'分组', grpCls:'资产类别', grpInd:'行业', allInd:'全部行业',
     cls:{'Cash':'现金','Money Market':'货币基金','Bonds':'债券','REITs':'REITs','Canadian Equity':'加拿大股票','US Equity':'美国股票','ADRs (Intl)':'ADR（国际）'},
     ind:{BANK:'银行',NBF:'非银金融',TECH:'科技',TCOM:'电信',DISC:'消费',RTLR:'零售',REST:'餐饮',PHRM:'医药',INDS:'工业',MAT:'原材料','O&G':'油气',TRANS:'运输',UTIL:'公用事业',REIT:'房地产信托',BOND:'债券',MMF:'货币基金',CASH:'现金',WRNTS:'认股权证',ETF:'指数 ETF',OTHER:'其他'}
@@ -385,6 +406,12 @@ const I18N = {
     ppNotes:['Directional excess: for a buy, stock return − benchmark return; for a sell, benchmark return − stock return. Positive means the call was right over that horizon.','Returns include dividends and are in the listing currency, so currency moves are excluded. They start on the first trading day on or after the proposal date. "To date" differs in length for each proposal.','Proposal dates known only to the month (e.g. 2024-03) are measured from the 15th and marked ≈.','This scores the proposal itself, whether or not it was executed; see the last column for execution.'],
     ppMissing:l=>`No price data: ${l} (delisted).`, pxSrc:d=>`Prices from Yahoo Finance, updated ${d}.`,
     pxTitle:'Price history', pxSub:b=>`Weekly closes, adjusted for dividends and splits. The dashed line is the benchmark ${b}, rebased to the first point. ▲ buy proposal, ▼ sell proposal.`,
+    secTitle:'Sector allocation (GICS)', secSub:(d,a)=>`Equity holdings at the ${d} snapshot (excluding cash, money market and bonds) against the market-cap sector weights of the S&P 500 and the S&P/TSX Composite. The blended benchmark weights the two indices by SMPT’s ${a} share of equity listed in Canada. Click a sector to see its 15 largest companies.`,
+    colSector:'Sector', colBlend:'Blended', colOU:'Over / under', colNHeld:'Holdings', r1Smpt:'1y · SMPT holdings', r1Sp:'1y · S&P 500 sector', r1Tsx:'1y · TSX sector',
+    secHeld:'SMPT holdings in this sector:', secNone:'SMPT holds nothing in this sector.', topOf:(n,m)=>`${n}: ${m} largest`, colRank:'#', colCap:c=>`Market cap (${c} bn)`, colR1:'1y return', heldMark:'Held', topFew:n=>`This index has only ${n} companies in this sector.`,
+    secTime:'Sector allocation over time', secTimeSub:'Share of SMPT’s equity holdings in each sector at each snapshot (current GICS classification).', colChange:'Change',
+    secNotes:(d)=>[`Constituents and GICS sectors from Wikipedia; market caps and prices from Yahoo Finance, as of ${d}.`,'Index sector weights use total market cap, not float-adjusted cap, so they differ slightly from official weights.','Holdings that are index members take the index’s GICS sector; others (mostly ADRs) use Yahoo’s sector, mapped to GICS.','"1y · SMPT holdings" is the past-year return of the current holdings weighted by current value, not the portfolio’s actual return (it ignores trades during the year). Index sector returns are cap-weighted. All in listing currency, dividends included.'],
+    gics:{'Information Technology':'Information Technology','Financials':'Financials','Health Care':'Health Care','Consumer Discretionary':'Consumer Discretionary','Communication Services':'Communication Services','Industrials':'Industrials','Consumer Staples':'Consumer Staples','Energy':'Energy','Materials':'Materials','Utilities':'Utilities','Real Estate':'Real Estate'},
     colInd:'Industry', grpBy:'Group by', grpCls:'Asset class', grpInd:'Industry', allInd:'All industries',
     cls:{'Cash':'Cash','Money Market':'Money market','Bonds':'Bonds','REITs':'REITs','Canadian Equity':'Canadian equity','US Equity':'US equity','ADRs (Intl)':'ADRs (intl)'},
     ind:{BANK:'Banks',NBF:'Non-bank financials',TECH:'Technology',TCOM:'Telecom',DISC:'Consumer',RTLR:'Retail',REST:'Restaurants',PHRM:'Pharma',INDS:'Industrials',MAT:'Materials','O&G':'Oil & gas',TRANS:'Transportation',UTIL:'Utilities',REIT:'REITs',BOND:'Bonds',MMF:'Money market',CASH:'Cash',WRNTS:'Warrants',ETF:'Index ETFs',OTHER:'Other'}
@@ -697,11 +724,49 @@ function renderAna(){
   $('#betat').innerHTML=`<thead><tr><th>${T('colSnap')}</th><th class="r">${T('betaH')}</th><th class="r">${T('betaX')}</th></tr></thead><tbody>
     ${PF.per.map(p=>`<tr><td class="num">${esc(p.snap)}</td>${p.beta?`<td class="r num">${num2(p.beta.h)}</td><td class="r num">${num2(p.beta.x)}</td>`:`<td class="r" colspan="2" style="color:var(--muted)">${T('betaNA')}</td>`}</tr>`).join('')}</tbody>`;
   $('#rnotes').innerHTML=I18N[LANG].riskNotes.map(n=>`<li>${esc(n)}</li>`).join('');
-  renderPP();
+  renderSec(); renderPP();
 }
 document.querySelectorAll('#awin button').forEach(b=>b.onclick=()=>{aWin=b.dataset.w; renderAna();});
 document.querySelectorAll('#abench button').forEach(b=>b.onclick=()=>{aBench=b.dataset.b; renderAna();});
 let rsz; addEventListener('resize',()=>{clearTimeout(rsz); rsz=setTimeout(renderAna,150);});
+
+/* ---------- GICS sectors ---------- */
+const GN = g => I18N[LANG].gics[g] || g;
+const isCA = h => h.c==='Canadian Equity' || h.c==='REITs';
+function secOf(snap){
+  const SC=DATA.sec, eq=snap.h.filter(h=>h.v>0 && SC.hold[h.t]?.g), tot=sum(eq.map(h=>h.v));
+  return {eq, tot, ca:sum(eq.filter(isCA).map(h=>h.v))/tot, w:g=>sum(eq.filter(h=>SC.hold[h.t].g===g).map(h=>h.v))/tot};
+}
+function renderSec(){
+  const SC=DATA.sec; if(!SC) return;
+  const snap=S.at(-1), X=secOf(snap);
+  const icap = m => sum(Object.values(SC.idx[m].sectors).map(x=>x.cap));
+  const capU=icap('US'), capC=icap('CA');
+  const heldKeys=new Set(X.eq.map(h=>SC.hold[h.t].key).filter(Boolean));
+  const rows=SC.gics.map(g=>{
+    const hs=X.eq.filter(h=>SC.hold[h.t].g===g).sort((a,b)=>b.v-a.v), w=X.w(g);
+    const us=(SC.idx.US.sectors[g]?.cap||0)/capU, ca=(SC.idx.CA.sectors[g]?.cap||0)/capC, bl=X.ca*ca+(1-X.ca)*us;
+    const rr=hs.filter(h=>SC.hold[h.t].r1!=null), r=rr.length? sum(rr.map(h=>h.v*SC.hold[h.t].r1))/sum(rr.map(h=>h.v)) : null;
+    return {g,hs,w,us,ca,bl,d:w-bl,r,rU:SC.idx.US.sectors[g]?.r1,rC:SC.idx.CA.sectors[g]?.r1};
+  }).sort((a,b)=>b.w-a.w||b.bl-a.bl);
+  const mx=Math.max(.01,...rows.map(x=>Math.abs(x.d)));
+  $('#secsub').textContent=T('secSub',snap.date,pct(X.ca,0));
+  const top=(m,g)=>{ const x=SC.idx[m].sectors[g]; if(!x) return `<p class="nm">—</p>`;
+    return `<div><h4>${T('topOf',esc(SC.idx[m].name),x.top.length)}</h4>${x.n<15?`<p class="nm" style="font-size:12px;margin:0 0 4px">${T('topFew',x.n)}</p>`:''}<table><thead><tr><th class="r">${T('colRank')}</th><th>${T('colName')}</th><th class="r">${T('colCap',SC.idx[m].ccy)}</th><th class="r">${T('colR1')}</th><th></th></tr></thead><tbody>
+      ${x.top.map((c,i)=>{ const held=c.keys.some(k=>heldKeys.has(k)); return `<tr${held?' style="background:var(--accent-soft)"':''}><td class="r num muted">${i+1}</td><td><span class="num" style="font-weight:600">${esc(c.t)}</span> <span class="nm">${esc(c.name)}</span></td><td class="r num">${fmt(c.cap,c.cap<10?1:0)}</td><td class="r num">${spct(c.r1,0)}</td><td>${held?`<span class="held">✓ ${T('heldMark')}</span>`:''}</td></tr>`; }).join('')}</tbody></table></div>`; };
+  $('#sect').innerHTML=`<thead><tr><th>${T('colSector')}</th><th class="r">SMPT</th><th class="r">${T('colBlend')}</th><th class="r">${T('colOU')}</th><th></th><th class="r">S&amp;P 500</th><th class="r">S&amp;P/TSX</th><th class="r">${T('colNHeld')}</th><th class="r">${T('r1Smpt')}</th><th class="r">${T('r1Sp')}</th><th class="r">${T('r1Tsx')}</th></tr></thead><tbody>
+    ${rows.map((x,i)=>`<tr class="row"><td><button class="xp" aria-expanded="false" style="font-family:var(--sans)">${esc(GN(x.g))}</button></td><td class="r num">${pct(x.w)}</td><td class="r num">${pct(x.bl)}</td><td class="r num">${spp(x.d)}</td>
+      <td><div class="dbar"><span class="${x.d>=0?'ov':'un'}" style="width:${Math.abs(x.d)/mx*50}%"></span></div></td><td class="r num">${pct(x.us)}</td><td class="r num">${pct(x.ca)}</td><td class="r num">${x.hs.length}</td>
+      <td class="r num">${spct(x.r)}</td><td class="r num">${spct(x.rU)}</td><td class="r num">${spct(x.rC)}</td></tr>
+      <tr class="sub" hidden><td colspan="11">${x.hs.length?`<div class="nm">${T('secHeld')}</div><div class="hchips">${x.hs.map(h=>`<span><button class="tk" data-t="${esc(h.t)}">${esc(h.t)}</button> ${pct(h.v/X.tot)}${SC.hold[h.t].r1!=null?` · ${spct(SC.hold[h.t].r1,0)}`:''}</span>`).join('')}</div>`:`<div class="nm">${T('secNone')}</div>`}
+        <div class="tops">${top('US',x.g)}${top('CA',x.g)}</div></td></tr>`).join('')}</tbody>`;
+  $('#sect').querySelectorAll('.xp').forEach(b=>b.onclick=()=>{const o=b.getAttribute('aria-expanded')!=='true'; b.setAttribute('aria-expanded',o); b.closest('tr').nextElementSibling.hidden=!o;});
+  const W=S.map(secOf);
+  $('#sectime').innerHTML=`<thead><tr><th>${T('colSector')}</th>${S.map(s=>`<th class="r">${s.date}</th>`).join('')}<th class="r">${T('colChange')}</th></tr></thead><tbody>
+    ${rows.map(x=>{ const ws=W.map(w=>w.w(x.g)); return `<tr><td>${esc(GN(x.g))}</td>${ws.map(v=>`<td class="r num">${pct(v)}</td>`).join('')}<td class="r num">${spp(ws.at(-1)-ws[0])}</td></tr>`; }).join('')}</tbody>`;
+  $('#secnotes').innerHTML=T('secNotes',SC.asof).map(n=>`<li>${esc(n)}</li>`).join('');
+  bindTk();
+}
 
 /* ---------- proposal performance ---------- */
 let ppH = '6', ppA = 'ALL', ppS = 'date';

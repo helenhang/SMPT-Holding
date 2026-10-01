@@ -1,0 +1,3269 @@
+{
+ "asof": "2026-10-01",
+ "gics": [
+  "Information Technology",
+  "Financials",
+  "Health Care",
+  "Consumer Discretionary",
+  "Communication Services",
+  "Industrials",
+  "Consumer Staples",
+  "Energy",
+  "Materials",
+  "Utilities",
+  "Real Estate"
+ ],
+ "idx": {
+  "US": {
+   "name": "S&P 500",
+   "ccy": "USD",
+   "n": 500,
+   "sectors": {
+    "Industrials": {
+     "cap": 5500.55,
+     "n": 83,
+     "r1": 0.2594,
+     "top": [
+      {
+       "t": "CAT",
+       "name": "Caterpillar Inc.",
+       "cap": 381.94,
+       "r1": 0.7897,
+       "keys": [
+        "US:CAT"
+       ]
+      },
+      {
+       "t": "GE",
+       "name": "GE Aerospace",
+       "cap": 326.14,
+       "r1": 0.0515,
+       "keys": [
+        "US:GE"
+       ]
+      },
+      {
+       "t": "GEV",
+       "name": "GE Vernova",
+       "cap": 266.2,
+       "r1": 0.5978,
+       "keys": [
+        "US:GEV"
+       ]
+      },
+      {
+       "t": "RTX",
+       "name": "RTX Corporation",
+       "cap": 249.67,
+       "r1": 0.1642,
+       "keys": [
+        "US:RTX"
+       ]
+      },
+      {
+       "t": "DE",
+       "name": "Deere & Company",
+       "cap": 179.63,
+       "r1": 0.4433,
+       "keys": [
+        "US:DE"
+       ]
+      },
+      {
+       "t": "ETN",
+       "name": "Eaton Corporation",
+       "cap": 170.18,
+       "r1": 0.1927,
+       "keys": [
+        "US:ETN"
+       ]
+      },
+      {
+       "t": "UNP",
+       "name": "Union Pacific Corporation",
+       "cap": 160.98,
+       "r1": 0.2012,
+       "keys": [
+        "US:UNP"
+       ]
+      },
+      {
+       "t": "BA",
+       "name": "Boeing",
+       "cap": 149.75,
+       "r1": -0.1165,
+       "keys": [
+        "US:BA"
+       ]
+      },
+      {
+       "t": "UBER",
+       "name": "Uber",
+       "cap": 138.61,
+       "r1": -0.3058,
+       "keys": [
+        "US:UBER"
+       ]
+      },
+      {
+       "t": "PH",
+       "name": "Parker Hannifin",
+       "cap": 121.95,
+       "r1": 0.3011,
+       "keys": [
+        "US:PH"
+       ]
+      },
+      {
+       "t": "LMT",
+       "name": "Lockheed Martin",
+       "cap": 116.82,
+       "r1": 0.0678,
+       "keys": [
+        "US:LMT"
+       ]
+      },
+      {
+       "t": "ADP",
+       "name": "Automatic Data Processing",
+       "cap": 104.32,
+       "r1": -0.0703,
+       "keys": [
+        "US:ADP"
+       ]
+      },
+      {
+       "t": "TT",
+       "name": "Trane Technologies",
+       "cap": 100.67,
+       "r1": 0.141,
+       "keys": [
+        "US:TT"
+       ]
+      },
+      {
+       "t": "PWR",
+       "name": "Quanta Services",
+       "cap": 99.52,
+       "r1": 0.6431,
+       "keys": [
+        "US:PWR"
+       ]
+      },
+      {
+       "t": "VRT",
+       "name": "Vertiv",
+       "cap": 95.86,
+       "r1": 0.7605,
+       "keys": [
+        "US:VRT"
+       ]
+      }
+     ]
+    },
+    "Health Care": {
+     "cap": 6234.51,
+     "n": 60,
+     "r1": 0.4017,
+     "top": [
+      {
+       "t": "LLY",
+       "name": "Lilly (Eli)",
+       "cap": 1025.32,
+       "r1": 0.5542,
+       "keys": [
+        "US:LLY"
+       ]
+      },
+      {
+       "t": "JNJ",
+       "name": "Johnson & Johnson",
+       "cap": 624.53,
+       "r1": 0.4982,
+       "keys": [
+        "US:JNJ"
+       ]
+      },
+      {
+       "t": "ABBV",
+       "name": "AbbVie",
+       "cap": 460.59,
+       "r1": 0.2204,
+       "keys": [
+        "US:ABBV"
+       ]
+      },
+      {
+       "t": "MRK",
+       "name": "Merck & Co.",
+       "cap": 355.89,
+       "r1": 0.8612,
+       "keys": [
+        "US:MRK"
+       ]
+      },
+      {
+       "t": "UNH",
+       "name": "UnitedHealth Group",
+       "cap": 327.04,
+       "r1": 0.0639,
+       "keys": [
+        "US:UNH"
+       ]
+      },
+      {
+       "t": "TMO",
+       "name": "Thermo Fisher Scientific",
+       "cap": 244.15,
+       "r1": 0.416,
+       "keys": [
+        "US:TMO"
+       ]
+      },
+      {
+       "t": "AMGN",
+       "name": "Amgen",
+       "cap": 222.86,
+       "r1": 0.5158,
+       "keys": [
+        "US:AMGN"
+       ]
+      },
+      {
+       "t": "GILD",
+       "name": "Gilead Sciences",
+       "cap": 183.71,
+       "r1": 0.3353,
+       "keys": [
+        "US:GILD"
+       ]
+      },
+      {
+       "t": "ABT",
+       "name": "Abbott Laboratories",
+       "cap": 168.63,
+       "r1": -0.2562,
+       "keys": [
+        "US:ABT"
+       ]
+      },
+      {
+       "t": "PFE",
+       "name": "Pfizer",
+       "cap": 160.99,
+       "r1": 0.2547,
+       "keys": [
+        "US:PFE"
+       ]
+      },
+      {
+       "t": "DHR",
+       "name": "Danaher Corporation",
+       "cap": 150.51,
+       "r1": 0.1609,
+       "keys": [
+        "US:DHR"
+       ]
+      },
+      {
+       "t": "ISRG",
+       "name": "Intuitive Surgical",
+       "cap": 144.55,
+       "r1": -0.0923,
+       "keys": [
+        "US:ISRG"
+       ]
+      },
+      {
+       "t": "VRTX",
+       "name": "Vertex Pharmaceuticals",
+       "cap": 129.28,
+       "r1": 0.3543,
+       "keys": [
+        "US:VRTX"
+       ]
+      },
+      {
+       "t": "BMY",
+       "name": "Bristol Myers Squibb",
+       "cap": 125.97,
+       "r1": 0.4624,
+       "keys": [
+        "US:BMY"
+       ]
+      },
+      {
+       "t": "MDT",
+       "name": "Medtronic",
+       "cap": 109.78,
+       "r1": -0.0674,
+       "keys": [
+        "US:MDT"
+       ]
+      }
+     ]
+    },
+    "Information Technology": {
+     "cap": 26935.14,
+     "n": 74,
+     "r1": 0.9919,
+     "top": [
+      {
+       "t": "NVDA",
+       "name": "Nvidia",
+       "cap": 5580.13,
+       "r1": 0.3086,
+       "keys": [
+        "US:NVDA"
+       ]
+      },
+      {
+       "t": "AAPL",
+       "name": "Apple Inc.",
+       "cap": 4800.76,
+       "r1": 0.3094,
+       "keys": [
+        "US:AAPL"
+       ]
+      },
+      {
+       "t": "MSFT",
+       "name": "Microsoft",
+       "cap": 3828.5,
+       "r1": 0.0196,
+       "keys": [
+        "US:MSFT"
+       ]
+      },
+      {
+       "t": "AVGO",
+       "name": "Broadcom",
+       "cap": 1668.86,
+       "r1": 0.0398,
+       "keys": [
+        "US:AVGO"
+       ]
+      },
+      {
+       "t": "MU",
+       "name": "Micron Technology",
+       "cap": 1216.0,
+       "r1": 5.6689,
+       "keys": [
+        "US:MU"
+       ]
+      },
+      {
+       "t": "AMD",
+       "name": "Advanced Micro Devices",
+       "cap": 1007.6,
+       "r1": 2.843,
+       "keys": [
+        "US:AMD"
+       ]
+      },
+      {
+       "t": "INTC",
+       "name": "Intel",
+       "cap": 641.29,
+       "r1": 2.9029,
+       "keys": [
+        "US:INTC"
+       ]
+      },
+      {
+       "t": "PLTR",
+       "name": "Palantir Technologies",
+       "cap": 457.58,
+       "r1": 0.0605,
+       "keys": [
+        "US:PLTR"
+       ]
+      },
+      {
+       "t": "CSCO",
+       "name": "Cisco",
+       "cap": 428.44,
+       "r1": 0.6489,
+       "keys": [
+        "US:CSCO"
+       ]
+      },
+      {
+       "t": "LRCX",
+       "name": "Lam Research",
+       "cap": 424.18,
+       "r1": 1.6534,
+       "keys": [
+        "US:LRCX"
+       ]
+      },
+      {
+       "t": "AMAT",
+       "name": "Applied Materials",
+       "cap": 421.96,
+       "r1": 1.657,
+       "keys": [
+        "US:AMAT"
+       ]
+      },
+      {
+       "t": "ORCL",
+       "name": "Oracle Corporation",
+       "cap": 420.11,
+       "r1": -0.5455,
+       "keys": [
+        "US:ORCL"
+       ]
+      },
+      {
+       "t": "DELL",
+       "name": "Dell Technologies",
+       "cap": 348.71,
+       "r1": 3.2186,
+       "keys": [
+        "US:DELL"
+       ]
+      },
+      {
+       "t": "PANW",
+       "name": "Palo Alto Networks",
+       "cap": 321.11,
+       "r1": 0.9559,
+       "keys": [
+        "US:PANW"
+       ]
+      },
+      {
+       "t": "CRWD",
+       "name": "CrowdStrike",
+       "cap": 271.94,
+       "r1": 1.2331,
+       "keys": [
+        "US:CRWD"
+       ]
+      }
+     ]
+    },
+    "Utilities": {
+     "cap": 1265.05,
+     "n": 31,
+     "r1": -0.043,
+     "top": [
+      {
+       "t": "NEE",
+       "name": "NextEra Energy",
+       "cap": 158.72,
+       "r1": 0.0597,
+       "keys": [
+        "US:NEE"
+       ]
+      },
+      {
+       "t": "SO",
+       "name": "Southern Company",
+       "cap": 95.58,
+       "r1": -0.0906,
+       "keys": [
+        "US:SO"
+       ]
+      },
+      {
+       "t": "CEG",
+       "name": "Constellation Energy",
+       "cap": 92.38,
+       "r1": -0.2265,
+       "keys": [
+        "US:CEG"
+       ]
+      },
+      {
+       "t": "DUK",
+       "name": "Duke Energy",
+       "cap": 88.61,
+       "r1": -0.0494,
+       "keys": [
+        "US:DUK"
+       ]
+      },
+      {
+       "t": "AEP",
+       "name": "American Electric Power",
+       "cap": 64.83,
+       "r1": 0.1269,
+       "keys": [
+        "US:AEP"
+       ]
+      },
+      {
+       "t": "D",
+       "name": "Dominion Energy",
+       "cap": 53.29,
+       "r1": 0.0344,
+       "keys": [
+        "US:D"
+       ]
+      },
+      {
+       "t": "SRE",
+       "name": "Sempra",
+       "cap": 50.81,
+       "r1": -0.0759,
+       "keys": [
+        "US:SRE"
+       ]
+      },
+      {
+       "t": "ETR",
+       "name": "Entergy",
+       "cap": 47.63,
+       "r1": 0.1152,
+       "keys": [
+        "US:ETR"
+       ]
+      },
+      {
+       "t": "VST",
+       "name": "Vistra Corp .",
+       "cap": 47.12,
+       "r1": -0.3009,
+       "keys": [
+        "US:VST"
+       ]
+      },
+      {
+       "t": "XEL",
+       "name": "Xcel Energy",
+       "cap": 43.91,
+       "r1": -0.07,
+       "keys": [
+        "US:XEL"
+       ]
+      },
+      {
+       "t": "EXC",
+       "name": "Exelon",
+       "cap": 41.66,
+       "r1": -0.0531,
+       "keys": [
+        "US:EXC"
+       ]
+      },
+      {
+       "t": "ED",
+       "name": "Consolidated Edison",
+       "cap": 38.34,
+       "r1": 0.083,
+       "keys": [
+        "US:ED"
+       ]
+      },
+      {
+       "t": "PCG",
+       "name": "PG&E Corporation",
+       "cap": 36.27,
+       "r1": -0.1642,
+       "keys": [
+        "US:PCG"
+       ]
+      },
+      {
+       "t": "PEG",
+       "name": "Public Service Enterprise Group",
+       "cap": 33.64,
+       "r1": -0.153,
+       "keys": [
+        "US:PEG"
+       ]
+      },
+      {
+       "t": "WEC",
+       "name": "WEC Energy Group",
+       "cap": 32.95,
+       "r1": -0.0663,
+       "keys": [
+        "US:WEC"
+       ]
+      }
+     ]
+    },
+    "Financials": {
+     "cap": 8057.52,
+     "n": 76,
+     "r1": 0.0344,
+     "top": [
+      {
+       "t": "BRK.B",
+       "name": "Berkshire Hathaway",
+       "cap": 1067.67,
+       "r1": 0.0032,
+       "keys": [
+        "US:BRK.B"
+       ]
+      },
+      {
+       "t": "JPM",
+       "name": "JPMorgan Chase",
+       "cap": 883.04,
+       "r1": 0.08,
+       "keys": [
+        "US:JPM"
+       ]
+      },
+      {
+       "t": "V",
+       "name": "Visa Inc.",
+       "cap": 673.55,
+       "r1": 0.0679,
+       "keys": [
+        "US:V"
+       ]
+      },
+      {
+       "t": "MA",
+       "name": "Mastercard",
+       "cap": 481.33,
+       "r1": -0.0283,
+       "keys": [
+        "US:MA"
+       ]
+      },
+      {
+       "t": "BAC",
+       "name": "Bank of America",
+       "cap": 375.44,
+       "r1": 0.0612,
+       "keys": [
+        "US:BAC"
+       ]
+      },
+      {
+       "t": "MS",
+       "name": "Morgan Stanley",
+       "cap": 292.75,
+       "r1": 0.2063,
+       "keys": [
+        "US:MS"
+       ]
+      },
+      {
+       "t": "GS",
+       "name": "Goldman Sachs",
+       "cap": 261.08,
+       "r1": 0.1545,
+       "keys": [
+        "US:GS"
+       ]
+      },
+      {
+       "t": "WFC",
+       "name": "Wells Fargo",
+       "cap": 240.18,
+       "r1": -0.0344,
+       "keys": [
+        "US:WFC"
+       ]
+      },
+      {
+       "t": "C",
+       "name": "Citigroup",
+       "cap": 213.24,
+       "r1": 0.2761,
+       "keys": [
+        "US:C"
+       ]
+      },
+      {
+       "t": "AXP",
+       "name": "American Express",
+       "cap": 203.6,
+       "r1": -0.1058,
+       "keys": [
+        "US:AXP"
+       ]
+      },
+      {
+       "t": "SCHW",
+       "name": "Charles Schwab Corporation",
+       "cap": 169.75,
+       "r1": 0.0758,
+       "keys": [
+        "US:SCHW"
+       ]
+      },
+      {
+       "t": "BLK",
+       "name": "BlackRock",
+       "cap": 165.53,
+       "r1": -0.0307,
+       "keys": [
+        "US:BLK"
+       ]
+      },
+      {
+       "t": "CB",
+       "name": "Chubb Limited",
+       "cap": 127.13,
+       "r1": 0.1949,
+       "keys": [
+        "US:CB"
+       ]
+      },
+      {
+       "t": "PGR",
+       "name": "Progressive Corporation",
+       "cap": 121.26,
+       "r1": -0.0737,
+       "keys": [
+        "US:PGR"
+       ]
+      },
+      {
+       "t": "COF",
+       "name": "Capital One",
+       "cap": 118.49,
+       "r1": -0.1256,
+       "keys": [
+        "US:COF"
+       ]
+      }
+     ]
+    },
+    "Materials": {
+     "cap": 1094.41,
+     "n": 25,
+     "r1": 0.1742,
+     "top": [
+      {
+       "t": "LIN",
+       "name": "Linde plc",
+       "cap": 216.48,
+       "r1": 0.0027,
+       "keys": [
+        "US:LIN"
+       ]
+      },
+      {
+       "t": "NEM",
+       "name": "Newmont",
+       "cap": 121.9,
+       "r1": 0.3948,
+       "keys": [
+        "US:NEM"
+       ]
+      },
+      {
+       "t": "FCX",
+       "name": "Freeport-McMoRan",
+       "cap": 100.16,
+       "r1": 0.8686,
+       "keys": [
+        "US:FCX"
+       ]
+      },
+      {
+       "t": "SHW",
+       "name": "Sherwin-Williams",
+       "cap": 77.95,
+       "r1": -0.0542,
+       "keys": [
+        "US:SHW"
+       ]
+      },
+      {
+       "t": "ECL",
+       "name": "Ecolab",
+       "cap": 76.34,
+       "r1": 0.0307,
+       "keys": [
+        "US:ECL"
+       ]
+      },
+      {
+       "t": "APD",
+       "name": "Air Products",
+       "cap": 60.65,
+       "r1": 0.0266,
+       "keys": [
+        "US:APD"
+       ]
+      },
+      {
+       "t": "CRH",
+       "name": "CRH plc",
+       "cap": 54.6,
+       "r1": -0.2625,
+       "keys": [
+        "US:CRH"
+       ]
+      },
+      {
+       "t": "NUE",
+       "name": "Nucor",
+       "cap": 53.28,
+       "r1": 0.7519,
+       "keys": [
+        "US:NUE"
+       ]
+      },
+      {
+       "t": "MLM",
+       "name": "Martin Marietta Materials",
+       "cap": 34.11,
+       "r1": -0.2042,
+       "keys": [
+        "US:MLM"
+       ]
+      },
+      {
+       "t": "STLD",
+       "name": "Steel Dynamics",
+       "cap": 32.53,
+       "r1": 0.6881,
+       "keys": [
+        "US:STLD"
+       ]
+      },
+      {
+       "t": "VMC",
+       "name": "Vulcan Materials Company",
+       "cap": 31.37,
+       "r1": -0.1699,
+       "keys": [
+        "US:VMC"
+       ]
+      },
+      {
+       "t": "PPG",
+       "name": "PPG Industries",
+       "cap": 23.26,
+       "r1": 0.0172,
+       "keys": [
+        "US:PPG"
+       ]
+      },
+      {
+       "t": "SW",
+       "name": "Smurfit Westrock",
+       "cap": 22.72,
+       "r1": 0.0311,
+       "keys": [
+        "US:SW"
+       ]
+      },
+      {
+       "t": "IFF",
+       "name": "International Flavors & Fragrances",
+       "cap": 21.24,
+       "r1": 0.3668,
+       "keys": [
+        "US:IFF"
+       ]
+      },
+      {
+       "t": "PKG",
+       "name": "Packaging Corporation of America",
+       "cap": 20.48,
+       "r1": 0.0946,
+       "keys": [
+        "US:PKG"
+       ]
+      }
+     ]
+    },
+    "Consumer Discretionary": {
+     "cap": 6457.64,
+     "n": 47,
+     "r1": -0.0082,
+     "top": [
+      {
+       "t": "AMZN",
+       "name": "Amazon",
+       "cap": 2690.54,
+       "r1": 0.1336,
+       "keys": [
+        "US:AMZN"
+       ]
+      },
+      {
+       "t": "TSLA",
+       "name": "Tesla, Inc.",
+       "cap": 1414.25,
+       "r1": -0.1915,
+       "keys": [
+        "US:TSLA"
+       ]
+      },
+      {
+       "t": "HD",
+       "name": "Home Depot (The)",
+       "cap": 282.4,
+       "r1": -0.2902,
+       "keys": [
+        "US:HD"
+       ]
+      },
+      {
+       "t": "MCD",
+       "name": "McDonald's",
+       "cap": 164.0,
+       "r1": -0.2188,
+       "keys": [
+        "US:MCD"
+       ]
+      },
+      {
+       "t": "TJX",
+       "name": "TJX Companies",
+       "cap": 147.01,
+       "r1": -0.0409,
+       "keys": [
+        "US:TJX"
+       ]
+      },
+      {
+       "t": "BKNG",
+       "name": "Booking Holdings",
+       "cap": 121.43,
+       "r1": -0.2622,
+       "keys": [
+        "US:BKNG"
+       ]
+      },
+      {
+       "t": "SBUX",
+       "name": "Starbucks",
+       "cap": 108.03,
+       "r1": 0.1544,
+       "keys": [
+        "US:SBUX"
+       ]
+      },
+      {
+       "t": "LOW",
+       "name": "Lowe's",
+       "cap": 102.81,
+       "r1": -0.2744,
+       "keys": [
+        "US:LOW"
+       ]
+      },
+      {
+       "t": "ABNB",
+       "name": "Airbnb",
+       "cap": 93.95,
+       "r1": 0.294,
+       "keys": [
+        "US:ABNB"
+       ]
+      },
+      {
+       "t": "MAR",
+       "name": "Marriott International",
+       "cap": 92.67,
+       "r1": 0.366,
+       "keys": [
+        "US:MAR"
+       ]
+      },
+      {
+       "t": "DASH",
+       "name": "DoorDash",
+       "cap": 79.1,
+       "r1": -0.3006,
+       "keys": [
+        "US:DASH"
+       ]
+      },
+      {
+       "t": "ROST",
+       "name": "Ross Stores",
+       "cap": 75.22,
+       "r1": 0.5892,
+       "keys": [
+        "US:ROST"
+       ]
+      },
+      {
+       "t": "RCL",
+       "name": "Royal Caribbean Group",
+       "cap": 72.02,
+       "r1": -0.1576,
+       "keys": [
+        "US:RCL"
+       ]
+      },
+      {
+       "t": "HLT",
+       "name": "Hilton Worldwide",
+       "cap": 71.32,
+       "r1": 0.2065,
+       "keys": [
+        "US:HLT"
+       ]
+      },
+      {
+       "t": "GM",
+       "name": "General Motors",
+       "cap": 70.81,
+       "r1": 0.3176,
+       "keys": [
+        "US:GM"
+       ]
+      }
+     ]
+    },
+    "Real Estate": {
+     "cap": 1130.37,
+     "n": 30,
+     "r1": 0.0872,
+     "top": [
+      {
+       "t": "WELL",
+       "name": "Welltower",
+       "cap": 163.98,
+       "r1": 0.349,
+       "keys": [
+        "US:WELL"
+       ]
+      },
+      {
+       "t": "PLD",
+       "name": "Prologis",
+       "cap": 122.3,
+       "r1": 0.1765,
+       "keys": [
+        "US:PLD"
+       ]
+      },
+      {
+       "t": "EQIX",
+       "name": "Equinix",
+       "cap": 100.0,
+       "r1": 0.3094,
+       "keys": [
+        "US:EQIX"
+       ]
+      },
+      {
+       "t": "AMT",
+       "name": "American Tower",
+       "cap": 75.17,
+       "r1": -0.1227,
+       "keys": [
+        "US:AMT"
+       ]
+      },
+      {
+       "t": "DLR",
+       "name": "Digital Realty",
+       "cap": 65.07,
+       "r1": 0.0492,
+       "keys": [
+        "US:DLR"
+       ]
+      },
+      {
+       "t": "SPG",
+       "name": "Simon Property Group",
+       "cap": 64.86,
+       "r1": 0.1453,
+       "keys": [
+        "US:SPG"
+       ]
+      },
+      {
+       "t": "PSA",
+       "name": "Public Storage",
+       "cap": 53.25,
+       "r1": 0.058,
+       "keys": [
+        "US:PSA"
+       ]
+      },
+      {
+       "t": "O",
+       "name": "Realty Income",
+       "cap": 50.77,
+       "r1": -0.052,
+       "keys": [
+        "US:O"
+       ]
+      },
+      {
+       "t": "VMRK",
+       "name": "Vivmark Residential",
+       "cap": 46.47,
+       "r1": -0.0369,
+       "keys": [
+        "US:VMRK"
+       ]
+      },
+      {
+       "t": "VTR",
+       "name": "Ventas",
+       "cap": 42.91,
+       "r1": 0.2593,
+       "keys": [
+        "US:VTR"
+       ]
+      },
+      {
+       "t": "CBRE",
+       "name": "CBRE Group",
+       "cap": 37.61,
+       "r1": -0.1719,
+       "keys": [
+        "US:CBRE"
+       ]
+      },
+      {
+       "t": "IRM",
+       "name": "Iron Mountain",
+       "cap": 32.96,
+       "r1": 0.1316,
+       "keys": [
+        "US:IRM"
+       ]
+      },
+      {
+       "t": "CCI",
+       "name": "Crown Castle",
+       "cap": 28.29,
+       "r1": -0.2534,
+       "keys": [
+        "US:CCI"
+       ]
+      },
+      {
+       "t": "EXR",
+       "name": "Extra Space Storage",
+       "cap": 28.16,
+       "r1": 0.0136,
+       "keys": [
+        "US:EXR"
+       ]
+      },
+      {
+       "t": "VICI",
+       "name": "Vici Properties",
+       "cap": 24.98,
+       "r1": -0.2384,
+       "keys": [
+        "US:VICI"
+       ]
+      }
+     ]
+    },
+    "Communication Services": {
+     "cap": 7475.9,
+     "n": 20,
+     "r1": 0.1674,
+     "top": [
+      {
+       "t": "GOOGL",
+       "name": "Alphabet Inc. (Class A)",
+       "cap": 4146.31,
+       "r1": 0.3756,
+       "keys": [
+        "US:GOOGL",
+        "US:GOOG"
+       ]
+      },
+      {
+       "t": "META",
+       "name": "Meta Platforms",
+       "cap": 1858.69,
+       "r1": -0.0387,
+       "keys": [
+        "US:META"
+       ]
+      },
+      {
+       "t": "NFLX",
+       "name": "Netflix",
+       "cap": 284.8,
+       "r1": -0.432,
+       "keys": [
+        "US:NFLX"
+       ]
+      },
+      {
+       "t": "VZ",
+       "name": "Verizon",
+       "cap": 190.72,
+       "r1": 0.1357,
+       "keys": [
+        "US:VZ"
+       ]
+      },
+      {
+       "t": "DIS",
+       "name": "Walt Disney Company (The)",
+       "cap": 175.69,
+       "r1": -0.0896,
+       "keys": [
+        "US:DIS"
+       ]
+      },
+      {
+       "t": "TMUS",
+       "name": "T-Mobile US",
+       "cap": 173.72,
+       "r1": -0.3062,
+       "keys": [
+        "US:TMUS"
+       ]
+      },
+      {
+       "t": "T",
+       "name": "AT&T",
+       "cap": 166.82,
+       "r1": -0.0998,
+       "keys": [
+        "US:T"
+       ]
+      },
+      {
+       "t": "APP",
+       "name": "AppLovin",
+       "cap": 93.46,
+       "r1": -0.5672,
+       "keys": [
+        "US:APP"
+       ]
+      },
+      {
+       "t": "WBD",
+       "name": "Warner Bros. Discovery",
+       "cap": 77.58,
+       "r1": 0.5613,
+       "keys": [
+        "US:WBD"
+       ]
+      },
+      {
+       "t": "CMCSA",
+       "name": "Comcast",
+       "cap": 77.13,
+       "r1": -0.2301,
+       "keys": [
+        "US:CMCSA"
+       ]
+      },
+      {
+       "t": "LYV",
+       "name": "Live Nation Entertainment",
+       "cap": 38.87,
+       "r1": 0.0298,
+       "keys": [
+        "US:LYV"
+       ]
+      },
+      {
+       "t": "TTWO",
+       "name": "Take-Two Interactive",
+       "cap": 38.11,
+       "r1": -0.1643,
+       "keys": [
+        "US:TTWO"
+       ]
+      },
+      {
+       "t": "RDDT",
+       "name": "Reddit",
+       "cap": 28.56,
+       "r1": -0.37,
+       "keys": [
+        "US:RDDT"
+       ]
+      },
+      {
+       "t": "ECHO",
+       "name": "EchoStar",
+       "cap": 26.06,
+       "r1": 0.225,
+       "keys": [
+        "US:ECHO"
+       ]
+      },
+      {
+       "t": "FOXA",
+       "name": "Fox Corporation (Class A)",
+       "cap": 25.64,
+       "r1": 0.0203,
+       "keys": [
+        "US:FOXA",
+        "US:FOX"
+       ]
+      }
+     ]
+    },
+    "Consumer Staples": {
+     "cap": 3347.62,
+     "n": 33,
+     "r1": 0.0842,
+     "top": [
+      {
+       "t": "WMT",
+       "name": "Walmart",
+       "cap": 832.21,
+       "r1": 0.0297,
+       "keys": [
+        "US:WMT"
+       ]
+      },
+      {
+       "t": "COST",
+       "name": "Costco",
+       "cap": 406.18,
+       "r1": -0.025,
+       "keys": [
+        "US:COST"
+       ]
+      },
+      {
+       "t": "KO",
+       "name": "Coca-Cola Company (The)",
+       "cap": 370.79,
+       "r1": 0.3309,
+       "keys": [
+        "US:KO"
+       ]
+      },
+      {
+       "t": "PG",
+       "name": "Procter & Gamble",
+       "cap": 335.0,
+       "r1": -0.0264,
+       "keys": [
+        "US:PG"
+       ]
+      },
+      {
+       "t": "PM",
+       "name": "Philip Morris International",
+       "cap": 292.19,
+       "r1": 0.1922,
+       "keys": [
+        "US:PM"
+       ]
+      },
+      {
+       "t": "PEP",
+       "name": "PepsiCo",
+       "cap": 171.83,
+       "r1": -0.0787,
+       "keys": [
+        "US:PEP"
+       ]
+      },
+      {
+       "t": "MO",
+       "name": "Altria",
+       "cap": 111.67,
+       "r1": 0.0956,
+       "keys": [
+        "US:MO"
+       ]
+      },
+      {
+       "t": "MNST",
+       "name": "Monster Beverage",
+       "cap": 82.19,
+       "r1": 0.2919,
+       "keys": [
+        "US:MNST"
+       ]
+      },
+      {
+       "t": "MDLZ",
+       "name": "Mondelez International",
+       "cap": 73.8,
+       "r1": -0.0633,
+       "keys": [
+        "US:MDLZ"
+       ]
+      },
+      {
+       "t": "TGT",
+       "name": "Target Corporation",
+       "cap": 71.72,
+       "r1": 0.8589,
+       "keys": [
+        "US:TGT"
+       ]
+      },
+      {
+       "t": "CL",
+       "name": "Colgate-Palmolive",
+       "cap": 67.52,
+       "r1": 0.0695,
+       "keys": [
+        "US:CL"
+       ]
+      },
+      {
+       "t": "KDP",
+       "name": "Keurig Dr Pepper",
+       "cap": 41.85,
+       "r1": 0.2198,
+       "keys": [
+        "US:KDP"
+       ]
+      },
+      {
+       "t": "ADM",
+       "name": "Archer Daniels Midland",
+       "cap": 37.86,
+       "r1": 0.3146,
+       "keys": [
+        "US:ADM"
+       ]
+      },
+      {
+       "t": "SYY",
+       "name": "Sysco",
+       "cap": 37.13,
+       "r1": -0.0272,
+       "keys": [
+        "US:SYY"
+       ]
+      },
+      {
+       "t": "KR",
+       "name": "Kroger",
+       "cap": 35.52,
+       "r1": -0.0638,
+       "keys": [
+        "US:KR"
+       ]
+      }
+     ]
+    },
+    "Energy": {
+     "cap": 2301.53,
+     "n": 21,
+     "r1": 0.4751,
+     "top": [
+      {
+       "t": "XOM",
+       "name": "ExxonMobil",
+       "cap": 667.82,
+       "r1": 0.4599,
+       "keys": [
+        "US:XOM"
+       ]
+      },
+      {
+       "t": "CVX",
+       "name": "Chevron Corporation",
+       "cap": 402.75,
+       "r1": 0.3419,
+       "keys": [
+        "US:CVX"
+       ]
+      },
+      {
+       "t": "COP",
+       "name": "ConocoPhillips",
+       "cap": 153.37,
+       "r1": 0.3594,
+       "keys": [
+        "US:COP"
+       ]
+      },
+      {
+       "t": "VLO",
+       "name": "Valero Energy",
+       "cap": 115.98,
+       "r1": 1.4032,
+       "keys": [
+        "US:VLO"
+       ]
+      },
+      {
+       "t": "MPC",
+       "name": "Marathon Petroleum",
+       "cap": 115.8,
+       "r1": 1.1742,
+       "keys": [
+        "US:MPC"
+       ]
+      },
+      {
+       "t": "PSX",
+       "name": "Phillips 66",
+       "cap": 104.65,
+       "r1": 0.9727,
+       "keys": [
+        "US:PSX"
+       ]
+      },
+      {
+       "t": "WMB",
+       "name": "Williams Companies",
+       "cap": 84.44,
+       "r1": 0.1311,
+       "keys": [
+        "US:WMB"
+       ]
+      },
+      {
+       "t": "EOG",
+       "name": "EOG Resources",
+       "cap": 73.56,
+       "r1": 0.2463,
+       "keys": [
+        "US:EOG"
+       ]
+      },
+      {
+       "t": "SLB",
+       "name": "Schlumberger",
+       "cap": 71.94,
+       "r1": 0.4337,
+       "keys": [
+        "US:SLB"
+       ]
+      },
+      {
+       "t": "KMI",
+       "name": "Kinder Morgan",
+       "cap": 67.9,
+       "r1": 0.1404,
+       "keys": [
+        "US:KMI"
+       ]
+      },
+      {
+       "t": "TRGP",
+       "name": "Targa Resources",
+       "cap": 59.14,
+       "r1": 0.6362,
+       "keys": [
+        "US:TRGP"
+       ]
+      },
+      {
+       "t": "OXY",
+       "name": "Occidental Petroleum",
+       "cap": 56.85,
+       "r1": 0.2389,
+       "keys": [
+        "US:OXY"
+       ]
+      },
+      {
+       "t": "BKR",
+       "name": "Baker Hughes",
+       "cap": 55.07,
+       "r1": 0.1331,
+       "keys": [
+        "US:BKR"
+       ]
+      },
+      {
+       "t": "OKE",
+       "name": "Oneok",
+       "cap": 54.52,
+       "r1": 0.2388,
+       "keys": [
+        "US:OKE"
+       ]
+      },
+      {
+       "t": "FANG",
+       "name": "Diamondback Energy",
+       "cap": 51.32,
+       "r1": 0.2995,
+       "keys": [
+        "US:FANG"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "CA": {
+   "name": "S&P/TSX Composite",
+   "ccy": "CAD",
+   "n": 220,
+   "sectors": {
+    "Materials": {
+     "cap": 958.45,
+     "n": 57,
+     "r1": 0.3645,
+     "top": [
+      {
+       "t": "AEM",
+       "name": "Agnico Eagle Mines Limited",
+       "cap": 131.6,
+       "r1": 0.1934,
+       "keys": [
+        "CA:AEM"
+       ]
+      },
+      {
+       "t": "ABX",
+       "name": "Barrick Gold Corporation",
+       "cap": 94.61,
+       "r1": 0.2566,
+       "keys": [
+        "CA:ABX"
+       ]
+      },
+      {
+       "t": "WPM",
+       "name": "Wheaton Precious Metals Corp.",
+       "cap": 86.59,
+       "r1": 0.3107,
+       "keys": [
+        "CA:WPM"
+       ]
+      },
+      {
+       "t": "FNV",
+       "name": "Franco-Nevada Corporation",
+       "cap": 66.1,
+       "r1": 0.1832,
+       "keys": [
+        "CA:FNV"
+       ]
+      },
+      {
+       "t": "NTR",
+       "name": "Nutrien Ltd.",
+       "cap": 47.23,
+       "r1": 0.2563,
+       "keys": [
+        "CA:NTR"
+       ]
+      },
+      {
+       "t": "TECK.B",
+       "name": "Teck Resources Limited",
+       "cap": 45.81,
+       "r1": 0.6898,
+       "keys": [
+        "CA:TECK.B"
+       ]
+      },
+      {
+       "t": "K",
+       "name": "Kinross Gold Corporation",
+       "cap": 40.79,
+       "r1": 0.069,
+       "keys": [
+        "CA:K"
+       ]
+      },
+      {
+       "t": "FM",
+       "name": "First Quantum Minerals Ltd.",
+       "cap": 32.88,
+       "r1": 0.3676,
+       "keys": [
+        "CA:FM"
+       ]
+      },
+      {
+       "t": "LUN",
+       "name": "Lundin Mining Corporation",
+       "cap": 28.74,
+       "r1": 0.7716,
+       "keys": [
+        "CA:LUN"
+       ]
+      },
+      {
+       "t": "PAAS",
+       "name": "Pan American Silver Corp.",
+       "cap": 26.71,
+       "r1": 0.2904,
+       "keys": [
+        "CA:PAAS"
+       ]
+      },
+      {
+       "t": "LUG",
+       "name": "Lundin Gold Inc.",
+       "cap": 21.12,
+       "r1": 0.1468,
+       "keys": [
+        "CA:LUG"
+       ]
+      },
+      {
+       "t": "AGI",
+       "name": "Alamos Gold Inc.",
+       "cap": 19.21,
+       "r1": -0.0072,
+       "keys": [
+        "CA:AGI"
+       ]
+      },
+      {
+       "t": "EQX",
+       "name": "Equinox Gold Corp.",
+       "cap": 18.26,
+       "r1": 0.075,
+       "keys": [
+        "CA:EQX"
+       ]
+      },
+      {
+       "t": "IVN",
+       "name": "Ivanhoe Mines Ltd.",
+       "cap": 16.9,
+       "r1": -0.1731,
+       "keys": [
+        "CA:IVN"
+       ]
+      },
+      {
+       "t": "HBM",
+       "name": "Hudbay Minerals Inc.",
+       "cap": 16.75,
+       "r1": 0.9208,
+       "keys": [
+        "CA:HBM"
+       ]
+      }
+     ]
+    },
+    "Energy": {
+     "cap": 968.05,
+     "n": 39,
+     "r1": 0.3711,
+     "top": [
+      {
+       "t": "ENB",
+       "name": "Enbridge Inc.",
+       "cap": 146.78,
+       "r1": 0.0,
+       "keys": [
+        "CA:ENB"
+       ]
+      },
+      {
+       "t": "CNQ",
+       "name": "Canadian Natural Resources Limited",
+       "cap": 139.5,
+       "r1": 0.5475,
+       "keys": [
+        "CA:CNQ"
+       ]
+      },
+      {
+       "t": "SU",
+       "name": "Suncor Energy Inc.",
+       "cap": 115.58,
+       "r1": 0.7098,
+       "keys": [
+        "CA:SU"
+       ]
+      },
+      {
+       "t": "TRP",
+       "name": "TC Energy Corporation",
+       "cap": 87.1,
+       "r1": 0.1834,
+       "keys": [
+        "CA:TRP"
+       ]
+      },
+      {
+       "t": "IMO",
+       "name": "Imperial Oil Limited",
+       "cap": 85.29,
+       "r1": 0.379,
+       "keys": [
+        "CA:IMO"
+       ]
+      },
+      {
+       "t": "CVE",
+       "name": "Cenovus Energy Inc.",
+       "cap": 82.68,
+       "r1": 0.8557,
+       "keys": [
+        "CA:CVE"
+       ]
+      },
+      {
+       "t": "CCO",
+       "name": "Cameco Corporation",
+       "cap": 53.37,
+       "r1": 0.064,
+       "keys": [
+        "CA:CCO"
+       ]
+      },
+      {
+       "t": "PPL",
+       "name": "Pembina Pipeline Corporation",
+       "cap": 37.29,
+       "r1": 0.1952,
+       "keys": [
+        "CA:PPL"
+       ]
+      },
+      {
+       "t": "TOU",
+       "name": "Tourmaline Oil Corp.",
+       "cap": 23.52,
+       "r1": -0.0049,
+       "keys": [
+        "CA:TOU"
+       ]
+      },
+      {
+       "t": "WCP",
+       "name": "Whitecap Resources Inc.",
+       "cap": 21.39,
+       "r1": 0.6736,
+       "keys": [
+        "CA:WCP"
+       ]
+      },
+      {
+       "t": "ARX",
+       "name": "ARC Resources Ltd.",
+       "cap": 19.19,
+       "r1": 0.3629,
+       "keys": [
+        "CA:ARX"
+       ]
+      },
+      {
+       "t": "ALA",
+       "name": "AltaGas Ltd.",
+       "cap": 16.42,
+       "r1": 0.258,
+       "keys": [
+        "CA:ALA"
+       ]
+      },
+      {
+       "t": "KEY",
+       "name": "Keyera Corp.",
+       "cap": 15.27,
+       "r1": 0.1622,
+       "keys": [
+        "CA:KEY"
+       ]
+      },
+      {
+       "t": "BEP.UN",
+       "name": "Brookfield Renewable Partners L.P.",
+       "cap": 12.38,
+       "r1": 0.1909,
+       "keys": [
+        "CA:BEP.UN"
+       ]
+      },
+      {
+       "t": "SOBO",
+       "name": "South Bow Corporation",
+       "cap": 9.99,
+       "r1": 0.3009,
+       "keys": [
+        "CA:SOBO"
+       ]
+      }
+     ]
+    },
+    "Industrials": {
+     "cap": 597.46,
+     "n": 28,
+     "r1": 0.1748,
+     "top": [
+      {
+       "t": "CP",
+       "name": "Canadian Pacific Kansas City Limited",
+       "cap": 105.46,
+       "r1": 0.1783,
+       "keys": [
+        "CA:CP"
+       ]
+      },
+      {
+       "t": "CNR",
+       "name": "Canadian National Railway Company",
+       "cap": 100.95,
+       "r1": 0.336,
+       "keys": [
+        "CA:CNR"
+       ]
+      },
+      {
+       "t": "TRI",
+       "name": "Thomson Reuters Corporation",
+       "cap": 61.72,
+       "r1": -0.323,
+       "keys": [
+        "CA:TRI"
+       ]
+      },
+      {
+       "t": "BBD.B",
+       "name": "Bombardier Inc.",
+       "cap": 58.17,
+       "r1": 0.6396,
+       "keys": [
+        "CA:BBD.B"
+       ]
+      },
+      {
+       "t": "WCN",
+       "name": "Waste Connections Inc.",
+       "cap": 54.0,
+       "r1": -0.0954,
+       "keys": [
+        "CA:WCN"
+       ]
+      },
+      {
+       "t": "WSP",
+       "name": "WSP Global Inc.",
+       "cap": 23.09,
+       "r1": -0.3691,
+       "keys": [
+        "CA:WSP"
+       ]
+      },
+      {
+       "t": "RBA",
+       "name": "RB Global, Inc.",
+       "cap": 21.33,
+       "r1": -0.2467,
+       "keys": [
+        "CA:RBA"
+       ]
+      },
+      {
+       "t": "GFL",
+       "name": "GFL Environmental Inc.",
+       "cap": 20.69,
+       "r1": -0.1104,
+       "keys": [
+        "CA:GFL"
+       ]
+      },
+      {
+       "t": "TIH",
+       "name": "Toromont Industries Ltd.",
+       "cap": 18.61,
+       "r1": 0.5104,
+       "keys": [
+        "CA:TIH"
+       ]
+      },
+      {
+       "t": "FTT",
+       "name": "Finning International Inc.",
+       "cap": 14.31,
+       "r1": 0.721,
+       "keys": [
+        "CA:FTT"
+       ]
+      },
+      {
+       "t": "TFII",
+       "name": "TFI International Inc.",
+       "cap": 14.01,
+       "r1": 0.3773,
+       "keys": [
+        "CA:TFII"
+       ]
+      },
+      {
+       "t": "ATRL",
+       "name": "AtkinsRéalis Group Inc.",
+       "cap": 13.79,
+       "r1": -0.1188,
+       "keys": [
+        "CA:ATRL"
+       ]
+      },
+      {
+       "t": "CAE",
+       "name": "CAE Inc.",
+       "cap": 11.1,
+       "r1": -0.1409,
+       "keys": [
+        "CA:CAE"
+       ]
+      },
+      {
+       "t": "STN",
+       "name": "Stantec Inc.",
+       "cap": 10.81,
+       "r1": -0.3475,
+       "keys": [
+        "CA:STN"
+       ]
+      },
+      {
+       "t": "EFN",
+       "name": "Element Fleet Management Corp.",
+       "cap": 8.64,
+       "r1": -0.3706,
+       "keys": [
+        "CA:EFN"
+       ]
+      }
+     ]
+    },
+    "Utilities": {
+     "cap": 157.66,
+     "n": 10,
+     "r1": 0.1476,
+     "top": [
+      {
+       "t": "FTS",
+       "name": "Fortis Inc.",
+       "cap": 38.38,
+       "r1": 0.1301,
+       "keys": [
+        "CA:FTS"
+       ]
+      },
+      {
+       "t": "H",
+       "name": "Hydro One Limited",
+       "cap": 30.6,
+       "r1": 0.0626,
+       "keys": [
+        "CA:H"
+       ]
+      },
+      {
+       "t": "BIP.UN",
+       "name": "Brookfield Infrastructure Partners L.P.",
+       "cap": 23.52,
+       "r1": 0.2188,
+       "keys": [
+        "CA:BIP.UN"
+       ]
+      },
+      {
+       "t": "EMA",
+       "name": "Emera Incorporated",
+       "cap": 20.82,
+       "r1": 0.0881,
+       "keys": [
+        "CA:EMA"
+       ]
+      },
+      {
+       "t": "CU",
+       "name": "Canadian Utilities Limited",
+       "cap": 13.88,
+       "r1": 0.3863,
+       "keys": [
+        "CA:CU"
+       ]
+      },
+      {
+       "t": "CPX",
+       "name": "Capital Power Corporation",
+       "cap": 9.64,
+       "r1": -0.0122,
+       "keys": [
+        "CA:CPX"
+       ]
+      },
+      {
+       "t": "ACO.X",
+       "name": "ATCO Ltd.",
+       "cap": 8.31,
+       "r1": 0.5526,
+       "keys": [
+        "CA:ACO.X"
+       ]
+      },
+      {
+       "t": "AQN",
+       "name": "Algonquin Power & Utilities Corp.",
+       "cap": 5.53,
+       "r1": 0.0111,
+       "keys": [
+        "CA:AQN"
+       ]
+      },
+      {
+       "t": "TA",
+       "name": "TransAlta Corporation",
+       "cap": 5.52,
+       "r1": -0.0656,
+       "keys": [
+        "CA:TA"
+       ]
+      },
+      {
+       "t": "SPB",
+       "name": "Superior Plus Corp.",
+       "cap": 1.45,
+       "r1": -0.0989,
+       "keys": [
+        "CA:SPB"
+       ]
+      }
+     ]
+    },
+    "Consumer Discretionary": {
+     "cap": 204.35,
+     "n": 15,
+     "r1": 0.1454,
+     "top": [
+      {
+       "t": "ATD",
+       "name": "Alimentation Couche-Tard Inc.",
+       "cap": 71.04,
+       "r1": 0.0525,
+       "keys": [
+        "CA:ATD"
+       ]
+      },
+      {
+       "t": "QSR",
+       "name": "Restaurant Brands International Inc.",
+       "cap": 34.68,
+       "r1": 0.1492,
+       "keys": [
+        "CA:QSR"
+       ]
+      },
+      {
+       "t": "MG",
+       "name": "Magna International Inc.",
+       "cap": 24.44,
+       "r1": 0.4752,
+       "keys": [
+        "CA:MG"
+       ]
+      },
+      {
+       "t": "CCL.B",
+       "name": "CCL Industries Inc.",
+       "cap": 15.98,
+       "r1": 0.1995,
+       "keys": [
+        "CA:CCL.B"
+       ]
+      },
+      {
+       "t": "ATZ",
+       "name": "Aritzia Inc.",
+       "cap": 13.88,
+       "r1": 0.411,
+       "keys": [
+        "CA:ATZ"
+       ]
+      },
+      {
+       "t": "GIL",
+       "name": "Gildan Activewear Inc.",
+       "cap": 11.1,
+       "r1": -0.2282,
+       "keys": [
+        "CA:GIL"
+       ]
+      },
+      {
+       "t": "CTC.A",
+       "name": "Canadian Tire Corporation Limited",
+       "cap": 9.88,
+       "r1": 0.1967,
+       "keys": [
+        "CA:CTC.A"
+       ]
+      },
+      {
+       "t": "LNR",
+       "name": "Linamar Corporation",
+       "cap": 5.64,
+       "r1": 0.2764,
+       "keys": [
+        "CA:LNR"
+       ]
+      },
+      {
+       "t": "DOO",
+       "name": "BRP Inc.",
+       "cap": 5.53,
+       "r1": -0.0688,
+       "keys": [
+        "CA:DOO"
+       ]
+      },
+      {
+       "t": "BYD",
+       "name": "Boyd Group Services Inc.",
+       "cap": 3.11,
+       "r1": -0.5257,
+       "keys": [
+        "CA:BYD"
+       ]
+      },
+      {
+       "t": "NFI",
+       "name": "NFI Group Inc.",
+       "cap": 2.95,
+       "r1": 0.465,
+       "keys": [
+        "CA:NFI"
+       ]
+      },
+      {
+       "t": "WPK",
+       "name": "Winpak Ltd.",
+       "cap": 2.5,
+       "r1": 0.0268,
+       "keys": [
+        "CA:WPK"
+       ]
+      },
+      {
+       "t": "RCH",
+       "name": "Richelieu Hardware Ltd.",
+       "cap": 1.98,
+       "r1": 0.0517,
+       "keys": [
+        "CA:RCH"
+       ]
+      },
+      {
+       "t": "PET",
+       "name": "Pet Valu Holdings Ltd.",
+       "cap": 1.19,
+       "r1": -0.4952,
+       "keys": [
+        "CA:PET"
+       ]
+      },
+      {
+       "t": "TCL.A",
+       "name": "Transcontinental Inc.",
+       "cap": 0.44,
+       "r1": 0.9233,
+       "keys": [
+        "CA:TCL.A"
+       ]
+      }
+     ]
+    },
+    "Real Estate": {
+     "cap": 84.3,
+     "n": 20,
+     "r1": -0.0142,
+     "top": [
+      {
+       "t": "CHP.UN",
+       "name": "Choice Properties Real Estate Investment Trust",
+       "cap": 10.68,
+       "r1": 0.0592,
+       "keys": [
+        "CA:CHP.UN"
+       ]
+      },
+      {
+       "t": "FSV",
+       "name": "FirstService Corporation",
+       "cap": 8.0,
+       "r1": -0.3033,
+       "keys": [
+        "CA:FSV"
+       ]
+      },
+      {
+       "t": "CIGI",
+       "name": "Colliers International Group Inc.",
+       "cap": 6.69,
+       "r1": -0.4026,
+       "keys": [
+        "CA:CIGI"
+       ]
+      },
+      {
+       "t": "CSH.UN",
+       "name": "Chartwell Retirement Residences",
+       "cap": 6.66,
+       "r1": 0.0813,
+       "keys": [
+        "CA:CSH.UN"
+       ]
+      },
+      {
+       "t": "REI.UN",
+       "name": "RioCan Real Estate Investment Trust",
+       "cap": 5.99,
+       "r1": 0.1612,
+       "keys": [
+        "CA:REI.UN"
+       ]
+      },
+      {
+       "t": "GRT.UN",
+       "name": "Granite Real Estate Investment Trust",
+       "cap": 5.18,
+       "r1": 0.1366,
+       "keys": [
+        "CA:GRT.UN"
+       ]
+      },
+      {
+       "t": "FCR.UN",
+       "name": "First Capital Real Estate Investment Trust",
+       "cap": 4.84,
+       "r1": 0.2226,
+       "keys": [
+        "CA:FCR.UN"
+       ]
+      },
+      {
+       "t": "CAR.UN",
+       "name": "Canadian Apartment Properties Real Estate Investment Trust",
+       "cap": 4.75,
+       "r1": -0.2004,
+       "keys": [
+        "CA:CAR.UN"
+       ]
+      },
+      {
+       "t": "SRU.UN",
+       "name": "SmartCentres Real Estate Investment Trust",
+       "cap": 4.52,
+       "r1": 0.073,
+       "keys": [
+        "CA:SRU.UN"
+       ]
+      },
+      {
+       "t": "CRT.UN",
+       "name": "CT Real Estate Investment Trust",
+       "cap": 4.02,
+       "r1": 0.1079,
+       "keys": [
+        "CA:CRT.UN"
+       ]
+      },
+      {
+       "t": "DIR.UN",
+       "name": "Dream Industrial Real Estate Investment Trust",
+       "cap": 3.64,
+       "r1": 0.083,
+       "keys": [
+        "CA:DIR.UN"
+       ]
+      },
+      {
+       "t": "BEI.UN",
+       "name": "Boardwalk Real Estate Investment Trust",
+       "cap": 3.06,
+       "r1": -0.0814,
+       "keys": [
+        "CA:BEI.UN"
+       ]
+      },
+      {
+       "t": "CRR.UN",
+       "name": "Crombie Real Estate Investment Trust",
+       "cap": 2.98,
+       "r1": 0.1189,
+       "keys": [
+        "CA:CRR.UN"
+       ]
+      },
+      {
+       "t": "PMZ.UN",
+       "name": "Primaris Real Estate Investment Trust",
+       "cap": 2.57,
+       "r1": 0.4926,
+       "keys": [
+        "CA:PMZ.UN"
+       ]
+      },
+      {
+       "t": "HR.UN",
+       "name": "H&R Real Estate Investment Trust",
+       "cap": 2.52,
+       "r1": -0.1524,
+       "keys": [
+        "CA:HR.UN"
+       ]
+      }
+     ]
+    },
+    "Financials": {
+     "cap": 1880.32,
+     "n": 24,
+     "r1": 0.3579,
+     "top": [
+      {
+       "t": "RY",
+       "name": "Royal Bank of Canada",
+       "cap": 381.6,
+       "r1": 0.3836,
+       "keys": [
+        "CA:RY"
+       ]
+      },
+      {
+       "t": "TD",
+       "name": "Toronto-Dominion Bank",
+       "cap": 273.09,
+       "r1": 0.5852,
+       "keys": [
+        "CA:TD"
+       ]
+      },
+      {
+       "t": "BMO",
+       "name": "Bank of Montreal",
+       "cap": 163.76,
+       "r1": 0.3648,
+       "keys": [
+        "CA:BMO"
+       ]
+      },
+      {
+       "t": "BNS",
+       "name": "Bank of Nova Scotia",
+       "cap": 156.4,
+       "r1": 0.5068,
+       "keys": [
+        "CA:BNS"
+       ]
+      },
+      {
+       "t": "CM",
+       "name": "Canadian Imperial Bank of Commerce",
+       "cap": 141.43,
+       "r1": 0.4435,
+       "keys": [
+        "CA:CM"
+       ]
+      },
+      {
+       "t": "BN",
+       "name": "Brookfield Corporation",
+       "cap": 116.33,
+       "r1": -0.1881,
+       "keys": [
+        "CA:BN"
+       ]
+      },
+      {
+       "t": "BAM",
+       "name": "Brookfield Asset Management Ltd.",
+       "cap": 101.82,
+       "r1": -0.1936,
+       "keys": [
+        "CA:BAM"
+       ]
+      },
+      {
+       "t": "MFC",
+       "name": "Manulife Financial Corporation",
+       "cap": 99.92,
+       "r1": 0.4528,
+       "keys": [
+        "CA:MFC"
+       ]
+      },
+      {
+       "t": "GWO",
+       "name": "Great-West Lifeco Inc.",
+       "cap": 79.22,
+       "r1": 0.6982,
+       "keys": [
+        "CA:GWO"
+       ]
+      },
+      {
+       "t": "NA",
+       "name": "National Bank of Canada",
+       "cap": 77.74,
+       "r1": 0.3776,
+       "keys": [
+        "CA:NA"
+       ]
+      },
+      {
+       "t": "SLF",
+       "name": "Sun Life Financial Inc.",
+       "cap": 61.43,
+       "r1": 0.4017,
+       "keys": [
+        "CA:SLF"
+       ]
+      },
+      {
+       "t": "POW",
+       "name": "Power Corporation of Canada",
+       "cap": 56.07,
+       "r1": 0.6106,
+       "keys": [
+        "CA:POW"
+       ]
+      },
+      {
+       "t": "FFH",
+       "name": "Fairfax Financial Holdings Limited",
+       "cap": 45.92,
+       "r1": -0.0671,
+       "keys": [
+        "CA:FFH"
+       ]
+      },
+      {
+       "t": "IFC",
+       "name": "Intact Financial Corporation",
+       "cap": 43.37,
+       "r1": -0.0534,
+       "keys": [
+        "CA:IFC"
+       ]
+      },
+      {
+       "t": "IGM",
+       "name": "IGM Financial Inc.",
+       "cap": 19.2,
+       "r1": 0.6941,
+       "keys": [
+        "CA:IGM"
+       ]
+      }
+     ]
+    },
+    "Health Care": {
+     "cap": 9.1,
+     "n": 3,
+     "r1": 0.1275,
+     "top": [
+      {
+       "t": "CURA",
+       "name": "Curaleaf Holdings, Inc.",
+       "cap": 3.93,
+       "r1": 0.2999,
+       "keys": [
+        "CA:CURA"
+       ]
+      },
+      {
+       "t": "BHC",
+       "name": "Bausch Health Companies Inc.",
+       "cap": 3.06,
+       "r1": -0.1158,
+       "keys": [
+        "CA:BHC"
+       ]
+      },
+      {
+       "t": "SIA",
+       "name": "Sienna Senior Living Inc.",
+       "cap": 2.12,
+       "r1": 0.1588,
+       "keys": [
+        "CA:SIA"
+       ]
+      }
+     ]
+    },
+    "Communication Services": {
+     "cap": 84.26,
+     "n": 5,
+     "r1": -0.0527,
+     "top": [
+      {
+       "t": "BCE",
+       "name": "BCE Inc.",
+       "cap": 26.36,
+       "r1": -0.0727,
+       "keys": [
+        "CA:BCE"
+       ]
+      },
+      {
+       "t": "RCI.B",
+       "name": "Rogers Communications Inc.",
+       "cap": 23.54,
+       "r1": -0.0611,
+       "keys": [
+        "CA:RCI.B"
+       ]
+      },
+      {
+       "t": "T",
+       "name": "Telus Corporation",
+       "cap": 18.39,
+       "r1": -0.4214,
+       "keys": [
+        "CA:T"
+       ]
+      },
+      {
+       "t": "QBR.B",
+       "name": "Quebecor Inc.",
+       "cap": 13.79,
+       "r1": 0.5043,
+       "keys": [
+        "CA:QBR.B"
+       ]
+      },
+      {
+       "t": "CCA",
+       "name": "Cogeco Communications Inc.",
+       "cap": 2.18,
+       "r1": -0.1332,
+       "keys": [
+        "CA:CCA"
+       ]
+      }
+     ]
+    },
+    "Information Technology": {
+     "cap": 458.06,
+     "n": 9,
+     "r1": 0.0709,
+     "top": [
+      {
+       "t": "SHOP",
+       "name": "Shopify Inc.",
+       "cap": 275.15,
+       "r1": 0.0339,
+       "keys": [
+        "CA:SHOP"
+       ]
+      },
+      {
+       "t": "CLS",
+       "name": "Celestica Inc.",
+       "cap": 67.6,
+       "r1": 0.6034,
+       "keys": [
+        "CA:CLS"
+       ]
+      },
+      {
+       "t": "CSU",
+       "name": "Constellation Software Inc.",
+       "cap": 62.52,
+       "r1": -0.2821,
+       "keys": [
+        "CA:CSU"
+       ]
+      },
+      {
+       "t": "GIB.A",
+       "name": "CGI Inc.",
+       "cap": 20.98,
+       "r1": -0.1999,
+       "keys": [
+        "CA:GIB.A"
+       ]
+      },
+      {
+       "t": "DSG",
+       "name": "Descartes Systems Group Inc.",
+       "cap": 9.82,
+       "r1": -0.1583,
+       "keys": [
+        "CA:DSG"
+       ]
+      },
+      {
+       "t": "OTEX",
+       "name": "Open Text Corporation",
+       "cap": 7.75,
+       "r1": -0.3716,
+       "keys": [
+        "CA:OTEX"
+       ]
+      },
+      {
+       "t": "BB",
+       "name": "BlackBerry Limited",
+       "cap": 7.6,
+       "r1": 1.1788,
+       "keys": [
+        "CA:BB"
+       ]
+      },
+      {
+       "t": "KXS",
+       "name": "Kinaxis Inc.",
+       "cap": 4.85,
+       "r1": -0.0038,
+       "keys": [
+        "CA:KXS"
+       ]
+      },
+      {
+       "t": "LSPD",
+       "name": "Lightspeed Commerce Inc.",
+       "cap": 1.8,
+       "r1": -0.1717,
+       "keys": [
+        "CA:LSPD"
+       ]
+      }
+     ]
+    },
+    "Consumer Staples": {
+     "cap": 214.73,
+     "n": 10,
+     "r1": 0.0993,
+     "top": [
+      {
+       "t": "L",
+       "name": "Loblaw Companies Limited",
+       "cap": 71.92,
+       "r1": 0.1652,
+       "keys": [
+        "CA:L"
+       ]
+      },
+      {
+       "t": "DOL",
+       "name": "Dollarama Inc.",
+       "cap": 49.4,
+       "r1": -0.0033,
+       "keys": [
+        "CA:DOL"
+       ]
+      },
+      {
+       "t": "WN",
+       "name": "George Weston Limited",
+       "cap": 37.6,
+       "r1": 0.2089,
+       "keys": [
+        "CA:WN"
+       ]
+      },
+      {
+       "t": "MRU",
+       "name": "Metro Inc.",
+       "cap": 18.87,
+       "r1": -0.009,
+       "keys": [
+        "CA:MRU"
+       ]
+      },
+      {
+       "t": "SAP",
+       "name": "Saputo Inc.",
+       "cap": 15.09,
+       "r1": 0.166,
+       "keys": [
+        "CA:SAP"
+       ]
+      },
+      {
+       "t": "EMP.A",
+       "name": "Empire Company Limited",
+       "cap": 10.69,
+       "r1": -0.0241,
+       "keys": [
+        "CA:EMP.A"
+       ]
+      },
+      {
+       "t": "PBH",
+       "name": "Premium Brands Holdings Corporation",
+       "cap": 3.63,
+       "r1": -0.1991,
+       "keys": [
+        "CA:PBH"
+       ]
+      },
+      {
+       "t": "MFI",
+       "name": "Maple Leaf Foods Inc.",
+       "cap": 3.08,
+       "r1": -0.1599,
+       "keys": [
+        "CA:MFI"
+       ]
+      },
+      {
+       "t": "NWC",
+       "name": "North West Company Inc.",
+       "cap": 2.56,
+       "r1": 0.1551,
+       "keys": [
+        "CA:NWC"
+       ]
+      },
+      {
+       "t": "JWEL",
+       "name": "Jamieson Wellness Inc.",
+       "cap": 1.89,
+       "r1": 0.2631,
+       "keys": [
+        "CA:JWEL"
+       ]
+      }
+     ]
+    }
+   }
+  }
+ },
+ "hold": {
+  "AAPL": {
+   "g": "Information Technology",
+   "key": "US:AAPL",
+   "r1": 0.3094
+  },
+  "ABBV": {
+   "g": "Health Care",
+   "key": "US:ABBV",
+   "r1": 0.2204
+  },
+  "ABX": {
+   "g": "Materials",
+   "key": "CA:ABX",
+   "r1": 0.2566
+  },
+  "AMT": {
+   "g": "Real Estate",
+   "key": "US:AMT",
+   "r1": -0.1227
+  },
+  "AMZN": {
+   "g": "Consumer Discretionary",
+   "key": "US:AMZN",
+   "r1": 0.1336
+  },
+  "ASML": {
+   "g": "Information Technology",
+   "key": null,
+   "r1": 0.9345
+  },
+  "ATD": {
+   "g": "Consumer Discretionary",
+   "key": "CA:ATD",
+   "r1": 0.0525
+  },
+  "BABA": {
+   "g": "Consumer Discretionary",
+   "key": null,
+   "r1": -0.3838
+  },
+  "BAC": {
+   "g": "Financials",
+   "key": "US:BAC",
+   "r1": 0.0612
+  },
+  "BMO": {
+   "g": "Financials",
+   "key": "CA:BMO",
+   "r1": 0.3648
+  },
+  "BRKB": {
+   "g": "Financials",
+   "key": "US:BRK.B",
+   "r1": 0.0032
+  },
+  "CNQ": {
+   "g": "Energy",
+   "key": "CA:CNQ",
+   "r1": 0.5475
+  },
+  "CNR": {
+   "g": "Industrials",
+   "key": "CA:CNR",
+   "r1": 0.336
+  },
+  "COST": {
+   "g": "Consumer Staples",
+   "key": "US:COST",
+   "r1": -0.025
+  },
+  "CPX": {
+   "g": "Utilities",
+   "key": "CA:CPX",
+   "r1": -0.0122
+  },
+  "CSU": {
+   "g": "Information Technology",
+   "key": "CA:CSU",
+   "r1": -0.2821
+  },
+  "CU": {
+   "g": "Utilities",
+   "key": "CA:CU",
+   "r1": 0.3863
+  },
+  "DAL": {
+   "g": "Industrials",
+   "key": "US:DAL",
+   "r1": 0.4706
+  },
+  "DE": {
+   "g": "Industrials",
+   "key": "US:DE",
+   "r1": 0.4433
+  },
+  "DIR.UN": {
+   "g": "Real Estate",
+   "key": "CA:DIR.UN",
+   "r1": 0.083
+  },
+  "DML": {
+   "g": "Energy",
+   "key": "CA:DML",
+   "r1": -0.0394
+  },
+  "EADSY": {
+   "g": "Industrials",
+   "key": null,
+   "r1": -0.0722
+  },
+  "EMA": {
+   "g": "Utilities",
+   "key": "CA:EMA",
+   "r1": 0.0881
+  },
+  "EMBJ": {
+   "g": "Industrials",
+   "key": null,
+   "r1": 0.2437
+  },
+  "ENB": {
+   "g": "Energy",
+   "key": "CA:ENB",
+   "r1": 0.0
+  },
+  "EQB": {
+   "g": "Financials",
+   "key": "CA:EQB",
+   "r1": 0.3481
+  },
+  "EXP": {
+   "g": "Materials",
+   "key": null,
+   "r1": -0.234
+  },
+  "FDX": {
+   "g": "Industrials",
+   "key": "US:FDX",
+   "r1": 0.5522
+  },
+  "FISV": {
+   "g": "Financials",
+   "key": "US:FISV",
+   "r1": -0.6528
+  },
+  "FMC": {
+   "g": "Materials",
+   "key": null,
+   "r1": -0.7374
+  },
+  "GOOG": {
+   "g": "Communication Services",
+   "key": "US:GOOG",
+   "r1": 0.3589
+  },
+  "GRGD": {
+   "g": "Consumer Discretionary",
+   "key": null,
+   "r1": -0.0656
+  },
+  "HD": {
+   "g": "Consumer Discretionary",
+   "key": "US:HD",
+   "r1": -0.2902
+  },
+  "HDB": {
+   "g": "Financials",
+   "key": null,
+   "r1": -0.3356
+  },
+  "HON": {
+   "g": "Industrials",
+   "key": "US:HON",
+   "r1": 0.0627
+  },
+  "HONA": {
+   "g": "Industrials",
+   "key": "US:HONA",
+   "r1": null
+  },
+  "HWM": {
+   "g": "Industrials",
+   "key": "US:HWM",
+   "r1": 0.2067
+  },
+  "IBN": {
+   "g": "Financials",
+   "key": null,
+   "r1": -0.1067
+  },
+  "INTC": {
+   "g": "Information Technology",
+   "key": "US:INTC",
+   "r1": 2.9029
+  },
+  "JCI": {
+   "g": "Industrials",
+   "key": "US:JCI",
+   "r1": 0.4275
+  },
+  "JNJ": {
+   "g": "Health Care",
+   "key": "US:JNJ",
+   "r1": 0.4982
+  },
+  "JPM": {
+   "g": "Financials",
+   "key": "US:JPM",
+   "r1": 0.08
+  },
+  "JWEL": {
+   "g": "Consumer Staples",
+   "key": "CA:JWEL",
+   "r1": 0.2631
+  },
+  "KO": {
+   "g": "Consumer Staples",
+   "key": "US:KO",
+   "r1": 0.3309
+  },
+  "KT": {
+   "g": "Communication Services",
+   "key": null,
+   "r1": -0.0346
+  },
+  "LLY": {
+   "g": "Health Care",
+   "key": "US:LLY",
+   "r1": 0.5542
+  },
+  "LMT": {
+   "g": "Industrials",
+   "key": "US:LMT",
+   "r1": 0.0678
+  },
+  "LRCX": {
+   "g": "Information Technology",
+   "key": "US:LRCX",
+   "r1": 1.6534
+  },
+  "LULU": {
+   "g": "Consumer Discretionary",
+   "key": "US:LULU",
+   "r1": -0.4488
+  },
+  "LVMUY": {
+   "g": "Consumer Discretionary",
+   "key": null,
+   "r1": -0.2807
+  },
+  "LYB": {
+   "g": "Materials",
+   "key": "US:LYB",
+   "r1": 0.1855
+  },
+  "MA": {
+   "g": "Financials",
+   "key": "US:MA",
+   "r1": -0.0283
+  },
+  "MCD": {
+   "g": "Consumer Discretionary",
+   "key": "US:MCD",
+   "r1": -0.2188
+  },
+  "META": {
+   "g": "Communication Services",
+   "key": "US:META",
+   "r1": -0.0387
+  },
+  "MFC": {
+   "g": "Financials",
+   "key": "CA:MFC",
+   "r1": 0.4528
+  },
+  "MG": {
+   "g": "Consumer Discretionary",
+   "key": "CA:MG",
+   "r1": 0.4752
+  },
+  "MPC": {
+   "g": "Energy",
+   "key": "US:MPC",
+   "r1": 1.1742
+  },
+  "MS": {
+   "g": "Financials",
+   "key": "US:MS",
+   "r1": 0.2063
+  },
+  "MSFT": {
+   "g": "Information Technology",
+   "key": "US:MSFT",
+   "r1": 0.0196
+  },
+  "NEM": {
+   "g": "Materials",
+   "key": "US:NEM",
+   "r1": 0.3948
+  },
+  "NFLX": {
+   "g": "Communication Services",
+   "key": "US:NFLX",
+   "r1": -0.432
+  },
+  "NKE": {
+   "g": "Consumer Discretionary",
+   "key": "US:NKE",
+   "r1": -0.4779
+  },
+  "NOC": {
+   "g": "Industrials",
+   "key": "US:NOC",
+   "r1": -0.1607
+  },
+  "NTR": {
+   "g": "Materials",
+   "key": "CA:NTR",
+   "r1": 0.2563
+  },
+  "NVDA": {
+   "g": "Information Technology",
+   "key": "US:NVDA",
+   "r1": 0.3086
+  },
+  "QCOM": {
+   "g": "Information Technology",
+   "key": "US:QCOM",
+   "r1": 0.0914
+  },
+  "QSR": {
+   "g": "Consumer Discretionary",
+   "key": "CA:QSR",
+   "r1": 0.1492
+  },
+  "RCI.B": {
+   "g": "Communication Services",
+   "key": "CA:RCI.B",
+   "r1": -0.0611
+  },
+  "RGSI": {
+   "g": "Utilities",
+   "key": null,
+   "r1": -0.0187
+  },
+  "RJF": {
+   "g": "Financials",
+   "key": "US:RJF",
+   "r1": -0.0649
+  },
+  "RY": {
+   "g": "Financials",
+   "key": "CA:RY",
+   "r1": 0.3836
+  },
+  "SOLS": {
+   "g": "Materials",
+   "key": null,
+   "r1": 0.178
+  },
+  "SRU.UN": {
+   "g": "Real Estate",
+   "key": "CA:SRU.UN",
+   "r1": 0.073
+  },
+  "SU": {
+   "g": "Energy",
+   "key": "CA:SU",
+   "r1": 0.7098
+  },
+  "T": {
+   "g": "Communication Services",
+   "key": "CA:T",
+   "r1": -0.4214
+  },
+  "TCEHY": {
+   "g": "Communication Services",
+   "key": null,
+   "r1": -0.3406
+  },
+  "TCOM": {
+   "g": "Consumer Discretionary",
+   "key": null,
+   "r1": -0.4922
+  },
+  "TD": {
+   "g": "Financials",
+   "key": "CA:TD",
+   "r1": 0.5852
+  },
+  "TJX": {
+   "g": "Consumer Discretionary",
+   "key": "US:TJX",
+   "r1": -0.0409
+  },
+  "TM": {
+   "g": "Consumer Discretionary",
+   "key": null,
+   "r1": -0.0754
+  },
+  "TOU": {
+   "g": "Energy",
+   "key": "CA:TOU",
+   "r1": -0.0049
+  },
+  "TRP": {
+   "g": "Energy",
+   "key": "CA:TRP",
+   "r1": 0.1834
+  },
+  "TSM": {
+   "g": "Information Technology",
+   "key": null,
+   "r1": 0.6568
+  },
+  "UNP": {
+   "g": "Industrials",
+   "key": "US:UNP",
+   "r1": 0.2012
+  },
+  "V": {
+   "g": "Financials",
+   "key": "US:V",
+   "r1": 0.0679
+  },
+  "VALE": {
+   "g": "Materials",
+   "key": null,
+   "r1": 0.3315
+  },
+  "VZ": {
+   "g": "Communication Services",
+   "key": "US:VZ",
+   "r1": 0.1357
+  },
+  "WFG": {
+   "g": "Materials",
+   "key": "CA:WFG",
+   "r1": 0.0236
+  },
+  "WMT": {
+   "g": "Consumer Staples",
+   "key": "US:WMT",
+   "r1": 0.0297
+  },
+  "XOM": {
+   "g": "Energy",
+   "key": "US:XOM",
+   "r1": 0.4599
+  }
+ },
+ "missing": []
+}
