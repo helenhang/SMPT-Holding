@@ -2,8 +2,11 @@
 
 Usage: python build/build_site.py
 """
+import bisect
 import json
 import os
+import re
+import datetime as dt
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RENAME = {'FI': 'FISV', 'ERJ': 'EMBJ'}  # ticker changes, merged into one row
@@ -90,11 +93,80 @@ site_perf = dict(
               cls=[dict(zip(('k', 'ix'), perf_class(c['cls'])), w=rd(c['w']), r=rd(c['ret'])) for c in p['classes']])
          for p in perf['periods']])
 
+# Post-proposal performance, from data/prices.json (see fetch_prices.py). One entry per ticker
+# in a BUY/SELL trade: total return of the stock and of its market's benchmark ETF from the
+# first trading day on or after the proposal date, over each horizon in HORIZONS (months).
+HORIZONS = [3, 6, 12]
+px_path = os.path.join(ROOT, 'data', 'prices.json')
+prices = json.load(open(px_path)) if os.path.exists(px_path) else dict(px={}, bench={}, missing=[])
+PX = prices['px']
+
+
+def add_months(d, n):
+    y, m = divmod(d.month - 1 + n, 12)
+    return dt.date(d.year + y, m + 1, min(d.day, 28))
+
+
+def at(series, day):
+    """Index of the first trading day on or after `day`, or None past the end."""
+    i = bisect.bisect_left(series['d'], day.isoformat())
+    return i if i < len(series['d']) else None
+
+
+def post_perf(t):
+    m = re.match(r'(\d{4})-(\d{2})(?:-(\d{2}))?', t['date'])
+    if t['action'] not in ('BUY', 'SELL') or not m:
+        return None
+    approx = m.group(3) is None  # month only: measure from mid-month
+    d0 = dt.date(int(m.group(1)), int(m.group(2)), int(m.group(3) or 15))
+    legs = []
+    for k in (x.strip() for x in t['ticker'].split('/')):
+        k = RENAME.get(k, k)
+        if not k or k == '—' or re.fullmatch(r'\d\w+', k):
+            continue
+        if k not in PX:
+            legs.append(dict(k=k, na=1))
+            continue
+        s, b = PX[k], PX[prices['bench'][PX[k]['mkt']]]
+        i0, j0 = at(s, d0), at(b, d0)
+        if i0 is None or j0 is None:
+            legs.append(dict(k=k, na=1))
+            continue
+        h = {}
+        for n in HORIZONS:
+            d1 = add_months(dt.date.fromisoformat(s['d'][i0]), n)
+            i1, j1 = at(s, d1), at(b, d1)
+            if i1 is not None and j1 is not None:
+                h[str(n)] = [round(s['c'][i1] / s['c'][i0] - 1, 4), round(b['c'][j1] / b['c'][j0] - 1, 4)]
+        h['now'] = [round(s['c'][-1] / s['c'][i0] - 1, 4), round(b['c'][-1] / b['c'][j0] - 1, 4),
+                    (dt.date.fromisoformat(s['d'][-1]) - dt.date.fromisoformat(s['d'][i0])).days]
+        legs.append(dict(k=k, mkt=s['mkt'], d0=s['d'][i0], h=h))
+    return dict(approx=approx, legs=legs) if legs else None
+
+
+def weekly(series):
+    """Friday closes (carrying the last close forward) for the drawer's price chart."""
+    d = dt.date.fromisoformat(series['d'][0])
+    d += dt.timedelta(days=(4 - d.weekday()) % 7)
+    end, out, i = dt.date.fromisoformat(series['d'][-1]), [], 0
+    while d <= end:
+        while i + 1 < len(series['d']) and series['d'][i + 1] <= d.isoformat():
+            i += 1
+        out.append(float(f'{series["c"][i]:.4g}'))
+        d += dt.timedelta(days=7)
+    first = dt.date.fromisoformat(series['d'][0])
+    return dict(s=(first + dt.timedelta(days=(4 - first.weekday()) % 7)).isoformat(), c=out, mkt=series['mkt'])
+
+
+site_px = dict(bench=prices['bench'], end=prices.get('end'), missing=prices['missing'],
+               w={k: weekly(v) for k, v in PX.items()})
+
 site_trades = [dict(date=t['date'], yr=t['year'], rep=t['report'], act=t['action'], tk=t['ticker'],
-                    sec=t['security'], prop=t['proposed'], act_=t['actual'], ex=t['executed'], note=t['note'])
+                    sec=t['security'], prop=t['proposed'], act_=t['actual'], ex=t['executed'], note=t['note'],
+                    pp=post_perf(t))
                for t in trades]
 
-data = json.dumps(dict(snaps=snaps, trades=site_trades, classes=ORDER, tind=tick_ind, perf=site_perf), separators=(',', ':'), ensure_ascii=False)
+data = json.dumps(dict(snaps=snaps, trades=site_trades, classes=ORDER, tind=tick_ind, perf=site_perf, px=site_px), separators=(',', ':'), ensure_ascii=False)
 html = open(os.path.join(ROOT, 'build', 'template.html')).read().replace('__DATA__', data)
 open(os.path.join(ROOT, 'index.html'), 'w').write(html)
 print(f'index.html: {len(snaps)} snapshots, {len(site_trades)} trades')

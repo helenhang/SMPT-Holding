@@ -169,6 +169,12 @@ tr.sub td{background:var(--bg);padding:8px 12px 12px}
 tr.sub table{min-width:0;background:var(--panel)}
 .xp{background:none;border:0;padding:0;cursor:pointer;font:500 13px var(--mono);color:var(--ink);white-space:nowrap}
 .xp::before{content:"▸ ";color:var(--muted)} .xp[aria-expanded="true"]::before{content:"▾ "}
+.dbar{position:relative;width:120px;height:14px;margin-left:auto}
+.dbar::before{content:"";position:absolute;left:50%;top:-2px;bottom:-2px;border-left:1px solid var(--muted)}
+.dbar span{position:absolute;top:2px;height:10px}
+.dbar .pos{left:50%;border-radius:0 3px 3px 0;background:var(--buy)} .dbar .neg{right:50%;border-radius:3px 0 0 3px;background:var(--sell)}
+.ppbar{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin:4px 0 14px}
+.muted{color:var(--muted)}
 .notes{margin:12px 0 0;padding-left:18px;font-size:12.5px;color:var(--ink-2);display:flex;flex-direction:column;gap:3px}
 @media (max-width:760px){
   .snaps{grid-template-columns:repeat(2,1fr)}
@@ -178,6 +184,7 @@ tr.sub table{min-width:0;background:var(--panel)}
   .tr .body{grid-column:1 / -1}
   .tr .st{grid-column:2;grid-row:1;justify-self:end}
   .mix{grid-template-columns:70px 1fr}
+  .drawer th,.drawer td{padding-inline:6px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -255,6 +262,20 @@ tr.sub table{min-width:0;background:var(--panel)}
           <div class="tbl-wrap"><table class="cmp" id="betat"></table></div>
           <ul class="notes" id="rnotes"></ul>
         </section>
+        <section class="card" aria-labelledby="pph2">
+          <h2 id="pph2" data-i18n="ppTitle"></h2><p class="sub" style="font-size:12.5px;margin-bottom:10px" data-i18n="ppSub"></p>
+          <div class="ppbar">
+            <div class="toggle-wrap"><span data-i18n="ppH"></span><div class="toggle" id="pph" role="group" data-i18n-aria="ppH"><button type="button" data-h="3" data-i18n="h3"></button><button type="button" data-h="6" data-i18n="h6"></button><button type="button" data-h="12" data-i18n="h12"></button><button type="button" data-h="now" data-i18n="hnow"></button></div></div>
+            <div class="toggle-wrap"><span data-i18n="ppAct"></span><div class="toggle" id="ppa" role="group" data-i18n-aria="ppAct"><button type="button" data-a="ALL" data-i18n="all"></button><button type="button" data-a="BUY" data-i18n="act_BUY"></button><button type="button" data-a="SELL" data-i18n="act_SELL"></button></div></div>
+            <div class="toggle-wrap"><span data-i18n="ppSort"></span><div class="toggle" id="pps" role="group" data-i18n-aria="ppSort"><button type="button" data-s="date" data-i18n="sortDate"></button><button type="button" data-s="perf" data-i18n="sortPerf"></button></div></div>
+          </div>
+          <div class="tiles" id="pptiles"></div>
+          <h3 class="sh" data-i18n="ppByYear" style="margin-top:4px"></h3>
+          <div class="tbl-wrap" style="margin-top:6px"><table class="cmp" id="ppyear"></table></div>
+          <h3 class="sh" data-i18n="ppList"></h3><p class="note-s" data-i18n="ppListSub"></p>
+          <div class="tbl-wrap" style="max-height:640px;overflow:auto"><table id="pplist"></table></div>
+          <ul class="notes" id="ppnotes"></ul>
+        </section>
       </div>
     </div>
   </section>
@@ -306,6 +327,17 @@ const I18N = {
     betaTitle:'RBC 计算的股票部分 Beta', betaSub:'来自各期持仓表的 Beta 工作表，只覆盖股票持仓。', colSnap:'快照', betaH:'历史 Beta', betaX:'预期 Beta', betaNA:'表格未完成',
     riskNotes:['期间长度不一（3 到 7 个月），波动率、Beta 等按对数收益和期间长度折算成年化值。','最大回撤只在期末取值，期间内的回撤看不到，实际回撤可能更大。','收益/波动比没有扣除无风险利率，不等于夏普比率。','自成立以来的序列取自 RBC 的 “HPR since inception” 表：组合为毛收益（含股息和汇率影响），指数为全收益指数。'],
     pcls:{CASH:'现金',MMF_CA:'加元货币基金',MMF_US:'美元货币基金',BOND_CA:'加元债券',BOND_US:'美元债券',EQ_CA:'加拿大股票',EQ_US:'美国股票',ADR_CN:'中国 ADR',ADR_IN:'印度 ADR',ADR_JP:'日本 ADR',ADR_EU:'欧洲 ADR',ADR_TW:'台湾 ADR',ADR_BR:'巴西 ADR',ADR_KR:'韩国 ADR'},
+    ppTitle:'提案事后表现', ppSub:'每个提案从提案日起，股票和所在市场基准的含股息总收益：加拿大上市的对比 XIC，美股和 ADR 对比 SPY。卖出提案看的是卖出后股票有没有跑输基准。',
+    ppH:'观察期', h3:'3 个月', h6:'6 个月', h12:'12 个月', hnow:'至今', ppAct:'操作', ppSort:'排序', sortDate:'按日期', sortPerf:'按表现',
+    ppN:'已评估', ppNsub:(b,s)=>`买入 ${b} · 卖出 ${s}`, ppPending:n=>`另有 ${n} 条未满观察期`,
+    ppHit:'方向正确率', ppHitSub:(b,s)=>`买入 ${b} · 卖出 ${s}`, ppAvg:'平均方向超额', ppMed:m=>`中位数 ${m}`,
+    ppByYear:'按学年', colYear:'学年', colN:'数量', colMed:'中位数', colBest:'最好', colWorst:'最差',
+    ppList:'逐个提案', ppListSub:'多只股票的提案按股票拆成多行。点代码可查看股价走势。',
+    colStock:'股票', colBenchR:'基准', colEx:'超额', colDir:'方向超额', colExec:'执行',
+    ppEmpty:'这个观察期内还没有可评估的提案。',
+    ppNotes:['方向超额：买入 = 股票收益 − 基准收益；卖出 = 基准收益 − 股票收益。为正表示这个决定在该观察期内是对的。','收益含股息，按上市地货币计算，不含汇率影响；起点是提案日当天或之后的第一个交易日。“至今”的长度因提案而异。','只写到月份的提案日期（如 2024-03）按当月 15 日计算，表中标 ≈。','评估的是提案本身，不管有没有执行；执行情况见最后一列。'],
+    ppMissing:l=>`没有价格数据：${l}（已退市）。`, pxSrc:d=>`价格来自 Yahoo Finance，更新到 ${d}。`,
+    pxTitle:'股价走势', pxSub:b=>`周收盘价（按股息和拆股调整）。虚线是基准 ${b}，与起点对齐。▲ 买入提案，▼ 卖出提案。`,
     colInd:'行业', grpBy:'分组', grpCls:'资产类别', grpInd:'行业', allInd:'全部行业',
     cls:{'Cash':'现金','Money Market':'货币基金','Bonds':'债券','REITs':'REITs','Canadian Equity':'加拿大股票','US Equity':'美国股票','ADRs (Intl)':'ADR（国际）'},
     ind:{BANK:'银行',NBF:'非银金融',TECH:'科技',TCOM:'电信',DISC:'消费',RTLR:'零售',REST:'餐饮',PHRM:'医药',INDS:'工业',MAT:'原材料','O&G':'油气',TRANS:'运输',UTIL:'公用事业',REIT:'房地产信托',BOND:'债券',MMF:'货币基金',CASH:'现金',WRNTS:'认股权证',ETF:'指数 ETF',OTHER:'其他'}
@@ -342,6 +374,17 @@ const I18N = {
     betaTitle:'Equity beta computed by RBC', betaSub:'From the beta sheet in each holdings workbook; covers equity holdings only.', colSnap:'Snapshot', betaH:'Historic beta', betaX:'Expected beta', betaNA:'Not filled in',
     riskNotes:['Periods vary from 3 to 7 months, so volatility, beta and similar figures are annualized from log returns weighted by period length.','Drawdown is measured only at period ends, so drawdowns within a period are missed and the true figure may be larger.','Return / volatility does not subtract a risk-free rate, so it is not a Sharpe ratio.','The since-inception series comes from RBC’s "HPR since inception" workbook: portfolio returns are gross (dividends and currency included) and the indices are total-return.'],
     pcls:{CASH:'Cash',MMF_CA:'CAD money market',MMF_US:'USD money market',BOND_CA:'CAD bonds',BOND_US:'USD bonds',EQ_CA:'Canadian equity',EQ_US:'US equity',ADR_CN:'China ADRs',ADR_IN:'India ADRs',ADR_JP:'Japan ADRs',ADR_EU:'Europe ADRs',ADR_TW:'Taiwan ADRs',ADR_BR:'Brazil ADRs',ADR_KR:'Korea ADRs'},
+    ppTitle:'How proposals performed afterwards', ppSub:'Total return (dividends included) of each proposed stock from the proposal date, against its market’s benchmark: XIC for TSX listings, SPY for US stocks and ADRs. For a sell, the question is whether the stock then lagged the benchmark.',
+    ppH:'Horizon', h3:'3 months', h6:'6 months', h12:'12 months', hnow:'To date', ppAct:'Action', ppSort:'Sort', sortDate:'By date', sortPerf:'By result',
+    ppN:'Evaluated', ppNsub:(b,s)=>`${b} buys · ${s} sells`, ppPending:n=>`${n} more not yet at this horizon`,
+    ppHit:'Right direction', ppHitSub:(b,s)=>`Buys ${b} · sells ${s}`, ppAvg:'Average directional excess', ppMed:m=>`Median ${m}`,
+    ppByYear:'By school year', colYear:'Year', colN:'Count', colMed:'Median', colBest:'Best', colWorst:'Worst',
+    ppList:'Each proposal', ppListSub:'Proposals covering several stocks get one row per stock. Click a ticker to see its price chart.',
+    colStock:'Stock', colBenchR:'Benchmark', colEx:'Excess', colDir:'Directional excess', colExec:'Executed',
+    ppEmpty:'No proposal has reached this horizon yet.',
+    ppNotes:['Directional excess: for a buy, stock return − benchmark return; for a sell, benchmark return − stock return. Positive means the call was right over that horizon.','Returns include dividends and are in the listing currency, so currency moves are excluded. They start on the first trading day on or after the proposal date. "To date" differs in length for each proposal.','Proposal dates known only to the month (e.g. 2024-03) are measured from the 15th and marked ≈.','This scores the proposal itself, whether or not it was executed; see the last column for execution.'],
+    ppMissing:l=>`No price data: ${l} (delisted).`, pxSrc:d=>`Prices from Yahoo Finance, updated ${d}.`,
+    pxTitle:'Price history', pxSub:b=>`Weekly closes, adjusted for dividends and splits. The dashed line is the benchmark ${b}, rebased to the first point. ▲ buy proposal, ▼ sell proposal.`,
     colInd:'Industry', grpBy:'Group by', grpCls:'Asset class', grpInd:'Industry', allInd:'All industries',
     cls:{'Cash':'Cash','Money Market':'Money market','Bonds':'Bonds','REITs':'REITs','Canadian Equity':'Canadian equity','US Equity':'US equity','ADRs (Intl)':'ADRs (intl)'},
     ind:{BANK:'Banks',NBF:'Non-bank financials',TECH:'Technology',TCOM:'Telecom',DISC:'Consumer',RTLR:'Retail',REST:'Restaurants',PHRM:'Pharma',INDS:'Industrials',MAT:'Materials','O&G':'Oil & gas',TRANS:'Transportation',UTIL:'Utilities',REIT:'REITs',BOND:'Bonds',MMF:'Money market',CASH:'Cash',WRNTS:'Warrants',ETF:'Index ETFs',OTHER:'Other'}
@@ -654,10 +697,87 @@ function renderAna(){
   $('#betat').innerHTML=`<thead><tr><th>${T('colSnap')}</th><th class="r">${T('betaH')}</th><th class="r">${T('betaX')}</th></tr></thead><tbody>
     ${PF.per.map(p=>`<tr><td class="num">${esc(p.snap)}</td>${p.beta?`<td class="r num">${num2(p.beta.h)}</td><td class="r num">${num2(p.beta.x)}</td>`:`<td class="r" colspan="2" style="color:var(--muted)">${T('betaNA')}</td>`}</tr>`).join('')}</tbody>`;
   $('#rnotes').innerHTML=I18N[LANG].riskNotes.map(n=>`<li>${esc(n)}</li>`).join('');
+  renderPP();
 }
 document.querySelectorAll('#awin button').forEach(b=>b.onclick=()=>{aWin=b.dataset.w; renderAna();});
 document.querySelectorAll('#abench button').forEach(b=>b.onclick=()=>{aBench=b.dataset.b; renderAna();});
 let rsz; addEventListener('resize',()=>{clearTimeout(rsz); rsz=setTimeout(renderAna,150);});
+
+/* ---------- proposal performance ---------- */
+let ppH = '6', ppA = 'ALL', ppS = 'date';
+const median = a => { if(!a.length) return null; const b=a.slice().sort((x,y)=>x-y), m=b.length>>1; return b.length%2?b[m]:(b[m-1]+b[m])/2; };
+const avg = a => a.length ? sum(a)/a.length : null;
+const hitRate = a => a.length ? a.filter(x=>x>0).length/a.length : null;
+// One item per ticker in each BUY/SELL proposal; dir > 0 means the call was right.
+function ppItems(h){
+  const done=[], pending=[];
+  DATA.trades.forEach(t=>{ if(!t.pp || (ppA!=='ALL'&&t.act!==ppA)) return;
+    t.pp.legs.forEach(l=>{ if(l.na) return; const v=l.h[h]; if(!v){ pending.push(l); return; }
+      const ex=v[0]-v[1]; done.push({t, l, rs:v[0], rb:v[1], ex, dir:t.act==='BUY'?ex:-ex, days:v[2]}); }); });
+  return {done, pending};
+}
+function renderPP(){
+  document.querySelectorAll('#pph button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.h===ppH));
+  document.querySelectorAll('#ppa button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.a===ppA));
+  document.querySelectorAll('#pps button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.s===ppS));
+  const {done,pending}=ppItems(ppH), D=done.map(x=>x.dir);
+  const B=done.filter(x=>x.t.act==='BUY').map(x=>x.dir), Sl=done.filter(x=>x.t.act==='SELL').map(x=>x.dir);
+  const hp = v => v==null?'—':pct(v,0);
+  $('#pptiles').innerHTML=`<div class="tile"><span class="l">${T('ppN')}</span><span class="v">${done.length}</span><span class="s">${T('ppNsub',B.length,Sl.length)}</span>${pending.length?`<span class="s">${T('ppPending',pending.length)}</span>`:''}</div>
+    <div class="tile"><span class="l">${T('ppHit')}</span><span class="v">${hp(hitRate(D))}</span><span class="s">${T('ppHitSub',hp(hitRate(B)),hp(hitRate(Sl)))}</span></div>
+    <div class="tile"><span class="l">${T('ppAvg')}</span><span class="v">${spp(avg(D))}</span><span class="s">${T('ppMed',spp(median(D)))}</span></div>`;
+  const yrs=[...new Set(done.map(x=>x.t.yr))].sort();
+  $('#ppyear').innerHTML=`<thead><tr><th>${T('colYear')}</th><th class="r">${T('colN')}</th><th class="r">${T('ppHit')}</th><th class="r">${T('ppAvg')}</th><th class="r">${T('colMed')}</th><th>${T('colBest')}</th><th>${T('colWorst')}</th></tr></thead><tbody>
+    ${yrs.map(y=>{ const g=done.filter(x=>x.t.yr===y), d=g.map(x=>x.dir), hi=g.reduce((a,x)=>x.dir>a.dir?x:a), lo=g.reduce((a,x)=>x.dir<a.dir?x:a);
+      return `<tr><td class="num">${esc(y)}</td><td class="r num">${g.length}</td><td class="r num">${hp(hitRate(d))}</td><td class="r num">${spp(avg(d))}</td><td class="r num">${spp(median(d))}</td>
+        <td class="nm"><button class="tk" data-t="${esc(hi.l.k)}">${esc(hi.l.k)}</button> ${spp(hi.dir,0)}</td><td class="nm"><button class="tk" data-t="${esc(lo.l.k)}">${esc(lo.l.k)}</button> ${spp(lo.dir,0)}</td></tr>`; }).join('')}</tbody>`;
+  const rows = done.slice().sort(ppS==='perf'?(a,b)=>b.dir-a.dir:(a,b)=>b.t.date.localeCompare(a.t.date)||b.dir-a.dir);
+  const mx = Math.max(.01,...rows.map(x=>Math.abs(x.dir)));
+  $('#pplist').innerHTML = rows.length ? `<thead><tr><th>${T('date')}</th><th>${T('ppAct')}</th><th>${T('colTicker')}</th><th>${T('colName')}</th><th class="r">${T('colStock')}</th><th class="r">${T('colBenchR')}</th><th class="r">${T('colDir')}</th><th></th><th>${T('colExec')}</th></tr></thead><tbody>
+    ${rows.map(x=>{ const [a,ac]=actOf(x.t.act), [,el,ec]=exOf(x.t), w=Math.abs(x.dir)/mx*50;
+      return `<tr class="row"><td class="num" style="white-space:nowrap">${x.t.pp.approx?'≈':''}${esc(x.l.d0)}</td><td><span class="pill ${ac}">${a}</span></td><td><button class="tk" data-t="${esc(x.l.k)}">${esc(x.l.k)}</button></td>
+        <td class="nm">${esc(x.t.rep)}</td><td class="r num">${spct(x.rs)}</td><td class="r num">${spct(x.rb)} <span class="muted">${esc(DATA.px.bench[x.l.mkt].replace('.TO',''))}</span></td><td class="r num">${spp(x.dir)}</td>
+        <td><div class="dbar"><span class="${x.dir>=0?'pos':'neg'}" style="width:${w}%"></span></div></td><td><span class="pill ${ec}" title="${esc(x.t.ex)}">${el}</span></td></tr>`; }).join('')}</tbody>`
+    : `<tbody><tr><td style="color:var(--muted);padding:20px">${T('ppEmpty')}</td></tr></tbody>`;
+  const notes=I18N[LANG].ppNotes.slice();
+  if(DATA.px.missing.length) notes.push(T('ppMissing',DATA.px.missing.join(', ')));
+  if(DATA.px.end) notes.push(T('pxSrc',DATA.px.end));
+  $('#ppnotes').innerHTML=notes.map(n=>`<li>${esc(n)}</li>`).join('');
+  bindTk();
+}
+document.querySelectorAll('#pph button').forEach(b=>b.onclick=()=>{ppH=b.dataset.h; renderPP();});
+document.querySelectorAll('#ppa button').forEach(b=>b.onclick=()=>{ppA=b.dataset.a; renderPP();});
+document.querySelectorAll('#pps button').forEach(b=>b.onclick=()=>{ppS=b.dataset.s; renderPP();});
+
+/* price chart in the ticker drawer: weekly closes, benchmark rebased, proposal markers */
+const WEEK = 7*864e5;
+function drawPx(el,t,rel){
+  const P=DATA.px.w[t]; if(!P) return;
+  const bs=DATA.px.bench[P.mkt], Bw=DATA.px.w[bs], t0=Date.parse(P.s);
+  const bi = i => Math.round((t0+i*WEEK-Date.parse(Bw.s))/WEEK);
+  const b0 = Bw.c[bi(0)], bv = P.c.map((_,i)=>Bw.c[bi(i)]!=null? Bw.c[bi(i)]/b0*P.c[0] : null);
+  const W=Math.max(260,el.clientWidth), H=200, mL=44, mR=10, mT=10, mB=22, pw=W-mL-mR, ph=H-mT-mB, n=P.c.length;
+  const sc=niceScale(Math.min(...P.c,...bv.filter(v=>v!=null)), Math.max(...P.c,...bv.filter(v=>v!=null)), 4);
+  const x=i=>mL+i/(n-1)*pw, y=v=>mT+(1-(v-sc.lo)/(sc.hi-sc.lo))*ph, xi=d=>Math.max(0,Math.min(n-1,Math.round((Date.parse(d)-t0)/WEEK)));
+  let g=sc.ticks.map(v=>`<line class="grid" x1="${mL}" x2="${W-mR}" y1="${y(v)}" y2="${y(v)}"/><text x="${mL-6}" y="${y(v)+4}" text-anchor="end">${fmt(v,v%1?1:0)}</text>`).join('');
+  const y0=new Date(t0).getUTCFullYear()+1, y1=new Date(t0+(n-1)*WEEK).getUTCFullYear();
+  for(let yr=y0; yr<=y1; yr++){ const xx=x((Date.UTC(yr,0,1)-t0)/WEEK); g+=`<text x="${xx}" y="${H-5}" text-anchor="middle">${yr}</text>`; }
+  const path=(v,attr)=>`<path d="${v.map((p,i)=>p==null?'':(i&&v[i-1]!=null?'L':'M')+x(i).toFixed(1)+','+y(p).toFixed(1)).join('')}" fill="none" ${attr}/>`;
+  const marks=rel.filter(r=>r.pp).flatMap(r=>r.pp.legs.filter(l=>l.k===t&&l.d0).map(l=>{ const i=xi(l.d0), yy=y(P.c[i]), up=r.act==='BUY';
+    return `<path d="${up?`M${x(i)},${yy-9}l6,10h-12z`:`M${x(i)},${yy+9}l6,-10h-12z`}" fill="${up?'var(--buy)':'var(--sell)'}" stroke="var(--panel)" stroke-width="1.5"><title>${esc(l.d0)} ${esc(T('act_'+r.act))}</title></path>`; })).join('');
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="${esc(T('pxTitle'))}">${g}${path(bv,'stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="4 3"')}${path(P.c,'stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"')}${marks}
+    <line id="pxx" y1="${mT}" y2="${H-mB}" stroke="var(--muted)" visibility="hidden"/><rect x="${mL}" y="${mT}" width="${pw}" height="${ph}" fill="transparent"/></svg>`;
+  const svg=el.querySelector('svg'), ln=svg.querySelector('#pxx');
+  svg.querySelector('rect').onpointermove=e=>{ const bx=svg.getBoundingClientRect(), i=Math.max(0,Math.min(n-1,Math.round(((e.clientX-bx.left)*W/bx.width-mL)/pw*(n-1))));
+    ln.setAttribute('x1',x(i)); ln.setAttribute('x2',x(i)); ln.setAttribute('visibility','visible');
+    tipAt(e,`<div class="num" style="font-weight:600;margin-bottom:4px">${new Date(t0+i*WEEK).toISOString().slice(0,10)}</div>`+tipRow('var(--accent)',esc(t),fmt(P.c[i],2),true)+(bv[i]!=null?tipRow('var(--muted)',esc(bs),fmt(bv[i],2)):'')); };
+  svg.querySelector('rect').onpointerleave=()=>{ ln.setAttribute('visibility','hidden'); hideTip(); };
+}
+function ppLine(x,t){
+  const l=x.pp?.legs.find(l=>l.k===t&&!l.na); if(!l) return '';
+  return `<div class="nm num" style="font-size:12px">${['3','6','12','now'].map(h=>{ const v=l.h[h]; if(!v) return ''; const ex=v[0]-v[1], d=x.act==='BUY'?ex:-ex;
+    return `<span style="margin-right:10px">${T('h'+h)} <b style="font-weight:500;color:${d>=0?'var(--buy)':'var(--sell)'}">${spp(d,0)}</b></span>`; }).join('')}</div>`;
+}
 
 /* ---------- tabs ---------- */
 function setTab(k){
@@ -680,10 +800,12 @@ function openTk(t){
     <div><h3>${T('bySnap')}</h3><table style="margin-top:6px"><thead><tr><th>${T('date')}</th><th class="r">${T('colQty')}</th><th class="r">${T('colMv')}</th><th class="r">${T('colW')}</th></tr></thead><tbody>
       ${hist.map(x=>`<tr><td class="num">${x.d}</td>${x.h?`<td class="r num">${fmt(x.h.q,x.h.q%1?2:0)}</td><td class="r num">${money(x.h.v)}</td><td class="r num">${pct(x.h.v/x.tot,2)}</td>`:'<td class="r" colspan="3" style="color:var(--muted)">'+T('notHeldRow')+'</td>'}</tr>`).join('')}
     </tbody></table></div>
+    ${DATA.px.w[t]?`<div><h3>${T('pxTitle')}</h3><p class="nm" style="font-size:12px;margin:2px 0 6px">${T('pxSub',esc(DATA.px.bench[DATA.px.w[t].mkt]))}</p><div class="chart" id="dpx"></div></div>`:''}
     <div><h3>${T('related')}</h3>${rel.length?rel.map(x=>{const [a,ac]=actOf(x.act);const [,el,ec]=exOf(x);return `<div style="padding:10px 0;border-bottom:1px solid var(--rule-2);display:flex;flex-direction:column;gap:3px">
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="num" style="color:var(--muted);font-size:12px">${esc(x.date)}</span><span class="pill ${ac}">${a}</span><span class="pill ${ec}">${el}</span></div>
-      <div style="font-size:13px">${esc(x.rep)}</div><div class="nm">${T('proposed')}: ${esc(x.prop)}<br>${T('actual')}: ${esc(x.act_)}</div>${x.note?`<div class="nm" style="font-style:italic">${esc(x.note)}</div>`:''}</div>`;}).join(''):`<p class="nm">${T('noRelated')}</p>`}</div>`;
+      <div style="font-size:13px">${esc(x.rep)}</div><div class="nm">${T('proposed')}: ${esc(x.prop)}<br>${T('actual')}: ${esc(x.act_)}</div>${ppLine(x,t)}${x.note?`<div class="nm" style="font-style:italic">${esc(x.note)}</div>`:''}</div>`;}).join(''):`<p class="nm">${T('noRelated')}</p>`}</div>`;
   d.hidden=false; $('#scrim').hidden=false; $('#dx').focus();
+  if($('#dpx')) drawPx($('#dpx'),t,rel);
   $('#dx').onclick=closeTk;
 }
 function closeTk(){$('#drawer').hidden=true;$('#scrim').hidden=true;openT=null;}
