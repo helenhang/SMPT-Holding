@@ -1,10 +1,10 @@
-"""Extract performance data from the RBC workbooks.
+"""Extract performance data from the holdings and HPR workbooks.
 
 Usage: python build/parse_perf.py <folder with the workbooks>
 Writes data/performance.json:
   hpr      period returns since inception, from the latest "HPR since inception" workbook
            (first sheet): {start, rows:[{end, months, smpt, tsx, sp}]}, returns as decimals.
-           tsx and sp are total-return index changes; smpt is RBC's gross HPR.
+           tsx and sp are total-return index changes; smpt is the workbook's gross HPR.
   periods  one entry per "Portfolio Holdings" workbook, from sheets 06 (beta), 08 (HPR)
            and 09 (return compared to index).
 """

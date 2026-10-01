@@ -1,4 +1,4 @@
-"""Extract holdings from the RBC "Portfolio Holdings & Analysis" workbooks.
+"""Extract holdings from the "Portfolio Holdings & Analysis" workbooks (holdings from the RBC account).
 
 Usage: python build/parse_holdings.py <folder with the holdings workbooks>
 Writes data/holdings.json. Any file named "YYYY MM DD Portfolio Holdings*.xlsx"
@@ -20,7 +20,7 @@ SRC = sys.argv[1]
 
 
 def industries(wb, syms):
-    """Symbol -> RBC industry code, from the "Industries" sheet. Its layout varies
+    """Symbol -> industry code, from the "Industries" sheet. Its layout varies
     between workbooks, so find each row by its symbol and take the first text cell
     after the name as the code."""
     ws = next((w for w in wb.worksheets if 'industr' in w.title.lower()), None)

@@ -11,11 +11,11 @@ import datetime as dt
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RENAME = {'FI': 'FISV', 'ERJ': 'EMBJ'}  # ticker changes, merged into one row
 ORDER = ['Cash', 'Money Market', 'Bonds', 'REITs', 'Canadian Equity', 'US Equity', 'ADRs (Intl)']
-# RBC industry codes; the spelling varies between workbooks, so merge the aliases.
+# Industry codes from the holdings workbooks; the spelling varies between workbooks, so merge the aliases.
 IND_ALIAS = {'BONDS': 'BOND', 'PHARM': 'PHRM', 'NBNK': 'NBF', 'RTLT': 'RTLR'}
 IND_BY_CLASS = {'Cash': 'CASH', 'Money Market': 'MMF', 'Bonds': 'BOND', 'REITs': 'REIT'}
 # Tickers that only appear in trades.json (never in a snapshot), classified by hand
-# with the same codes RBC uses for their peers.
+# with the same codes the workbooks use for their peers.
 TRADE_IND = {'XIU': 'ETF', 'IVV': 'ETF', 'QQQ': 'ETF', 'FLIN': 'ETF', 'XEG': 'O&G',
              'C': 'BANK', 'CM': 'BANK', 'AC': 'TRANS', 'MMM': 'INDS', 'RNMBY': 'INDS', 'BA': 'INDS',
              'LMN': 'TECH', 'FL': 'RTLR', 'TGT': 'RTLR', 'PG': 'DISC', 'BCE': 'TCOM',
@@ -69,7 +69,7 @@ for date, snap in holdings.items():
                          q=h['qty'], v=round(h['mv'] or 0, 2)))
     total = sum(r['v'] for r in rows)
     if abs(total - snap['total']) > 1:
-        print(f'WARNING {date}: rows sum to {total:,.2f} but RBC total is {snap["total"]:,.2f}')
+        print(f'WARNING {date}: rows sum to {total:,.2f} but the workbook total is {snap["total"]:,.2f}')
     snaps.append(dict(date=date, total=round(snap['total'], 2), h=rows))
 
 # Industry per ticker for trades and the drawer: the latest snapshot that holds it wins.
