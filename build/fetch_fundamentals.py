@@ -7,6 +7,8 @@ Needs network access and `yfinance`. Writes data/fundamentals.json:
   co      {ticker: {yf, name, kind, ccy, fccy, fx, px, mcap, beta, ind, fye,
                     y: [fiscal year end...] oldest first, and per year (millions of fccy):
                     rev, ebit, da, capex, dnwc, tax (effective rate), int,
+                    ni (net income to common), bv (common equity at year end),
+                    div (common dividends paid), bb (net share buybacks), for the DDM / residual income model,
                     debt, cash (latest balance sheet, millions of fccy),
                     est: [growth this fiscal year, next fiscal year] from analysts, or null
                          (always null for statements outside USD/CAD)}}
@@ -105,6 +107,9 @@ for t, (s, sec) in sorted(hold.items()):
     wc = row(cf, 'Change In Working Capital')
     taxp, pre = row(inc, 'Tax Provision'), row(inc, 'Pretax Income')
     intr = row(inc, 'Interest Expense', 'Interest Expense Non Operating')
+    ni, bv = row(inc, 'Net Income Common Stockholders', 'Net Income'), row(bs, 'Common Stock Equity', 'Stockholders Equity')
+    div = row(cf, 'Common Stock Dividend Paid', 'Cash Dividends Paid')
+    bb = {y: max(0.0, -v) for y, v in row(cf, 'Net Common Stock Issuance', 'Repurchase Of Capital Stock').items()}
     debt, cash = row(bs, 'Total Debt'), row(bs, 'Cash Cash Equivalents And Short Term Investments', 'Cash And Cash Equivalents')
     ly = max(debt) if debt else None
     r = lambda d, y, f=lambda v: v: None if d.get(y) is None or math.isnan(d[y]) else round(f(d[y]), 2)
@@ -125,6 +130,7 @@ for t, (s, sec) in sorted(hold.items()):
         capex=[r(capex, y, abs) for y in years], dnwc=[r(wc, y, lambda v: -v) for y in years],
         tax=[round(taxp[y] / pre[y], 4) if taxp.get(y) is not None and pre.get(y) else None for y in years],
         int=[r(intr, y, abs) for y in years],
+        ni=[r(ni, y) for y in years], bv=[r(bv, y) for y in years], div=[r(div, y, abs) for y in years], bb=[r(bb, y) for y in years],
         debt=r(debt, ly) if ly else 0, cash=r(cash, ly) if ly else 0, est=est)
     c = out['co'][t]
     print(f'{t:8} {s:10} {c["kind"]:4} {fccy}->{ccy} rev {c["rev"][-1]:>12,.0f}  est {est}')
