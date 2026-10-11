@@ -173,12 +173,23 @@ if os.path.exists(sec_path):
             if r['v'] and r['c'] not in IND_BY_CLASS and r['t'] not in sec['hold']:
                 print(f'WARNING: {snap["date"]} {r["t"]} has no GICS sector; rerun fetch_sectors.py')
 
+# Annual statements for the DCF calculator (see fetch_fundamentals.py); the model itself
+# runs in the page.
+fd_path = os.path.join(ROOT, 'data', 'fundamentals.json')
+site_fd = None
+if os.path.exists(fd_path):
+    fd = json.load(open(fd_path))
+    site_fd = dict(asof=fd['asof'], co=fd['co'])
+    for r in snaps[-1]['h']:
+        if r['v'] and r['c'] not in IND_BY_CLASS and r['t'] not in fd['co'] and r['t'] not in fd['missing']:
+            print(f'WARNING: {r["t"]} has no fundamentals; rerun fetch_fundamentals.py')
+
 site_trades = [dict(date=t['date'], yr=t['year'], rep=t['report'], act=t['action'], tk=t['ticker'],
                     sec=t['security'], prop=t['proposed'], act_=t['actual'], ex=t['executed'], note=t['note'],
                     pp=post_perf(t))
                for t in trades]
 
-data = json.dumps(dict(snaps=snaps, trades=site_trades, classes=ORDER, tind=tick_ind, perf=site_perf, px=site_px, sec=site_sec), separators=(',', ':'), ensure_ascii=False)
+data = json.dumps(dict(snaps=snaps, trades=site_trades, classes=ORDER, tind=tick_ind, perf=site_perf, px=site_px, sec=site_sec, fd=site_fd), separators=(',', ':'), ensure_ascii=False)
 html = open(os.path.join(ROOT, 'build', 'template.html')).read().replace('__DATA__', data)
 open(os.path.join(ROOT, 'index.html'), 'w').write(html)
 print(f'index.html: {len(snaps)} snapshots, {len(site_trades)} trades')

@@ -110,8 +110,8 @@ th[data-dir="asc"]::after{content:" ↑"} th[data-dir="desc"]::after{content:" �
 tr.grp td{background:var(--bg);font:600 12px var(--cond);letter-spacing:.04em;color:var(--ink-2);padding-block:6px}
 tr.grp td .tot{float:right;font:500 12px var(--mono)}
 tbody tr.row:hover td{background:var(--accent-soft)}
-.tk{font:600 13px var(--mono);color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px}
-.tk:hover{text-decoration-color:currentColor}
+.tk,.tkd{font:600 13px var(--mono);color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px}
+.tk:hover,.tkd:hover{text-decoration-color:currentColor}
 .nm{color:var(--ink-2);font-size:13px}
 .wbar{display:flex;align-items:center;gap:8px;justify-content:flex-end}
 .wbar span{display:inline-block;height:6px;border-radius:0 3px 3px 0;background:var(--accent);opacity:.55}
@@ -183,7 +183,31 @@ tr.sub table{min-width:0;background:var(--panel)}
 .ppbar{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin:4px 0 14px}
 .muted{color:var(--muted)}
 .notes{margin:12px 0 0;padding-left:18px;font-size:12.5px;color:var(--ink-2);display:flex;flex-direction:column;gap:3px}
+/* DCF */
+.dgrid{display:grid;grid-template-columns:250px minmax(0,1fr);gap:20px;margin-top:4px}
+.dside h4{margin:14px 0 4px;font:600 13px var(--cond);color:var(--ink-2)}
+.dside h4:first-child{margin-top:0}
+.dside .toggle{margin:2px 0 4px}
+.fl{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-2);min-height:29px}
+.fi{display:inline-flex;align-items:center;gap:4px}
+.fi i{font:12px var(--mono);font-style:normal;color:var(--muted);width:12px}
+input.sc,input.cell{width:88px;text-align:right;font:13px var(--mono);font-variant-numeric:tabular-nums;color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:4px;padding:3px 6px}
+input.cell{width:80px;padding:2px 5px}
+input.ov{background:var(--warn-bg);border-color:var(--warn)}
+table.proj{min-width:0}
+table.proj th{position:static;cursor:default}
+table.proj th,table.proj td{padding:4px 8px;white-space:nowrap;vertical-align:middle}
+table.proj th.pj{color:var(--accent)}
+table.proj td.h{color:var(--muted)}
+table.proj tr.b td{font-weight:600}
+table.proj tr.s td:first-child{padding-left:20px;color:var(--muted);font-size:12px}
+table.sens td.c{box-shadow:inset 0 0 0 2px var(--accent)}
+.warnbox{background:var(--warn-bg);color:var(--warn);border-radius:6px;padding:8px 12px;font-size:12.5px;margin:6px 0}
+.dbtns{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.btn{border:1px solid var(--rule);background:var(--panel);border-radius:5px;padding:5px 10px;font-size:12px;cursor:pointer;color:var(--ink-2)}
+.btn:hover{border-color:var(--ink-2)}
 @media (max-width:760px){
+  .dgrid{grid-template-columns:1fr}
   .snaps{grid-template-columns:repeat(2,1fr)}
   .month{grid-template-columns:1fr}
   .month .mh{position:static;margin-bottom:4px}
@@ -221,6 +245,7 @@ tr.sub table{min-width:0;background:var(--panel)}
       <button class="tab" role="tab" id="tab-h" aria-selected="true"><span data-i18n="tabHold"></span><span class="c" id="hc"></span></button>
       <button class="tab" role="tab" id="tab-t" aria-selected="false"><span data-i18n="tabTrades"></span><span class="c" id="tc"></span></button>
       <button class="tab" role="tab" id="tab-a" aria-selected="false"><span data-i18n="tabAna"></span></button>
+      <button class="tab" role="tab" id="tab-d" aria-selected="false"><span data-i18n="tabDcf"></span></button>
     </div>
 
     <div id="pane-h">
@@ -293,6 +318,22 @@ tr.sub table{min-width:0;background:var(--panel)}
         </section>
       </div>
     </div>
+
+    <div id="pane-d" hidden>
+      <div class="agrid">
+        <section class="card" aria-labelledby="dcfh">
+          <div class="row-h"><div><h2 id="dcfh" data-i18n="dcfTitle"></h2><p class="sub" style="font-size:12.5px" data-i18n="dcfSub"></p></div>
+            <select class="dd" id="dsel" data-i18n-aria="dPick"></select></div>
+          <div id="dcf"></div>
+        </section>
+        <section class="card" aria-labelledby="dsumh">
+          <div class="row-h"><div><h2 id="dsumh" data-i18n="dSumTitle"></h2><p class="sub" style="font-size:12.5px;margin-bottom:10px" data-i18n="dSumSub"></p></div>
+            <div class="toggle-wrap" style="margin-bottom:8px"><span data-i18n="ppSort"></span><div class="toggle" id="dsort" role="group" data-i18n-aria="ppSort"><button type="button" data-s="w" data-i18n="dSortW"></button><button type="button" data-s="up" data-i18n="dSortUp"></button></div></div></div>
+          <div class="tbl-wrap" style="max-height:640px;overflow:auto"><table id="dsum"></table></div>
+          <ul class="notes" id="dnotes"></ul>
+        </section>
+      </div>
+    </div>
   </section>
 
   <footer class="foot">
@@ -359,6 +400,33 @@ const I18N = {
     secTime:'行业配置随时间变化', secTimeSub:'SMPT 各快照股票持仓中各行业的占比（按当前的 GICS 分类）。', colChange:'变化',
     secNotes:(d)=>[`成分股和 GICS 行业来自维基百科，市值和价格来自 Yahoo Finance，数据日期 ${d}。`,'指数行业权重按总市值计算，没有做自由流通调整，会和官方权重略有出入。','SMPT 持仓如果是指数成分股，沿用指数的 GICS 行业；否则（主要是 ADR）用 Yahoo 的行业分类换算。','“1 年 · SMPT 持仓”是现有持仓过去一年的收益按当前市值加权，不是组合的实际收益（没有考虑期间的买卖）；指数行业收益按成员市值加权。都按上市地货币计算，含股息。'],
     gics:{'Information Technology':'信息技术','Financials':'金融','Health Care':'医疗保健','Consumer Discretionary':'可选消费','Communication Services':'通信服务','Industrials':'工业','Consumer Staples':'必需消费','Energy':'能源','Materials':'原材料','Utilities':'公用事业','Real Estate':'房地产'},
+    tabDcf:'估值', dcfTitle:'DCF 估值', dcfSub:'两阶段自由现金流（FCFF）折现模型。默认假设来自最近几年的财报和分析师预期。带框的数字都可以改，改完立即重算；清空一个格子即恢复默认。', dPick:'选择股票',
+    dHist:'历史', dProj:'预测', dMn:f=>`百万 ${f}`,
+    dRev:'收入', dG:'增长率', dCost:'营业成本及费用', dEbit:'营业利润 EBIT', dMargin:'EBIT 利润率', dTax:'税率', dNopat:'税后营业利润 NOPAT',
+    dDa:'折旧摊销 D&A', dPctRev:'占收入 %', dCx:'资本支出 Capex', dNwc:'营运资本增加 ΔNWC', dFcff:'自由现金流 FCFF', dDf:'折现因子', dPv:'现值',
+    dWaccH:'折现率', dTvH:'终值', dHorH:'预测期', dBridgeH:'企业价值 → 每股价值',
+    dRf:'无风险利率', dErp:'股权风险溢价', dBeta:'Beta', dKe:'股权成本', dKd:'税前债务成本', dWd:'债务占比 D/(D+E)', dTg:'永续增长率', dMult:'EV/EBITDA 倍数',
+    dDebt:'总债务', dCash:'现金及短期投资', dShares:'股数（百万）', dPxIn:c=>`股价（${c}）`, dBridgeSub:f=>`债务和现金单位为百万 ${f}。股数 = 市值 / 股价，ADR 按每份 ADR 计。`,
+    dWaccOv:'WACC 已手动设定，上面的各项不再影响结果。',
+    dGordon:'永续增长', dExit:'退出倍数', dYears:n=>`${n} 年`,
+    dVps:'每股内在价值', dPx:'现价', dUp:'涨跌空间', dEv:'企业价值', dEq:e=>`股权价值 ${e}`, dTvs:'终值占比', dImpMult:v=>`隐含 EV/EBITDA ${v}×`, dImpG:v=>`隐含永续增长 ${v}`,
+    dKeSub:(ke,wd)=>`股权成本 ${ke} · 债务占比 ${wd}`,
+    dReset:'重置这只股票', dResetQ:t=>`清除 ${t} 的所有手动输入？`, dExport:'导出输入', dImport:'导入输入', dImported:n=>`已导入 ${n} 只股票的输入。`, dBadFile:'文件格式不对，没有导入。',
+    dEdited:'已修改', dKind_fin:'金融', dKind_reit:'REIT',
+    dSens:'敏感性分析', dSensSub:c=>`每股价值（${c}）随 WACC 和终值假设的变化，预测期现金流不变。绿色高于现价，红色低于现价。`,
+    dWarnFin:'银行、保险和资管公司的债务是经营的一部分，FCFF DCF 不适用，Yahoo 也不提供它们的营业利润。更合适的是股利折现或剩余收益模型；如果仍想试算，可以手动填写利润率。',
+    dWarnReit:'REIT 通常用 AFFO 或 NAV 估值，这里的 FCFF DCF 只作参考。',
+    dWarnNoData:'缺少营业利润数据，无法计算。可以在预测表里手动填写 EBIT 利润率或成本。',
+    dWarnNeg:'最近几年营业利润为负，默认假设会得出负的现金流。请手动填写未来的利润率。',
+    dWarnWG:'WACC 必须高于永续增长率，否则终值没有意义。',
+    dWarnTv:v=>`终值占企业价值的 ${v}，结果对终值假设非常敏感。`,
+    dWarnCcy:(f,c)=>`财报币种是 ${f}，股价是 ${c}。现金流按 ${f} 折现，但默认的无风险利率是美元/加元利率，两种货币的通胀不同，需要手动调整。`,
+    dGrowthSrc:a=>a?'第 1–2 年的增长率默认取分析师一致预期（限制在 −20% 到 40%），之后线性过渡到永续增长率。':'第 1–2 年的增长率默认取过去三年的收入复合增长率（限制在 −20% 到 40%），之后线性过渡到永续增长率。',
+    dHint:'黄色格子是手动输入。改收入会覆盖增长率，改成本会覆盖利润率，反过来也一样。',
+    dMeta:(y,f,c,e)=>`Yahoo ${y} · 财报币种 ${f} · 股价币种 ${c} · 最近财年截至 ${e}`,
+    dSumTitle:'全部持仓的 DCF 结果', dSumSub:'用上面的模型给最新快照里的每只股票估值。没改过的股票用默认假设，只是机械的起点，不是结论。点代码在上方打开。', dSortW:'按权重', dSortUp:'按涨跌空间',
+    dNotes:d=>[`财报和股价来自 Yahoo Finance，数据日期 ${d}，估值日也取这一天。`,'默认值：EBIT 利润率、D&A、Capex、ΔNWC 取最近三年占收入比例的平均（ΔNWC 限制在 ±3%）；税率取历史有效税率的中位数（5%–35%）；Beta 取 Yahoo 的值；债务成本 = 利息支出 / 总债务。',`默认无风险利率：加拿大上市 ${pct(RF.CA)}，其他 ${pct(RF.US)}；股权风险溢价 ${pct(ERP)}；永续增长率 ${pct(TG)}。这些是手工设定的，请按当时的市场调整。`,'营业利润是调整后口径（与 Bloomberg 的 Industrial-Adjusted 一致）：不扣收购的在研项目、减值和重组等异常项目，所以可能高于 10-K 的 GAAP 营业利润。这些费用如果每年都有（例如 LLY 的在研项目收购），请手动调低利润率。','现金流假定在每个财年末发生，第一年按估值日距上个财年末已过去的时间缩短折现期。','手动输入目前只保存在你自己的浏览器里，其他人看不到。可以用“导出 / 导入”分享。'],
+    dNoFd:'没有财报数据。运行 build/fetch_fundamentals.py 后重新构建。', dOpen:'DCF 估值 →',
     colInd:'行业', grpBy:'分组', grpCls:'资产类别', grpInd:'行业', allInd:'全部行业',
     cls:{'Cash':'现金','Money Market':'货币基金','Bonds':'债券','REITs':'REITs','Canadian Equity':'加拿大股票','US Equity':'美国股票','ADRs (Intl)':'ADR（国际）'},
     ind:{BANK:'银行',NBF:'非银金融',TECH:'科技',TCOM:'电信',DISC:'消费',RTLR:'零售',REST:'餐饮',PHRM:'医药',INDS:'工业',MAT:'原材料','O&G':'油气',TRANS:'运输',UTIL:'公用事业',REIT:'房地产信托',BOND:'债券',MMF:'货币基金',CASH:'现金',WRNTS:'认股权证',ETF:'指数 ETF',OTHER:'其他'}
@@ -412,6 +480,33 @@ const I18N = {
     secTime:'Sector allocation over time', secTimeSub:'Share of SMPT’s equity holdings in each sector at each snapshot (current GICS classification).', colChange:'Change',
     secNotes:(d)=>[`Constituents and GICS sectors from Wikipedia; market caps and prices from Yahoo Finance, as of ${d}.`,'Index sector weights use total market cap, not float-adjusted cap, so they differ slightly from official weights.','Holdings that are index members take the index’s GICS sector; others (mostly ADRs) use Yahoo’s sector, mapped to GICS.','"1y · SMPT holdings" is the past-year return of the current holdings weighted by current value, not the portfolio’s actual return (it ignores trades during the year). Index sector returns are cap-weighted. All in listing currency, dividends included.'],
     gics:{'Information Technology':'Information Technology','Financials':'Financials','Health Care':'Health Care','Consumer Discretionary':'Consumer Discretionary','Communication Services':'Communication Services','Industrials':'Industrials','Consumer Staples':'Consumer Staples','Energy':'Energy','Materials':'Materials','Utilities':'Utilities','Real Estate':'Real Estate'},
+    tabDcf:'Valuation', dcfTitle:'DCF valuation', dcfSub:'Two-stage free cash flow to the firm (FCFF) model. Defaults come from recent financial statements and analyst estimates. Every boxed number can be edited and the model recalculates at once; clear a box to restore its default.', dPick:'Choose a stock',
+    dHist:'Historical', dProj:'Projected', dMn:f=>`${f} millions`,
+    dRev:'Revenue', dG:'Growth', dCost:'Operating costs', dEbit:'Operating income (EBIT)', dMargin:'EBIT margin', dTax:'Tax rate', dNopat:'NOPAT',
+    dDa:'D&A', dPctRev:'% of revenue', dCx:'Capex', dNwc:'Increase in NWC', dFcff:'FCFF', dDf:'Discount factor', dPv:'Present value',
+    dWaccH:'Discount rate', dTvH:'Terminal value', dHorH:'Forecast period', dBridgeH:'Enterprise value → per share',
+    dRf:'Risk-free rate', dErp:'Equity risk premium', dBeta:'Beta', dKe:'Cost of equity', dKd:'Pre-tax cost of debt', dWd:'Debt weight D/(D+E)', dTg:'Terminal growth', dMult:'EV/EBITDA multiple',
+    dDebt:'Total debt', dCash:'Cash & short-term inv.', dShares:'Shares (millions)', dPxIn:c=>`Share price (${c})`, dBridgeSub:f=>`Debt and cash in ${f} millions. Shares = market cap / price, so ADRs are per ADR.`,
+    dWaccOv:'WACC is set by hand, so the inputs above no longer affect the result.',
+    dGordon:'Perpetual growth', dExit:'Exit multiple', dYears:n=>`${n} years`,
+    dVps:'Intrinsic value / share', dPx:'Price', dUp:'Upside', dEv:'Enterprise value', dEq:e=>`Equity ${e}`, dTvs:'Terminal value share', dImpMult:v=>`Implied EV/EBITDA ${v}×`, dImpG:v=>`Implied terminal growth ${v}`,
+    dKeSub:(ke,wd)=>`Cost of equity ${ke} · debt weight ${wd}`,
+    dReset:'Reset this stock', dResetQ:t=>`Clear all manual inputs for ${t}?`, dExport:'Export inputs', dImport:'Import inputs', dImported:n=>`Imported inputs for ${n} ${n===1?'stock':'stocks'}.`, dBadFile:'That file is not in the right format; nothing was imported.',
+    dEdited:'Edited', dKind_fin:'Financial', dKind_reit:'REIT',
+    dSens:'Sensitivity', dSensSub:c=>`Value per share (${c}) as WACC and the terminal assumption change, holding the forecast cash flows fixed. Green is above the current price, red below.`,
+    dWarnFin:'For banks, insurers and asset managers debt is part of operations, so an FCFF DCF does not apply, and Yahoo does not report their operating income. A dividend discount or residual income model fits better; to try anyway, enter margins by hand.',
+    dWarnReit:'REITs are usually valued on AFFO or NAV; treat this FCFF DCF as a rough reference.',
+    dWarnNoData:'Operating income is missing, so the model cannot run. Enter an EBIT margin or costs in the forecast table.',
+    dWarnNeg:'Operating income has been negative in recent years, so the defaults give negative cash flows. Enter future margins by hand.',
+    dWarnWG:'WACC must be above terminal growth, or the terminal value is meaningless.',
+    dWarnTv:v=>`The terminal value is ${v} of enterprise value, so the result is very sensitive to the terminal assumption.`,
+    dWarnCcy:(f,c)=>`Statements are in ${f} and the share price in ${c}. Cash flows are discounted in ${f}, but the default risk-free rate is a USD/CAD rate, and inflation differs between the currencies, so adjust it by hand.`,
+    dGrowthSrc:a=>a?'Growth in years 1–2 defaults to the analyst consensus (capped at −20% to 40%), then moves in a straight line to terminal growth.':'Growth in years 1–2 defaults to the past three-year revenue CAGR (capped at −20% to 40%), then moves in a straight line to terminal growth.',
+    dHint:'Yellow boxes are manual inputs. Entering revenue overrides growth and entering costs overrides the margin, and the other way round.',
+    dMeta:(y,f,c,e)=>`Yahoo ${y} · statements in ${f} · price in ${c} · latest fiscal year ended ${e}`,
+    dSumTitle:'DCF results for all holdings', dSumSub:'The model above applied to every stock in the latest snapshot. Stocks nobody has edited use the defaults, which are a mechanical starting point, not a conclusion. Click a ticker to open it above.', dSortW:'By weight', dSortUp:'By upside',
+    dNotes:d=>[`Statements and prices from Yahoo Finance as of ${d}, which is also the valuation date.`,'Defaults: EBIT margin, D&A, capex and NWC increase are three-year averages as a share of revenue (NWC capped at ±3%); tax is the median historical effective rate (5%–35%); beta is Yahoo’s; cost of debt = interest expense / total debt.',`Default risk-free rate: ${pct(RF.CA)} for TSX listings and ${pct(RF.US)} otherwise; equity risk premium ${pct(ERP)}; terminal growth ${pct(TG)}. These are set by hand; adjust them to the market at the time.`,'Operating income is on an adjusted basis (matching Bloomberg’s Industrial-Adjusted): acquired in-process R&D, impairments, restructuring and other abnormal items are not deducted, so it can be higher than GAAP operating income in the 10-K. If those charges recur every year (e.g. LLY’s in-process R&D acquisitions), lower the margin by hand.','Cash flows are assumed at each fiscal year end; the first year’s discount period is shortened by the time already elapsed since the last fiscal year end.','Manual inputs are saved only in your own browser for now, so others cannot see them. Use Export / Import to share them.'],
+    dNoFd:'No financial statements. Run build/fetch_fundamentals.py and rebuild.', dOpen:'DCF valuation →',
     colInd:'Industry', grpBy:'Group by', grpCls:'Asset class', grpInd:'Industry', allInd:'All industries',
     cls:{'Cash':'Cash','Money Market':'Money market','Bonds':'Bonds','REITs':'REITs','Canadian Equity':'Canadian equity','US Equity':'US equity','ADRs (Intl)':'ADRs (intl)'},
     ind:{BANK:'Banks',NBF:'Non-bank financials',TECH:'Technology',TCOM:'Telecom',DISC:'Consumer',RTLR:'Retail',REST:'Restaurants',PHRM:'Pharma',INDS:'Industrials',MAT:'Materials','O&G':'Oil & gas',TRANS:'Transportation',UTIL:'Utilities',REIT:'REITs',BOND:'Bonds',MMF:'Money market',CASH:'Cash',WRNTS:'Warrants',ETF:'Index ETFs',OTHER:'Other'}
@@ -844,12 +939,219 @@ function ppLine(x,t){
     return `<span style="margin-right:10px">${T('h'+h)} <b style="font-weight:500;color:${d>=0?'var(--buy)':'var(--sell)'}">${spp(d,0)}</b></span>`; }).join('')}</div>`;
 }
 
+/* ---------- DCF ---------- */
+const FD = DATA.fd;
+// Manual inputs, one object per ticker holding only what differs from the defaults.
+// They live in this browser for now; every read and write goes through DStore, so a
+// shared backend can replace it without touching the model.
+const DStore = (()=>{
+  const KEY='smpt-dcf'; let mem={};
+  try{ mem=JSON.parse(localStorage.getItem(KEY))||{}; }catch(e){}
+  const save=()=>{ try{ localStorage.setItem(KEY, JSON.stringify(mem)); }catch(e){} };
+  return {all:()=>mem, get:t=>Object.hasOwn(mem,t)?mem[t]:null, set(t,o){ if(o) mem[t]=o; else delete mem[t]; save(); }, replace(a){ mem=a; save(); }};
+})();
+const RF = {CA:.033, US:.042}, ERP = .05, TG = .025, MULT = 10;
+const SKEYS = ['rf','erp','beta','kd','wacc','tg','mult','debt','cash','shares','px'], SPCT = new Set(['rf','erp','kd','wacc','tg']);
+const YKEYS = ['g','rev','cost','m','tax','da','cx','nwc'], YPCT = new Set(['g','m','tax','da','cx','nwc']);
+const clamp = (v,a,b) => Math.min(b,Math.max(a,v));
+const okN = v => typeof v==='number' && isFinite(v);
+const mean3 = a => { const b=a.slice(-3).filter(okN); return b.length?sum(b)/b.length:null; };
+const mny = v => !okN(v)?'—':fmt(v,Math.abs(v)>=100?0:1);
+let dT = null, dSort = 'w';
+const dHeld = () => FD ? S.at(-1).h.filter(h=>h.v>0 && Object.hasOwn(FD.co,h.t)).sort((a,b)=>b.v-a.v) : [];
+
+function dPrune(o){
+  for(const k in o.y||{}) if(!o.y[k].some(v=>v!=null)) delete o.y[k];
+  ['y','s'].forEach(k=>{ if(o[k]&&!Object.keys(o[k]).length) delete o[k]; });
+  return Object.keys(o).length?o:null;
+}
+// Keep only known keys and finite numbers: stored or imported input is untrusted.
+function dClean(o){
+  if(!o||typeof o!=='object') return null;
+  const r={};
+  if(o.n===10) r.n=10;
+  if(o.tm==='x') r.tm='x';
+  if(o.s&&typeof o.s==='object'){ r.s={}; SKEYS.forEach(k=>{ if(okN(o.s[k])) r.s[k]=o.s[k]; }); }
+  if(o.y&&typeof o.y==='object'){ r.y={}; YKEYS.forEach(k=>{ if(Array.isArray(o.y[k])) r.y[k]=o.y[k].slice(0,10).map(v=>okN(v)?v:null); }); }
+  return dPrune(r);
+}
+
+// Defaults from the statements: three-year averages as a share of revenue.
+function dBase(t){
+  const c=FD.co[t], R=c.rev, L=R.length-1, h=S.at(-1).h.find(x=>x.t===t);
+  const ratio = a => mean3(a.map((v,i)=>okN(v)&&R[i]?v/R[i]:null));
+  const tx=c.tax.filter(v=>okN(v)&&v>0&&v<.5), i0=Math.max(0,L-3);
+  const cagr = L>i0&&R[i0]>0&&R[L]>0 ? (R[L]/R[i0])**(1/(L-i0))-1 : 0;
+  const g1=clamp(c.est?.[0]??cagr,-.2,.4), g2=clamp(c.est?.[1]??g1,-.2,.4);
+  const rf=RF[h&&isCA(h)?'CA':'US'], it=c.int.filter(okN).at(-1), kd0=c.debt>0&&okN(it)?it/c.debt:null;
+  return {g1, g2, m:ratio(c.ebit), tax:tx.length?clamp(median(tx),.05,.35):.25, da:ratio(c.da)??0, cx:ratio(c.capex)??0, nwc:clamp(ratio(c.dnwc)??0,-.03,.03),
+    s:{rf, erp:ERP, beta:okN(c.beta)?clamp(.67*c.beta+.33,.5,2.5):1, kd:kd0!=null?clamp(kd0,rf,rf+.06):rf+.015, tg:TG, mult:MULT,
+       debt:c.debt||0, cash:c.cash||0, shares:c.mcap?c.mcap/c.px:null, px:c.px}};
+}
+// Amounts are in millions of the statement currency (fccy); fx converts per-share value to the listing currency.
+function dModel(t){
+  const c=FD.co[t], B=dBase(t), o=dClean(DStore.get(t))||{}, oy=o.y||{};
+  const s={...B.s, ...(o.s||{})}, N=o.n||5, tm=o.tm||'g';
+  const ov=(k,i)=>oy[k]?.[i]??null, at=(k,i,d)=>ov(k,i)??d;
+  const P=[]; let prev=c.rev.at(-1);
+  for(let i=0;i<N;i++){
+    const gd = i===0?B.g1 : i===1?B.g2 : B.g2+(s.tg-B.g2)*(i-1)/(N-2);
+    const rev = ov('rev',i) ?? prev*(1+at('g',i,gd));
+    const m = ov('cost',i)!=null ? 1-ov('cost',i)/rev : at('m',i,B.m);
+    const ebit = m==null?null:rev*m, tax=at('tax',i,B.tax);
+    const nopat = ebit==null?null : ebit>0?ebit*(1-tax):ebit;
+    // capex and D&A converge to the lower of the two by the last year, so the terminal value carries no net capex
+    const f=(i+1)/N, lo=Math.min(B.da,B.cx), dap=at('da',i,B.da+(lo-B.da)*f), cxp=at('cx',i,B.cx+(lo-B.cx)*f), nwcp=at('nwc',i,B.nwc), da=rev*dap, cx=rev*cxp, nwc=rev*nwcp;
+    P.push({rev, g:rev/prev-1, cost:ebit==null?null:rev-ebit, m, ebit, tax, nopat, da, dap, cx, cxp, nwc, nwcp, fcff:nopat==null?null:nopat+da-cx-nwc});
+    prev=rev;
+  }
+  const E=s.shares*s.px/c.fx, wd=s.debt/(s.debt+E), ke=s.rf+s.beta*s.erp;
+  const wacc = s.wacc ?? (1-wd)*ke + wd*s.kd*(1-B.tax);
+  const el = clamp((Date.parse(FD.asof)-Date.parse(c.fye))/(365.25*864e5),0,1);
+  const r = {c, B, s, o, N, tm, P, wd, ke, wacc, el};
+  r.v = dValue(r, wacc, tm==='g'?s.tg:s.mult);
+  return r;
+}
+// Value at discount rate w and terminal growth (or exit multiple) x, with the forecast fixed.
+function dValue(r,w,x){
+  const {P,el,s,c}=r, N=P.length, L=P[N-1];
+  if(P.some(p=>p.fcff==null) || !okN(w) || w<=-1) return null;
+  const df=P.map((_,i)=>(1+w)**-(i+1-el)), pv=P.map((p,i)=>p.fcff*df[i]);
+  if(r.tm==='g' && w<=x) return {df, pv, bad:true};
+  const tv = r.tm==='g' ? L.fcff*(1+x)/(w-x) : (L.ebit+L.da)*x;
+  const pvtv=tv*df[N-1], ev=sum(pv)+pvtv, eq=ev-s.debt+s.cash, vps=s.shares>0?eq/s.shares*c.fx:null;
+  return {df, pv, tv, ev, eq, vps, up:okN(vps)?vps/s.px-1:null, tvs:pvtv/ev,
+    imp: r.tm==='g' ? tv/(L.ebit+L.da) : (tv*w-L.fcff)/(tv+L.fcff)};
+}
+function dHist(c){
+  return c.y.map((_,i)=>{
+    const rev=c.rev[i], ebit=c.ebit[i], tax=c.tax[i], r=v=>okN(v)&&rev?v/rev:null;
+    const nopat=okN(ebit)&&okN(tax)?(ebit>0?ebit*(1-tax):ebit):null;
+    return {rev, g:i&&c.rev[i-1]?rev/c.rev[i-1]-1:null, cost:okN(ebit)?rev-ebit:null, ebit, m:r(ebit), tax, nopat,
+      da:c.da[i], dap:r(c.da[i]), cx:c.capex[i], cxp:r(c.capex[i]), nwc:c.dnwc[i], nwcp:r(c.dnwc[i]),
+      fcff:okN(nopat)&&okN(c.da[i])&&okN(c.capex[i])?nopat+c.da[i]-c.capex[i]-(c.dnwc[i]||0):null};
+  });
+}
+// k: field of a projection row; e: the manual-input key when the row is editable; f: m(oney) / p(ercent) / x (factor)
+const DROWS = [{k:'rev',l:'dRev',f:'m',e:'rev',b:1}, {k:'g',l:'dG',f:'p',e:'g',sub:1}, {k:'cost',l:'dCost',f:'m',e:'cost'},
+  {k:'ebit',l:'dEbit',f:'m',b:1}, {k:'m',l:'dMargin',f:'p',e:'m',sub:1}, {k:'tax',l:'dTax',f:'p',e:'tax',sub:1}, {k:'nopat',l:'dNopat',f:'m'},
+  {k:'da',l:'dDa',f:'m'}, {k:'dap',l:'dPctRev',f:'p',e:'da',sub:1}, {k:'cx',l:'dCx',f:'m'}, {k:'cxp',l:'dPctRev',f:'p',e:'cx',sub:1},
+  {k:'nwc',l:'dNwc',f:'m'}, {k:'nwcp',l:'dPctRev',f:'p',e:'nwc',sub:1}, {k:'fcff',l:'dFcff',f:'m',b:1}, {k:'df',l:'dDf',f:'x'}, {k:'pv',l:'dPv',f:'m',b:1}];
+const dParse = x => { x=String(x).replace(/[,%×\s$]/g,'').replace('−','-'); if(x==='') return null; const v=parseFloat(x); return isFinite(v)?v:NaN; };
+// Save a change, then re-render and put focus back on the box the user moved to.
+function dEdit(fn){
+  const o=dClean(DStore.get(dT))||{}; fn(o); DStore.set(dT, dPrune(o));
+  setTimeout(()=>{
+    const a=document.activeElement, sel=a?.dataset?.e?`input[data-e="${a.dataset.e}"][data-i="${a.dataset.i}"]`:a?.dataset?.k?`input[data-k="${a.dataset.k}"]`:null;
+    renderDCF();
+    const n=sel&&$('#dcf '+sel); if(n){ n.focus(); n.select(); }
+  });
+}
+function renderDCF(){
+  if($('#pane-d').hidden) return;
+  if(!FD){ $('#dcf').innerHTML=`<p class="nm">${T('dNoFd')}</p>`; return; }
+  const held=dHeld();
+  if(!dT||!Object.hasOwn(FD.co,dT)) dT=(held.find(h=>FD.co[h.t].kind==='op')||held[0])?.t;
+  $('#dsel').innerHTML=CLS.filter(g=>held.some(h=>h.c===g)).map(g=>`<optgroup label="${esc(CN()[g])}">${held.filter(h=>h.c===g).map(h=>
+    `<option value="${esc(h.t)}"${h.t===dT?' selected':''}>${esc(h.t)} · ${esc(h.n)}${DStore.get(h.t)?' ✎':''}</option>`).join('')}</optgroup>`).join('');
+  const r=dModel(dT), {c,B,s,o,P,v}=r, F=c.fccy, C=c.ccy, h=held.find(x=>x.t===dT), ok=okN(v?.vps), yl=c.y.at(-1);
+  const warn=[];
+  if(c.kind==='fin') warn.push(T('dWarnFin'));
+  if(c.kind==='reit') warn.push(T('dWarnReit'));
+  if(!v) warn.push(T('dWarnNoData'));
+  else if(B.m!=null && B.m<0) warn.push(T('dWarnNeg'));
+  if(v?.bad) warn.push(T('dWarnWG'));
+  if(v?.tvs>.8) warn.push(T('dWarnTv',pct(v.tvs,0)));
+  if(!['USD','CAD'].includes(F)) warn.push(T('dWarnCcy',F,C));
+  const tile=(l,val,sub,cls='')=>`<div class="tile"><span class="l">${l}</span><span class="v ${cls}">${val}</span>${sub?`<span class="s">${sub}</span>`:''}</div>`;
+  const tiles=[tile(T('dVps'), ok?fmt(v.vps,2):'—', esc(C)), tile(T('dPx'), fmt(s.px,2), `${esc(C)} · ${esc(FD.asof)}`),
+    tile(T('dUp'), ok?spct(v.up):'—', '', ok?(v.up>=0?'delta-up':'delta-dn'):''), tile('WACC', pct(r.wacc,2), T('dKeSub',pct(r.ke,1),pct(r.wd,0))),
+    tile(T('dEv'), mny(v?.ev), (okN(v?.eq)?T('dEq',mny(v.eq))+' · ':'')+T('dMn',esc(F))),
+    tile(T('dTvs'), okN(v?.tvs)?pct(v.tvs,0):'—', okN(v?.imp)?(r.tm==='g'?T('dImpMult',v.imp.toFixed(1)):T('dImpG',pct(v.imp,1))):'')].join('');
+  const fld=(k,l,val,u,d=2)=>`<label class="fl"><span>${l}</span><span class="fi"><input class="sc${o.s?.[k]!=null?' ov':''}" data-k="${k}" inputmode="decimal" value="${okN(val)?fmt(u==='%'?val*100:val,d):''}"><i>${u}</i></span></label>`;
+  const ro=(l,val)=>`<div class="fl"><span>${l}</span><span class="num">${val}</span></div>`;
+  const dd=x=>Math.abs(x)>=100?0:1;
+  const side=`<h4>${T('dWaccH')}</h4>${fld('rf',T('dRf'),s.rf,'%')}${fld('erp',T('dErp'),s.erp,'%')}${fld('beta',T('dBeta'),s.beta,'')}${ro(T('dKe'),pct(r.ke,2))}
+    ${fld('kd',T('dKd'),s.kd,'%')}${ro(T('dWd'),pct(r.wd,1))}${fld('wacc','WACC',r.wacc,'%')}${o.s?.wacc!=null?`<p class="note-s">${T('dWaccOv')}</p>`:''}
+    <h4>${T('dTvH')}</h4><div class="toggle" id="dtm" role="group" aria-label="${esc(T('dTvH'))}"><button type="button" data-m="g" aria-pressed="${r.tm==='g'}">${T('dGordon')}</button><button type="button" data-m="x" aria-pressed="${r.tm==='x'}">${T('dExit')}</button></div>
+    ${r.tm==='g'?fld('tg',T('dTg'),s.tg,'%'):fld('mult',T('dMult'),s.mult,'×',1)}
+    <h4>${T('dHorH')}</h4><div class="toggle" id="dn" role="group" aria-label="${esc(T('dHorH'))}">${[5,10].map(n=>`<button type="button" data-n="${n}" aria-pressed="${r.N===n}">${T('dYears',n)}</button>`).join('')}</div>
+    <h4>${T('dBridgeH')}</h4>${fld('debt',T('dDebt'),s.debt,'',dd(s.debt))}${fld('cash',T('dCash'),s.cash,'',dd(s.cash))}${fld('shares',T('dShares'),s.shares,'',1)}${fld('px',T('dPxIn',esc(C)),s.px,'')}
+    <p class="note-s">${T('dBridgeSub',esc(F))}</p>
+    <div class="dbtns"><button type="button" class="btn" id="dreset">${T('dReset')}</button><button type="button" class="btn" id="dexp">${T('dExport')}</button><button type="button" class="btn" id="dimp">${T('dImport')}</button><input type="file" id="dfile" accept="application/json,.json" hidden></div>
+    <p class="note-s" id="dmsg" role="status"></p>`;
+  const cellV=(f,x)=>!okN(x)?'—':f==='p'?pct(x,1):f==='x'?x.toFixed(3):mny(x);
+  const inV=(f,x)=>!okN(x)?'':f==='p'?(x*100).toFixed(1):fmt(x,dd(x));
+  const head=`<thead><tr><th></th><th colspan="${c.y.length}" style="text-align:center">${T('dHist')}</th><th colspan="${r.N}" class="pj" style="text-align:center">${T('dProj')}</th></tr>
+    <tr><th>${T('dMn',esc(F))}</th>${c.y.map(y=>`<th class="r">FY${y}</th>`).join('')}${P.map((_,i)=>`<th class="r pj">FY${yl+i+1}E</th>`).join('')}</tr></thead>`;
+  const H=dHist(c);
+  const body=DROWS.map(d=>`<tr class="${d.b?'b':''}${d.sub?' s':''}"><td>${T(d.l)}</td>${H.map(x=>`<td class="r num h">${d.k==='df'||d.k==='pv'?'':cellV(d.f,x[d.k])}</td>`).join('')}${P.map((p,i)=>{
+    const x = d.k==='df'?v?.df?.[i] : d.k==='pv'?v?.pv?.[i] : p[d.k];
+    return d.e ? `<td class="r"><input class="cell${o.y?.[d.e]?.[i]!=null?' ov':''}" data-e="${d.e}" data-i="${i}" inputmode="decimal" value="${inV(d.f,x)}" aria-label="${esc(T(d.l))} FY${yl+i+1}E"></td>`
+               : `<td class="r num">${cellV(d.f,x)}</td>`; }).join('')}</tr>`).join('');
+  const ws=[-.01,-.005,0,.005,.01].map(d=>r.wacc+d), xs=r.tm==='g'?[-.01,-.005,0,.005,.01].map(d=>s.tg+d):[-2,-1,0,1,2].map(d=>s.mult+d);
+  const sens = ok ? `<table class="cmp sens"><thead><tr><th>WACC \\ ${r.tm==='g'?'g':'EV/EBITDA'}</th>${xs.map(x=>`<th class="r">${r.tm==='g'?pct(x,1):x.toFixed(1)+'×'}</th>`).join('')}</tr></thead><tbody>
+    ${ws.map((w,i)=>`<tr><td class="num">${pct(w,1)}</td>${xs.map((x,j)=>{ const z=dValue(r,w,x)?.vps; return `<td class="r num${i===2&&j===2?' c':''}${okN(z)?(z>=s.px?' delta-up':' delta-dn'):''}">${okN(z)?fmt(z,2):'—'}</td>`; }).join('')}</tr>`).join('')}</tbody></table>` : '';
+  $('#dcf').innerHTML=`<div style="margin:6px 0 8px"><div class="eyebrow">${esc(CN()[h?.c]||'')}${c.ind?' · '+esc(c.ind):''}</div>
+      <h3 style="font-size:20px;margin-top:4px"><span class="num">${esc(dT)}</span> <span class="nm" style="font-size:15px;font-family:var(--sans)">${esc(c.name||h?.n||'')}</span></h3>
+      <div class="nm" style="font-size:12px">${T('dMeta',esc(c.yf),esc(F),esc(C),esc(c.fye))}</div></div>
+    ${warn.map(w=>`<div class="warnbox">${esc(w)}</div>`).join('')}
+    <div class="tiles">${tiles}</div>
+    <div class="dgrid"><div class="dside">${side}</div>
+      <div style="min-width:0"><div class="tbl-wrap"><table class="proj">${head}<tbody>${body}</tbody></table></div>
+        <p class="note-s" style="margin-top:6px">${T('dGrowthSrc',okN(c.est?.[0]))} ${T('dHint')}</p>
+        <h3 class="sh">${T('dSens')}</h3><p class="note-s">${T('dSensSub',esc(C))}</p>${sens?`<div class="tbl-wrap">${sens}</div>`:'<p class="nm">—</p>'}</div></div>`;
+  $('#dcf').querySelectorAll('input.cell').forEach(inp=>inp.onchange=()=>{
+    const x=dParse(inp.value); if(Number.isNaN(x)) return renderDCF();
+    const e=inp.dataset.e, i=+inp.dataset.i, pair={rev:'g',g:'rev',cost:'m',m:'cost'}[e];
+    dEdit(o=>{ o.y=o.y||{}; const put=(k,val)=>{ const a=o.y[k]=o.y[k]||[]; while(a.length<=i) a.push(null); a[i]=val; };
+      put(e, x==null?null:YPCT.has(e)?x/100:x); if(pair&&x!=null) put(pair,null); });
+  });
+  $('#dcf').querySelectorAll('input.sc').forEach(inp=>inp.onchange=()=>{
+    const x=dParse(inp.value), k=inp.dataset.k; if(Number.isNaN(x)) return renderDCF();
+    dEdit(o=>{ o.s=o.s||{}; if(x==null) delete o.s[k]; else o.s[k]=SPCT.has(k)?x/100:x; });
+  });
+  $('#dcf').querySelectorAll('#dtm button').forEach(b=>b.onclick=()=>dEdit(o=>{ if(b.dataset.m==='x') o.tm='x'; else delete o.tm; }));
+  $('#dcf').querySelectorAll('#dn button').forEach(b=>b.onclick=()=>dEdit(o=>{ if(b.dataset.n==='10') o.n=10; else delete o.n; }));
+  $('#dreset').onclick=()=>{ if(DStore.get(dT) && confirm(T('dResetQ',dT))){ DStore.set(dT,null); renderDCF(); } };
+  $('#dexp').onclick=()=>{
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([JSON.stringify({asof:FD.asof, dcf:DStore.all()},null,1)],{type:'application/json'}));
+    a.download='smpt-dcf-inputs.json'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  };
+  $('#dimp').onclick=()=>$('#dfile').click();
+  $('#dfile').onchange=e=>{ const f=e.target.files[0]; if(!f) return;
+    f.text().then(txt=>{ let n=0; const all={...DStore.all()};
+      try{ const j=JSON.parse(txt), src=j&&typeof j.dcf==='object'?j.dcf:j;
+        for(const t of Object.keys(src||{})) if(Object.hasOwn(FD.co,t)){ const x=dClean(src[t]); if(x){ all[t]=x; n++; } } }catch(err){}
+      if(n){ DStore.replace(all); renderDCF(); }
+      $('#dmsg').textContent=n?T('dImported',n):T('dBadFile'); });
+  };
+  renderDSum();
+}
+function renderDSum(){
+  const tot=S.at(-1).total;
+  document.querySelectorAll('#dsort button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.s===dSort));
+  const rows=dHeld().map(h=>{ const r=dModel(h.t); return {h, r, up:okN(r.v?.vps)?r.v.up:null}; });
+  if(dSort==='up') rows.sort((a,b)=>(b.up??-Infinity)-(a.up??-Infinity));
+  $('#dsum').innerHTML=`<thead><tr><th>${T('colTicker')}</th><th>${T('colName')}</th><th class="r">${T('colW')}</th><th class="r">${T('dPx')}</th><th class="r">${T('dVps')}</th><th class="r">${T('dUp')}</th><th></th><th class="r">WACC</th><th class="r">${T('dTvs')}</th><th></th></tr></thead><tbody>
+    ${rows.map(({h,r,up})=>`<tr class="row"${h.t===dT?' style="background:var(--accent-soft)"':''}><td><button class="tkd" data-t="${esc(h.t)}">${esc(h.t)}</button></td><td class="nm">${esc(h.n)}</td>
+      <td class="r num">${pct(h.v/tot,2)}</td><td class="r num">${fmt(r.s.px,2)} <span class="muted">${esc(r.c.ccy)}</span></td><td class="r num">${up!=null?fmt(r.v.vps,2):'—'}</td><td class="r num">${spct(up)}</td>
+      <td>${up!=null?`<div class="dbar"><span class="${up>=0?'pos':'neg'}" style="width:${Math.min(1,Math.abs(up))*50}%"></span></div>`:''}</td>
+      <td class="r num">${pct(r.wacc,1)}</td><td class="r num">${okN(r.v?.tvs)?pct(r.v.tvs,0):'—'}</td>
+      <td>${r.c.kind!=='op'?`<span class="pill p-warn">${T('dKind_'+r.c.kind)}</span> `:''}${DStore.get(h.t)?`<span class="pill p-na">✎ ${T('dEdited')}</span>`:''}</td></tr>`).join('')}</tbody>`;
+  $('#dsum').querySelectorAll('.tkd').forEach(b=>b.onclick=()=>{ dT=b.dataset.t; renderDCF(); $('#pane-d').scrollIntoView({behavior:'smooth',block:'start'}); });
+  $('#dnotes').innerHTML=T('dNotes',FD.asof).map(n=>`<li>${esc(n)}</li>`).join('');
+}
+$('#dsel').onchange=e=>{ dT=e.target.value; renderDCF(); };
+document.querySelectorAll('#dsort button').forEach(b=>b.onclick=()=>{ dSort=b.dataset.s; renderDSum(); });
+
 /* ---------- tabs ---------- */
 function setTab(k){
-  ['h','t','a'].forEach(x=>{ $('#tab-'+x).setAttribute('aria-selected',x===k); $('#pane-'+x).hidden=x!==k; });
-  renderAna();
+  ['h','t','a','d'].forEach(x=>{ $('#tab-'+x).setAttribute('aria-selected',x===k); $('#pane-'+x).hidden=x!==k; });
+  renderAna(); renderDCF();
 }
-['h','t','a'].forEach(x=>$('#tab-'+x).onclick=()=>setTab(x));
+['h','t','a','d'].forEach(x=>$('#tab-'+x).onclick=()=>setTab(x));
 
 /* ---------- drawer ---------- */
 const ALIAS = {FI:'FISV',ERJ:'EMBJ'};
@@ -861,7 +1163,8 @@ function openTk(t){
   const rel = DATA.trades.filter(x=>tks(x).map(k=>ALIAS[k]||k).includes(t)).sort((a,b)=>a.date.localeCompare(b.date));
   const d=$('#drawer');
   d.innerHTML = `<button class="x" id="dx">${T('close')}</button>
-    <div><div class="eyebrow">${any?esc(CN()[any.c]):T('notHeld')}${DATA.tind[t]?' · '+esc(IN(DATA.tind[t])):''}</div><h2 style="font-size:24px;margin-top:4px" class="num">${esc(t)}</h2><div class="nm">${esc(any?.n || rel[0]?.sec || '')}</div></div>
+    <div><div class="eyebrow">${any?esc(CN()[any.c]):T('notHeld')}${DATA.tind[t]?' · '+esc(IN(DATA.tind[t])):''}</div><h2 style="font-size:24px;margin-top:4px" class="num">${esc(t)}</h2><div class="nm">${esc(any?.n || rel[0]?.sec || '')}</div>
+      ${FD&&Object.hasOwn(FD.co,t)?`<button type="button" class="btn" id="ddcf" style="margin-top:8px">${T('dOpen')}</button>`:''}</div>
     <div><h3>${T('bySnap')}</h3><table style="margin-top:6px"><thead><tr><th>${T('date')}</th><th class="r">${T('colQty')}</th><th class="r">${T('colMv')}</th><th class="r">${T('colW')}</th></tr></thead><tbody>
       ${hist.map(x=>`<tr><td class="num">${x.d}</td>${x.h?`<td class="r num">${fmt(x.h.q,x.h.q%1?2:0)}</td><td class="r num">${money(x.h.v)}</td><td class="r num">${pct(x.h.v/x.tot,2)}</td>`:'<td class="r" colspan="3" style="color:var(--muted)">'+T('notHeldRow')+'</td>'}</tr>`).join('')}
     </tbody></table></div>
@@ -872,6 +1175,7 @@ function openTk(t){
   d.hidden=false; $('#scrim').hidden=false; $('#dx').focus();
   if($('#dpx')) drawPx($('#dpx'),t,rel);
   $('#dx').onclick=closeTk;
+  if($('#ddcf')) $('#ddcf').onclick=()=>{ closeTk(); dT=t; setTab('d'); $('.tabs').scrollIntoView({behavior:'smooth',block:'start'}); };
 }
 function closeTk(){$('#drawer').hidden=true;$('#scrim').hidden=true;openT=null;}
 $('#scrim').onclick=closeTk;
@@ -886,7 +1190,7 @@ function applyLang(l){
   document.querySelectorAll('[data-i18n-ph]').forEach(el=>{el.placeholder=T(el.dataset.i18nPh);el.setAttribute('aria-label',T(el.dataset.i18nPh));});
   document.querySelectorAll('[data-i18n-aria]').forEach(el=>el.setAttribute('aria-label',T(el.dataset.i18nAria)));
   document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.l===l));
-  renderAll(); renderTrades(); renderAna();
+  renderAll(); renderTrades(); renderAna(); renderDCF();
   if(openT) openTk(openT);
 }
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>applyLang(b.dataset.l));
