@@ -24,6 +24,7 @@ pip install openpyxl
 python build/parse_holdings.py ~/Documents/COMM371/portfolioAnalysis   # 更新 data/holdings.json
 # 如有新交易，在 data/trades.json 里手动添加
 python build/parse_perf.py ~/Documents/COMM371/portfolioAnalysis      # 更新 data/performance.json（需要新的 HPR 表）
+python build/parse_research.py      # 读取 research/morningstar/ 里的报告，更新 data/research.json；未持有的股票加进观察名单（需要 pdftotext）
 python build/fetch_prices.py      # 更新 data/prices.json（需要联网和 yfinance）
 python build/fetch_sectors.py     # 更新 data/sectors.json（需要联网、yfinance、requests、beautifulsoup4）
 python build/fetch_fundamentals.py  # 更新 data/fundamentals.json（需要联网和 yfinance）

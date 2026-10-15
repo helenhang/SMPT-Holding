@@ -1,6 +1,50 @@
 [
- {"t": "MRK", "yf": "MRK"},
- {"t": "SBUX", "yf": "SBUX"},
- {"t": "NFLX", "yf": "NFLX"},
- {"t": "MRNA", "yf": "MRNA"}
+ {
+  "t": "MRK",
+  "yf": "MRK"
+ },
+ {
+  "t": "SBUX",
+  "yf": "SBUX"
+ },
+ {
+  "t": "NFLX",
+  "yf": "NFLX"
+ },
+ {
+  "t": "MRNA",
+  "yf": "MRNA"
+ },
+ {
+  "t": "ADBE",
+  "yf": "ADBE"
+ },
+ {
+  "t": "CRCL",
+  "yf": "CRCL"
+ },
+ {
+  "t": "FICO",
+  "yf": "FICO"
+ },
+ {
+  "t": "ORCL",
+  "yf": "ORCL"
+ },
+ {
+  "t": "PLTR",
+  "yf": "PLTR"
+ },
+ {
+  "t": "RBLX",
+  "yf": "RBLX"
+ },
+ {
+  "t": "REGN",
+  "yf": "REGN"
+ },
+ {
+  "t": "VRT",
+  "yf": "VRT"
+ }
 ]
