@@ -4,12 +4,16 @@ for the DCF calculator.
 Usage: python build/fetch_fundamentals.py
 Needs network access and `yfinance`. Writes data/fundamentals.json:
   asof    date the data was fetched
-  co      {ticker: {yf, name, kind, ccy, fccy, fx, px, mcap, beta, ind, fye,
+  co      {ticker: {yf, name, kind, ccy, fccy, fx, px, mcap, beta, ind, gics (Yahoo's sector as GICS), fye,
                     y: [fiscal year end...] oldest first, and per year (millions of fccy):
                     rev, ebit, da, capex, dnwc, tax (effective rate), int,
                     ni (net income to common), bv (common equity at year end),
                     div (common dividends paid), bb (net share buybacks), for the DDM / residual income model,
-                    debt, cash (latest balance sheet, millions of fccy),
+                    nwc (operating working capital: current assets less cash, minus current
+                         liabilities less short-term debt and leases),
+                    debt, cash, lease (lease liabilities, included in debt) from the latest balance
+                         sheet, millions of fccy; usgaap: domiciled in the US, so operating lease
+                         cost sits in operating income and the page leaves leases out of debt,
                     est: [growth this fiscal year, next fiscal year] from analysts, or null
                          (always null for statements outside USD/CAD)}}
   missing tickers Yahoo returned no statements for
@@ -33,6 +37,11 @@ YF_HOLD = {'BRKB': 'BRK-B', 'CSST.WT': None}  # same as fetch_sectors.py
 EQUITY = ('Canadian Common', 'United States', 'American Depos', 'Real Estate')
 FIN = ('Banks', 'Insurance', 'Capital Markets', 'Asset Management', 'Mortgage Finance')
 YEARS = 4
+# Yahoo's sector names -> GICS, same as fetch_sectors.py; used to group stocks that aren't in sectors.json
+YAHOO_GICS = {'Technology': 'Information Technology', 'Financial Services': 'Financials', 'Healthcare': 'Health Care',
+              'Consumer Cyclical': 'Consumer Discretionary', 'Consumer Defensive': 'Consumer Staples',
+              'Communication Services': 'Communication Services', 'Industrials': 'Industrials', 'Energy': 'Energy',
+              'Basic Materials': 'Materials', 'Utilities': 'Utilities', 'Real Estate': 'Real Estate'}
 
 
 def yahoo(t, mkt):
@@ -115,6 +124,12 @@ for t, (s, sec) in sorted(hold.items()):
     ni, bv = row(inc, 'Net Income Common Stockholders', 'Net Income'), row(bs, 'Common Stock Equity', 'Stockholders Equity')
     div = row(cf, 'Common Stock Dividend Paid', 'Cash Dividends Paid')
     bb = {y: max(0.0, -v) for y, v in row(cf, 'Net Common Stock Issuance', 'Repurchase Of Capital Stock').items()}
+    # operating working capital: current assets less cash, minus current liabilities less short-term debt and leases
+    ca, cl = row(bs, 'Current Assets'), row(bs, 'Current Liabilities')
+    stc = row(bs, 'Cash Cash Equivalents And Short Term Investments', 'Cash And Cash Equivalents')
+    std = row(bs, 'Current Debt And Capital Lease Obligation', 'Current Debt')
+    nwc = {y: (ca[y] - stc.get(y, 0)) - (cl[y] - std.get(y, 0)) for y in ca if y in cl}
+    lease = row(bs, 'Capital Lease Obligations')
     debt, cash = row(bs, 'Total Debt'), row(bs, 'Cash Cash Equivalents And Short Term Investments', 'Cash And Cash Equivalents')
     ly = max(debt) if debt else None
     r = lambda d, y, f=lambda v: v: None if d.get(y) is None or math.isnan(d[y]) else round(f(d[y]), 2)
@@ -128,6 +143,7 @@ for t, (s, sec) in sorted(hold.items()):
     fye = dt.date.fromisoformat(str(inc.columns[0])[:10]).isoformat() if inc is not None else None
     out['co'][t] = dict(
         yf=s, name=info.get('longName') or info.get('shortName'), kind=kind_of(info, sec), ind=info.get('industry'),
+        gics=YAHOO_GICS.get(info.get('sector')),
         ccy=ccy, fccy=fccy, fx=fx_rate(fccy, ccy), px=info['currentPrice'],
         mcap=round(info['marketCap'] / 1e6, 1) if info.get('marketCap') else None,
         beta=info.get('beta'), fye=fye, y=years,
@@ -136,6 +152,8 @@ for t, (s, sec) in sorted(hold.items()):
         tax=[round(taxp[y] / pre[y], 4) if taxp.get(y) is not None and pre.get(y) else None for y in years],
         int=[r(intr, y, abs) for y in years],
         ni=[r(ni, y) for y in years], bv=[r(bv, y) for y in years], div=[r(div, y, abs) for y in years], bb=[r(bb, y) for y in years],
+        nwc=[r(nwc, y) for y in years], lease=r(lease, ly) if ly and lease.get(ly) is not None else 0,
+        usgaap=info.get('country') == 'United States',
         debt=r(debt, ly) if ly else 0, cash=r(cash, ly) if ly else 0, est=est)
     c = out['co'][t]
     if t in watch:

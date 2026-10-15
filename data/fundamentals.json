@@ -7,11 +7,12 @@
    "name": "Apple Inc.",
    "kind": "op",
    "ind": "Consumer Electronics",
+   "gics": "Information Technology",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 343.9423,
-   "mcap": 5019370.3,
+   "px": 344.56,
+   "mcap": 5028570.5,
    "beta": 1.069,
    "fye": "2025-09-30",
    "y": [
@@ -86,6 +87,14 @@
     94949.0,
     90711.0
    ],
+   "nwc": [
+    -44108.0,
+    -47490.0,
+    -67697.0,
+    -52042.0
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 98657.0,
    "cash": 54697.0,
    "est": [
@@ -98,11 +107,12 @@
    "name": "AbbVie Inc.",
    "kind": "op",
    "ind": "Drug Manufacturers - General",
+   "gics": "Health Care",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 288.0,
-   "mcap": 508929.8,
+   "px": 287.67,
+   "mcap": 508346.7,
    "beta": 0.228,
    "fye": "2025-12-31",
    "y": [
@@ -177,6 +187,14 @@
     1708.0,
     980.0
    ],
+   "nwc": [
+    -6168.0,
+    -10464.0,
+    -11918.0,
+    -10929.0
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 67496.0,
    "cash": 5257.0,
    "est": [
@@ -189,11 +207,12 @@
    "name": "Barrick Mining Corporation",
    "kind": "op",
    "ind": "Gold",
+   "gics": "Materials",
    "ccy": "CAD",
    "fccy": "USD",
-   "fx": 1.419600009918213,
-   "px": 56.95,
-   "mcap": 93733.1,
+   "fx": 1.4193999767303467,
+   "px": 56.9,
+   "mcap": 93650.8,
    "beta": 1.136,
    "fye": "2025-12-31",
    "y": [
@@ -268,6 +287,14 @@
     498.0,
     1500.0
    ],
+   "nwc": [
+    950.0,
+    977.0,
+    1000.0,
+    122.0
+   ],
+   "lease": 47.0,
+   "usgaap": false,
    "debt": 5211.0,
    "cash": 6706.0,
    "est": [
@@ -280,11 +307,12 @@
    "name": "Adobe Inc.",
    "kind": "op",
    "ind": "Software - Application",
+   "gics": "Information Technology",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 250.555,
-   "mcap": 97516.0,
+   "px": 250.02,
+   "mcap": 97307.8,
    "beta": 1.415,
    "fye": "2025-11-30",
    "y": [
@@ -359,6 +387,14 @@
     9139.0,
     10933.0
    ],
+   "nwc": [
+    -4641.0,
+    -4936.0,
+    -5601.0,
+    -6555.0
+   ],
+   "lease": 438.0,
+   "usgaap": true,
    "debt": 6648.0,
    "cash": 6595.0,
    "est": [
@@ -372,11 +408,12 @@
    "name": "Amazon.com, Inc.",
    "kind": "op",
    "ind": "Internet Retail",
+   "gics": "Consumer Discretionary",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 253.4,
-   "mcap": 2733251.8,
+   "px": 253.58,
+   "mcap": 2735193.2,
    "beta": 1.456,
    "fye": "2025-12-31",
    "y": [
@@ -451,6 +488,14 @@
     0.0,
     null
    ],
+   "nwc": [
+    -78628.0,
+    -79346.0,
+    -89766.0,
+    -111951.0
+   ],
+   "lease": 87339.0,
+   "usgaap": true,
    "debt": 152987.0,
    "cash": 123029.0,
    "est": [
@@ -463,11 +508,12 @@
    "name": "ASML Holding N.V.",
    "kind": "op",
    "ind": "Semiconductor Equipment & Materials",
+   "gics": "Information Technology",
    "ccy": "USD",
    "fccy": "EUR",
-   "fx": 1.1213276386260986,
-   "px": 1636.41,
-   "mcap": 628545.1,
+   "fx": 1.1212018728256226,
+   "px": 1639.6871,
+   "mcap": 629803.8,
    "beta": 1.302,
    "fye": "2025-12-31",
    "y": [
@@ -542,6 +588,14 @@
     376.0,
     5807.7
    ],
+   "nwc": [
+    -1548.5,
+    1109.2,
+    -1045.0,
+    -5287.8
+   ],
+   "lease": 0,
+   "usgaap": false,
    "debt": 4390.9,
    "cash": 13321.9,
    "est": null
@@ -551,11 +605,12 @@
    "name": "Alimentation Couche-Tard Inc.",
    "kind": "op",
    "ind": "Specialty Retail",
+   "gics": "Consumer Discretionary",
    "ccy": "CAD",
    "fccy": "USD",
-   "fx": 1.419600009918213,
-   "px": 81.51,
-   "mcap": 74823.1,
+   "fx": 1.4193999767303467,
+   "px": 81.515,
+   "mcap": 74827.7,
    "beta": 0.721,
    "fye": "2026-04-30",
    "y": [
@@ -630,6 +685,14 @@
     538.3,
     1572.3
    ],
+   "nwc": [
+    12.7,
+    -440.9,
+    -1189.1,
+    -594.6
+   ],
+   "lease": 5146.8,
+   "usgaap": false,
    "debt": 16446.0,
    "cash": 3140.1,
    "est": [
@@ -642,11 +705,12 @@
    "name": "Alibaba Group Holding Limited",
    "kind": "op",
    "ind": "Internet Retail",
+   "gics": "Consumer Discretionary",
    "ccy": "USD",
    "fccy": "CNY",
    "fx": 0.149691641330719,
-   "px": 110.23,
-   "mcap": 274224.1,
+   "px": 109.96,
+   "mcap": 273552.4,
    "beta": 0.463,
    "fye": "2026-03-31",
    "y": [
@@ -721,6 +785,14 @@
     86652.0,
     6596.0
    ],
+   "nwc": [
+    -193922.0,
+    -204800.0,
+    -162884.0,
+    -149981.0
+   ],
+   "lease": 21726.0,
+   "usgaap": false,
    "debt": 281722.0,
    "cash": 316894.0,
    "est": null
@@ -730,11 +802,12 @@
    "name": "Bank of America Corporation",
    "kind": "fin",
    "ind": "Banks - Diversified",
+   "gics": "Financials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 51.865,
-   "mcap": 362678.9,
+   "px": 51.855,
+   "mcap": 362609.0,
    "beta": 1.214,
    "fye": "2025-12-31",
    "y": [
@@ -809,6 +882,14 @@
     13104.0,
     21433.0
    ],
+   "nwc": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 365904.0,
    "cash": 239319.0,
    "est": [
@@ -821,11 +902,12 @@
    "name": "Bank of Montreal",
    "kind": "fin",
    "ind": "Banks - Diversified",
+   "gics": "Financials",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 234.97,
-   "mcap": 163325.8,
+   "px": 234.91,
+   "mcap": 163284.1,
    "beta": 1.124,
    "fye": "2025-10-31",
    "y": [
@@ -900,6 +982,14 @@
     0.0,
     3238.0
    ],
+   "nwc": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "lease": 3315.0,
+   "usgaap": false,
    "debt": 280228.0,
    "cash": 70322.0,
    "est": [
@@ -912,11 +1002,12 @@
    "name": "Berkshire Hathaway Inc.",
    "kind": "fin",
    "ind": "Insurance - Diversified",
+   "gics": "Financials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 528.375,
-   "mcap": 1131097.5,
+   "px": 528.46,
+   "mcap": 1131279.5,
    "beta": 0.595,
    "fye": "2025-12-31",
    "y": [
@@ -991,6 +1082,14 @@
     2918.0,
     0.0
    ],
+   "nwc": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 129081.0,
    "cash": 373311.0,
    "est": [
@@ -1003,11 +1102,12 @@
    "name": "Canadian Natural Resources Limited",
    "kind": "op",
    "ind": "Oil & Gas E&P",
+   "gics": "Energy",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 73.91,
-   "mcap": 152365.5,
+   "px": 74.16,
+   "mcap": 152880.9,
    "beta": 0.944,
    "fye": "2025-12-31",
    "y": [
@@ -1082,6 +1182,14 @@
     2660.0,
     1449.0
    ],
+   "nwc": [
+    -2601.0,
+    -690.0,
+    43.0,
+    -631.0
+   ],
+   "lease": 0,
+   "usgaap": false,
    "debt": 16617.0,
    "cash": 673.0,
    "est": [
@@ -1094,11 +1202,12 @@
    "name": "Canadian National Railway Company",
    "kind": "op",
    "ind": "Railroads",
+   "gics": "Industrials",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 170.84,
-   "mcap": 103204.4,
+   "px": 170.85,
+   "mcap": 103210.5,
    "beta": 0.991,
    "fye": "2025-12-31",
    "y": [
@@ -1173,6 +1282,14 @@
     2650.0,
     2115.0
    ],
+   "nwc": [
+    229.0,
+    36.0,
+    -446.0,
+    -561.0
+   ],
+   "lease": 424.0,
+   "usgaap": false,
    "debt": 21630.0,
    "cash": 350.0,
    "est": [
@@ -1185,11 +1302,12 @@
    "name": "Costco Wholesale Corporation",
    "kind": "op",
    "ind": "Discount Stores",
+   "gics": "Consumer Staples",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 986.2,
-   "mcap": 437014.2,
+   "px": 987.52,
+   "mcap": 437599.1,
    "beta": 0.87,
    "fye": "2025-08-31",
    "y": [
@@ -1264,6 +1382,14 @@
     700.0,
     903.0
    ],
+   "nwc": [
+    -10278.0,
+    -11857.0,
+    -12259.0,
+    -14012.0
+   ],
+   "lease": 2460.0,
+   "usgaap": true,
    "debt": 8173.0,
    "cash": 15284.0,
    "est": [
@@ -1276,11 +1402,12 @@
    "name": "Capital Power Corporation",
    "kind": "op",
    "ind": "Utilities - Independent Power Producers",
+   "gics": "Utilities",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 62.245,
-   "mcap": 9777.4,
+   "px": 62.36,
+   "mcap": 9795.5,
    "beta": 0.409,
    "fye": "2025-12-31",
    "y": [
@@ -1355,6 +1482,14 @@
     0.0,
     0.0
    ],
+   "nwc": [
+    -676.0,
+    -231.0,
+    -99.0,
+    158.0
+   ],
+   "lease": 154.0,
+   "usgaap": false,
    "debt": 6884.0,
    "cash": 96.0,
    "est": [
@@ -1367,11 +1502,12 @@
    "name": "Circle Internet Group",
    "kind": "fin",
    "ind": "Capital Markets",
+   "gics": "Financials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 85.225,
-   "mcap": 21636.6,
+   "px": 85.2312,
+   "mcap": 21638.1,
    "beta": null,
    "fye": "2025-12-31",
    "y": [
@@ -1446,6 +1582,14 @@
     0.0,
     0.0
    ],
+   "nwc": [
+    null,
+    355.57,
+    368.67,
+    983.3
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 36.82,
    "cash": 1526.59,
    "est": [
@@ -1459,11 +1603,12 @@
    "name": "Canadian Utilities Limited",
    "kind": "op",
    "ind": "Utilities - Diversified",
+   "gics": "Utilities",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 49.65,
-   "mcap": 13521.2,
+   "px": 49.72,
+   "mcap": 13540.3,
    "beta": 0.567,
    "fye": "2025-12-31",
    "y": [
@@ -1538,6 +1683,14 @@
     0.0,
     0.0
    ],
+   "nwc": [
+    -35.0,
+    195.0,
+    120.0,
+    138.0
+   ],
+   "lease": 66.0,
+   "usgaap": false,
    "debt": 12381.0,
    "cash": 860.0,
    "est": [
@@ -1550,11 +1703,12 @@
    "name": "Delta Air Lines, Inc.",
    "kind": "op",
    "ind": "Airlines",
+   "gics": "Industrials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 76.59,
-   "mcap": 50389.5,
+   "px": 76.72,
+   "mcap": 50475.0,
    "beta": 1.336,
    "fye": "2025-12-31",
    "y": [
@@ -1629,6 +1783,14 @@
     null,
     null
    ],
+   "nwc": [
+    -16390.0,
+    -16275.0,
+    -16957.0,
+    -18552.0
+   ],
+   "lease": 6162.0,
+   "usgaap": true,
    "debt": 20274.0,
    "cash": 4310.0,
    "est": [
@@ -1641,11 +1803,12 @@
    "name": "Deere & Company",
    "kind": "op",
    "ind": "Farm & Heavy Construction Machinery",
+   "gics": "Industrials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 654.58,
-   "mcap": 176491.4,
+   "px": 653.24,
+   "mcap": 176130.1,
    "beta": 0.872,
    "fye": "2025-10-31",
    "y": [
@@ -1720,6 +1883,14 @@
     4007.0,
     1138.0
    ],
+   "nwc": [
+    46708.0,
+    55398.0,
+    55463.0,
+    53466.0
+   ],
+   "lease": 353.0,
+   "usgaap": true,
    "debt": 64250.0,
    "cash": 9687.0,
    "est": [
@@ -1732,6 +1903,7 @@
    "name": "Dream Industrial Real Estate Investment Trust",
    "kind": "reit",
    "ind": "REIT - Industrial",
+   "gics": "Real Estate",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
@@ -1811,6 +1983,14 @@
     0.0,
     20.04
    ],
+   "nwc": [
+    -288.95,
+    -309.34,
+    -238.67,
+    507.27
+   ],
+   "lease": 11.94,
+   "usgaap": false,
    "debt": 3133.87,
    "cash": 41.43,
    "est": [
@@ -1823,11 +2003,12 @@
    "name": "Denison Mines Corp.",
    "kind": "op",
    "ind": "Uranium",
+   "gics": "Energy",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 3.26,
-   "mcap": 2951.1,
+   "px": 3.28,
+   "mcap": 2969.2,
    "beta": 1.804,
    "fye": "2025-12-31",
    "y": [
@@ -1902,6 +2083,14 @@
     0.0,
     0.0
    ],
+   "nwc": [
+    -10.19,
+    -10.86,
+    -24.98,
+    -31.33
+   ],
+   "lease": 0,
+   "usgaap": false,
    "debt": 295.72,
    "cash": 539.44,
    "est": [
@@ -1914,11 +2103,12 @@
    "name": "Airbus SE",
    "kind": "op",
    "ind": "Aerospace & Defense",
+   "gics": "Industrials",
    "ccy": "USD",
    "fccy": "EUR",
-   "fx": 1.1213276386260986,
-   "px": 54.43,
-   "mcap": 172321.1,
+   "fx": 1.1212018728256226,
+   "px": 54.47,
+   "mcap": 172447.8,
    "beta": 0.887,
    "fye": "2025-12-31",
    "y": [
@@ -1993,6 +2183,14 @@
     276.0,
     565.0
    ],
+   "nwc": [
+    -7788.0,
+    -7463.0,
+    -9450.0,
+    -6219.0
+   ],
+   "lease": 2380.0,
+   "usgaap": false,
    "debt": 11023.0,
    "cash": 18315.0,
    "est": null
@@ -2002,11 +2200,12 @@
    "name": "Emera Incorporated",
    "kind": "op",
    "ind": "Utilities - Regulated Electric",
+   "gics": "Utilities",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 67.04,
-   "mcap": 20591.3,
+   "px": 67.08,
+   "mcap": 20603.6,
    "beta": 0.423,
    "fye": "2025-12-31",
    "y": [
@@ -2081,6 +2280,14 @@
     0.0,
     0.0
    ],
+   "nwc": [
+    599.0,
+    706.0,
+    11.0,
+    421.0
+   ],
+   "lease": 0,
+   "usgaap": false,
    "debt": 21461.0,
    "cash": 349.0,
    "est": [
@@ -2093,11 +2300,12 @@
    "name": "Embraer S.A.",
    "kind": "op",
    "ind": "Aerospace & Defense",
+   "gics": "Industrials",
    "ccy": "USD",
    "fccy": "BRL",
-   "fx": 0.19791005551815033,
-   "px": 71.99,
-   "mcap": 12811.2,
+   "fx": 0.1974489539861679,
+   "px": 71.98,
+   "mcap": 12809.4,
    "beta": 0.683,
    "fye": "2025-12-31",
    "y": [
@@ -2172,6 +2380,14 @@
     0.0,
     186.8
    ],
+   "nwc": [
+    548.5,
+    379.8,
+    26.4,
+    -111.5
+   ],
+   "lease": 118.1,
+   "usgaap": false,
    "debt": 2711.9,
    "cash": 2625.9,
    "est": null
@@ -2181,11 +2397,12 @@
    "name": "Enbridge Inc.",
    "kind": "op",
    "ind": "Oil & Gas Midstream",
+   "gics": "Energy",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 66.55,
-   "mcap": 148329.5,
+   "px": 66.6,
+   "mcap": 148441.0,
    "beta": 0.802,
    "fye": "2025-12-31",
    "y": [
@@ -2260,6 +2477,14 @@
     0.0,
     0.0
    ],
+   "nwc": [
+    -974.0,
+    -2453.0,
+    -4022.0,
+    -2614.0
+   ],
+   "lease": 0,
+   "usgaap": false,
    "debt": 105252.0,
    "cash": 1094.0,
    "est": [
@@ -2272,11 +2497,12 @@
    "name": "Eagle Materials Inc.",
    "kind": "op",
    "ind": "Building Materials",
+   "gics": "Materials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 169.66,
-   "mcap": 5204.4,
+   "px": 170.545,
+   "mcap": 5231.5,
    "beta": 1.335,
    "fye": "2026-03-31",
    "y": [
@@ -2351,6 +2577,14 @@
     304.18,
     390.39
    ],
+   "nwc": [
+    309.38,
+    371.26,
+    422.28,
+    411.96
+   ],
+   "lease": 36.7,
+   "usgaap": true,
    "debt": 1796.78,
    "cash": 297.92,
    "est": [
@@ -2363,11 +2597,12 @@
    "name": "Fair Isaac Corporation",
    "kind": "op",
    "ind": "Software - Application",
+   "gics": "Information Technology",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 757.645,
-   "mcap": 16363.3,
+   "px": 756.085,
+   "mcap": 16329.6,
    "beta": 1.341,
    "fye": "2025-09-30",
    "y": [
@@ -2442,6 +2677,14 @@
     821.7,
     1414.5
    ],
+   "nwc": [
+    69.42,
+    118.32,
+    101.46,
+    121.35
+   ],
+   "lease": 19.19,
+   "usgaap": true,
    "debt": 3074.88,
    "cash": 134.14,
    "est": [
@@ -2455,11 +2698,12 @@
    "name": "FMC Corporation",
    "kind": "op",
    "ind": "Agricultural Inputs",
+   "gics": "Materials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 5.485,
-   "mcap": 853.2,
+   "px": 5.425,
+   "mcap": 846.9,
    "beta": 0.456,
    "fye": "2025-12-31",
    "y": [
@@ -2534,6 +2778,14 @@
     2.1,
     1.6
    ],
+   "nwc": [
+    1629.8,
+    2400.5,
+    1943.7,
+    1950.6
+   ],
+   "lease": 123.9,
+   "usgaap": true,
    "debt": 4198.8,
    "cash": 584.5,
    "est": [
@@ -2546,11 +2798,12 @@
    "name": "Alphabet Inc.",
    "kind": "op",
    "ind": "Internet Content & Information",
+   "gics": "Communication Services",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 343.73,
-   "mcap": 4203795.7,
+   "px": 344.3,
+   "mcap": 4210766.4,
    "beta": 1.211,
    "fye": "2025-12-31",
    "y": [
@@ -2625,6 +2878,14 @@
     62222.0,
     45709.0
    ],
+   "nwc": [
+    -15790.0,
+    -18409.0,
+    -18181.0,
+    -23550.0
+   ],
+   "lease": 12744.0,
+   "usgaap": true,
    "debt": 59291.0,
    "cash": 126843.0,
    "est": [
@@ -2637,11 +2898,12 @@
    "name": "Groupe Dynamite Inc.",
    "kind": "op",
    "ind": "Apparel Retail",
+   "gics": "Consumer Discretionary",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 59.82,
-   "mcap": 6508.0,
+   "px": 60.19,
+   "mcap": 6548.2,
    "beta": null,
    "fye": "2026-01-31",
    "y": [
@@ -2716,6 +2978,14 @@
     3.0,
     0.0
    ],
+   "nwc": [
+    -18.09,
+    -11.82,
+    -6.85,
+    -104.44
+   ],
+   "lease": 477.25,
+   "usgaap": false,
    "debt": 477.25,
    "cash": 82.48,
    "est": [
@@ -2728,11 +2998,12 @@
    "name": "The Home Depot, Inc.",
    "kind": "op",
    "ind": "Home Improvement Retail",
+   "gics": "Consumer Discretionary",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 305.195,
-   "mcap": 304489.9,
+   "px": 304.95,
+   "mcap": 304245.4,
    "beta": 0.999,
    "fye": "2026-01-31",
    "y": [
@@ -2807,6 +3078,14 @@
     254.0,
     0.0
    ],
+   "nwc": [
+    8780.0,
+    6418.0,
+    7535.0,
+    11427.0
+   ],
+   "lease": 9578.0,
+   "usgaap": true,
    "debt": 65350.0,
    "cash": 1389.0,
    "est": [
@@ -2819,11 +3098,12 @@
    "name": "Honeywell International Inc.",
    "kind": "op",
    "ind": "Conglomerates",
+   "gics": "Industrials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 207.455,
-   "mcap": 65750.8,
+   "px": 207.585,
+   "mcap": 65792.0,
    "beta": 0.888,
    "fye": "2025-12-31",
    "y": [
@@ -2898,6 +3178,14 @@
     1118.0,
     3567.0
    ],
+   "nwc": [
+    -427.0,
+    945.0,
+    2134.0,
+    1656.0
+   ],
+   "lease": 983.0,
+   "usgaap": true,
    "debt": 35563.0,
    "cash": 12930.0,
    "est": [
@@ -2910,11 +3198,12 @@
    "name": "Honeywell Aerospace Inc.",
    "kind": "op",
    "ind": "Aerospace & Defense",
+   "gics": "Industrials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 162.32,
-   "mcap": 51447.8,
+   "px": 163.06,
+   "mcap": 51682.3,
    "beta": null,
    "fye": "2025-12-31",
    "y": [
@@ -2977,6 +3266,13 @@
     null,
     null
    ],
+   "nwc": [
+    null,
+    1641.0,
+    1635.0
+   ],
+   "lease": 271.0,
+   "usgaap": true,
    "debt": 271.0,
    "cash": 213.0,
    "est": [
@@ -2989,11 +3285,12 @@
    "name": "Howmet Aerospace Inc.",
    "kind": "op",
    "ind": "Aerospace & Defense",
+   "gics": "Industrials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 217.11,
-   "mcap": 86583.8,
+   "px": 217.495,
+   "mcap": 86737.3,
    "beta": 1.204,
    "fye": "2025-12-31",
    "y": [
@@ -3068,6 +3365,14 @@
     500.0,
     700.0
    ],
+   "nwc": [
+    902.0,
+    1160.0,
+    1292.0,
+    1499.0
+   ],
+   "lease": 163.0,
+   "usgaap": true,
    "debt": 3213.0,
    "cash": 742.0,
    "est": [
@@ -3080,11 +3385,12 @@
    "name": "Johnson & Johnson",
    "kind": "op",
    "ind": "Drug Manufacturers - General",
+   "gics": "Health Care",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 255.9951,
-   "mcap": 616922.2,
+   "px": 255.91,
+   "mcap": 616717.2,
    "beta": 0.206,
    "fye": "2025-12-31",
    "y": [
@@ -3159,6 +3465,14 @@
     2432.0,
     5953.0
    ],
+   "nwc": [
+    -10033.0,
+    -12263.0,
+    -12967.0,
+    -10109.0
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 47933.0,
    "cash": 20102.0,
    "est": [
@@ -3171,11 +3485,12 @@
    "name": "JPMorgan Chase & Co.",
    "kind": "fin",
    "ind": "Banks - Diversified",
+   "gics": "Financials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 334.11,
-   "mcap": 887262.5,
+   "px": 334.19,
+   "mcap": 887475.0,
    "beta": 1.015,
    "fye": "2025-12-31",
    "y": [
@@ -3250,6 +3565,14 @@
     18830.0,
     31591.0
    ],
+   "nwc": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 499982.0,
    "cash": 343338.0,
    "est": [
@@ -3262,6 +3585,7 @@
    "name": "Jamieson Wellness Inc.",
    "kind": "op",
    "ind": "Packaged Foods",
+   "gics": "Consumer Staples",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
@@ -3341,6 +3665,14 @@
     0.95,
     37.87
    ],
+   "nwc": [
+    171.36,
+    210.67,
+    219.47,
+    235.97
+   ],
+   "lease": 0,
+   "usgaap": false,
    "debt": 414.6,
    "cash": 41.23,
    "est": [
@@ -3353,11 +3685,12 @@
    "name": "The Coca-Cola Company",
    "kind": "op",
    "ind": "Beverages - Non-Alcoholic",
+   "gics": "Consumer Staples",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 92.4101,
-   "mcap": 397599.0,
+   "px": 92.52,
+   "mcap": 398071.8,
    "beta": 0.318,
    "fye": "2025-12-31",
    "y": [
@@ -3432,6 +3765,14 @@
     1048.0,
     433.0
    ],
+   "nwc": [
+    -5992.0,
+    -3985.0,
+    -11676.0,
+    -2670.0
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 45492.0,
    "cash": 15806.0,
    "est": [
@@ -3444,11 +3785,12 @@
    "name": "KT Corporation",
    "kind": "op",
    "ind": "Telecom Services",
+   "gics": "Communication Services",
    "ccy": "USD",
    "fccy": "KRW",
-   "fx": 0.0007443909998983145,
-   "px": 18.585,
-   "mcap": 8799.1,
+   "fx": 0.0007445018272846937,
+   "px": 18.555,
+   "mcap": 8784.9,
    "beta": 0.091,
    "fye": "2025-12-31",
    "y": [
@@ -3523,6 +3865,14 @@
     27100.0,
     250000.0
    ],
+   "nwc": [
+    46274.0,
+    85419.0,
+    -816300.0,
+    -403704.0
+   ],
+   "lease": 0,
+   "usgaap": false,
    "debt": 10785572.0,
    "cash": 5133953.0,
    "est": null
@@ -3532,11 +3882,12 @@
    "name": "Eli Lilly and Company",
    "kind": "op",
    "ind": "Drug Manufacturers - General",
+   "gics": "Health Care",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 1267.935,
-   "mcap": 1130182.9,
+   "px": 1267.035,
+   "mcap": 1129380.6,
    "beta": 0.453,
    "fye": "2025-12-31",
    "y": [
@@ -3611,6 +3962,14 @@
     2500.0,
     4108.0
    ],
+   "nwc": [
+    185.6,
+    2410.6,
+    6213.0,
+    14768.0
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 42503.0,
    "cash": 7268.0,
    "est": [
@@ -3623,11 +3982,12 @@
    "name": "Lockheed Martin Corporation",
    "kind": "op",
    "ind": "Aerospace & Defense",
+   "gics": "Industrials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 530.52,
-   "mcap": 122439.1,
+   "px": 530.86,
+   "mcap": 122517.6,
    "beta": 0.095,
    "fye": "2025-12-31",
    "y": [
@@ -3702,6 +4062,14 @@
     3700.0,
     3000.0
    ],
+   "nwc": [
+    2675.0,
+    2310.0,
+    589.0,
+    -926.0
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 21700.0,
    "cash": 4121.0,
    "est": [
@@ -3714,11 +4082,12 @@
    "name": "Lam Research Corporation",
    "kind": "op",
    "ind": "Semiconductor Equipment & Materials",
+   "gics": "Information Technology",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 271.7,
-   "mcap": 340012.0,
+   "px": 272.335,
+   "mcap": 340806.7,
    "beta": 1.854,
    "fye": "2026-06-30",
    "y": [
@@ -3793,6 +4162,14 @@
     3419.87,
     3833.9
    ],
+   "nwc": [
+    3714.8,
+    3201.74,
+    2312.22,
+    4098.36
+   ],
+   "lease": 12.5,
+   "usgaap": true,
    "debt": 3734.56,
    "cash": 5579.17,
    "est": [
@@ -3805,11 +4182,12 @@
    "name": "lululemon athletica inc.",
    "kind": "op",
    "ind": "Apparel Retail",
+   "gics": "Consumer Discretionary",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 98.82,
-   "mcap": 11445.9,
+   "px": 98.7281,
+   "mcap": 11435.3,
    "beta": 0.922,
    "fye": "2026-01-31",
    "y": [
@@ -3884,6 +4262,14 @@
     1636.88,
     1178.35
    ],
+   "nwc": [
+    720.36,
+    434.62,
+    431.49,
+    866.67
+   ],
+   "lease": 1798.44,
+   "usgaap": false,
    "debt": 1798.44,
    "cash": 1807.2,
    "est": [
@@ -3896,11 +4282,12 @@
    "name": "LVMH Moët Hennessy - Louis Vuitton, Société Européenne",
    "kind": "op",
    "ind": "Luxury Goods",
+   "gics": "Consumer Discretionary",
    "ccy": "USD",
    "fccy": "EUR",
-   "fx": 1.1213276386260986,
-   "px": 88.95,
-   "mcap": 219246.3,
+   "fx": 1.1212018728256226,
+   "px": 89.05,
+   "mcap": 219492.8,
    "beta": 0.879,
    "fye": "2025-12-31",
    "y": [
@@ -3975,6 +4362,14 @@
     259.0,
     1640.0
    ],
+   "nwc": [
+    12888.0,
+    13140.0,
+    14440.0,
+    15189.0
+   ],
+   "lease": 16387.0,
+   "usgaap": false,
    "debt": 36731.0,
    "cash": 13502.0,
    "est": null
@@ -3984,11 +4379,12 @@
    "name": "Mastercard Incorporated",
    "kind": "op",
    "ind": "Credit Services",
+   "gics": "Financials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 615.305,
-   "mcap": 539013.3,
+   "px": 615.135,
+   "mcap": 538864.4,
    "beta": 0.76,
    "fye": "2025-12-31",
    "y": [
@@ -4063,6 +4459,14 @@
     10954.0,
     11727.0
    ],
+   "nwc": [
+    -4699.0,
+    -5146.0,
+    -7518.0,
+    -9353.0
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 19000.0,
    "cash": 10898.0,
    "est": [
@@ -4075,11 +4479,12 @@
    "name": "McDonald's Corporation",
    "kind": "op",
    "ind": "Restaurants",
+   "gics": "Consumer Discretionary",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 243.21,
-   "mcap": 172105.5,
+   "px": 242.7216,
+   "mcap": 171759.9,
    "beta": 0.447,
    "fye": "2025-12-31",
    "y": [
@@ -4154,6 +4559,14 @@
     2824.0,
     2056.0
    ],
+   "nwc": [
+    -300.6,
+    -572.0,
+    289.0,
+    -278.0
+   ],
+   "lease": 14841.0,
+   "usgaap": true,
    "debt": 54814.0,
    "cash": 774.0,
    "est": [
@@ -4166,11 +4579,12 @@
    "name": "Meta Platforms, Inc.",
    "kind": "op",
    "ind": "Internet Content & Information",
+   "gics": "Communication Services",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 732.595,
-   "mcap": 1866290.2,
+   "px": 735.18,
+   "mcap": 1872875.6,
    "beta": 1.185,
    "fye": "2025-12-31",
    "y": [
@@ -4245,6 +4659,14 @@
     30125.0,
     26248.0
    ],
+   "nwc": [
+    -6848.0,
+    -10375.0,
+    -9424.0,
+    -12493.0
+   ],
+   "lease": 25153.0,
+   "usgaap": true,
    "debt": 83897.0,
    "cash": 81592.0,
    "est": [
@@ -4257,11 +4679,12 @@
    "name": "Manulife Financial Corporation",
    "kind": "fin",
    "ind": "Insurance - Life",
+   "gics": "Financials",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 61.865,
-   "mcap": 102343.0,
+   "px": 61.775,
+   "mcap": 102194.2,
    "beta": 0.738,
    "fye": "2025-12-31",
    "y": [
@@ -4336,6 +4759,14 @@
     3128.0,
     2358.0
    ],
+   "nwc": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "lease": 0,
+   "usgaap": false,
    "debt": 14675.0,
    "cash": 26703.0,
    "est": [
@@ -4348,11 +4779,12 @@
    "name": "Magna International Inc.",
    "kind": "op",
    "ind": "Auto Parts",
+   "gics": "Consumer Discretionary",
    "ccy": "CAD",
    "fccy": "USD",
-   "fx": 1.419600009918213,
-   "px": 93.76,
-   "mcap": 25082.7,
+   "fx": 1.4193999767303467,
+   "px": 93.97,
+   "mcap": 25138.8,
    "beta": 1.808,
    "fye": "2025-12-31",
    "y": [
@@ -4427,6 +4859,14 @@
     207.0,
     137.0
    ],
+   "nwc": [
+    1231.0,
+    1334.0,
+    1046.0,
+    1492.0
+   ],
+   "lease": 1977.0,
+   "usgaap": false,
    "debt": 6689.0,
    "cash": 1612.0,
    "est": [
@@ -4439,11 +4879,12 @@
    "name": "Merck & Co., Inc.",
    "kind": "op",
    "ind": "Drug Manufacturers - General",
+   "gics": "Health Care",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 149.21,
-   "mcap": 368126.7,
+   "px": 149.175,
+   "mcap": 368040.3,
    "beta": 0.222,
    "fye": "2025-12-31",
    "y": [
@@ -4518,6 +4959,14 @@
     1306.0,
     5084.0
    ],
+   "nwc": [
+    237.0,
+    753.0,
+    -678.0,
+    3213.0
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 49339.0,
    "cash": 14565.0,
    "est": [
@@ -4531,11 +4980,12 @@
    "name": "Moderna, Inc.",
    "kind": "op",
    "ind": "Biotechnology",
+   "gics": "Health Care",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 238.6,
-   "mcap": 95257.7,
+   "px": 237.89,
+   "mcap": 94974.2,
    "beta": 1.095,
    "fye": "2025-12-31",
    "y": [
@@ -4610,6 +5060,14 @@
     0.0,
     0.0
    ],
+   "nwc": [
+    -1198.0,
+    -1269.0,
+    -1095.0,
+    -1200.0
+   ],
+   "lease": 715.0,
+   "usgaap": true,
    "debt": 1305.0,
    "cash": 5799.0,
    "est": [
@@ -4623,11 +5081,12 @@
    "name": "Morgan Stanley",
    "kind": "fin",
    "ind": "Capital Markets",
+   "gics": "Financials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 179.69,
-   "mcap": 282215.1,
+   "px": 179.74,
+   "mcap": 282293.6,
    "beta": 1.214,
    "fye": "2025-12-31",
    "y": [
@@ -4702,6 +5161,14 @@
     4199.0,
     5835.0
    ],
+   "nwc": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 370538.0,
    "cash": 81310.0,
    "est": [
@@ -4714,11 +5181,12 @@
    "name": "Microsoft Corporation",
    "kind": "op",
    "ind": "Software - Infrastructure",
+   "gics": "Information Technology",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 539.52,
-   "mcap": 4006230.6,
+   "px": 539.13,
+   "mcap": 4003334.5,
    "beta": 1.099,
    "fye": "2026-06-30",
    "y": [
@@ -4793,6 +5261,14 @@
     16364.0,
     20262.0
    ],
+   "nwc": [
+    -25901.0,
+    -32141.0,
+    -41643.0,
+    -28539.0
+   ],
+   "lease": 16532.0,
+   "usgaap": true,
    "debt": 56826.0,
    "cash": 76651.0,
    "est": [
@@ -4805,11 +5281,12 @@
    "name": "Newmont Corporation",
    "kind": "op",
    "ind": "Gold",
+   "gics": "Materials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 113.975,
-   "mcap": 120094.6,
+   "px": 114.05,
+   "mcap": 120173.6,
    "beta": 0.53,
    "fye": "2025-12-31",
    "y": [
@@ -4884,6 +5361,14 @@
     1246.0,
     2303.0
    ],
+   "nwc": [
+    -72.0,
+    526.0,
+    2123.0,
+    -769.0
+   ],
+   "lease": 474.0,
+   "usgaap": true,
    "debt": 5589.0,
    "cash": 8241.0,
    "est": [
@@ -4896,11 +5381,12 @@
    "name": "Netflix, Inc.",
    "kind": "op",
    "ind": "Entertainment",
+   "gics": "Communication Services",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 72.62,
-   "mcap": 302385.3,
+   "px": 72.92,
+   "mcap": 303634.5,
    "beta": 1.613,
    "fye": "2025-12-31",
    "y": [
@@ -4975,6 +5461,14 @@
     5430.86,
     8460.2
    ],
+   "nwc": [
+    -4722.95,
+    -5680.56,
+    -5454.31,
+    -6024.23
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 14462.84,
    "cash": 9062.36,
    "est": [
@@ -4988,11 +5482,12 @@
    "name": "Northrop Grumman Corporation",
    "kind": "op",
    "ind": "Aerospace & Defense",
+   "gics": "Industrials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 498.895,
-   "mcap": 70874.5,
+   "px": 498.475,
+   "mcap": 70814.9,
    "beta": -0.112,
    "fye": "2025-12-31",
    "y": [
@@ -5067,6 +5562,14 @@
     2514.0,
     1624.0
    ],
+   "nwc": [
+    -604.0,
+    -1345.0,
+    -4207.0,
+    -2998.0
+   ],
+   "lease": 1857.0,
+   "usgaap": true,
    "debt": 17019.0,
    "cash": 4403.0,
    "est": [
@@ -5079,11 +5582,12 @@
    "name": "Nutrien Ltd.",
    "kind": "op",
    "ind": "Agricultural Inputs",
+   "gics": "Materials",
    "ccy": "CAD",
    "fccy": "USD",
-   "fx": 1.419600009918213,
-   "px": 99.15,
-   "mcap": 47315.4,
+   "fx": 1.4193999767303467,
+   "px": 99.0,
+   "mcap": 47243.8,
    "beta": 1.126,
    "fye": "2025-12-31",
    "y": [
@@ -5158,6 +5662,14 @@
     166.0,
     513.0
    ],
+   "nwc": [
+    4150.0,
+    3762.0,
+    3821.0,
+    4739.0
+   ],
+   "lease": 1283.0,
+   "usgaap": false,
    "debt": 12019.0,
    "cash": 701.0,
    "est": [
@@ -5170,11 +5682,12 @@
    "name": "NVIDIA Corporation",
    "kind": "op",
    "ind": "Semiconductors",
+   "gics": "Information Technology",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 216.81,
-   "mcap": 5235310.9,
+   "px": 217.25,
+   "mcap": 5245935.6,
    "beta": 2.216,
    "fye": "2026-01-31",
    "y": [
@@ -5249,6 +5762,14 @@
     33706.0,
     40086.0
    ],
+   "nwc": [
+    4640.0,
+    9208.0,
+    19157.0,
+    31885.0
+   ],
+   "lease": 2572.0,
+   "usgaap": true,
    "debt": 11040.0,
    "cash": 62556.0,
    "est": [
@@ -5261,11 +5782,12 @@
    "name": "Oracle Corporation",
    "kind": "op",
    "ind": "Software - Infrastructure",
+   "gics": "Information Technology",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 132.895,
-   "mcap": 402871.4,
+   "px": 133.59,
+   "mcap": 404978.2,
    "beta": 1.77,
    "fye": "2026-05-31",
    "y": [
@@ -5340,6 +5862,14 @@
     847.0,
     0.0
    ],
+   "nwc": [
+    -8212.0,
+    -9046.0,
+    -11996.0,
+    -19892.0
+   ],
+   "lease": 26648.0,
+   "usgaap": true,
    "debt": 156189.0,
    "cash": 31894.0,
    "est": [
@@ -5353,11 +5883,12 @@
    "name": "Palantir Technologies Inc.",
    "kind": "op",
    "ind": "Software - Infrastructure",
+   "gics": "Information Technology",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 199.1,
-   "mcap": 478448.9,
+   "px": 199.16,
+   "mcap": 478593.1,
    "beta": 1.602,
    "fye": "2025-12-31",
    "y": [
@@ -5432,6 +5963,14 @@
     64.2,
     74.98
    ],
+   "nwc": [
+    -134.94,
+    -227.4,
+    -247.72,
+    51.41
+   ],
+   "lease": 229.34,
+   "usgaap": true,
    "debt": 229.34,
    "cash": 7177.04,
    "est": [
@@ -5445,11 +5984,12 @@
    "name": "Roblox Corporation",
    "kind": "op",
    "ind": "Electronic Gaming & Multimedia",
+   "gics": "Communication Services",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 49.57,
-   "mcap": 35411.6,
+   "px": 49.505,
+   "mcap": 35365.2,
    "beta": 1.468,
    "fye": "2025-12-31",
    "y": [
@@ -5524,6 +6064,14 @@
     0.0,
     0.0
    ],
+   "nwc": [
+    -1546.47,
+    -1858.93,
+    -2215.87,
+    -3117.26
+   ],
+   "lease": 794.91,
+   "usgaap": true,
    "debt": 1802.7,
    "cash": 3055.14,
    "est": [
@@ -5537,11 +6085,12 @@
    "name": "Rogers Communications Inc.",
    "kind": "op",
    "ind": "Telecom Services",
+   "gics": "Communication Services",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 45.4,
-   "mcap": 24526.2,
+   "px": 45.365,
+   "mcap": 24507.3,
    "beta": 0.841,
    "fye": "2025-12-31",
    "y": [
@@ -5616,6 +6165,14 @@
     null,
     null
    ],
+   "nwc": [
+    14446.0,
+    1606.0,
+    2108.0,
+    -1632.0
+   ],
+   "lease": 3118.0,
+   "usgaap": false,
    "debt": 44176.0,
    "cash": 1344.0,
    "est": [
@@ -5628,11 +6185,12 @@
    "name": "Regeneron Pharmaceuticals, Inc.",
    "kind": "op",
    "ind": "Biotechnology",
+   "gics": "Health Care",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 805.24,
-   "mcap": 82903.5,
+   "px": 804.845,
+   "mcap": 82862.8,
    "beta": 0.153,
    "fye": "2025-12-31",
    "y": [
@@ -5707,6 +6265,14 @@
     2167.1,
     3334.8
    ],
+   "nwc": [
+    5000.5,
+    5211.0,
+    5704.1,
+    5048.3
+   ],
+   "lease": 720.0,
+   "usgaap": true,
    "debt": 2705.9,
    "cash": 8605.2,
    "est": [
@@ -5720,11 +6286,12 @@
    "name": "Rockpoint Gas Storage Inc.",
    "kind": "op",
    "ind": "Utilities - Regulated Gas",
+   "gics": "Utilities",
    "ccy": "CAD",
    "fccy": "USD",
-   "fx": 1.419600009918213,
-   "px": 23.93,
-   "mcap": 3160.6,
+   "fx": 1.4193999767303467,
+   "px": 23.94,
+   "mcap": 3161.9,
    "beta": null,
    "fye": "2026-03-31",
    "y": [
@@ -5763,6 +6330,11 @@
    "bb": [
     0.0
    ],
+   "nwc": [
+    107.6
+   ],
+   "lease": 99.5,
+   "usgaap": false,
    "debt": 1309.0,
    "cash": 42.3,
    "est": [
@@ -5775,11 +6347,12 @@
    "name": "Raymond James Financial, Inc.",
    "kind": "fin",
    "ind": "Asset Management",
+   "gics": "Financials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 156.575,
-   "mcap": 30119.0,
+   "px": 156.46,
+   "mcap": 30096.9,
    "beta": 0.946,
    "fye": "2025-09-30",
    "y": [
@@ -5854,6 +6427,14 @@
     984.0,
     1267.0
    ],
+   "nwc": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 4220.0,
    "cash": 11389.0,
    "est": [
@@ -5866,11 +6447,12 @@
    "name": "Royal Bank of Canada",
    "kind": "fin",
    "ind": "Banks - Diversified",
+   "gics": "Financials",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 278.2,
-   "mcap": 385148.4,
+   "px": 278.08,
+   "mcap": 384982.2,
    "beta": 0.906,
    "fye": "2025-10-31",
    "y": [
@@ -5945,6 +6527,14 @@
     0.0,
     2724.0
    ],
+   "nwc": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "lease": 4586.0,
+   "usgaap": false,
    "debt": 545439.0,
    "cash": 87388.0,
    "est": [
@@ -5957,11 +6547,12 @@
    "name": "Starbucks Corporation",
    "kind": "op",
    "ind": "Restaurants",
+   "gics": "Consumer Discretionary",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 95.845,
-   "mcap": 109263.3,
+   "px": 95.89,
+   "mcap": 109314.6,
    "beta": 0.975,
    "fye": "2025-09-30",
    "y": [
@@ -6036,6 +6627,14 @@
     1158.7,
     0.0
    ],
+   "nwc": [
+    -2146.3,
+    -2867.5,
+    -3053.8,
+    -3231.7
+   ],
+   "lease": 10536.7,
+   "usgaap": true,
    "debt": 26611.5,
    "cash": 3467.0,
    "est": [
@@ -6049,11 +6648,12 @@
    "name": "Solstice Advanced Materials, Inc.",
    "kind": "op",
    "ind": "Specialty Chemicals",
+   "gics": "Materials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 59.1299,
-   "mcap": 9392.6,
+   "px": 59.19,
+   "mcap": 9402.2,
    "beta": null,
    "fye": "2025-12-31",
    "y": [
@@ -6128,6 +6728,14 @@
     null,
     null
    ],
+   "nwc": [
+    null,
+    198.0,
+    139.0,
+    479.0
+   ],
+   "lease": 187.0,
+   "usgaap": true,
    "debt": 2495.0,
    "cash": 534.0,
    "est": [
@@ -6140,11 +6748,12 @@
    "name": "SmartCentres Real Estate Investment Trust",
    "kind": "reit",
    "ind": "REIT - Retail",
+   "gics": "Real Estate",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 26.79,
-   "mcap": 5259.2,
+   "px": 26.78,
+   "mcap": 5257.3,
    "beta": 0.828,
    "fye": "2025-12-31",
    "y": [
@@ -6219,6 +6828,14 @@
     null,
     null
    ],
+   "nwc": [
+    -274.8,
+    -241.4,
+    -410.16,
+    -265.83
+   ],
+   "lease": 0,
+   "usgaap": false,
    "debt": 5209.03,
    "cash": 51.55,
    "est": [
@@ -6231,11 +6848,12 @@
    "name": "Tencent Holdings Limited",
    "kind": "op",
    "ind": "Internet Content & Information",
+   "gics": "Communication Services",
    "ccy": "USD",
    "fccy": "CNY",
    "fx": 0.149691641330719,
-   "px": 53.62,
-   "mcap": 482851.3,
+   "px": 53.61,
+   "mcap": 482761.3,
    "beta": 0.742,
    "fye": "2025-12-31",
    "y": [
@@ -6310,6 +6928,14 @@
     103819.0,
     75460.0
    ],
+   "nwc": [
+    -130591.0,
+    -151014.0,
+    -176780.0,
+    -185498.0
+   ],
+   "lease": 0,
+   "usgaap": false,
    "debt": 0,
    "cash": 0,
    "est": null
@@ -6319,11 +6945,12 @@
    "name": "The Toronto-Dominion Bank",
    "kind": "fin",
    "ind": "Banks - Diversified",
+   "gics": "Financials",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 169.15,
-   "mcap": 276224.8,
+   "px": 168.84,
+   "mcap": 275718.5,
    "beta": 0.874,
    "fye": "2025-10-31",
    "y": [
@@ -6398,6 +7025,14 @@
     3783.0,
     5993.0
    ],
+   "nwc": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "lease": 5352.0,
+   "usgaap": false,
    "debt": 442429.0,
    "cash": 116929.0,
    "est": [
@@ -6410,11 +7045,12 @@
    "name": "The TJX Companies, Inc.",
    "kind": "op",
    "ind": "Apparel Retail",
+   "gics": "Consumer Discretionary",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 144.47,
-   "mcap": 159596.6,
+   "px": 144.415,
+   "mcap": 159535.9,
    "beta": 0.561,
    "fye": "2026-01-31",
    "y": [
@@ -6489,6 +7125,14 @@
     2147.0,
     2211.0
    ],
+   "nwc": [
+    -1216.0,
+    -1767.0,
+    -1716.0,
+    -1664.0
+   ],
+   "lease": 10620.0,
+   "usgaap": true,
    "debt": 13489.0,
    "cash": 6230.0,
    "est": [
@@ -6501,11 +7145,12 @@
    "name": "Toyota Motor Corporation",
    "kind": "op",
    "ind": "Auto Manufacturers",
+   "gics": "Consumer Discretionary",
    "ccy": "USD",
    "fccy": "JPY",
-   "fx": 0.006324990652501583,
-   "px": 192.27,
-   "mcap": 226456.9,
+   "fx": 0.006324190646409988,
+   "px": 192.385,
+   "mcap": 226592.3,
    "beta": 0.375,
    "fye": "2026-03-31",
    "y": [
@@ -6580,6 +7225,14 @@
     1179043.0,
     39975.0
    ],
+   "nwc": [
+    5573063.0,
+    6828427.0,
+    7555809.0,
+    10158099.0
+   ],
+   "lease": 711013.0,
+   "usgaap": false,
    "debt": 43205469.0,
    "cash": 16642067.0,
    "est": null
@@ -6589,11 +7242,12 @@
    "name": "Tourmaline Oil Corp.",
    "kind": "op",
    "ind": "Oil & Gas E&P",
+   "gics": "Energy",
    "ccy": "CAD",
    "fccy": "CAD",
    "fx": 1.0,
-   "px": 64.45,
-   "mcap": 25045.4,
+   "px": 64.6,
+   "mcap": 25103.7,
    "beta": 0.403,
    "fye": "2025-12-31",
    "y": [
@@ -6668,6 +7322,14 @@
     0.0,
     0.0
    ],
+   "nwc": [
+    812.56,
+    -292.48,
+    -159.24,
+    388.73
+   ],
+   "lease": 38.38,
+   "usgaap": false,
    "debt": 1891.29,
    "cash": null,
    "est": [
@@ -6680,11 +7342,12 @@
    "name": "Taiwan Semiconductor Manufacturing Company Limited",
    "kind": "op",
    "ind": "Semiconductors",
+   "gics": "Information Technology",
    "ccy": "USD",
    "fccy": "TWD",
-   "fx": 0.030873727053403854,
-   "px": 417.6,
-   "mcap": 2165871.6,
+   "fx": 0.030878495424985886,
+   "px": 418.28,
+   "mcap": 2169398.4,
    "beta": 1.239,
    "fye": "2025-12-31",
    "y": [
@@ -6759,6 +7422,14 @@
     3089.2,
     0.0
    ],
+   "nwc": [
+    -500724.0,
+    -453456.6,
+    -645253.1,
+    -696425.6
+   ],
+   "lease": 31595.0,
+   "usgaap": false,
    "debt": 1064582.7,
    "cash": 3128068.1,
    "est": null
@@ -6768,11 +7439,12 @@
    "name": "Union Pacific Corporation",
    "kind": "op",
    "ind": "Railroads",
+   "gics": "Industrials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 288.0,
-   "mcap": 171013.5,
+   "px": 287.85,
+   "mcap": 171004.6,
    "beta": 0.954,
    "fye": "2025-12-31",
    "y": [
@@ -6847,6 +7519,14 @@
     1505.0,
     2679.0
    ],
+   "nwc": [
+    -578.0,
+    -251.0,
+    -498.0,
+    -185.0
+   ],
+   "lease": 1008.0,
+   "usgaap": true,
    "debt": 32822.0,
    "cash": 1516.0,
    "est": [
@@ -6859,11 +7539,12 @@
    "name": "Visa Inc.",
    "kind": "op",
    "ind": "Credit Services",
+   "gics": "Financials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 400.1,
-   "mcap": 751129.9,
+   "px": 400.28,
+   "mcap": 751467.8,
    "beta": 0.771,
    "fye": "2025-09-30",
    "y": [
@@ -6938,6 +7619,14 @@
     16713.0,
     18316.0
    ],
+   "nwc": [
+    -6920.0,
+    -9694.0,
+    -7659.0,
+    -10710.0
+   ],
+   "lease": 0,
+   "usgaap": true,
    "debt": 25171.0,
    "cash": 18997.0,
    "est": [
@@ -6950,11 +7639,12 @@
    "name": "Vale S.A.",
    "kind": "op",
    "ind": "Other Industrial Metals & Mining",
+   "gics": "Materials",
    "ccy": "USD",
    "fccy": "BRL",
-   "fx": 0.19791005551815033,
-   "px": 13.0,
-   "mcap": 55324.9,
+   "fx": 0.1974489539861679,
+   "px": 12.955,
+   "mcap": 55133.4,
    "beta": 0.699,
    "fye": "2025-12-31",
    "y": [
@@ -7029,6 +7719,14 @@
     409.0,
     0.0
    ],
+   "nwc": [
+    -2673.0,
+    1406.0,
+    -3448.0,
+    -4463.0
+   ],
+   "lease": 668.0,
+   "usgaap": false,
    "debt": 21801.0,
    "cash": 7566.0,
    "est": null
@@ -7038,11 +7736,12 @@
    "name": "Vertiv Holdings Co",
    "kind": "op",
    "ind": "Electrical Equipment & Parts",
+   "gics": "Industrials",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 207.645,
-   "mcap": 79940.9,
+   "px": 207.225,
+   "mcap": 79779.2,
    "beta": 2.048,
    "fye": "2025-12-31",
    "y": [
@@ -7117,6 +7816,14 @@
     599.9,
     0.0
    ],
+   "nwc": [
+    1067.2,
+    980.4,
+    843.9,
+    675.2
+   ],
+   "lease": 314.9,
+   "usgaap": true,
    "debt": 3227.9,
    "cash": 1827.9,
    "est": [
@@ -7130,11 +7837,12 @@
    "name": "Verizon Communications Inc.",
    "kind": "op",
    "ind": "Telecom Services",
+   "gics": "Communication Services",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 45.0,
-   "mcap": 186964.9,
+   "px": 44.87,
+   "mcap": 186424.8,
    "beta": 0.248,
    "fye": "2025-12-31",
    "y": [
@@ -7209,6 +7917,14 @@
     null,
     null
    ],
+   "nwc": [
+    -822.0,
+    -1235.0,
+    -1394.0,
+    -1336.0
+   ],
+   "lease": 23493.0,
+   "usgaap": true,
    "debt": 181643.0,
    "cash": 19048.0,
    "est": [
@@ -7221,11 +7937,12 @@
    "name": "West Fraser Timber Co. Ltd.",
    "kind": "op",
    "ind": "Lumber & Wood Production",
+   "gics": "Materials",
    "ccy": "CAD",
    "fccy": "USD",
-   "fx": 1.419600009918213,
-   "px": 93.41,
-   "mcap": 7314.4,
+   "fx": 1.4193999767303467,
+   "px": 93.43,
+   "mcap": 7315.9,
    "beta": 1.141,
    "fye": "2025-12-31",
    "y": [
@@ -7300,6 +8017,14 @@
     139.0,
     129.0
    ],
+   "nwc": [
+    806.0,
+    740.0,
+    472.0,
+    543.0
+   ],
+   "lease": 33.0,
+   "usgaap": false,
    "debt": 333.0,
    "cash": 202.0,
    "est": [
@@ -7312,11 +8037,12 @@
    "name": "ExxonMobil Holdings Corporation",
    "kind": "op",
    "ind": "Oil & Gas Integrated",
+   "gics": "Energy",
    "ccy": "USD",
    "fccy": "USD",
    "fx": 1.0,
-   "px": 174.72,
-   "mcap": 718433.3,
+   "px": 174.7091,
+   "mcap": 718388.5,
    "beta": 0.209,
    "fye": "2025-12-31",
    "y": [
@@ -7391,6 +8117,14 @@
     19629.0,
     20273.0
    ],
+   "nwc": [
+    -420.0,
+    3844.0,
+    3609.0,
+    9667.0
+   ],
+   "lease": 6313.0,
+   "usgaap": true,
    "debt": 43537.0,
    "cash": 10681.0,
    "est": [
