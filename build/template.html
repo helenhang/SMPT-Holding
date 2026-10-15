@@ -414,7 +414,7 @@ const I18N = {
     eB0:'期初净资产', eRoe:'ROE', eNi:'净利润', ePo:'派息率', eDiv:'股利', eBbr:'回购 / 净利润', eBb:'回购', eDist:'分配给股东', eB1:'期末净资产', eRi:'超额收益 RI', ePvD:'现值 · 分配', ePvR:'现值 · RI',
     eHint:'默认 ROE（净利润 / 期初净资产）、派息率和回购率都取最近三年的平均，之后保持不变。净资产按“期初 + 净利润 − 股利 − 回购”滚动。改净利润会覆盖 ROE，反过来也一样；回购率改成 0 就是纯股利模型。黄色格子是手动输入。',
     eSensSub:c=>`主要结果的每股价值（${c}）随股权成本和永续增长率的变化，预测期的利润和分配不变。绿色高于现价，红色低于现价。`,
-    watchGrp:'观察名单', watchSub:'正在研究、尚未持有，不计入组合数字', rsTitle:'独立研究机构的公允价值', rsSub:'从研究报告（如 Morningstar）中手工摘录的少量关键数字，只用于对比，不含报告内容。公允价值是机构对当前内在价值的估计，和我们的模型口径相同。',
+    dHorHG:'高增长公司（前两年增长率都 ≥ 10%，能源和原材料除外），默认预测 10 年。', watchGrp:'观察名单', watchSub:'正在研究、尚未持有，不计入组合数字', rsTitle:'独立研究机构的公允价值', rsSub:'从研究报告（如 Morningstar）中手工摘录的少量关键数字，只用于对比，不含报告内容。公允价值是机构对当前内在价值的估计，和我们的模型口径相同。',
     colSrc:'来源', colFv:c=>`公允价值 ${c}`, colStars:'星级', colMoat:'护城河', colUnc:'不确定性', colTheirRate:n=>`机构的 ${n}`, colOurs:'我们的',
     moatL:{Wide:'宽',Narrow:'窄',None:'无'}, uncL:{Low:'低',Medium:'中',High:'高','Very High':'很高',Extreme:'极高'}, dPortRs:'股票组合隐含涨幅 · 研究机构公允价值',
     anTitle:'机构目标价', anSub:(n,d,m)=>`Yahoo Finance 汇总的 ${n} 位卖方分析师 12 个月目标价，数据日期 ${d}。下表是每家机构最近 ${m} 个月内最新一次给出的目标价。`,
@@ -450,7 +450,7 @@ const I18N = {
     dHint:'黄色格子是手动输入。改收入会覆盖增长率，改成本会覆盖利润率，反过来也一样。',
     dMeta:(y,f,c,e)=>`Yahoo ${y} · 财报币种 ${f} · 股价币种 ${c} · 最近财年截至 ${e}`,
     dSumTitle:'全部持仓的估值结果', dSumSub:'用上面的模型给最新快照里的每只股票估值。没改过的股票用默认假设，只是机械的起点，不是结论。点代码在上方打开。', dSortW:'按权重', dSortUp:'按涨跌空间',
-    dNotes:d=>[`财报和股价来自 Yahoo Finance，数据日期 ${d}，估值日也取这一天。`,'默认值：EBIT 利润率、D&A、Capex、ΔNWC 取最近三年占收入比例的平均（ΔNWC 限制在 ±3%）；税率取历史有效税率的中位数（5%–35%）；Beta 取 Yahoo 的值；债务成本 = 利息支出 / 总债务。',`默认无风险利率：加拿大上市 ${pct(RF.CA)}，其他 ${pct(RF.US)}；股权风险溢价 ${pct(ERP)}；永续增长率 ${pct(TG)}。这些是手工设定的，请按当时的市场调整。`,'营业利润是调整后口径（与 Bloomberg 的 Industrial-Adjusted 一致）：不扣收购的在研项目、减值和重组等异常项目，所以可能高于 10-K 的 GAAP 营业利润。这些费用如果每年都有（例如 LLY 的在研项目收购），请手动调低利润率。','现金流假定在每个财年末发生，第一年按估值日距上个财年末已过去的时间缩短折现期。','金融股：DDM 把股利和回购都算作分配给股东的现金（总派现模型）。终值 = 下一年净利润 × 终值派息率 / (Ke − g)，下一年净利润 = 最后一年 ROE × 期末净资产。RI = 期初净资产 + 各年 (净利润 − Ke × 期初净资产) 的现值 + 终值。净资产按 clean surplus 滚动，所以终值派息率取 1 − g / ROE 时两者相同。','手动输入目前只保存在你自己的浏览器里，其他人看不到。可以用“导出 / 导入”分享。'],
+    dNotes:d=>[`财报和股价来自 Yahoo Finance，数据日期 ${d}，估值日也取这一天。`,'默认值：EBIT 利润率、D&A、Capex、ΔNWC 取最近三年占收入比例的平均（ΔNWC 限制在 ±3%）；税率取历史有效税率的中位数（5%–35%）；Beta 取 Yahoo 的值；债务成本 = 利息支出 / 总债务。',`默认无风险利率：加拿大上市 ${pct(RF.CA)}，其他 ${pct(RF.US)}；股权风险溢价 ${pct(ERP)}；永续增长率 ${pct(TG)}。这些是手工设定的，请按当时的市场调整。`,'营业利润是调整后口径（与 Bloomberg 的 Industrial-Adjusted 一致）：不扣收购的在研项目、减值和重组等异常项目，所以可能高于 10-K 的 GAAP 营业利润。这些费用如果每年都有（例如 LLY 的在研项目收购），请手动调低利润率。','预测期默认 5 年；前两年增长率都 ≥ 10% 的高增长公司（能源和原材料除外）默认 10 年，让增长率更慢地回落到永续增长率。金融股默认 5 年。','现金流假定在每个财年末发生，第一年按估值日距上个财年末已过去的时间缩短折现期。','金融股：DDM 把股利和回购都算作分配给股东的现金（总派现模型）。终值 = 下一年净利润 × 终值派息率 / (Ke − g)，下一年净利润 = 最后一年 ROE × 期末净资产。RI = 期初净资产 + 各年 (净利润 − Ke × 期初净资产) 的现值 + 终值。净资产按 clean surplus 滚动，所以终值派息率取 1 − g / ROE 时两者相同。','手动输入目前只保存在你自己的浏览器里，其他人看不到。可以用“导出 / 导入”分享。'],
     dNoFd:'没有财报数据。运行 build/fetch_fundamentals.py 后重新构建。', dOpen:'估值 →',
     colInd:'行业', grpBy:'分组', grpCls:'资产类别', grpInd:'行业', allInd:'全部行业',
     cls:{'Cash':'现金','Money Market':'货币基金','Bonds':'债券','REITs':'REITs','Canadian Equity':'加拿大股票','US Equity':'美国股票','ADRs (Intl)':'ADR（国际）'},
@@ -512,7 +512,7 @@ const I18N = {
     eB0:'Opening book equity', eRoe:'ROE', eNi:'Net income', ePo:'Payout ratio', eDiv:'Dividends', eBbr:'Buybacks / net income', eBb:'Buybacks', eDist:'Paid to shareholders', eB1:'Closing book equity', eRi:'Residual income', ePvD:'PV · payouts', ePvR:'PV · RI',
     eHint:'ROE (net income / opening book equity), payout and buyback rates default to three-year averages and then stay flat. Book equity rolls forward as opening + net income − dividends − buybacks. Entering net income overrides ROE and the other way round; set the buyback rate to 0 for a pure dividend model. Yellow boxes are manual inputs.',
     eSensSub:c=>`Value per share (${c}) of the main result as the cost of equity and terminal growth change, holding forecast earnings and payouts fixed. Green is above the current price, red below.`,
-    watchGrp:'Watchlist', watchSub:'under research, not held; left out of the portfolio figures', rsTitle:'Fair values from independent research', rsSub:'A few key figures copied by hand from research reports (e.g. Morningstar), for comparison only; no report content. A fair value is the firm’s estimate of intrinsic value today, the same basis as our model.',
+    dHorHG:'High-growth company (both of the first two years grow 10% or more, energy and materials excluded), so the forecast defaults to 10 years.', watchGrp:'Watchlist', watchSub:'under research, not held; left out of the portfolio figures', rsTitle:'Fair values from independent research', rsSub:'A few key figures copied by hand from research reports (e.g. Morningstar), for comparison only; no report content. A fair value is the firm’s estimate of intrinsic value today, the same basis as our model.',
     colSrc:'Source', colFv:c=>`Fair value ${c}`, colStars:'Rating', colMoat:'Moat', colUnc:'Uncertainty', colTheirRate:n=>`Their ${n}`, colOurs:'Ours',
     moatL:{Wide:'Wide',Narrow:'Narrow',None:'None'}, uncL:{Low:'Low',Medium:'Medium',High:'High','Very High':'Very high',Extreme:'Extreme'}, dPortRs:'Implied equity upside · research fair values',
     anTitle:'Analyst price targets', anSub:(n,d,m)=>`12-month price targets from ${n} sell-side analysts as compiled by Yahoo Finance, as of ${d}. The table lists each firm’s latest target within the last ${m} months.`,
@@ -548,7 +548,7 @@ const I18N = {
     dHint:'Yellow boxes are manual inputs. Entering revenue overrides growth and entering costs overrides the margin, and the other way round.',
     dMeta:(y,f,c,e)=>`Yahoo ${y} · statements in ${f} · price in ${c} · latest fiscal year ended ${e}`,
     dSumTitle:'Valuation of all holdings', dSumSub:'The model above applied to every stock in the latest snapshot. Stocks nobody has edited use the defaults, which are a mechanical starting point, not a conclusion. Click a ticker to open it above.', dSortW:'By weight', dSortUp:'By upside',
-    dNotes:d=>[`Statements and prices from Yahoo Finance as of ${d}, which is also the valuation date.`,'Defaults: EBIT margin, D&A, capex and NWC increase are three-year averages as a share of revenue (NWC capped at ±3%); tax is the median historical effective rate (5%–35%); beta is Yahoo’s; cost of debt = interest expense / total debt.',`Default risk-free rate: ${pct(RF.CA)} for TSX listings and ${pct(RF.US)} otherwise; equity risk premium ${pct(ERP)}; terminal growth ${pct(TG)}. These are set by hand; adjust them to the market at the time.`,'Operating income is on an adjusted basis (matching Bloomberg’s Industrial-Adjusted): acquired in-process R&D, impairments, restructuring and other abnormal items are not deducted, so it can be higher than GAAP operating income in the 10-K. If those charges recur every year (e.g. LLY’s in-process R&D acquisitions), lower the margin by hand.','Cash flows are assumed at each fiscal year end; the first year’s discount period is shortened by the time already elapsed since the last fiscal year end.','Financials: the DDM counts dividends and buybacks as payouts to shareholders (a total payout model). Terminal value = next year’s net income × terminal payout / (Ke − g), where next year’s net income = last-year ROE × closing book equity. RI = opening book equity + the present value of (net income − Ke × opening book equity) each year + terminal value. Book equity follows clean surplus, so with a terminal payout of 1 − g / ROE the two give the same value.','Manual inputs are saved only in your own browser for now, so others cannot see them. Use Export / Import to share them.'],
+    dNotes:d=>[`Statements and prices from Yahoo Finance as of ${d}, which is also the valuation date.`,'Defaults: EBIT margin, D&A, capex and NWC increase are three-year averages as a share of revenue (NWC capped at ±3%); tax is the median historical effective rate (5%–35%); beta is Yahoo’s; cost of debt = interest expense / total debt.',`Default risk-free rate: ${pct(RF.CA)} for TSX listings and ${pct(RF.US)} otherwise; equity risk premium ${pct(ERP)}; terminal growth ${pct(TG)}. These are set by hand; adjust them to the market at the time.`,'Operating income is on an adjusted basis (matching Bloomberg’s Industrial-Adjusted): acquired in-process R&D, impairments, restructuring and other abnormal items are not deducted, so it can be higher than GAAP operating income in the 10-K. If those charges recur every year (e.g. LLY’s in-process R&D acquisitions), lower the margin by hand.','The forecast defaults to 5 years; high-growth companies whose first two years both grow 10% or more (energy and materials excluded) default to 10, so growth fades to the terminal rate more slowly. Financials default to 5.','Cash flows are assumed at each fiscal year end; the first year’s discount period is shortened by the time already elapsed since the last fiscal year end.','Financials: the DDM counts dividends and buybacks as payouts to shareholders (a total payout model). Terminal value = next year’s net income × terminal payout / (Ke − g), where next year’s net income = last-year ROE × closing book equity. RI = opening book equity + the present value of (net income − Ke × opening book equity) each year + terminal value. Book equity follows clean surplus, so with a terminal payout of 1 − g / ROE the two give the same value.','Manual inputs are saved only in your own browser for now, so others cannot see them. Use Export / Import to share them.'],
     dNoFd:'No financial statements. Run build/fetch_fundamentals.py and rebuild.', dOpen:'Valuation →',
     colInd:'Industry', grpBy:'Group by', grpCls:'Asset class', grpInd:'Industry', allInd:'All industries',
     cls:{'Cash':'Cash','Money Market':'Money market','Bonds':'Bonds','REITs':'REITs','Canadian Equity':'Canadian equity','US Equity':'US equity','ADRs (Intl)':'ADRs (intl)'},
@@ -994,6 +994,10 @@ const DStore = (()=>{
   return {all:()=>mem, get:t=>Object.hasOwn(mem,t)?mem[t]:null, set(t,o){ if(o) mem[t]=o; else delete mem[t]; save(); }, replace(a){ mem=a; save(); }};
 })();
 const RF = {CA:.033, US:.042}, ERP = .05, TG = .025, MULT = 10;
+// High-growth companies get a 10-year forecast by default, so growth can fade more slowly:
+// both default growth years at least HG, outside the commodity sectors, whose growth swings with prices.
+const HG = .10, HG_SKIP = ['Energy','Materials'];
+const highGrowth = (t,B) => Math.min(B.g1,B.g2)>=HG && !HG_SKIP.includes(DATA.sec?.hold?.[t]?.g);
 const SKEYS = ['rf','erp','beta','kd','wacc','ke','tg','tpo','mult','debt','cash','bv','shares','px'], SPCT = new Set(['rf','erp','kd','wacc','ke','tg','tpo']);
 const YKEYS = ['g','rev','cost','m','tax','da','cx','nwc','roe','ni','po','bb'], YPCT = new Set(['g','m','tax','da','cx','nwc','roe','po','bb']);
 const DPAIR = {rev:'g', g:'rev', cost:'m', m:'cost', ni:'roe', roe:'ni'};  // entering one clears the other
@@ -1015,7 +1019,7 @@ function dPrune(o){
 function dClean(o){
   if(!o||typeof o!=='object') return null;
   const r={};
-  if(o.n===10) r.n=10;
+  if(o.n===5 || o.n===10) r.n=o.n;
   if(o.tm==='x') r.tm='x';
   if(o.s&&typeof o.s==='object'){ r.s={}; SKEYS.forEach(k=>{ if(okN(o.s[k])) r.s[k]=o.s[k]; }); }
   if(o.y&&typeof o.y==='object'){ r.y={}; YKEYS.forEach(k=>{ if(Array.isArray(o.y[k])) r.y[k]=o.y[k].slice(0,10).map(v=>okN(v)?v:null); }); }
@@ -1038,7 +1042,7 @@ function dBase(t){
 function dModel(t){
   if(FD.co[t].kind==='fin') return dModelEq(t);
   const c=FD.co[t], B=dBase(t), o=dClean(DStore.get(t))||{}, oy=o.y||{};
-  const s={...B.s, ...(o.s||{})}, N=o.n||5, tm=o.tm||'g';
+  const N0=highGrowth(t,B)?10:5, s={...B.s, ...(o.s||{})}, N=o.n||N0, tm=o.tm||'g';
   const ov=(k,i)=>oy[k]?.[i]??null, at=(k,i,d)=>ov(k,i)??d;
   const P=[]; let prev=c.rev.at(-1);
   for(let i=0;i<N;i++){
@@ -1055,7 +1059,7 @@ function dModel(t){
   const E=s.shares*s.px/c.fx, wd=s.debt/(s.debt+E), ke=s.rf+s.beta*s.erp;
   const kdat = s.kd*(1-P[0].tax), wacc = s.wacc ?? (1-wd)*ke + wd*kdat;  // after-tax at the first forecast year's rate
   const el = clamp((Date.parse(FD.asof)-Date.parse(c.fye))/(365.25*864e5),0,1);
-  const r = {c, B, s, o, N, tm, P, wd, ke, kdat, wacc, disc:wacc, el};
+  const r = {c, B, s, o, N, N0, tm, P, wd, ke, kdat, wacc, disc:wacc, el};
   r.v = dValue(r, wacc, tm==='g'?s.tg:s.mult);
   return r;
 }
@@ -1095,7 +1099,7 @@ function dModelEq(t){
   const c=FD.co[t], H=dHistEq(c), o=dClean(DStore.get(t))||{}, oy=o.y||{};
   const po=clamp(mean3(H.map(x=>x.po))??0,0,1);
   const B={roe:clamp(mean3(H.map(x=>x.roe))??0,0,.3), po, bb:clamp(mean3(H.map(x=>x.bbr))??0,0,1-po)};
-  const s={...dBase(t).s, bv:c.bv.at(-1), ...(o.s||{})}, N=o.n||5;
+  const s={...dBase(t).s, bv:c.bv.at(-1), ...(o.s||{})}, N=o.n||5;  // financials: 5 years unless set by hand
   const ov=(k,i)=>oy[k]?.[i]??null, at=(k,i,d)=>ov(k,i)??d;
   const P=[]; let b=s.bv;
   for(let i=0;i<N;i++){
@@ -1105,7 +1109,7 @@ function dModelEq(t){
   }
   const ke=s.ke ?? s.rf+s.beta*s.erp;
   const el=clamp((Date.parse(FD.asof)-Date.parse(c.fye))/(365.25*864e5),0,1);
-  const r={eq:true, c, B, H, s, o, N, P, ke, disc:ke, el};
+  const r={eq:true, c, B, H, s, o, N, N0:5, P, ke, disc:ke, el};
   r.v=dValueEq(r, ke, s.tg);
   return r;
 }
@@ -1198,7 +1202,7 @@ function renderDCF(){
   const ro=(l,val)=>`<div class="fl"><span>${l}</span><span class="num">${val}</span></div>`;
   const dd=x=>Math.abs(x)>=100?0:1;
   const upTile=sub=>tile(T('dUp'), ok?spct(v.up):'—', sub, ok?(v.up>=0?'delta-up':'delta-dn'):'');
-  const horizon=`<h4>${T('dHorH')}</h4><div class="toggle" id="dn" role="group" aria-label="${esc(T('dHorH'))}">${[5,10].map(n=>`<button type="button" data-n="${n}" aria-pressed="${r.N===n}">${T('dYears',n)}</button>`).join('')}</div>`;
+  const horizon=`<h4>${T('dHorH')}</h4><div class="toggle" id="dn" role="group" aria-label="${esc(T('dHorH'))}">${[5,10].map(n=>`<button type="button" data-n="${n}" aria-pressed="${r.N===n}">${T('dYears',n)}</button>`).join('')}</div>${r.N0===10?`<p class="note-s">${T('dHorHG')}</p>`:''}`;
   const capm=`${fld('rf',T('dRf'),s.rf,'%')}${fld('erp',T('dErp'),s.erp,'%')}${fld('beta',T('dBeta'),s.beta,'')}`;
   const warn=[], info=[];
   let tiles, side, rows, H, hint, sx, sens='';
@@ -1272,7 +1276,8 @@ function renderDCF(){
     dEdit(o=>{ o.s=o.s||{}; if(x==null) delete o.s[k]; else o.s[k]=SPCT.has(k)?x/100:x; });
   });
   $('#dcf').querySelectorAll('#dtm button').forEach(b=>b.onclick=()=>dEdit(o=>{ if(b.dataset.m==='x') o.tm='x'; else delete o.tm; }));
-  $('#dcf').querySelectorAll('#dn button').forEach(b=>b.onclick=()=>dEdit(o=>{ if(b.dataset.n==='10') o.n=10; else delete o.n; }));
+  // store the horizon only when it differs from this stock's default
+  $('#dcf').querySelectorAll('#dn button').forEach(b=>b.onclick=()=>dEdit(o=>{ const n=+b.dataset.n; if(n===r.N0) delete o.n; else o.n=n; }));
   $('#dreset').onclick=()=>{ if(DStore.get(dT) && confirm(T('dResetQ',dT))){ DStore.set(dT,null); renderDCF(); } };
   $('#dexp').onclick=()=>{
     const a=document.createElement('a');
