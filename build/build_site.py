@@ -184,12 +184,35 @@ if os.path.exists(fd_path):
         if r['v'] and r['c'] not in IND_BY_CLASS and r['t'] not in fd['co'] and r['t'] not in fd['missing']:
             print(f'WARNING: {r["t"]} has no fundamentals; rerun fetch_fundamentals.py')
 
+# Sell-side price targets and ratings (see fetch_analysts.py).
+an_path = os.path.join(ROOT, 'data', 'analysts.json')
+site_an = None
+if os.path.exists(an_path):
+    an = json.load(open(an_path))
+    site_an = dict(asof=an['asof'], months=an['months'], co=an['co'])
+
+# Independent research (Morningstar etc.), maintained by hand in data/research.json as
+# {ticker: [{src, date, ccy, fv, stars, moat, unc, wacc, coe}]}: only a few key figures per
+# report, never report text. fv must be in the listing currency used on the page.
+rs_path = os.path.join(ROOT, 'data', 'research.json')
+site_rs = {}
+if os.path.exists(rs_path):
+    for t, rows in json.load(open(rs_path)).items():
+        for r in rows:
+            if not isinstance(r.get('fv'), (int, float)) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}', r.get('date', '')) or not r.get('src'):
+                print(f'WARNING: research.json {t}: each entry needs src, date (YYYY-MM-DD) and a numeric fv')
+            elif site_fd and t in site_fd['co'] and r.get('ccy') != site_fd['co'][t]['ccy']:
+                print(f'WARNING: research.json {t}: fair value is in {r.get("ccy")} but the page prices it in {site_fd["co"][t]["ccy"]}')
+            elif site_fd and t not in site_fd['co']:
+                print(f'WARNING: research.json {t}: neither held in the latest snapshot nor in watchlist.json')
+        site_rs[t] = sorted(rows, key=lambda r: r.get('date', ''), reverse=True)
+
 site_trades = [dict(date=t['date'], yr=t['year'], rep=t['report'], act=t['action'], tk=t['ticker'],
                     sec=t['security'], prop=t['proposed'], act_=t['actual'], ex=t['executed'], note=t['note'],
                     pp=post_perf(t))
                for t in trades]
 
-data = json.dumps(dict(snaps=snaps, trades=site_trades, classes=ORDER, tind=tick_ind, perf=site_perf, px=site_px, sec=site_sec, fd=site_fd), separators=(',', ':'), ensure_ascii=False)
+data = json.dumps(dict(snaps=snaps, trades=site_trades, classes=ORDER, tind=tick_ind, perf=site_perf, px=site_px, sec=site_sec, fd=site_fd, an=site_an, rs=site_rs), separators=(',', ':'), ensure_ascii=False)
 html = open(os.path.join(ROOT, 'build', 'template.html')).read().replace('__DATA__', data)
 open(os.path.join(ROOT, 'index.html'), 'w').write(html)
 print(f'index.html: {len(snaps)} snapshots, {len(site_trades)} trades')

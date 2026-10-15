@@ -112,6 +112,8 @@ tr.grp td .tot{float:right;font:500 12px var(--mono)}
 tbody tr.row:hover td{background:var(--accent-soft)}
 .tk,.tkd{font:600 13px var(--mono);color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px}
 .tk:hover,.tkd:hover{text-decoration-color:currentColor}
+.nmb{font:inherit;color:inherit;background:none;border:0;padding:0;text-align:left;cursor:pointer;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px}
+.nmb:hover{color:var(--accent);text-decoration-color:currentColor}
 .nm{color:var(--ink-2);font-size:13px}
 .wbar{display:flex;align-items:center;gap:8px;justify-content:flex-end}
 .wbar span{display:inline-block;height:6px;border-radius:0 3px 3px 0;background:var(--accent);opacity:.55}
@@ -204,6 +206,9 @@ table.proj tr.s td:first-child{padding-left:20px;color:var(--muted);font-size:12
 table.sens td.c{box-shadow:inset 0 0 0 2px var(--accent)}
 .warnbox{background:var(--warn-bg);color:var(--warn);border-radius:6px;padding:8px 12px;font-size:12.5px;margin:6px 0}
 .warnbox.infobox{background:var(--neutral-bg);color:var(--ink-2)}
+.recbar{display:flex;height:10px;gap:2px;margin:8px 0 2px}
+.recbar span{height:100%;min-width:2px}
+.recbar span:first-child{border-radius:3px 0 0 3px}.recbar span:last-child{border-radius:0 3px 3px 0}
 .dbtns{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
 .btn{border:1px solid var(--rule);background:var(--panel);border-radius:5px;padding:5px 10px;font-size:12px;cursor:pointer;color:var(--ink-2)}
 .btn:hover{border-color:var(--ink-2)}
@@ -329,7 +334,8 @@ table.sens td.c{box-shadow:inset 0 0 0 2px var(--accent)}
         </section>
         <section class="card" aria-labelledby="dsumh">
           <div class="row-h"><div><h2 id="dsumh" data-i18n="dSumTitle"></h2><p class="sub" style="font-size:12.5px;margin-bottom:10px" data-i18n="dSumSub"></p></div>
-            <div class="toggle-wrap" style="margin-bottom:8px"><span data-i18n="ppSort"></span><div class="toggle" id="dsort" role="group" data-i18n-aria="ppSort"><button type="button" data-s="w" data-i18n="dSortW"></button><button type="button" data-s="up" data-i18n="dSortUp"></button></div></div></div>
+            <div class="toggle-wrap" style="margin-bottom:8px"><span data-i18n="ppSort"></span><div class="toggle" id="dsort" role="group" data-i18n-aria="ppSort"><button type="button" data-s="w" data-i18n="dSortW"></button><button type="button" data-s="up" data-i18n="dSortUp"></button><button type="button" data-s="an" data-i18n="dSortAn"></button></div></div></div>
+          <div class="tiles" id="dsumt"></div>
           <div class="tbl-wrap" style="max-height:640px;overflow:auto"><table id="dsum"></table></div>
           <ul class="notes" id="dnotes"></ul>
         </section>
@@ -353,7 +359,7 @@ const $ = s => document.querySelector(s);
 const CLS = DATA.classes;
 const I18N = {
   zh: {
-    intro:'四个持仓快照（RBC 账户持仓）加上 2022-11 至 2026-04 的交易提案。点击日期切换快照，点击代码查看该证券的历史。',
+    intro:'四个持仓快照（RBC 账户持仓）加上 2022-11 至 2026-04 的交易提案。点击日期切换快照，点击代码或名称查看该证券的历史和近 5 年股价。',
     snapsAria:'快照', mixTitle:'资产配置', mixSub:'占组合总市值 (CAD) 的比例',
     tabHold:'持仓', tabTrades:'交易时间线', holdSearch:'搜索代码或名称…', tradeSearch:'搜索代码、公司或报告…',
     colTicker:'代码', colName:'名称', colQty:'数量', colMv:'市值 CAD', colW:'权重', colChg:'相比上一期',
@@ -394,7 +400,7 @@ const I18N = {
     ppEmpty:'这个观察期内还没有可评估的提案。',
     ppNotes:['方向超额：买入 = 股票收益 − 基准收益；卖出 = 基准收益 − 股票收益。为正表示这个决定在该观察期内是对的。','收益含股息，按上市地货币计算，不含汇率影响；起点是提案日当天或之后的第一个交易日。“至今”的长度因提案而异。','只写到月份的提案日期（如 2024-03）按当月 15 日计算，表中标 ≈。','评估的是提案本身，不管有没有执行；执行情况见最后一列。'],
     ppMissing:l=>`没有价格数据：${l}（已退市）。`, pxSrc:d=>`价格来自 Yahoo Finance，更新到 ${d}。`,
-    pxTitle:'股价走势', pxSub:b=>`周收盘价（按股息和拆股调整）。虚线是基准 ${b}，与起点对齐。▲ 买入提案，▼ 卖出提案。`,
+    pxTitle:'股价走势（近 5 年）', pxSub:b=>`周收盘价（按股息和拆股调整），近年上市的股票从上市日开始。虚线是基准 ${b}，与起点对齐。▲ 买入提案，▼ 卖出提案。`,
     secTitle:'行业配置（GICS）', secSub:(d,a)=>`${d} 快照的股票持仓（不含现金、货币基金和债券），与 S&P 500、S&P/TSX 综合指数按市值计算的行业权重对比。混合基准按 SMPT 股票中加拿大上市 ${a} 的比例，把两个指数加权。点击行业可查看市值前 15 名。`,
     colSector:'行业', colBlend:'混合基准', colOU:'超配 / 低配', colNHeld:'持仓数', r1Smpt:'1 年 · SMPT 持仓', r1Sp:'1 年 · S&P 500 行业', r1Tsx:'1 年 · TSX 行业',
     secHeld:'SMPT 在该行业的持仓：', secNone:'SMPT 在该行业没有持仓。', topOf:(n,m)=>`${n} 市值前 ${m} 名`, colRank:'#', colCap:c=>`市值（十亿 ${c}）`, colR1:'1 年收益', heldMark:'已持有', topFew:n=>`该指数在此行业只有 ${n} 家公司。`,
@@ -408,12 +414,24 @@ const I18N = {
     eB0:'期初净资产', eRoe:'ROE', eNi:'净利润', ePo:'派息率', eDiv:'股利', eBbr:'回购 / 净利润', eBb:'回购', eDist:'分配给股东', eB1:'期末净资产', eRi:'超额收益 RI', ePvD:'现值 · 分配', ePvR:'现值 · RI',
     eHint:'默认 ROE（净利润 / 期初净资产）、派息率和回购率都取最近三年的平均，之后保持不变。净资产按“期初 + 净利润 − 股利 − 回购”滚动。改净利润会覆盖 ROE，反过来也一样；回购率改成 0 就是纯股利模型。黄色格子是手动输入。',
     eSensSub:c=>`主要结果的每股价值（${c}）随股权成本和永续增长率的变化，预测期的利润和分配不变。绿色高于现价，红色低于现价。`,
+    watchGrp:'观察名单', watchSub:'正在研究、尚未持有，不计入组合数字', rsTitle:'独立研究机构的公允价值', rsSub:'从研究报告（如 Morningstar）中手工摘录的少量关键数字，只用于对比，不含报告内容。公允价值是机构对当前内在价值的估计，和我们的模型口径相同。',
+    colSrc:'来源', colFv:c=>`公允价值 ${c}`, colStars:'星级', colMoat:'护城河', colUnc:'不确定性', colTheirRate:n=>`机构的 ${n}`, colOurs:'我们的',
+    moatL:{Wide:'宽',Narrow:'窄',None:'无'}, uncL:{Low:'低',Medium:'中',High:'高','Very High':'很高',Extreme:'极高'}, dPortRs:'股票组合隐含涨幅 · 研究机构公允价值',
+    anTitle:'机构目标价', anSub:(n,d,m)=>`Yahoo Finance 汇总的 ${n} 位卖方分析师 12 个月目标价，数据日期 ${d}。下表是每家机构最近 ${m} 个月内最新一次给出的目标价。`,
+    anMed:'中位目标价', anUp:v=>`较现价 ${v}`, anRange:'最低–最高', anMean:v=>`均值 ${v}`, anRec:'分析师评级', anVs:'我们的估值 vs 机构中位', anVsSub:'负数 = 我们比机构保守',
+    anImp:n=>`反推的 ${n}`, anImpSub:(n,c)=>`其他假设不变，${n} 取这个值时，我们的模型正好等于机构中位目标价（现在是 ${c}）`, anImpNone:'在 g 到 30% 之间找不到能对上的值',
+    colFirm:'机构', colGrade:'评级', colPt:c=>`目标价 ${c}`, colPrev:'上次',
+    anNoFirms:'Yahoo 只有加拿大上市股票的汇总数字，没有分机构明细。可以从 Bloomberg 的 ANR 导出补充。', anNone:'Yahoo 没有这只股票的分析师目标价。',
+    anNote:'目标价是 12 个月后的预期股价，我们的模型算的是今天的内在价值，两者口径不完全相同。卖方评级普遍偏乐观（买入远多于卖出），只适合作为参考区间。',
+    recL:['强烈买入','买入','持有','卖出','强烈卖出'],
+    dAn:'机构中位目标', dAnUp:'机构涨幅', dSortAn:'按机构涨幅', dPortOurs:'股票组合隐含涨幅 · 我们的模型', dPortAn:'股票组合隐含涨幅 · 机构中位目标价', dPortSub:(n,w)=>`按市值加权，覆盖 ${n} 只，占股票持仓 ${w}`,
+    anDrawer:(m,c,n,u)=>`机构中位目标价 ${m} ${c}（${n} 位分析师，较现价 ${u}）`,
     tabDcf:'估值', dcfTitle:'折现估值', dcfSub:'一般公司用两阶段自由现金流（FCFF）折现模型，银行、保险等金融股用股利折现模型（DDM）。默认假设来自最近几年的财报和分析师预期。带框的数字都可以改，改完立即重算；清空一个格子即恢复默认。', dPick:'选择股票',
     dHist:'历史', dProj:'预测', dMn:f=>`百万 ${f}`,
     dRev:'收入', dG:'增长率', dCost:'营业成本及费用', dEbit:'营业利润 EBIT', dMargin:'EBIT 利润率', dTax:'税率', dNopat:'税后营业利润 NOPAT',
     dDa:'折旧摊销 D&A', dPctRev:'占收入 %', dCx:'资本支出 Capex', dNwc:'营运资本增加 ΔNWC', dFcff:'自由现金流 FCFF', dDf:'折现因子', dPv:'现值',
     dWaccH:'折现率', dTvH:'终值', dHorH:'预测期', dBridgeH:'企业价值 → 每股价值',
-    dRf:'无风险利率', dErp:'股权风险溢价', dBeta:'Beta', dKe:'股权成本', dKd:'税前债务成本', dWd:'债务占比 D/(D+E)', dTg:'永续增长率', dMult:'EV/EBITDA 倍数',
+    dRf:'无风险利率', dErp:'股权风险溢价', dBeta:'Beta', dKe:'股权成本', dKd:'税前债务成本', dKdAt:t=>`税后债务成本（税率 ${t}）`, dWd:'债务占比 D/(D+E)', dTg:'永续增长率', dMult:'EV/EBITDA 倍数',
     dDebt:'总债务', dCash:'现金及短期投资', dShares:'股数（百万）', dPxIn:c=>`股价（${c}）`, dBridgeSub:f=>`债务和现金单位为百万 ${f}。股数 = 市值 / 股价，ADR 按每份 ADR 计。`,
     dWaccOv:'WACC 已手动设定，上面的各项不再影响结果。',
     dGordon:'永续增长', dExit:'退出倍数', dYears:n=>`${n} 年`,
@@ -439,7 +457,7 @@ const I18N = {
     ind:{BANK:'银行',NBF:'非银金融',TECH:'科技',TCOM:'电信',DISC:'消费',RTLR:'零售',REST:'餐饮',PHRM:'医药',INDS:'工业',MAT:'原材料','O&G':'油气',TRANS:'运输',UTIL:'公用事业',REIT:'房地产信托',BOND:'债券',MMF:'货币基金',CASH:'现金',WRNTS:'认股权证',ETF:'指数 ETF',OTHER:'其他'}
   },
   en: {
-    intro:'Four holdings snapshots from the RBC account, plus the trade proposals from Nov 2022 to Apr 2026. Pick a date to switch snapshots; click a ticker to see its history.',
+    intro:'Four holdings snapshots from the RBC account, plus the trade proposals from Nov 2022 to Apr 2026. Pick a date to switch snapshots; click a ticker or name to see its history and five-year price chart.',
     snapsAria:'Snapshots', mixTitle:'Asset mix', mixSub:'Share of total portfolio market value (CAD)',
     tabHold:'Holdings', tabTrades:'Trade timeline', holdSearch:'Search ticker or name…', tradeSearch:'Search ticker, company or report…',
     colTicker:'Ticker', colName:'Name', colQty:'Quantity', colMv:'Market value CAD', colW:'Weight', colChg:'vs previous',
@@ -480,7 +498,7 @@ const I18N = {
     ppEmpty:'No proposal has reached this horizon yet.',
     ppNotes:['Directional excess: for a buy, stock return − benchmark return; for a sell, benchmark return − stock return. Positive means the call was right over that horizon.','Returns include dividends and are in the listing currency, so currency moves are excluded. They start on the first trading day on or after the proposal date. "To date" differs in length for each proposal.','Proposal dates known only to the month (e.g. 2024-03) are measured from the 15th and marked ≈.','This scores the proposal itself, whether or not it was executed; see the last column for execution.'],
     ppMissing:l=>`No price data: ${l} (delisted).`, pxSrc:d=>`Prices from Yahoo Finance, updated ${d}.`,
-    pxTitle:'Price history', pxSub:b=>`Weekly closes, adjusted for dividends and splits. The dashed line is the benchmark ${b}, rebased to the first point. ▲ buy proposal, ▼ sell proposal.`,
+    pxTitle:'Price history (5 years)', pxSub:b=>`Weekly closes, adjusted for dividends and splits; recent listings start at their listing date. The dashed line is the benchmark ${b}, rebased to the first point. ▲ buy proposal, ▼ sell proposal.`,
     secTitle:'Sector allocation (GICS)', secSub:(d,a)=>`Equity holdings at the ${d} snapshot (excluding cash, money market and bonds) against the market-cap sector weights of the S&P 500 and the S&P/TSX Composite. The blended benchmark weights the two indices by SMPT’s ${a} share of equity listed in Canada. Click a sector to see its 15 largest companies.`,
     colSector:'Sector', colBlend:'Blended', colOU:'Over / under', colNHeld:'Holdings', r1Smpt:'1y · SMPT holdings', r1Sp:'1y · S&P 500 sector', r1Tsx:'1y · TSX sector',
     secHeld:'SMPT holdings in this sector:', secNone:'SMPT holds nothing in this sector.', topOf:(n,m)=>`${n}: ${m} largest`, colRank:'#', colCap:c=>`Market cap (${c} bn)`, colR1:'1y return', heldMark:'Held', topFew:n=>`This index has only ${n} companies in this sector.`,
@@ -494,12 +512,24 @@ const I18N = {
     eB0:'Opening book equity', eRoe:'ROE', eNi:'Net income', ePo:'Payout ratio', eDiv:'Dividends', eBbr:'Buybacks / net income', eBb:'Buybacks', eDist:'Paid to shareholders', eB1:'Closing book equity', eRi:'Residual income', ePvD:'PV · payouts', ePvR:'PV · RI',
     eHint:'ROE (net income / opening book equity), payout and buyback rates default to three-year averages and then stay flat. Book equity rolls forward as opening + net income − dividends − buybacks. Entering net income overrides ROE and the other way round; set the buyback rate to 0 for a pure dividend model. Yellow boxes are manual inputs.',
     eSensSub:c=>`Value per share (${c}) of the main result as the cost of equity and terminal growth change, holding forecast earnings and payouts fixed. Green is above the current price, red below.`,
+    watchGrp:'Watchlist', watchSub:'under research, not held; left out of the portfolio figures', rsTitle:'Fair values from independent research', rsSub:'A few key figures copied by hand from research reports (e.g. Morningstar), for comparison only; no report content. A fair value is the firm’s estimate of intrinsic value today, the same basis as our model.',
+    colSrc:'Source', colFv:c=>`Fair value ${c}`, colStars:'Rating', colMoat:'Moat', colUnc:'Uncertainty', colTheirRate:n=>`Their ${n}`, colOurs:'Ours',
+    moatL:{Wide:'Wide',Narrow:'Narrow',None:'None'}, uncL:{Low:'Low',Medium:'Medium',High:'High','Very High':'Very high',Extreme:'Extreme'}, dPortRs:'Implied equity upside · research fair values',
+    anTitle:'Analyst price targets', anSub:(n,d,m)=>`12-month price targets from ${n} sell-side analysts as compiled by Yahoo Finance, as of ${d}. The table lists each firm’s latest target within the last ${m} months.`,
+    anMed:'Median target', anUp:v=>`${v} vs price`, anRange:'Low–high', anMean:v=>`Mean ${v}`, anRec:'Analyst ratings', anVs:'Our value vs median target', anVsSub:'Negative = we are more conservative',
+    anImp:n=>`Implied ${n}`, anImpSub:(n,c)=>`With everything else unchanged, this ${n} makes our model equal the median target (it is ${c} now)`, anImpNone:'No value between g and 30% matches',
+    colFirm:'Firm', colGrade:'Rating', colPt:c=>`Target ${c}`, colPrev:'Previous',
+    anNoFirms:'Yahoo has only the consensus for TSX listings, with no per-firm detail. A Bloomberg ANR export can fill it in.', anNone:'Yahoo has no analyst targets for this stock.',
+    anNote:'A price target is the expected price in 12 months, while our model gives intrinsic value today, so the two are not quite like for like. Sell-side ratings lean optimistic (buys far outnumber sells); treat them as a reference range.',
+    recL:['Strong buy','Buy','Hold','Sell','Strong sell'],
+    dAn:'Median target', dAnUp:'Analyst upside', dSortAn:'By analyst upside', dPortOurs:'Implied equity upside · our model', dPortAn:'Implied equity upside · median targets', dPortSub:(n,w)=>`Value-weighted over ${n} stocks, ${w} of equity holdings`,
+    anDrawer:(m,c,n,u)=>`Median analyst target ${m} ${c} (${n} analysts, ${u} vs price)`,
     tabDcf:'Valuation', dcfTitle:'Discounted valuation', dcfSub:'Operating companies use a two-stage free cash flow to the firm (FCFF) model; banks, insurers and other financials use a dividend discount model (DDM). Defaults come from recent financial statements and analyst estimates. Every boxed number can be edited and the model recalculates at once; clear a box to restore its default.', dPick:'Choose a stock',
     dHist:'Historical', dProj:'Projected', dMn:f=>`${f} millions`,
     dRev:'Revenue', dG:'Growth', dCost:'Operating costs', dEbit:'Operating income (EBIT)', dMargin:'EBIT margin', dTax:'Tax rate', dNopat:'NOPAT',
     dDa:'D&A', dPctRev:'% of revenue', dCx:'Capex', dNwc:'Increase in NWC', dFcff:'FCFF', dDf:'Discount factor', dPv:'Present value',
     dWaccH:'Discount rate', dTvH:'Terminal value', dHorH:'Forecast period', dBridgeH:'Enterprise value → per share',
-    dRf:'Risk-free rate', dErp:'Equity risk premium', dBeta:'Beta', dKe:'Cost of equity', dKd:'Pre-tax cost of debt', dWd:'Debt weight D/(D+E)', dTg:'Terminal growth', dMult:'EV/EBITDA multiple',
+    dRf:'Risk-free rate', dErp:'Equity risk premium', dBeta:'Beta', dKe:'Cost of equity', dKd:'Pre-tax cost of debt', dKdAt:t=>`After-tax cost of debt (tax ${t})`, dWd:'Debt weight D/(D+E)', dTg:'Terminal growth', dMult:'EV/EBITDA multiple',
     dDebt:'Total debt', dCash:'Cash & short-term inv.', dShares:'Shares (millions)', dPxIn:c=>`Share price (${c})`, dBridgeSub:f=>`Debt and cash in ${f} millions. Shares = market cap / price, so ADRs are per ADR.`,
     dWaccOv:'WACC is set by hand, so the inputs above no longer affect the result.',
     dGordon:'Perpetual growth', dExit:'Exit multiple', dYears:n=>`${n} years`,
@@ -605,7 +635,7 @@ function renderHold(){
     .filter(h=>(!hcls.size||hcls.has(h.c)) && (!hind.size||hind.has(h.i)) && (!q || h.t.toLowerCase().includes(q) || h.n.toLowerCase().includes(q) || IN(h.i).toLowerCase().includes(q)));
   const maxW = Math.max(...s.h.filter(h=>h.c!=='Cash').map(h=>h.v/s.total));
   const tb = $('#ht tbody');
-  const row = h=>`<tr class="row"><td><button class="tk" data-t="${esc(h.t)}">${esc(h.t)}</button></td><td class="nm">${esc(h.n)}</td><td><span class="ind">${esc(IN(h.i))}</span></td>
+  const row = h=>`<tr class="row"><td><button class="tk" data-t="${esc(h.t)}">${esc(h.t)}</button></td><td class="nm"><button class="nmb" data-t="${esc(h.t)}">${esc(h.n)}</button></td><td><span class="ind">${esc(IN(h.i))}</span></td>
     <td class="r num">${fmt(h.q, h.q%1?2:0)}</td><td class="r num">${money(h.v)}</td>
     <td class="r"><div class="wbar"><span style="width:${Math.max(2,Math.min(1,h.w/maxW)*60)}px"></span><span class="num" style="background:none;opacity:1;height:auto">${pct(h.w,2)}</span></div></td>
     <td><span class="pill ${h.chg.cls}">${h.chg.txt}</span></td></tr>`;
@@ -973,6 +1003,8 @@ const mean3 = a => { const b=a.slice(-3).filter(okN); return b.length?sum(b)/b.l
 const mny = v => !okN(v)?'—':fmt(v,Math.abs(v)>=100?0:1);
 let dT = null, dSort = 'w';
 const dHeld = () => FD ? S.at(-1).h.filter(h=>h.v>0 && Object.hasOwn(FD.co,h.t)).sort((a,b)=>b.v-a.v) : [];
+// Stocks under research but not held (data/watchlist.json), shaped like holdings with no value.
+const dWatch = () => FD ? Object.keys(FD.co).filter(t=>FD.co[t].watch && !S.at(-1).h.some(h=>h.t===t&&h.v>0)).sort().map(t=>({t, n:FD.co[t].name||t, v:0, w:1})) : [];
 
 function dPrune(o){
   for(const k in o.y||{}) if(!o.y[k].some(v=>v!=null)) delete o.y[k];
@@ -1021,9 +1053,9 @@ function dModel(t){
     prev=rev;
   }
   const E=s.shares*s.px/c.fx, wd=s.debt/(s.debt+E), ke=s.rf+s.beta*s.erp;
-  const wacc = s.wacc ?? (1-wd)*ke + wd*s.kd*(1-B.tax);
+  const kdat = s.kd*(1-P[0].tax), wacc = s.wacc ?? (1-wd)*ke + wd*kdat;  // after-tax at the first forecast year's rate
   const el = clamp((Date.parse(FD.asof)-Date.parse(c.fye))/(365.25*864e5),0,1);
-  const r = {c, B, s, o, N, tm, P, wd, ke, wacc, disc:wacc, el};
+  const r = {c, B, s, o, N, tm, P, wd, ke, kdat, wacc, disc:wacc, el};
   r.v = dValue(r, wacc, tm==='g'?s.tg:s.mult);
   return r;
 }
@@ -1108,13 +1140,58 @@ function dEdit(fn){
     const n=sel&&$('#dcf '+sel); if(n){ n.focus(); n.select(); }
   });
 }
+/* ---------- analyst targets ---------- */
+const AN = DATA.an;
+const anOf = t => AN && Object.hasOwn(AN.co,t) ? AN.co[t] : null;
+const RS = DATA.rs || {};
+const rsOf = t => Object.hasOwn(RS,t) ? RS[t] : [];
+const stars = n => okN(n) ? '★'.repeat(n)+'☆'.repeat(Math.max(0,5-n)) : '—';
+// Fair values and ratings from independent research (data/research.json), newest first.
+function rsBlock(r){
+  const rows=rsOf(dT); if(!rows.length) return '';
+  const px=r.s.px, L=I18N[LANG], tr=(m,k)=>k?(m[k]||k):'—';
+  return `<h3 class="sh">${T('rsTitle')}</h3><p class="note-s">${T('rsSub')}</p><div class="tbl-wrap"><table class="cmp"><thead><tr><th>${T('colSrc')}</th><th>${T('date')}</th><th class="r">${T('colFv',esc(r.c.ccy))}</th><th class="r">${T('dUp')}</th><th>${T('colStars')}</th><th>${T('colMoat')}</th><th>${T('colUnc')}</th><th class="r">${T('colTheirRate',r.eq?T('dKe'):'WACC')}</th><th class="r">${T('colOurs')}</th></tr></thead><tbody>
+    ${rows.map(x=>{ const rate=r.eq?x.coe:(x.wacc??x.coe); return `<tr><td>${esc(x.src)}</td><td class="num">${esc(x.date)}</td><td class="r num">${fmt(x.fv,2)}</td><td class="r num ${x.fv>=px?'delta-up':'delta-dn'}">${spct(x.fv/px-1)}</td>
+      <td style="color:var(--warn)">${stars(x.stars)}</td><td>${esc(tr(L.moatL,x.moat))}</td><td>${esc(tr(L.uncL,x.unc))}</td><td class="r num">${okN(rate)?pct(rate,1):'—'}</td><td class="r num">${pct(r.disc,1)}</td></tr>`; }).join('')}</tbody></table></div>`;
+}
+// Discount rate (WACC, or Ke for financials) at which our model equals `target`; value falls as the rate rises.
+function dImplied(r, target){
+  if(!okN(target) || target<=0) return null;
+  const val = r.eq ? k=>dValueEq(r,k,r.s.tg)?.vps : w=>dValue(r,w,r.tm==='g'?r.s.tg:r.s.mult)?.vps;
+  let lo=(r.eq||r.tm==='g')?r.s.tg+.001:.005, hi=.3;
+  const vlo=val(lo), vhi=val(hi);
+  if(!okN(vlo) || !okN(vhi) || target>vlo || target<vhi) return null;
+  for(let i=0;i<60;i++){ const m=(lo+hi)/2, v=val(m); if(!okN(v)) return null; if(v>target) lo=m; else hi=m; }
+  return (lo+hi)/2;
+}
+const REC_C = ['var(--buy)','var(--buy)','var(--muted)','var(--sell)','var(--sell)'], REC_O = [1,.6,.5,.6,1];
+function anBlock(r){
+  const a=anOf(dT), C=r.c.ccy, px=r.s.px;
+  if(!a) return `<h3 class="sh">${T('anTitle')}</h3><p class="nm">${T('anNone')}</p>`;
+  const up=x=>okN(x)?spct(x/px-1):'—', ok=okN(r.v?.vps), imp=dImplied(r,a.median), rn=r.eq?T('dKe'):'WACC';
+  const tile=(l,val,sub,cls='')=>`<div class="tile"><span class="l">${l}</span><span class="v ${cls}">${val}</span>${sub?`<span class="s">${sub}</span>`:''}</div>`;
+  const nrec=a.rec?sum(a.rec):0, recL=I18N[LANG].recL;
+  const rec=nrec?`<div class="recbar" role="img" aria-label="${esc(a.rec.map((n,i)=>`${recL[i]} ${n}`).join(', '))}">${a.rec.map((n,i)=>n?`<span style="flex:${n} 0 0;background:${REC_C[i]};opacity:${REC_O[i]}" title="${esc(recL[i])} ${n}"></span>`:'').join('')}</div>
+    <span class="s">${a.rec.map((n,i)=>`${esc(recL[i])} ${n}`).join(' · ')}</span>`:'';
+  const tiles=[tile(T('anMed'), fmt(a.median,2), `${esc(C)} · ${T('anUp',up(a.median))}`, a.median>=px?'delta-up':'delta-dn'),
+    tile(T('anRange'), `${fmt(a.low,0)}–${fmt(a.high,0)}`, T('anMean',fmt(a.mean,2))),
+    `<div class="tile"><span class="l">${T('anRec')}</span><span class="v">${a.n??nrec}</span>${rec}</div>`,
+    tile(T('anVs'), ok?spct(r.v.vps/a.median-1):'—', T('anVsSub')),
+    tile(T('anImp',rn), okN(imp)?pct(imp,2):'—', okN(imp)?T('anImpSub',rn,pct(r.disc,2)):T('anImpNone'))].join('');
+  const firms=a.firms.length?`<div class="tbl-wrap" style="margin-top:8px;max-height:360px;overflow:auto"><table class="cmp"><thead><tr><th>${T('date')}</th><th>${T('colFirm')}</th><th>${T('colGrade')}</th><th class="r">${T('colPt',esc(C))}</th><th class="r">${T('colPrev')}</th><th class="r">${T('dUp')}</th></tr></thead><tbody>
+    ${a.firms.map(f=>`<tr><td class="num">${esc(f.d)}</td><td>${esc(f.f)}</td><td class="nm">${esc(f.g||'—')}</td><td class="r num">${fmt(f.pt,2)}</td>
+      <td class="r num muted">${f.prev&&f.prev!==f.pt?`${fmt(f.prev,2)} ${f.pt>f.prev?'↑':'↓'}`:''}</td><td class="r num ${f.pt>=px?'delta-up':'delta-dn'}">${up(f.pt)}</td></tr>`).join('')}</tbody></table></div>`
+    : `<p class="note-s">${T('anNoFirms')}</p>`;
+  return `<h3 class="sh">${T('anTitle')}</h3><p class="note-s">${T('anSub',a.n??nrec,AN.asof,AN.months)}</p><div class="tiles">${tiles}</div>${firms}<p class="note-s" style="margin-top:8px">${T('anNote')}</p>`;
+}
 function renderDCF(){
   if($('#pane-d').hidden) return;
   if(!FD){ $('#dcf').innerHTML=`<p class="nm">${T('dNoFd')}</p>`; return; }
   const held=dHeld();
   if(!dT||!Object.hasOwn(FD.co,dT)) dT=(held.find(h=>FD.co[h.t].kind==='op')||held[0])?.t;
   $('#dsel').innerHTML=CLS.filter(g=>held.some(h=>h.c===g)).map(g=>`<optgroup label="${esc(CN()[g])}">${held.filter(h=>h.c===g).map(h=>
-    `<option value="${esc(h.t)}"${h.t===dT?' selected':''}>${esc(h.t)} · ${esc(h.n)}${DStore.get(h.t)?' ✎':''}</option>`).join('')}</optgroup>`).join('');
+    `<option value="${esc(h.t)}"${h.t===dT?' selected':''}>${esc(h.t)} · ${esc(h.n)}${DStore.get(h.t)?' ✎':''}</option>`).join('')}</optgroup>`).join('')
+    +(dWatch().length?`<optgroup label="${esc(T('watchGrp'))}">${dWatch().map(h=>`<option value="${esc(h.t)}"${h.t===dT?' selected':''}>${esc(h.t)} · ${esc(h.n)}${DStore.get(h.t)?' ✎':''}</option>`).join('')}</optgroup>`:'');
   const r=dModel(dT), {c,s,o,P,v}=r, F=c.fccy, C=c.ccy, h=held.find(x=>x.t===dT), ok=okN(v?.vps), yl=c.y.at(-1);
   const tile=(l,val,sub,cls='')=>`<div class="tile"><span class="l">${l}</span><span class="v ${cls}">${val}</span>${sub?`<span class="s">${sub}</span>`:''}</div>`;
   const fld=(k,l,val,u,d=2)=>`<label class="fl"><span>${l}</span><span class="fi"><input class="sc${o.s?.[k]!=null?' ov':''}" data-k="${k}" inputmode="decimal" value="${okN(val)?fmt(u==='%'?val*100:val,d):''}"><i>${u}</i></span></label>`;
@@ -1152,7 +1229,7 @@ function renderDCF(){
       tile(T('dEv'), mny(v?.ev), (okN(v?.eq)?T('dEq',mny(v.eq))+' · ':'')+T('dMn',esc(F))),
       tile(T('dTvs'), okN(v?.tvs)?pct(v.tvs,0):'—', okN(v?.imp)?(r.tm==='g'?T('dImpMult',v.imp.toFixed(1)):T('dImpG',pct(v.imp,1))):'')].join('');
     side=`<h4>${T('dWaccH')}</h4>${capm}${ro(T('dKe'),pct(r.ke,2))}
-      ${fld('kd',T('dKd'),s.kd,'%')}${ro(T('dWd'),pct(r.wd,1))}${fld('wacc','WACC',r.wacc,'%')}${o.s?.wacc!=null?`<p class="note-s">${T('dWaccOv')}</p>`:''}
+      ${fld('kd',T('dKd'),s.kd,'%')}${ro(T('dKdAt',pct(P[0].tax,1)),pct(r.kdat,2))}${ro(T('dWd'),pct(r.wd,1))}${fld('wacc','WACC',r.wacc,'%')}${o.s?.wacc!=null?`<p class="note-s">${T('dWaccOv')}</p>`:''}
       <h4>${T('dTvH')}</h4><div class="toggle" id="dtm" role="group" aria-label="${esc(T('dTvH'))}"><button type="button" data-m="g" aria-pressed="${r.tm==='g'}">${T('dGordon')}</button><button type="button" data-m="x" aria-pressed="${r.tm==='x'}">${T('dExit')}</button></div>
       ${r.tm==='g'?fld('tg',T('dTg'),s.tg,'%'):fld('mult',T('dMult'),s.mult,'×',1)}${horizon}
       <h4>${T('dBridgeH')}</h4>${fld('debt',T('dDebt'),s.debt,'',dd(s.debt))}${fld('cash',T('dCash'),s.cash,'',dd(s.cash))}${fld('shares',T('dShares'),s.shares,'',1)}${fld('px',T('dPxIn',esc(C)),s.px,'')}
@@ -1174,7 +1251,7 @@ function renderDCF(){
                : `<td class="r num">${cellV(d.f,x)}</td>`; }).join('')}</tr>`).join('');
   if(ok) sens=`<table class="cmp sens"><thead><tr><th>${sx.yl} \\ ${sx.xl}</th>${sx.xs.map(x=>`<th class="r">${sx.fx(x)}</th>`).join('')}</tr></thead><tbody>
     ${sx.ys.map((y,i)=>`<tr><td class="num">${pct(y,1)}</td>${sx.xs.map((x,j)=>{ const z=sx.val(y,x); return `<td class="r num${i===2&&j===2?' c':''}${okN(z)?(z>=s.px?' delta-up':' delta-dn'):''}">${okN(z)?fmt(z,2):'—'}</td>`; }).join('')}</tr>`).join('')}</tbody></table>`;
-  $('#dcf').innerHTML=`<div style="margin:6px 0 8px"><div class="eyebrow">${esc(CN()[h?.c]||'')}${c.ind?' · '+esc(c.ind):''}</div>
+  $('#dcf').innerHTML=`<div style="margin:6px 0 8px"><div class="eyebrow">${esc(h?CN()[h.c]:c.watch?T('watchGrp'):'')}${c.ind?' · '+esc(c.ind):''}</div>
       <h3 style="font-size:20px;margin-top:4px"><span class="num">${esc(dT)}</span> <span class="nm" style="font-size:15px;font-family:var(--sans)">${esc(c.name||h?.n||'')}</span></h3>
       <div class="nm" style="font-size:12px">${T('dMeta',esc(c.yf),esc(F),esc(C),esc(c.fye))}</div></div>
     ${info.map(w=>`<div class="warnbox infobox">${esc(w)}</div>`).join('')}${warn.map(w=>`<div class="warnbox">${esc(w)}</div>`).join('')}
@@ -1182,7 +1259,8 @@ function renderDCF(){
     <div class="dgrid"><div class="dside">${side}</div>
       <div style="min-width:0"><div class="tbl-wrap"><table class="proj">${head}<tbody>${body}</tbody></table></div>
         <p class="note-s" style="margin-top:6px">${hint}</p>
-        <h3 class="sh">${T('dSens')}</h3><p class="note-s">${T(r.eq?'eSensSub':'dSensSub',esc(C))}</p>${sens?`<div class="tbl-wrap">${sens}</div>`:'<p class="nm">—</p>'}</div></div>`;
+        <h3 class="sh">${T('dSens')}</h3><p class="note-s">${T(r.eq?'eSensSub':'dSensSub',esc(C))}</p>${sens?`<div class="tbl-wrap">${sens}</div>`:'<p class="nm">—</p>'}</div></div>
+    ${anBlock(r)}${rsBlock(r)}`;
   $('#dcf').querySelectorAll('input.cell').forEach(inp=>inp.onchange=()=>{
     const x=dParse(inp.value); if(Number.isNaN(x)) return renderDCF();
     const e=inp.dataset.e, i=+inp.dataset.i, pair=DPAIR[e];
@@ -1214,16 +1292,27 @@ function renderDCF(){
 function renderDSum(){
   const tot=S.at(-1).total;
   document.querySelectorAll('#dsort button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.s===dSort));
-  const rows=dHeld().map(h=>{ const r=dModel(h.t); return {h, r, up:okN(r.v?.vps)?r.v.up:null}; });
-  if(dSort==='up') rows.sort((a,b)=>(b.up??-Infinity)-(a.up??-Infinity));
-  $('#dsum').innerHTML=`<thead><tr><th>${T('colTicker')}</th><th>${T('colName')}</th><th class="r">${T('colW')}</th><th class="r">${T('dPx')}</th><th class="r">${T('dVps')}</th><th class="r">${T('dUp')}</th><th></th><th class="r">${T('dDisc')}</th><th class="r">${T('dTvs')}</th><th></th></tr></thead><tbody>
-    ${rows.map(({h,r,up})=>`<tr class="row"${h.t===dT?' style="background:var(--accent-soft)"':''}><td><button class="tkd" data-t="${esc(h.t)}">${esc(h.t)}</button></td><td class="nm">${esc(h.n)}</td>
-      <td class="r num">${pct(h.v/tot,2)}</td><td class="r num">${fmt(r.s.px,2)} <span class="muted">${esc(r.c.ccy)}</span></td><td class="r num">${up!=null?fmt(r.v.vps,2):'—'}</td><td class="r num">${spct(up)}</td>
+  const item=h=>{ const r=dModel(h.t), a=anOf(h.t), m=rsOf(h.t)[0];
+    return {h, r, up:okN(r.v?.vps)?r.v.up:null, au:a?.median?a.median/r.s.px-1:null, mu:okN(m?.fv)?m.fv/r.s.px-1:null}; };
+  const rows=dHeld().map(item), wrows=dWatch().map(item);  // the watchlist is listed but left out of the portfolio figures
+  // value-weighted upside over the holdings each source covers
+  const wavg=k=>{ const g=rows.filter(x=>okN(x[k])), w=sum(g.map(x=>x.h.v)); return {v:w?sum(g.map(x=>x.h.v*x[k]))/w:null, n:g.length, w:w/sum(rows.map(x=>x.h.v))}; };
+  const P1=wavg('up'), P2=wavg('au');
+  const ptile=(l,x)=>`<div class="tile"><span class="l">${l}</span><span class="v ${okN(x.v)?(x.v>=0?'delta-up':'delta-dn'):''}">${spct(x.v)}</span><span class="s">${T('dPortSub',x.n,pct(x.w,0))}</span></div>`;
+  const P3=wavg('mu');
+  $('#dsumt').innerHTML=ptile(T('dPortOurs'),P1)+(AN?ptile(T('dPortAn'),P2):'')+(P3.n?ptile(T('dPortRs'),P3):'');
+  const srt=g=>{ if(dSort==='up') g.sort((a,b)=>(b.up??-Infinity)-(a.up??-Infinity)); if(dSort==='an') g.sort((a,b)=>(b.au??-Infinity)-(a.au??-Infinity)); return g; };
+  srt(rows); srt(wrows);
+  $('#dsum').innerHTML=`<thead><tr><th>${T('colTicker')}</th><th>${T('colName')}</th><th class="r">${T('colW')}</th><th class="r">${T('dPx')}</th><th class="r">${T('dVps')}</th><th class="r">${T('dUp')}</th><th></th><th class="r">${T('dAn')}</th><th class="r">${T('dAnUp')}</th><th class="r">${T('dDisc')}</th><th class="r">${T('dTvs')}</th><th></th></tr></thead><tbody>
+    ${[...rows, ...(wrows.length?[null]:[]), ...wrows].map(x=>x?x:{grp:1}).map(({h,r,up,au,grp})=>grp?`<tr class="grp"><td colspan="12">${T('watchGrp')} <span style="color:var(--muted);font-weight:500">· ${wrows.length} · ${T('watchSub')}</span></td></tr>`:`<tr class="row"${h.t===dT?' style="background:var(--accent-soft)"':''}><td><button class="tkd" data-t="${esc(h.t)}">${esc(h.t)}</button></td><td class="nm"><button class="nmb" data-t="${esc(h.t)}">${esc(h.n)}</button></td>
+      <td class="r num">${h.w?'—':pct(h.v/tot,2)}</td><td class="r num">${fmt(r.s.px,2)} <span class="muted">${esc(r.c.ccy)}</span></td><td class="r num">${up!=null?fmt(r.v.vps,2):'—'}</td><td class="r num">${spct(up)}</td>
       <td>${up!=null?`<div class="dbar"><span class="${up>=0?'pos':'neg'}" style="width:${Math.min(1,Math.abs(up))*50}%"></span></div>`:''}</td>
+      <td class="r num">${okN(au)?fmt(anOf(h.t).median,2):'—'}</td><td class="r num ${okN(au)?(au>=0?'delta-up':'delta-dn'):''}">${spct(au)}</td>
       <td class="r num">${pct(r.disc,1)}</td><td class="r num">${okN(r.v?.tvs)?pct(r.v.tvs,0):'—'}</td>
-      <td>${r.eq?`<span class="pill p-na">DDM</span> `:r.c.kind!=='op'?`<span class="pill p-warn">${T('dKind_'+r.c.kind)}</span> `:''}${DStore.get(h.t)?`<span class="pill p-na">✎ ${T('dEdited')}</span>`:''}</td></tr>`).join('')}</tbody>`;
+      <td>${r.eq?`<span class="pill p-na">DDM</span> `:r.c.kind!=='op'?`<span class="pill p-warn">${T('dKind_'+r.c.kind)}</span> `:''}${rsOf(h.t)[0]?`<span class="pill p-na" title="${esc(rsOf(h.t)[0].src)}">FV ${spct(rsOf(h.t)[0].fv/r.s.px-1,0)}</span> `:''}${DStore.get(h.t)?`<span class="pill p-na">✎ ${T('dEdited')}</span>`:''}</td></tr>`).join('')}</tbody>`;
   $('#dsum').querySelectorAll('.tkd').forEach(b=>b.onclick=()=>{ dT=b.dataset.t; renderDCF(); $('#pane-d').scrollIntoView({behavior:'smooth',block:'start'}); });
   $('#dnotes').innerHTML=T('dNotes',FD.asof).map(n=>`<li>${esc(n)}</li>`).join('');
+  bindTk();
 }
 $('#dsel').onchange=e=>{ dT=e.target.value; renderDCF(); };
 document.querySelectorAll('#dsort button').forEach(b=>b.onclick=()=>{ dSort=b.dataset.s; renderDSum(); });
@@ -1245,7 +1334,8 @@ function openTk(t){
   const rel = DATA.trades.filter(x=>tks(x).map(k=>ALIAS[k]||k).includes(t)).sort((a,b)=>a.date.localeCompare(b.date));
   const d=$('#drawer');
   d.innerHTML = `<button class="x" id="dx">${T('close')}</button>
-    <div><div class="eyebrow">${any?esc(CN()[any.c]):T('notHeld')}${DATA.tind[t]?' · '+esc(IN(DATA.tind[t])):''}</div><h2 style="font-size:24px;margin-top:4px" class="num">${esc(t)}</h2><div class="nm">${esc(any?.n || rel[0]?.sec || '')}</div>
+    <div><div class="eyebrow">${any?esc(CN()[any.c]):FD?.co[t]?.watch?T('watchGrp'):T('notHeld')}${DATA.tind[t]?' · '+esc(IN(DATA.tind[t])):''}</div><h2 style="font-size:24px;margin-top:4px" class="num">${esc(t)}</h2><div class="nm">${esc(any?.n || rel[0]?.sec || (FD&&Object.hasOwn(FD.co,t)?FD.co[t].name:'') || '')}</div>
+      ${anOf(t)&&FD?.co[t]?`<div class="nm" style="font-size:12.5px;margin-top:4px">${T('anDrawer',fmt(anOf(t).median,2),esc(FD.co[t].ccy),anOf(t).n??'—',spct(anOf(t).median/FD.co[t].px-1))}</div>`:''}
       ${FD&&Object.hasOwn(FD.co,t)?`<button type="button" class="btn" id="ddcf" style="margin-top:8px">${T('dOpen')}</button>`:''}</div>
     <div><h3>${T('bySnap')}</h3><table style="margin-top:6px"><thead><tr><th>${T('date')}</th><th class="r">${T('colQty')}</th><th class="r">${T('colMv')}</th><th class="r">${T('colW')}</th></tr></thead><tbody>
       ${hist.map(x=>`<tr><td class="num">${x.d}</td>${x.h?`<td class="r num">${fmt(x.h.q,x.h.q%1?2:0)}</td><td class="r num">${money(x.h.v)}</td><td class="r num">${pct(x.h.v/x.tot,2)}</td>`:'<td class="r" colspan="3" style="color:var(--muted)">'+T('notHeldRow')+'</td>'}</tr>`).join('')}
@@ -1262,7 +1352,7 @@ function openTk(t){
 function closeTk(){$('#drawer').hidden=true;$('#scrim').hidden=true;openT=null;}
 $('#scrim').onclick=closeTk;
 addEventListener('keydown',e=>{if(e.key==='Escape')closeTk();});
-function bindTk(){document.querySelectorAll('.tk').forEach(b=>b.onclick=()=>openTk(b.dataset.t));}
+function bindTk(){document.querySelectorAll('.tk,.nmb').forEach(b=>b.onclick=()=>openTk(b.dataset.t));}
 
 function renderAll(){renderSnaps();renderMix();renderHold();}
 function applyLang(l){

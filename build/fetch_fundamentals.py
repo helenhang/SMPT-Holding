@@ -13,6 +13,7 @@ Needs network access and `yfinance`. Writes data/fundamentals.json:
                     est: [growth this fiscal year, next fiscal year] from analysts, or null
                          (always null for statements outside USD/CAD)}}
   missing tickers Yahoo returned no statements for
+The stocks in data/watchlist.json are included too, marked watch: true.
 kind is 'op' (operating company, FCFF DCF applies), 'fin' (bank, insurer, asset manager)
 or 'reit'. ccy is the listing currency of px; fccy the currency of the statements; fx
 converts one unit of fccy into ccy. capex is positive; dnwc is the increase in net working
@@ -87,6 +88,10 @@ for x in last['hold']:
         hold[t] = (YF_HOLD.get(t, yahoo(t, 'CA' if ('Canadian' in x['sec'] or 'Real Estate' in x['sec']) else 'US')), x['sec'])
 
 out = dict(asof=dt.date.today().isoformat(), snap=max(holdings), co={}, missing=[])
+# Stocks the team is researching but doesn't hold (data/watchlist.json, maintained by hand).
+watch = {w['t']: (w.get('yf', w['t']), 'Watchlist') for w in json.load(open(os.path.join(ROOT, 'data', 'watchlist.json')))
+         if w['t'] not in hold}
+hold.update(watch)
 for t, (s, sec) in sorted(hold.items()):
     if not s:
         out['missing'].append(t)
@@ -133,6 +138,8 @@ for t, (s, sec) in sorted(hold.items()):
         ni=[r(ni, y) for y in years], bv=[r(bv, y) for y in years], div=[r(div, y, abs) for y in years], bb=[r(bb, y) for y in years],
         debt=r(debt, ly) if ly else 0, cash=r(cash, ly) if ly else 0, est=est)
     c = out['co'][t]
+    if t in watch:
+        c['watch'] = True
     print(f'{t:8} {s:10} {c["kind"]:4} {fccy}->{ccy} rev {c["rev"][-1]:>12,.0f}  est {est}')
     time.sleep(0.5)
 

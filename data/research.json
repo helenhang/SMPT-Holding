@@ -1,0 +1,177 @@
+{
+ "LLY": [
+  {
+   "src": "Morningstar",
+   "date": "2026-08-06",
+   "ccy": "USD",
+   "fv": 980.0,
+   "stars": 2,
+   "moat": "Wide",
+   "unc": "High",
+   "wacc": 0.079
+  }
+ ],
+ "MCD": [
+  {
+   "src": "Morningstar",
+   "date": "2026-10-01",
+   "ccy": "USD",
+   "fv": 270.0,
+   "stars": 4,
+   "moat": "Wide",
+   "unc": "Low"
+  }
+ ],
+ "RJF": [
+  {
+   "src": "Morningstar",
+   "date": "2026-07-23",
+   "ccy": "USD",
+   "fv": 187.0,
+   "stars": 4,
+   "moat": "Narrow",
+   "unc": "Medium",
+   "coe": 0.094
+  }
+ ],
+ "MA": [
+  {
+   "src": "Morningstar",
+   "date": "2026-02-28",
+   "ccy": "USD",
+   "fv": 550.0,
+   "stars": 3,
+   "moat": "Wide",
+   "unc": "Medium",
+   "wacc": 0.085
+  }
+ ],
+ "JNJ": [
+  {
+   "src": "Morningstar",
+   "date": "2026-04-14",
+   "ccy": "USD",
+   "fv": 190.0,
+   "stars": 1,
+   "moat": "Wide",
+   "unc": "Low",
+   "wacc": 0.074
+  }
+ ],
+ "ABBV": [
+  {
+   "src": "Morningstar",
+   "date": "2026-06-23",
+   "ccy": "USD",
+   "fv": 200.0,
+   "stars": 2,
+   "moat": "Wide",
+   "unc": "High",
+   "wacc": 0.07
+  }
+ ],
+ "AMZN": [
+  {
+   "src": "Morningstar",
+   "date": "2026-07-31",
+   "ccy": "USD",
+   "fv": 300.0,
+   "stars": 4,
+   "moat": "Wide",
+   "unc": "Medium"
+  }
+ ],
+ "MFC": [
+  {
+   "src": "Morningstar",
+   "date": "2026-09-09",
+   "ccy": "CAD",
+   "fv": 49.03,
+   "stars": 2,
+   "moat": "None",
+   "unc": "Medium",
+   "note": "USD 35.30 converted at the report’s CAD 0.72/USD 1",
+   "coe": 0.1
+  }
+ ],
+ "V": [
+  {
+   "src": "Morningstar",
+   "date": "2026-06-05",
+   "ccy": "USD",
+   "fv": 330.0,
+   "stars": 2,
+   "moat": "Wide",
+   "unc": "Medium"
+  }
+ ],
+ "GOOG": [
+  {
+   "src": "Morningstar",
+   "date": "2026-04-30",
+   "ccy": "USD",
+   "fv": 433.0,
+   "stars": 4,
+   "moat": "Wide",
+   "unc": "Medium"
+  }
+ ],
+ "BRKB": [
+  {
+   "src": "Morningstar",
+   "date": "2025-11-01",
+   "ccy": "USD",
+   "fv": 510.0,
+   "stars": 3,
+   "moat": "Narrow",
+   "unc": "Low",
+   "coe": 0.09
+  }
+ ],
+ "MRK": [
+  {
+   "src": "Morningstar",
+   "date": "2026-08-19",
+   "ccy": "USD",
+   "fv": 143.0,
+   "stars": 3,
+   "moat": "Wide",
+   "unc": "Medium",
+   "wacc": 0.077
+  }
+ ],
+ "SBUX": [
+  {
+   "src": "Morningstar",
+   "date": "2026-10-01",
+   "ccy": "USD",
+   "fv": 89.0,
+   "stars": 3,
+   "moat": "Wide",
+   "unc": "Medium"
+  }
+ ],
+ "NFLX": [
+  {
+   "src": "Morningstar",
+   "date": "2026-02-28",
+   "ccy": "USD",
+   "fv": 80.0,
+   "stars": 3,
+   "moat": "Narrow",
+   "unc": "High"
+  }
+ ],
+ "MRNA": [
+  {
+   "src": "Morningstar",
+   "date": "2026-08-19",
+   "ccy": "USD",
+   "fv": 163.0,
+   "stars": 2,
+   "moat": "None",
+   "unc": "Very High",
+   "wacc": 0.092
+  }
+ ]
+}

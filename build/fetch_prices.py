@@ -1,10 +1,11 @@
-"""Download daily prices for every ticker in a BUY/SELL trade, plus the benchmark ETFs.
+"""Download daily prices for every ticker in a BUY/SELL trade and every stock held in any
+snapshot or listed in data/watchlist.json, plus the benchmark ETFs, from five years back (or the first proposal, if earlier).
 
 Usage: python build/fetch_prices.py
 Needs network access and `yfinance`. Writes data/prices.json:
   {start, end, bench: {CA: sym, US: sym},
    px: {ticker: {yf, mkt: 'CA'|'US', d: [YYYY-MM-DD...], c: [adjusted close...]}},
-   missing: [ticker...]}
+   missing: [trade ticker...]}  (holdings Yahoo can't find, such as warrants, are only printed)
 Closes are adjusted for splits and dividends, so returns are total returns in the
 listing currency. TSX-listed tickers are compared with XIC.TO and everything else
 (US stocks and ADRs) with SPY, both in their own currency.
@@ -12,7 +13,7 @@ listing currency. TSX-listed tickers are compared with XIC.TO and everything els
 import json
 import os
 import re
-from datetime import date
+from datetime import date, timedelta
 
 import yfinance as yf
 
@@ -24,6 +25,8 @@ CA_TRADE_ONLY = {'XIU', 'XEG', 'CM', 'AC', 'BCE', 'SOBO', 'BEP.UN', 'GRT.UN', 'L
 # Yahoo symbols that don't follow the default rule; several candidates are tried in order.
 YF_OVERRIDE = {'LMN': ['LMN.V'], 'FISV': ['FISV', 'FI'], 'EMBJ': ['EMBJ', 'ERJ'], 'BRKB': ['BRK-B']}
 CA_CLASSES = ('Canadian Common', 'Real Estate')
+EQUITY = ('Canadian Common', 'United States', 'American Depos', 'Real Estate')  # same as fetch_sectors.py
+YEARS = 5
 
 
 def candidates(tk, mkt):
@@ -53,7 +56,13 @@ for t in trades:
         if k and k != '—' and not re.fullmatch(r'\d\w+', k):  # skip bond codes like 5CPMFB0
             tickers.add(ALIAS.get(k, k))
 
-start = min(t['date'][:7] for t in trades if re.match(r'\d{4}-\d{2}', t['date'])) + '-01'
+traded = set(tickers)
+tickers |= {ALIAS.get(h['sym'], h['sym']) for snap in holdings.values() for h in snap['hold'] if any(k in h['sec'] for k in EQUITY)}
+WATCH = {w['t']: w.get('yf', w['t']) for w in json.load(open(os.path.join(ROOT, 'data', 'watchlist.json')))}
+YF_OVERRIDE.update({t: [s] for t, s in WATCH.items() if t not in YF_OVERRIDE})
+tickers |= set(WATCH)
+start = min(min(t['date'][:7] for t in trades if re.match(r'\d{4}-\d{2}', t['date'])) + '-01',
+            (date.today() - timedelta(days=round(365.25 * YEARS))).isoformat())
 out = dict(start=start, end=date.today().isoformat(), bench=BENCH, px={}, missing=[])
 for mkt, sym in BENCH.items():
     out['px'][sym] = dict(yf=sym, mkt=mkt, **fetch(sym, start))
@@ -67,7 +76,7 @@ for tk in sorted(tickers):
     if got:
         out['px'][tk] = dict(yf=sym, mkt=mkt, **got)
         print(f'{tk:8} {sym:10} {mkt} {got["d"][0]} → {got["d"][-1]} ({len(got["d"])} days)')
-    else:
+    elif tk in traded:
         out['missing'].append(tk)
         print(f'{tk:8} MISSING (tried {candidates(tk, mkt)})')
 
