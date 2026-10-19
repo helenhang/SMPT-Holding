@@ -100,6 +100,10 @@ button{font:inherit;color:inherit}
 .toggle-wrap{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
 .dd{padding:6px 8px;border:1px solid var(--rule);border-radius:5px;background:var(--panel);font:inherit;font-size:12.5px;color:var(--ink)}
 .ind{display:inline-block;font:500 11px/1.3 var(--sans);color:var(--ink-2);background:var(--neutral-bg);border-radius:3px;padding:2px 6px;white-space:nowrap}
+button.ind{border:0;cursor:pointer}
+button.ind:hover{color:var(--accent);background:var(--accent-soft)}
+.eyebrow button.ind{font:inherit;letter-spacing:inherit;text-transform:inherit;padding:0;background:none;color:inherit;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px}
+.eyebrow button.ind:hover{color:var(--accent);background:none;text-decoration-color:currentColor}
 
 .tbl-wrap{overflow-x:auto;background:var(--panel);border:1px solid var(--rule);border-radius:6px}
 /* A scrolling wrapper traps sticky headers; on wide screens, where the table fits, clip instead so the
@@ -149,6 +153,10 @@ tbody tr.row:hover td{background:var(--accent-soft)}
 .drawer{position:fixed;top:0;right:0;bottom:0;width:min(640px,100%);background:var(--panel);border-left:1px solid var(--rule);z-index:31;overflow-y:auto;padding:calc(20px + env(safe-area-inset-top,0px)) 22px calc(28px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:18px}
 .drawer .x{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:14px;background:none;border:1px solid var(--rule);border-radius:5px;padding:4px 10px;cursor:pointer}
 .drawer table{min-width:0}
+.drawer .tblx{overflow-x:auto;margin-top:6px}
+.drawer .tblx td:first-child{white-space:nowrap}
+.drawer .unr2 .muted{display:block;font-size:12px}
+.drawer .tblx th{white-space:normal;vertical-align:bottom}
 .drawer h3{font-size:14px;color:var(--ink-2)}
 
 .foot{font-size:12px;color:var(--muted);border-top:1px solid var(--rule);padding-top:14px;display:flex;flex-direction:column;gap:4px}
@@ -368,7 +376,7 @@ const I18N = {
     intro:'四个持仓快照（RBC 账户持仓）加上 2022-11 至 2026-04 的交易提案。点击日期切换快照，点击代码或名称查看该证券的历史和近 5 年股价。',
     snapsAria:'快照', mixTitle:'资产配置', mixSub:'占组合总市值 (CAD) 的比例',
     tabHold:'持仓', tabTrades:'交易时间线', holdSearch:'搜索代码或名称…', tradeSearch:'搜索代码、公司或报告…',
-    colTicker:'代码', colName:'名称', colCost:'成本 CAD', colUnr:'未实现盈亏', colUnrTip:'未实现盈亏：金额按快照日汇率换算成加元，百分比按上市币种计算（与 RBC 持仓表一致）', unrShort:'未实现', colQty:'数量', colMv:'市值 CAD', colW:'权重', colChg:'相比上一期',
+    colTicker:'代码', colName:'名称', indTip:'列出这个行业的所有持仓', indTipT:'只看这个行业的交易', clearFilter:'清除筛选', colCost:'成本 CAD', colUnr:'未实现盈亏', colUnrTip:'未实现盈亏：金额按快照日汇率换算成加元，百分比按上市币种计算（与 RBC 持仓表一致）', unrShort:'未实现', colQty:'数量', colMv:'市值 CAD', colW:'权重', colChg:'相比上一期',
     foot1:'来源：各期 “Portfolio Holdings & Analysis” 持仓分析表（持仓明细来自 RBC 账户）和 “HPR since inception” 表，以及 SMPT 的交易提案报告。',
     foot2:'成本和未实现盈亏取自持仓分析表，百分比按上市币种计算（不含汇率影响），金额按快照日汇率换算成加元，所以成本 + 未实现盈亏 = 市值。交易日期是提案日期，不是成交日期；“执行情况”是用前后快照的持仓数量推断的。FI→FISV、ERJ→EMBJ 视为代码变更合并。行业取自持仓分析表的行业工作表（各期可能不同）；只出现在交易里的代码是手工归类的。',
     drawerAria:'证券详情',
@@ -466,7 +474,7 @@ const I18N = {
     intro:'Four holdings snapshots from the RBC account, plus the trade proposals from Nov 2022 to Apr 2026. Pick a date to switch snapshots; click a ticker or name to see its history and five-year price chart.',
     snapsAria:'Snapshots', mixTitle:'Asset mix', mixSub:'Share of total portfolio market value (CAD)',
     tabHold:'Holdings', tabTrades:'Trade timeline', holdSearch:'Search ticker or name…', tradeSearch:'Search ticker, company or report…',
-    colTicker:'Ticker', colName:'Name', colCost:'Book cost CAD', colUnr:'Unrealized P/L', colUnrTip:'Unrealized gain or loss: amount converted to CAD at the snapshot rate, percentage in listing currency (as in the RBC holdings sheet)', unrShort:'unrealized', colQty:'Quantity', colMv:'Market value CAD', colW:'Weight', colChg:'vs previous',
+    colTicker:'Ticker', colName:'Name', indTip:'List every holding in this industry', indTipT:'Show only this industry’s trades', clearFilter:'Clear filter', colCost:'Book cost CAD', colUnr:'Unrealized P/L', colUnrTip:'Unrealized gain or loss: amount converted to CAD at the snapshot rate, percentage in listing currency (as in the RBC holdings sheet)', unrShort:'unrealized', colQty:'Quantity', colMv:'Market value CAD', colW:'Weight', colChg:'vs previous',
     foot1:'Sources: the "Portfolio Holdings & Analysis" workbook for each snapshot (holdings from the RBC account), the "HPR since inception" workbook, and the SMPT trade proposal reports.',
     foot2:'Book cost and unrealized gain/loss come from the holdings workbook: the percentage is in listing currency (no currency effect) and amounts are converted to CAD at the snapshot rate, so book cost + unrealized = market value. Trade dates are proposal dates, not execution dates. Execution status is inferred from share counts in the snapshots before and after. FI→FISV and ERJ→EMBJ are merged as ticker changes. Industries come from the industry sheet in each holdings workbook and can change between snapshots; tickers that only appear in trades were classified by hand.',
     drawerAria:'Security details',
@@ -641,12 +649,14 @@ function renderHold(){
   $('#hcls').innerHTML = hgrp==='cls'
     ? CLS.map(c=>`<button class="chip" aria-pressed="${hcls.has(c)}" data-c="${esc(c)}"><i style="background:${COL(c)}"></i>${CN()[c]}</button>`).join('')
     : INDS.map(c=>`<button class="chip" aria-pressed="${hind.has(c)}" data-c="${esc(c)}">${esc(IN(c))}</button>`).join('');
-  document.querySelectorAll('#hcls .chip').forEach(b=>b.onclick=()=>{const c=b.dataset.c; fset.has(c)?fset.delete(c):fset.add(c); renderHold();});
+  if(fset.size) $('#hcls').innerHTML += `<button class="chip" id="hclr">${T('clearFilter')} ×</button>`;
+  document.querySelectorAll('#hcls .chip[data-c]').forEach(b=>b.onclick=()=>{const c=b.dataset.c; fset.has(c)?fset.delete(c):fset.add(c); renderHold();});
+  if($('#hclr')) $('#hclr').onclick=()=>{ fset.clear(); renderHold(); };
   let rows = s.h.map(h=>({...h,w:h.v/s.total,chg:chgOf(h)}))
     .filter(h=>(!hcls.size||hcls.has(h.c)) && (!hind.size||hind.has(h.i)) && (!q || h.t.toLowerCase().includes(q) || h.n.toLowerCase().includes(q) || IN(h.i).toLowerCase().includes(q)));
   const maxW = Math.max(...s.h.filter(h=>h.c!=='Cash').map(h=>h.v/s.total));
   const tb = $('#ht tbody');
-  const row = h=>`<tr class="row"><td><button class="tk" data-t="${esc(h.t)}">${esc(h.t)}</button></td><td class="nm"><button class="nmb" data-t="${esc(h.t)}">${esc(h.n)}</button></td><td><span class="ind">${esc(IN(h.i))}</span></td>
+  const row = h=>`<tr class="row"><td><button class="tk" data-t="${esc(h.t)}">${esc(h.t)}</button></td><td class="nm"><button class="nmb" data-t="${esc(h.t)}">${esc(h.n)}</button></td><td><button type="button" class="ind" data-ind="${esc(h.i)}" title="${esc(T('indTip'))}">${esc(IN(h.i))}</button></td>
     <td class="r num">${fmt(h.q, h.q%1?2:0)}</td><td class="r num">${h.b==null?'<span class="muted">—</span>':money(h.b)}</td><td class="r num">${money(h.v)}</td>
     <td class="r"><div class="wbar"><span style="width:${Math.max(2,Math.min(1,h.w/maxW)*60)}px"></span><span class="num" style="background:none;opacity:1;height:auto">${pct(h.w,2)}</span></div></td>
     <td class="r num" style="white-space:nowrap">${unr(h)}</td>
@@ -727,7 +737,7 @@ function renderTrades(){
       const [a,ac]=actOf(t.act); const [,el,ec]=exOf(t);
       return `<div class="tr"><div class="dt">${esc(t.date.length>7?t.date.slice(5):t.date)}</div>
         <div><span class="pill ${ac}">${a}</span></div>
-        <div class="body"><div class="t1">${tks(t).map(k=>`<button class="tk" data-t="${esc(k)}">${esc(k)}</button>`).join('<span style="color:var(--muted)">/</span>')||''}<span class="sec">${esc(t.sec)}</span>${indsOf(t).map(c=>`<span class="ind">${esc(IN(c))}</span>`).join('')}</div>
+        <div class="body"><div class="t1">${tks(t).map(k=>`<button class="tk" data-t="${esc(k)}">${esc(k)}</button>`).join('<span style="color:var(--muted)">/</span>')||''}<span class="sec">${esc(t.sec)}</span>${indsOf(t).map(c=>`<button type="button" class="ind" data-ind="${esc(c)}" data-ctx="t" title="${esc(T('indTipT'))}">${esc(IN(c))}</button>`).join('')}</div>
           <div class="rep">${esc(t.rep)}</div>
           <div class="pa"><b>${T('proposed')}</b><span>${esc(t.prop)}</span><b>${T('actual')}</b><span>${esc(t.act_)}</span></div>
           ${t.note?`<div class="note">${esc(t.note)}</div>`:''}</div>
@@ -1371,12 +1381,12 @@ function openTk(t){
   const rel = DATA.trades.filter(x=>tks(x).map(k=>ALIAS[k]||k).includes(t)).sort((a,b)=>a.date.localeCompare(b.date));
   const d=$('#drawer');
   d.innerHTML = `<button class="x" id="dx">${T('close')}</button>
-    <div><div class="eyebrow">${any?esc(CN()[any.c]):FD?.co[t]?.watch?T('watchGrp'):T('notHeld')}${DATA.tind[t]?' · '+esc(IN(DATA.tind[t])):''}</div><h2 style="font-size:24px;margin-top:4px" class="num">${esc(t)}</h2><div class="nm">${esc(any?.n || rel[0]?.sec || (FD&&Object.hasOwn(FD.co,t)?FD.co[t].name:'') || '')}</div>
+    <div><div class="eyebrow">${any?esc(CN()[any.c]):FD?.co[t]?.watch?T('watchGrp'):T('notHeld')}${DATA.tind[t]?` · <button type="button" class="ind" data-ind="${esc(DATA.tind[t])}" title="${esc(T('indTip'))}">${esc(IN(DATA.tind[t]))}</button>`:''}</div><h2 style="font-size:24px;margin-top:4px" class="num">${esc(t)}</h2><div class="nm">${esc(any?.n || rel[0]?.sec || (FD&&Object.hasOwn(FD.co,t)?FD.co[t].name:'') || '')}</div>
       ${anOf(t)&&FD?.co[t]?`<div class="nm" style="font-size:12.5px;margin-top:4px">${T('anDrawer',fmt(anOf(t).median,2),esc(FD.co[t].ccy),anOf(t).n??'—',spct(anOf(t).median/FD.co[t].px-1))}</div>`:''}
       ${FD&&Object.hasOwn(FD.co,t)?`<button type="button" class="btn" id="ddcf" style="margin-top:8px">${T('dOpen')}</button>`:''}</div>
-    <div><h3>${T('bySnap')}</h3><table style="margin-top:6px"><thead><tr><th>${T('date')}</th><th class="r">${T('colQty')}</th><th class="r">${T('colCost')}</th><th class="r">${T('colMv')}</th><th class="r">${T('colW')}</th><th class="r">${T('colUnr')}</th></tr></thead><tbody>
-      ${hist.map(x=>`<tr><td class="num">${x.d}</td>${x.h?`<td class="r num">${fmt(x.h.q,x.h.q%1?2:0)}</td><td class="r num">${x.h.b==null?'—':money(x.h.b)}</td><td class="r num">${money(x.h.v)}</td><td class="r num">${pct(x.h.v/x.tot,2)}</td><td class="r num" style="white-space:nowrap">${unr(x.h)}</td>`:'<td class="r" colspan="5" style="color:var(--muted)">'+T('notHeldRow')+'</td>'}</tr>`).join('')}
-    </tbody></table></div>
+    <div><h3>${T('bySnap')}</h3><div class="tblx"><table><thead><tr><th>${T('date')}</th><th class="r">${T('colQty')}</th><th class="r">${T('colCost')}</th><th class="r">${T('colMv')}</th><th class="r">${T('colW')}</th><th class="r">${T('colUnr')}</th></tr></thead><tbody>
+      ${hist.map(x=>`<tr><td class="num">${x.d}</td>${x.h?`<td class="r num">${fmt(x.h.q,x.h.q%1?2:0)}</td><td class="r num">${x.h.b==null?'—':money(x.h.b)}</td><td class="r num">${money(x.h.v)}</td><td class="r num">${pct(x.h.v/x.tot,2)}</td><td class="r num unr2" style="white-space:nowrap">${unr(x.h)}</td>`:'<td class="r" colspan="5" style="color:var(--muted)">'+T('notHeldRow')+'</td>'}</tr>`).join('')}
+    </tbody></table></div></div>
     ${DATA.px.w[t]?`<div><h3>${T('pxTitle')}</h3><p class="nm" style="font-size:12px;margin:2px 0 6px">${T('pxSub',esc(DATA.px.bench[DATA.px.w[t].mkt]))}</p><div class="chart" id="dpx"></div></div>`:''}
     <div><h3>${T('related')}</h3>${rel.length?rel.map(x=>{const [a,ac]=actOf(x.act);const [,el,ec]=exOf(x);return `<div style="padding:10px 0;border-bottom:1px solid var(--rule-2);display:flex;flex-direction:column;gap:3px">
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="num" style="color:var(--muted);font-size:12px">${esc(x.date)}</span><span class="pill ${ac}">${a}</span><span class="pill ${ec}">${el}</span></div>
@@ -1384,12 +1394,25 @@ function openTk(t){
   d.hidden=false; $('#scrim').hidden=false; $('#dx').focus();
   if($('#dpx')) drawPx($('#dpx'),t,rel);
   $('#dx').onclick=closeTk;
+  bindTk();
   if($('#ddcf')) $('#ddcf').onclick=()=>{ closeTk(); dT=t; setTab('d'); $('.tabs').scrollIntoView({behavior:'smooth',block:'start'}); };
 }
 function closeTk(){$('#drawer').hidden=true;$('#scrim').hidden=true;openT=null;}
 $('#scrim').onclick=closeTk;
 addEventListener('keydown',e=>{if(e.key==='Escape')closeTk();});
-function bindTk(){document.querySelectorAll('.tk,.nmb').forEach(b=>b.onclick=()=>openTk(b.dataset.t));}
+// Industry tags: in the trade timeline they filter trades; anywhere else they list that industry's holdings.
+function showInd(code){
+  closeTk(); setTab('h');
+  hgrp='ind'; hcls.clear(); hind=new Set([code]); hsort={k:null,dir:'desc'}; $('#hq').value='';
+  renderHold(); $('.tabs').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function bindTk(){
+  document.querySelectorAll('.tk,.nmb').forEach(b=>b.onclick=()=>openTk(b.dataset.t));
+  document.querySelectorAll('button.ind[data-ind]').forEach(b=>b.onclick=()=>{
+    if(b.dataset.ctx==='t'){ tInd=b.dataset.ind; renderTrades(); $('.tabs').scrollIntoView({behavior:'smooth',block:'start'}); }
+    else showInd(b.dataset.ind);
+  });
+}
 
 function renderAll(){renderSnaps();renderMix();renderHold();}
 function applyLang(l){
