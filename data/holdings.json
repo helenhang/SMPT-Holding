@@ -8,6 +8,10 @@
     "name": "Canadian Cash",
     "qty": 260536.03,
     "mv": 260536.03,
+    "book": 260536.03,
+    "mvl": 260536.03,
+    "ugl": null,
+    "uglp": null,
     "ind": "CASH"
    },
    {
@@ -16,6 +20,10 @@
     "name": "US Dollar Cash",
     "qty": 25855.77,
     "mv": 35496.0938445,
+    "book": 25855.77,
+    "mvl": 25855.77,
+    "ugl": null,
+    "uglp": null,
     "ind": "CASH"
    },
    {
@@ -24,6 +32,10 @@
     "name": "Rbc Investment Savings Account Sr A (2010), $Cad Denominated",
     "qty": 4477.932,
     "mv": 44779.32,
+    "book": 44779.32,
+    "mvl": 44779.32,
+    "ugl": 0,
+    "uglp": 0,
     "ind": "MMF"
    },
    {
@@ -32,6 +44,10 @@
     "name": "Rbc Investment Savings Account Sr A (2014), $Us Denominated",
     "qty": 4418.764,
     "mv": 60663.001573999994,
+    "book": 44187.64,
+    "mvl": 44187.64,
+    "ugl": 0,
+    "uglp": 0,
     "ind": "MMF"
    },
    {
@@ -40,6 +56,10 @@
     "name": "Brookfield Renewable Partnr Sr Unsecured Mtn",
     "qty": 102000,
     "mv": 100942.26,
+    "book": 99554.04,
+    "mvl": 100942.26,
+    "ugl": 1388.22,
+    "uglp": 0.0139443863855248,
     "ind": "BOND"
    },
    {
@@ -48,6 +68,10 @@
     "name": "Cu Inc",
     "qty": 90000,
     "mv": 100737.9,
+    "book": 100318.73,
+    "mvl": 100737.9,
+    "ugl": 419.17,
+    "uglp": 0.00417838224227918,
     "ind": null
    },
    {
@@ -56,6 +80,10 @@
     "name": "Smartcentres Reit Sr Unsec Sr X",
     "qty": 50000,
     "mv": 49811,
+    "book": 49350.5,
+    "mvl": 49811,
+    "ugl": 460.5,
+    "uglp": 0.00933121244972188,
     "ind": "BOND"
    },
    {
@@ -64,6 +92,10 @@
     "name": "General Mtrs Finl Co Inc Senior Unsecured",
     "qty": 45000,
     "mv": 62916.205364999994,
+    "book": 45187.5,
+    "mvl": 45828.9,
+    "ugl": 641.4,
+    "uglp": 0.0141941908713692,
     "ind": "BOND"
    },
    {
@@ -72,6 +104,10 @@
     "name": "Toronto Dominion Bank Sr Unsecured",
     "qty": 68000,
     "mv": 70611.880782,
+    "book": 50135.78,
+    "mvl": 51434.52,
+    "ugl": 1298.74,
+    "uglp": 0.0259044538650839,
     "ind": "BOND"
    },
    {
@@ -80,6 +116,10 @@
     "name": "United States Treasury Bond Stripped Int Pmt",
     "qty": 69685,
     "mv": 66048.53287339999,
+    "book": 45123.6,
+    "mvl": 48110.524,
+    "ugl": 2986.924,
+    "uglp": 0.0661942752794546,
     "ind": null
    },
    {
@@ -88,6 +128,10 @@
     "name": "Dream Indl Real Estate Invt Tr Tr Unit",
     "qty": 3319,
     "mv": 40690.94,
+    "book": 38498.35,
+    "mvl": 40690.94,
+    "ugl": 2192.59,
+    "uglp": 0.0569528304459801,
     "ind": "REIT"
    },
    {
@@ -96,6 +140,10 @@
     "name": "Barrick Mng Corp Com",
     "qty": 500,
     "mv": 18315,
+    "book": 14340.38,
+    "mvl": 18315,
+    "ugl": 3974.62,
+    "uglp": 0.277162808795861,
     "ind": "MAT"
    },
    {
@@ -104,6 +152,10 @@
     "name": "Alimentation Couche-Tard Inc Com",
     "qty": 600,
     "mv": 41766,
+    "book": 21852.95,
+    "mvl": 41766,
+    "ugl": 19913.05,
+    "uglp": 0.911229376354222,
     "ind": "DISC"
    },
    {
@@ -112,6 +164,10 @@
     "name": "Bank Of Montreal",
     "qty": 600,
     "mv": 99714,
+    "book": 63947.23,
+    "mvl": 99714,
+    "ugl": 35766.77,
+    "uglp": 0.559316955558512,
     "ind": "BANK"
    },
    {
@@ -120,6 +176,10 @@
     "name": "Canadian Natural Resources Ltd",
     "qty": 2000,
     "mv": 86980,
+    "book": 35112.31,
+    "mvl": 86980,
+    "ugl": 51867.69,
+    "uglp": 1.47719389581602,
     "ind": "O&G"
    },
    {
@@ -128,6 +188,10 @@
     "name": "Canadian National Railway Co",
     "qty": 400,
     "mv": 53180,
+    "book": 25612.68,
+    "mvl": 53180,
+    "ugl": 27567.32,
+    "uglp": 1.07631532506555,
     "ind": "TRANS"
    },
    {
@@ -136,6 +200,10 @@
     "name": "Capital Power Corporation",
     "qty": 1197,
     "mv": 68552.19,
+    "book": 73708.21,
+    "mvl": 68552.19,
+    "ugl": -5156.02,
+    "uglp": -0.0699517733506213,
     "ind": "UTIL"
    },
    {
@@ -144,6 +212,10 @@
     "name": "Constellation Software Inc",
     "qty": 20,
     "mv": 91006.8,
+    "book": 21809.95,
+    "mvl": 91006.8,
+    "ugl": 69196.85,
+    "uglp": 3.17271933223139,
     "ind": "TECH"
    },
    {
@@ -152,6 +224,10 @@
     "name": "Canadian Utilities Ltd Cl-A Non-Voting Shares",
     "qty": 821,
     "mv": 31386.83,
+    "book": 30169.55,
+    "mvl": 31386.83,
+    "ugl": 1217.28,
+    "uglp": 0.0403479667413004,
     "ind": "UTIL"
    },
    {
@@ -160,6 +236,10 @@
     "name": "Emera Inc",
     "qty": 400,
     "mv": 26164,
+    "book": 16089.9,
+    "mvl": 26164,
+    "ugl": 10074.1,
+    "uglp": 0.626113276030304,
     "ind": "UTIL"
    },
    {
@@ -168,6 +248,10 @@
     "name": "Enbridge Inc",
     "qty": 450,
     "mv": 29902.5,
+    "book": 19657.26,
+    "mvl": 29902.5,
+    "ugl": 10245.24,
+    "uglp": 0.521193696374774,
     "ind": "TRANS"
    },
    {
@@ -176,6 +260,10 @@
     "name": "Eqb Inc Com",
     "qty": 929,
     "mv": 84028.05,
+    "book": 77661.67,
+    "mvl": 84028.05,
+    "ugl": 6366.38,
+    "uglp": 0.0819758318357048,
     "ind": "BANK"
    },
    {
@@ -184,6 +272,10 @@
     "name": "Jamieson Wellness Inc Common",
     "qty": 2268,
     "mv": 84596.4,
+    "book": 60729.35,
+    "mvl": 84596.4,
+    "ugl": 23867.05,
+    "uglp": 0.393006841008507,
     "ind": "DISC"
    },
    {
@@ -192,6 +284,10 @@
     "name": "Manulife Financial Corp",
     "qty": 1900,
     "mv": 80275,
+    "book": 43177.13,
+    "mvl": 80275,
+    "ugl": 37097.87,
+    "uglp": 0.859201850609338,
     "ind": "NBNK"
    },
    {
@@ -200,6 +296,10 @@
     "name": "Magna International Inc Com",
     "qty": 600,
     "mv": 37824,
+    "book": 39092.92,
+    "mvl": 37824,
+    "ugl": -1268.92,
+    "uglp": -0.0324590744308688,
     "ind": "INDS"
    },
    {
@@ -208,6 +308,10 @@
     "name": "Nutrien Ltd Com",
     "qty": 750,
     "mv": 59362.5,
+    "book": 54860.62,
+    "mvl": 59362.5,
+    "ugl": 4501.88,
+    "uglp": 0.082060319405796,
     "ind": "MAT"
    },
    {
@@ -216,6 +320,10 @@
     "name": "Restaurant Brands International Inc Com",
     "qty": 200,
     "mv": 17394,
+    "book": 15023.9,
+    "mvl": 17394,
+    "ugl": 2370.1,
+    "uglp": 0.157755309872935,
     "ind": "REST"
    },
    {
@@ -224,6 +332,10 @@
     "name": "Rogers Communications Inc Cl B Non-Vtg",
     "qty": 900,
     "mv": 44289,
+    "book": 52818.9,
+    "mvl": 44289,
+    "ugl": -8529.9,
+    "uglp": -0.161493329092427,
     "ind": "TCOM"
    },
    {
@@ -232,6 +344,10 @@
     "name": "Royal Bank Of Canada",
     "qty": 660,
     "mv": 131722.8,
+    "book": 74193.93,
+    "mvl": 131722.8,
+    "ugl": 57528.87,
+    "uglp": 0.775385129214748,
     "ind": "BANK"
    },
    {
@@ -240,6 +356,10 @@
     "name": "Suncor Energy Inc",
     "qty": 1700,
     "mv": 96509,
+    "book": 58437.54,
+    "mvl": 96509,
+    "ugl": 38071.46,
+    "uglp": 0.651489778659402,
     "ind": "O&G"
    },
    {
@@ -248,6 +368,10 @@
     "name": "Telus Corporation",
     "qty": 1700,
     "mv": 38488,
+    "book": 41346.29,
+    "mvl": 38488,
+    "ugl": -2858.29,
+    "uglp": -0.0691305072353529,
     "ind": "TCOM"
    },
    {
@@ -256,6 +380,10 @@
     "name": "Toronto-Dominion Bank",
     "qty": 1000,
     "mv": 103120,
+    "book": 94243.72,
+    "mvl": 103120,
+    "ugl": 8876.28,
+    "uglp": 0.0941843127584522,
     "ind": "BANK"
    },
    {
@@ -264,6 +392,10 @@
     "name": "Tourmaline Oil Corp",
     "qty": 1450,
     "mv": 84564,
+    "book": 87439.9,
+    "mvl": 84564,
+    "ugl": -2875.9,
+    "uglp": -0.0328900193161245,
     "ind": "O&G"
    },
    {
@@ -272,6 +404,10 @@
     "name": "Tc Energy Corp Com",
     "qty": 250,
     "mv": 17880,
+    "book": 13459.26,
+    "mvl": 17880,
+    "ugl": 4420.74,
+    "uglp": 0.32845342165914,
     "ind": "TRANS"
    },
    {
@@ -280,6 +416,10 @@
     "name": "West Fraser Timber Co Ltd",
     "qty": 615,
     "mv": 61524.6,
+    "book": 31275.99,
+    "mvl": 61524.6,
+    "ugl": 30248.61,
+    "uglp": 0.967151159723481,
     "ind": "MAT"
    },
    {
@@ -288,6 +428,10 @@
     "name": "Apple Inc",
     "qty": 600,
     "mv": 191216.03939999998,
+    "book": 22904.9,
+    "mvl": 139284,
+    "ugl": 116379.1,
+    "uglp": 5.08096957419591,
     "ind": "TECH"
    },
    {
@@ -296,6 +440,10 @@
     "name": "Abbvie Inc",
     "qty": 125,
     "mv": 36105.954999999994,
+    "book": 12441.2,
+    "mvl": 26300,
+    "ugl": 13858.8,
+    "uglp": 1.11394399254091,
     "ind": "PHARM"
    },
    {
@@ -304,6 +452,10 @@
     "name": "American Tower Corporation Reit",
     "qty": 100,
     "mv": 27985.54725,
+    "book": 24144.95,
+    "mvl": 20385,
+    "ugl": -3759.95,
+    "uglp": -0.155724074806533,
     "ind": "TCOM"
    },
    {
@@ -312,6 +464,10 @@
     "name": "Amazon.Com Inc",
     "qty": 400,
     "mv": 125753.06,
+    "book": 14016.99,
+    "mvl": 91600,
+    "ugl": 77583.01,
+    "uglp": 5.53492654271708,
     "ind": "RTLR"
    },
    {
@@ -320,6 +476,10 @@
     "name": "Bank Of America Corp",
     "qty": 630,
     "mv": 43884.79767,
+    "book": 18401.67,
+    "mvl": 31966.2,
+    "ugl": 13564.53,
+    "uglp": 0.73713581430381,
     "ind": "BANK"
    },
    {
@@ -328,6 +488,10 @@
     "name": "Berkshire Hathaway Inc Del Cl B",
     "qty": 100,
     "mv": 69051.6093,
+    "book": 32086.28,
+    "mvl": 50298,
+    "ugl": 18211.72,
+    "uglp": 0.56758589652649,
     "ind": "NBNK"
    },
    {
@@ -336,6 +500,10 @@
     "name": "Costco Wholesale Corp-New",
     "qty": 160,
     "mv": 207205.89792,
+    "book": 48713.59,
+    "mvl": 150931.2,
+    "ugl": 102217.61,
+    "uglp": 2.09833867715354,
     "ind": "RTLR"
    },
    {
@@ -344,6 +512,10 @@
     "name": "Delta Air Lines Inc Del Com",
     "qty": 400,
     "mv": 33925.8692,
+    "book": 20807.89,
+    "mvl": 24712,
+    "ugl": 3904.11,
+    "uglp": 0.18762642439959,
     "ind": "TRANS"
    },
    {
@@ -352,6 +524,10 @@
     "name": "Deere & Co",
     "qty": 200,
     "mv": 131420.1848,
+    "book": 21481.9,
+    "mvl": 95728,
+    "ugl": 74246.1,
+    "uglp": 3.45621662888292,
     "ind": "INDS"
    },
    {
@@ -360,6 +536,10 @@
     "name": "Eagle Materials Inc",
     "qty": 200,
     "mv": 63398.212999999996,
+    "book": 26999.95,
+    "mvl": 46180,
+    "ugl": 19180.05,
+    "uglp": 0.710373537728773,
     "ind": "MAT"
    },
    {
@@ -368,6 +548,10 @@
     "name": "Fedex Corp",
     "qty": 150,
     "mv": 47583.667425,
+    "book": 36722.45,
+    "mvl": 34660.5,
+    "ugl": -2061.95,
+    "uglp": -0.0561495760767595,
     "ind": "NBNK"
    },
    {
@@ -376,6 +560,10 @@
     "name": "Fiserv Inc Common Stock",
     "qty": 200,
     "mv": 37940.082599999994,
+    "book": 23457.95,
+    "mvl": 27636,
+    "ugl": 4178.05,
+    "uglp": 0.178108061446119,
     "ind": "NBNK"
    },
    {
@@ -384,6 +572,10 @@
     "name": "FMC Corp New",
     "qty": 1182,
     "mv": 63447.91016999999,
+    "book": 49949.33,
+    "mvl": 46216.2,
+    "ugl": -3733.13,
+    "uglp": -0.0747383398335873,
     "ind": "INDS"
    },
    {
@@ -392,6 +584,10 @@
     "name": "Alphabet Inc Class C Capital Stock",
     "qty": 800,
     "mv": 234515.7284,
+    "book": 38387.06,
+    "mvl": 170824,
+    "ugl": 132436.94,
+    "uglp": 3.45004123785463,
     "ind": "TECH"
    },
    {
@@ -400,6 +596,10 @@
     "name": "Home Depot Inc",
     "qty": 100,
     "mv": 55843.419449999994,
+    "book": 16267.95,
+    "mvl": 40677,
+    "ugl": 24409.05,
+    "uglp": 1.50043797774151,
     "ind": "RTLR"
    },
    {
@@ -408,6 +608,10 @@
     "name": "Honeywell Intl Inc",
     "qty": 100,
     "mv": 30134.0575,
+    "book": 13411.95,
+    "mvl": 21950,
+    "ugl": 8538.05,
+    "uglp": 0.636600196093782,
     "ind": "INDS"
    },
    {
@@ -416,6 +620,10 @@
     "name": "Howmet Aerospace Inc Common Stock",
     "qty": 370,
     "mv": 88434.87844999999,
+    "book": 10153.64,
+    "mvl": 64417,
+    "ugl": 54263.36,
+    "uglp": 5.34422729188744,
     "ind": "INDS"
    },
    {
@@ -424,6 +632,10 @@
     "name": "Intel Corp",
     "qty": 400,
     "mv": 13371.559,
+    "book": 23669.95,
+    "mvl": 9740,
+    "ugl": -13929.95,
+    "uglp": -0.588507791524696,
     "ind": "TECH"
    },
    {
@@ -432,6 +644,10 @@
     "name": "Johnson Controls International Plc Ordinary Shares",
     "qty": 700,
     "mv": 102720.75554999999,
+    "book": 40280.24,
+    "mvl": 74823,
+    "ugl": 34542.76,
+    "uglp": 0.857560928137468,
     "ind": "INDS"
    },
    {
@@ -440,6 +656,10 @@
     "name": "Johnson & Johnson Common Stock",
     "qty": 200,
     "mv": 48645.5669,
+    "book": 18650.64,
+    "mvl": 35434,
+    "ugl": 16783.36,
+    "uglp": 0.899881183702007,
     "ind": "PHARM"
    },
    {
@@ -448,6 +668,10 @@
     "name": "Jpmorgan Chase & Co",
     "qty": 500,
     "mv": 206902.2235,
+    "book": 69069.95,
+    "mvl": 150710,
+    "ugl": 81640.05,
+    "uglp": 1.18199086578171,
     "ind": "BANK"
    },
    {
@@ -456,6 +680,10 @@
     "name": "Coca Cola Company (The)",
     "qty": 500,
     "mv": 47356.46075,
+    "book": 31054.95,
+    "mvl": 34495,
+    "ugl": 3440.05,
+    "uglp": 0.110773000761553,
     "ind": "DISC"
    },
    {
@@ -464,6 +692,10 @@
     "name": "Lockheed Martin Corp",
     "qty": 50,
     "mv": 31275.582274999997,
+    "book": 15637.45,
+    "mvl": 22781.5,
+    "ugl": 7144.05,
+    "uglp": 0.456855177794333,
     "ind": "INDS"
    },
    {
@@ -472,6 +704,10 @@
     "name": "Mastercard Incorporated",
     "qty": 145,
     "mv": 118500.3620925,
+    "book": 14914.76,
+    "mvl": 86317.05,
+    "ugl": 71402.29,
+    "uglp": 4.78735762425945,
     "ind": "NBNK"
    },
    {
@@ -480,6 +716,10 @@
     "name": "Mcdonalds Corp",
     "qty": 250,
     "mv": 107610.84724999999,
+    "book": 55200.85,
+    "mvl": 78385,
+    "ugl": 23184.15,
+    "uglp": 0.419996250057743,
     "ind": "REST"
    },
    {
@@ -488,6 +728,10 @@
     "name": "Meta Platforms Inc Class A Common Stock",
     "qty": 270,
     "mv": 273813.55964999995,
+    "book": 58151.22,
+    "mvl": 199449,
+    "ugl": 141297.78,
+    "uglp": 2.4298334583522,
     "ind": "TECH"
    },
    {
@@ -496,6 +740,10 @@
     "name": "Marathon Pete Corp Com",
     "qty": 300,
     "mv": 74014.46205,
+    "book": 15322.4,
+    "mvl": 53913,
+    "ugl": 38590.6,
+    "uglp": 2.51857411371586,
     "ind": "O&G"
    },
    {
@@ -504,6 +752,10 @@
     "name": "Microsoft Corp",
     "qty": 450,
     "mv": 313024.214925,
+    "book": 60763.9,
+    "mvl": 228010.5,
+    "ugl": 167246.6,
+    "uglp": 2.7524006852753,
     "ind": "TECH"
    },
    {
@@ -512,6 +764,10 @@
     "name": "Netflix Inc Com",
     "qty": 60,
     "mv": 99524.76074999999,
+    "book": 32724.95,
+    "mvl": 72495,
+    "ugl": 39770.05,
+    "uglp": 1.21528222350225,
     "ind": "DISC"
    },
    {
@@ -520,6 +776,10 @@
     "name": "Nike Inc Class B Com",
     "qty": 150,
     "mv": 15932.610674999998,
+    "book": 10172.16,
+    "mvl": 11605.5,
+    "ugl": 1433.34,
+    "uglp": 0.140908125707814,
     "ind": "RTLR"
    },
    {
@@ -528,6 +788,10 @@
     "name": "Northrop Grumman Corp",
     "qty": 50,
     "mv": 40501.8207,
+    "book": 15362.45,
+    "mvl": 29502,
+    "ugl": 14139.55,
+    "uglp": 0.920396811706466,
     "ind": "INDS"
    },
    {
@@ -536,6 +800,10 @@
     "name": "Qualcomm Inc",
     "qty": 130,
     "mv": 28685.563465,
+    "book": 9691.99,
+    "mvl": 20894.9,
+    "ugl": 11202.91,
+    "uglp": 1.15589368127701,
     "ind": "TECH"
    },
    {
@@ -544,6 +812,10 @@
     "name": "Raymond James Financial Inc",
     "qty": 751,
     "mv": 174694.393704,
+    "book": 63450.31,
+    "mvl": 127249.44,
+    "ugl": 63799.13,
+    "uglp": 1.00549753027211,
     "ind": "NBNK"
    },
    {
@@ -552,6 +824,10 @@
     "name": "Union Pacific Corp",
     "qty": 250,
     "mv": 76732.018625,
+    "book": 29602.66,
+    "mvl": 55892.5,
+    "ugl": 26289.84,
+    "uglp": 0.888090462140902,
     "ind": "TRANS"
    },
    {
@@ -560,6 +836,10 @@
     "name": "Visa Inc Cl A Common Stock",
     "qty": 300,
     "mv": 144882.35189999998,
+    "book": 16588.97,
+    "mvl": 105534,
+    "ugl": 88945.03,
+    "uglp": 5.36169695888292,
     "ind": "NBNK"
    },
    {
@@ -568,6 +848,10 @@
     "name": "Verizon Communications",
     "qty": 400,
     "mv": 24288.462199999998,
+    "book": 20120.34,
+    "mvl": 17692,
+    "ugl": -2428.34,
+    "uglp": -0.120690803435727,
     "ind": "TCOM"
    },
    {
@@ -576,6 +860,10 @@
     "name": "Walmart Inc Common Stock",
     "qty": 1000,
     "mv": 133138.993,
+    "book": 57886.22,
+    "mvl": 96980,
+    "ugl": 39093.78,
+    "uglp": 0.675355550941139,
     "ind": "RTLR"
    },
    {
@@ -584,6 +872,10 @@
     "name": "Alibaba Group Holding Ltd Sponsored Adr",
     "qty": 100,
     "mv": 18533.475,
+    "book": 9770.88,
+    "mvl": 13500,
+    "ugl": 3729.12,
+    "uglp": 0.381656514049911,
     "ind": "TECH"
    },
    {
@@ -592,6 +884,10 @@
     "name": "Tencent Holdings Limited Unsponsored Adr Representing B Shares",
     "qty": 500,
     "mv": 53314.62974999999,
+    "book": 18562.8,
+    "mvl": 38835,
+    "ugl": 20272.2,
+    "uglp": 1.09208740060766,
     "ind": "TECH"
    },
    {
@@ -600,6 +896,10 @@
     "name": "Trip.Com Group Limited American Depositary Shares",
     "qty": 675,
     "mv": 68342.1890625,
+    "book": 25253.87,
+    "mvl": 49781.25,
+    "ugl": 24527.38,
+    "uglp": 0.971232527925422,
     "ind": "DISC"
    },
    {
@@ -608,6 +908,10 @@
     "name": "Airbus Se American Depositary Receipts Unsponsored",
     "qty": 777,
     "mv": 55628.6370675,
+    "book": 34628.4,
+    "mvl": 40520.55,
+    "ugl": 5892.15,
+    "uglp": 0.170153688879647,
     "ind": "INDS"
    },
    {
@@ -616,6 +920,10 @@
     "name": "Lvmh Moet Hennessy Louis Vuitton Sa Unsponsored Adr",
     "qty": 425,
     "mv": 68883.43517499999,
+    "book": 28513.46,
+    "mvl": 50175.5,
+    "ugl": 21662.04,
+    "uglp": 0.759712781261902,
     "ind": "DISC"
    },
    {
@@ -624,6 +932,10 @@
     "name": "Lyondellbasell Industries N V Cl A",
     "qty": 200,
     "mv": 15472.019499999999,
+    "book": 20757.27,
+    "mvl": 11270,
+    "ugl": -9487.27,
+    "uglp": -0.457057695930148,
     "ind": "INDS"
    },
    {
@@ -632,6 +944,10 @@
     "name": "Hdfc Bk Ltd Adr Repstg 3 Shs",
     "qty": 588,
     "mv": 57442.899528,
+    "book": 35719.19,
+    "mvl": 41842.08,
+    "ugl": 6122.89,
+    "uglp": 0.171417380965245,
     "ind": "BANK"
    },
    {
@@ -640,6 +956,10 @@
     "name": "Icici Bank Ltd Sponsored Adr",
     "qty": 1222,
     "mv": 53247.74449799999,
+    "book": 35202.69,
+    "mvl": 38786.28,
+    "ugl": 3583.59,
+    "uglp": 0.101798754583811,
     "ind": "BANK"
    },
    {
@@ -648,6 +968,10 @@
     "name": "Embraer S A Adr Each Rep 4 Com Stk Shs",
     "qty": 602,
     "mv": 46554.249581000004,
+    "book": 30037.46,
+    "mvl": 33910.66,
+    "ugl": 3873.2,
+    "uglp": 0.128945656523554,
     "ind": "INDS"
    },
    {
@@ -656,6 +980,10 @@
     "name": "Toyota Motor Corporation Ads",
     "qty": 80,
     "mv": 21369.233959999998,
+    "book": 9791.38,
+    "mvl": 15565.6,
+    "ugl": 5774.22,
+    "uglp": 0.589724839603814,
     "ind": "TRANS"
    },
    {
@@ -664,6 +992,10 @@
     "name": "Taiwan Semiconductor Mfg Co Ltd-Sponsored Adr Repstg 5 Com",
     "qty": 333,
     "mv": 105544.3098735,
+    "book": 60163.07,
+    "mvl": 76879.71,
+    "ugl": 16716.64,
+    "uglp": 0.277855501722235,
     "ind": "TECH"
    },
    {
@@ -672,6 +1004,10 @@
     "name": "Wts Constellation Software Inc Exp 03/31/2040",
     "qty": 20,
     "mv": 0,
+    "book": 0.01,
+    "mvl": 0,
+    "ugl": -0.01,
+    "uglp": -1,
     "ind": "TECH"
    }
   ]
@@ -685,6 +1021,10 @@
     "name": "Canadian Cash",
     "qty": 2158.56,
     "mv": 2158.56,
+    "book": 2158.56,
+    "mvl": 2158.56,
+    "ugl": null,
+    "uglp": null,
     "ind": "CASH"
    },
    {
@@ -693,6 +1033,10 @@
     "name": "US Dollar Cash",
     "qty": 17794.41,
     "mv": 24413.0407995,
+    "book": 17794.41,
+    "mvl": 17794.41,
+    "ugl": null,
+    "uglp": null,
     "ind": "CASH"
    },
    {
@@ -701,6 +1045,10 @@
     "name": "Rbc Investment Savings Account Sr A (2010), $Cad Denominated",
     "qty": 7169.186,
     "mv": 71691.86,
+    "book": 71691.86,
+    "mvl": 71691.86,
+    "ugl": 0,
+    "uglp": 0,
     "ind": "MMF"
    },
    {
@@ -709,6 +1057,10 @@
     "name": "RBC U.S INVESTMENT SAVINGS ACCOUNT SR A U$ (2014)",
     "qty": 580.826,
     "mv": 7968.642307,
+    "book": 5808.26,
+    "mvl": 5808.26,
+    "ugl": 0,
+    "uglp": 0,
     "ind": "MMF"
    },
    {
@@ -717,6 +1069,10 @@
     "name": "Brookfield Renewable Partnr Sr Unsecured Mtn",
     "qty": 102000,
     "mv": 101416.56,
+    "book": 99554.04,
+    "mvl": 101416.56,
+    "ugl": 1862.52,
+    "uglp": 0.0187,
     "ind": "BONDS"
    },
    {
@@ -725,6 +1081,10 @@
     "name": "Cu Inc",
     "qty": 90000,
     "mv": 100922.4,
+    "book": 100318.73,
+    "mvl": 100922.4,
+    "ugl": 603.67,
+    "uglp": 0.006,
     "ind": null
    },
    {
@@ -733,6 +1093,10 @@
     "name": "PROVINCE OF MANITOBA UNSECURED",
     "qty": 100000,
     "mv": 102715,
+    "book": 103867.92,
+    "mvl": 102715,
+    "ugl": -1152.92,
+    "uglp": -0.0110998660606662,
     "ind": "BONDS"
    },
    {
@@ -741,6 +1105,10 @@
     "name": "EQUITABLE BANK SR UNSECURED",
     "qty": 75000,
     "mv": 75786.75,
+    "book": 76420.08,
+    "mvl": 75786.75,
+    "ugl": -633.33,
+    "uglp": -0.00828748151009525,
     "ind": "BONDS"
    },
    {
@@ -749,6 +1117,10 @@
     "name": "PROVINCE OF SASKATCHEWAN MEDIUM TERM NOTE",
     "qty": 85000,
     "mv": 98139.3,
+    "book": 99848.95,
+    "mvl": 98139.3,
+    "ugl": -1709.65,
+    "uglp": -0.0171223633298096,
     "ind": "BONDS"
    },
    {
@@ -757,6 +1129,10 @@
     "name": "General Mtrs Finl Co Inc Senior Unsecured",
     "qty": 45000,
     "mv": 62771.239935000005,
+    "book": 45187.5,
+    "mvl": 45753.3,
+    "ugl": 565.8,
+    "uglp": 0.0141941908713692,
     "ind": "BONDS"
    },
    {
@@ -765,6 +1141,10 @@
     "name": "Toronto Dominion Bank Sr Unsecured",
     "qty": 68000,
     "mv": 70793.223658,
+    "book": 50135.78,
+    "mvl": 51600.44,
+    "ugl": 1464.6600000000035,
+    "uglp": 0.0292,
     "ind": "BONDS"
    },
    {
@@ -773,6 +1153,10 @@
     "name": "United States Treasury Bond Stripped Int Pmt",
     "qty": 69685,
     "mv": 67487.10060592499,
+    "book": 45123.6,
+    "mvl": 49190.6415,
+    "ugl": 4067.0415,
+    "uglp": 0.0901,
     "ind": null
    },
    {
@@ -781,6 +1165,10 @@
     "name": "Dream Indl Real Estate Invt Tr Tr Unit",
     "qty": 3319,
     "mv": 41753.02,
+    "book": 38498.35,
+    "mvl": 41753.02,
+    "ugl": 3254.6699999999983,
+    "uglp": 0.0845,
     "ind": "REIT"
    },
    {
@@ -789,6 +1177,10 @@
     "name": "CONSTELLATION SOFTWARE INC",
     "qty": 20,
     "mv": 66028,
+    "book": 21809.95,
+    "mvl": 66028,
+    "ugl": 44218.05,
+    "uglp": 2.02742555576697,
     "ind": "TECH"
    },
    {
@@ -797,6 +1189,10 @@
     "name": "ROYAL BANK OF CANADA",
     "qty": 660,
     "mv": 154433.4,
+    "book": 74193.93,
+    "mvl": 154433.4,
+    "ugl": 80239.47,
+    "uglp": 1.08148294611162,
     "ind": "BANK"
    },
    {
@@ -805,6 +1201,10 @@
     "name": "BANK OF MONTREAL",
     "qty": 600,
     "mv": 106950,
+    "book": 63947.23,
+    "mvl": 106950,
+    "ugl": 43002.77,
+    "uglp": 0.672472756052138,
     "ind": "BANK"
    },
    {
@@ -813,6 +1213,10 @@
     "name": "CANADIAN NATIONAL RAILWAY CO",
     "qty": 400,
     "mv": 54300,
+    "book": 25612.68,
+    "mvl": 54300,
+    "ugl": 28687.32,
+    "uglp": 1.12004366587174,
     "ind": "TRANS"
    },
    {
@@ -821,6 +1225,10 @@
     "name": "TORONTO-DOMINION BANK",
     "qty": 1000,
     "mv": 129360,
+    "book": 94243.72,
+    "mvl": 129360,
+    "ugl": 35116.28,
+    "uglp": 0.37261135277767,
     "ind": "BANK"
    },
    {
@@ -829,6 +1237,10 @@
     "name": "RESTAURANT BRANDS INTERNATIONAL INC COM",
     "qty": 200,
     "mv": 18732,
+    "book": 15023.9,
+    "mvl": 18732,
+    "ugl": 3708.1,
+    "uglp": 0.246813410632392,
     "ind": "REST"
    },
    {
@@ -837,6 +1249,10 @@
     "name": "NUTRIEN LTD COM",
     "qty": 750,
     "mv": 63540,
+    "book": 54860.62,
+    "mvl": 63540,
+    "ugl": 8679.38,
+    "uglp": 0.158207836513695,
     "ind": "MAT"
    },
    {
@@ -845,6 +1261,10 @@
     "name": "WEST FRASER TIMBER CO LTD",
     "qty": 615,
     "mv": 51641.55,
+    "book": 31275.99,
+    "mvl": 51641.55,
+    "ugl": 20365.56,
+    "uglp": 0.651156366273297,
     "ind": "MAT"
    },
    {
@@ -853,6 +1273,10 @@
     "name": "TC ENERGY CORP COM",
     "qty": 250,
     "mv": 18895,
+    "book": 13459.26,
+    "mvl": 18895,
+    "ugl": 5435.74,
+    "uglp": 0.403866185808135,
     "ind": "TRANS"
    },
    {
@@ -861,6 +1285,10 @@
     "name": "ALIMENTATION COUCHE-TARD INC COM",
     "qty": 600,
     "mv": 44976,
+    "book": 21852.95,
+    "mvl": 44976,
+    "ugl": 23123.05,
+    "uglp": 1.05812029954765,
     "ind": "RTLR"
    },
    {
@@ -869,6 +1297,10 @@
     "name": "MAGNA INTERNATIONAL INC COM",
     "qty": 600,
     "mv": 43902,
+    "book": 39092.92,
+    "mvl": 43902,
+    "ugl": 4809.08,
+    "uglp": 0.123016648538917,
     "ind": "INDS"
    },
    {
@@ -877,6 +1309,10 @@
     "name": "EMERA INC",
     "qty": 400,
     "mv": 27056,
+    "book": 16089.9,
+    "mvl": 27056,
+    "ugl": 10966.1,
+    "uglp": 0.681551780930894,
     "ind": "UTIL"
    },
    {
@@ -885,6 +1321,10 @@
     "name": "ENBRIDGE INC",
     "qty": 450,
     "mv": 29556,
+    "book": 19657.26,
+    "mvl": 29556,
+    "ugl": 9898.74,
+    "uglp": 0.503566621187286,
     "ind": "TRANS"
    },
    {
@@ -893,6 +1333,10 @@
     "name": "TOURMALINE OIL CORP",
     "qty": 1450,
     "mv": 89276.5,
+    "book": 87439.9,
+    "mvl": 89276.5,
+    "ugl": 1836.6,
+    "uglp": 0.021004141130079,
     "ind": "O&G"
    },
    {
@@ -901,6 +1345,10 @@
     "name": "SUNCOR ENERGY INC",
     "qty": 1700,
     "mv": 103564,
+    "book": 58437.54,
+    "mvl": 103564,
+    "ugl": 45126.46,
+    "uglp": 0.772216968749882,
     "ind": "O&G"
    },
    {
@@ -909,6 +1357,10 @@
     "name": "BARRICK MNG CORP COM",
     "qty": 500,
     "mv": 29895,
+    "book": 14340.38,
+    "mvl": 29895,
+    "ugl": 15554.62,
+    "uglp": 1.08467279109758,
     "ind": "MAT"
    },
    {
@@ -917,6 +1369,10 @@
     "name": "CAPITAL POWER CORPORATION",
     "qty": 1197,
     "mv": 70084.35,
+    "book": 73708.21,
+    "mvl": 70084.35,
+    "ugl": -3623.86,
+    "uglp": -0.0491649437694932,
     "ind": "UTIL"
    },
    {
@@ -925,6 +1381,10 @@
     "name": "ROGERS COMMUNICATIONS INC CL B NON-VTG",
     "qty": 900,
     "mv": 46629,
+    "book": 52818.9,
+    "mvl": 46629,
+    "ugl": -6189.9,
+    "uglp": -0.117191005492352,
     "ind": "TCOM"
    },
    {
@@ -933,6 +1393,10 @@
     "name": "MANULIFE FINANCIAL CORP",
     "qty": 1900,
     "mv": 94696,
+    "book": 43177.13,
+    "mvl": 94696,
+    "ugl": 51518.87,
+    "uglp": 1.19319811205608,
     "ind": "NBNK"
    },
    {
@@ -941,6 +1405,10 @@
     "name": "CANADIAN NATURAL RESOURCES LTD",
     "qty": 2000,
     "mv": 92980,
+    "book": 35112.31,
+    "mvl": 92980,
+    "ugl": 57867.69,
+    "uglp": 1.64807413696222,
     "ind": "O&G"
    },
    {
@@ -949,6 +1417,10 @@
     "name": "CANADIAN UTILITIES LTD CL-A NON-VOTING SHARES",
     "qty": 821,
     "mv": 35081.33,
+    "book": 30169.55,
+    "mvl": 35081.33,
+    "ugl": 4911.78,
+    "uglp": 0.162805875460522,
     "ind": "UTIL"
    },
    {
@@ -957,6 +1429,10 @@
     "name": "JAMIESON WELLNESS INC COMMON",
     "qty": 2268,
     "mv": 76318.2,
+    "book": 60729.35,
+    "mvl": 76318.2,
+    "ugl": 15588.85,
+    "uglp": 0.256693839140382,
     "ind": "DISC"
    },
    {
@@ -965,6 +1441,10 @@
     "name": "TELUS CORPORATION",
     "qty": 1700,
     "mv": 30753,
+    "book": 41346.29,
+    "mvl": 30753,
+    "ugl": -10593.29,
+    "uglp": -0.256208960949096,
     "ind": "TCOM"
    },
    {
@@ -973,6 +1453,10 @@
     "name": "COSTCO WHOLESALE CORP-NEW",
     "qty": 160,
     "mv": 189293.97808,
+    "book": 48713.59,
+    "mvl": 137974.4,
+    "ugl": 89260.81,
+    "uglp": 1.83235951199654,
     "ind": "RTLR"
    },
    {
@@ -981,6 +1465,10 @@
     "name": "META PLATFORMS INC CLASS A COMMON STOCK",
     "qty": 270,
     "mv": 244514.82838499997,
+    "book": 58151.22,
+    "mvl": 178224.3,
+    "ugl": 120073.08,
+    "uglp": 2.06484197580033,
     "ind": "TECH"
    },
    {
@@ -989,6 +1477,10 @@
     "name": "MASTERCARD INCORPORATED",
     "qty": 145,
     "mv": 113566.72832000001,
+    "book": 14914.76,
+    "mvl": 82777.6,
+    "ugl": 67862.84,
+    "uglp": 4.55004572651521,
     "ind": "NBNK"
    },
    {
@@ -997,6 +1489,10 @@
     "name": "NORTHROP GRUMMAN CORP",
     "qty": 50,
     "mv": 39114.980475,
+    "book": 15362.45,
+    "mvl": 28510.5,
+    "ugl": 13148.05,
+    "uglp": 0.855856325000244,
     "ind": "INDS"
    },
    {
@@ -1005,6 +1501,10 @@
     "name": "BERKSHIRE HATHAWAY INC DEL CL B",
     "qty": 100,
     "mv": 69106.49345,
+    "book": 32086.28,
+    "mvl": 50371,
+    "ugl": 18284.72,
+    "uglp": 0.569861012245732,
     "ind": "NBNK"
    },
    {
@@ -1013,6 +1513,10 @@
     "name": "LOCKHEED MARTIN CORP",
     "qty": 50,
     "mv": 33178.552825,
+    "book": 15637.45,
+    "mvl": 24183.5,
+    "ugl": 8546.05,
+    "uglp": 0.546511739446009,
     "ind": "INDS"
    },
    {
@@ -1021,6 +1525,10 @@
     "name": "MICROSOFT CORP",
     "qty": 450,
     "mv": 298576.10655,
+    "book": 60763.9,
+    "mvl": 217629,
+    "ugl": 156865.1,
+    "uglp": 2.58155088794498,
     "ind": "TECH"
    },
    {
@@ -1029,6 +1537,10 @@
     "name": "DEERE & CO",
     "qty": 200,
     "mv": 127747.75230000001,
+    "book": 21481.9,
+    "mvl": 93114,
+    "ugl": 71632.1,
+    "uglp": 3.33453279272317,
     "ind": "INDS"
    },
    {
@@ -1037,6 +1549,10 @@
     "name": "VISA INC CL A COMMON STOCK",
     "qty": 300,
     "mv": 144346.97535,
+    "book": 16588.97,
+    "mvl": 105213,
+    "ugl": 88624.03,
+    "uglp": 5.34234675208888,
     "ind": "NBNK"
    },
    {
@@ -1045,6 +1561,10 @@
     "name": "HOME DEPOT INC",
     "qty": 100,
     "mv": 47208.7995,
+    "book": 16267.95,
+    "mvl": 34410,
+    "ugl": 18142.05,
+    "uglp": 1.11520197689321,
     "ind": "RTLR"
    },
    {
@@ -1053,6 +1573,10 @@
     "name": "JPMORGAN CHASE & CO",
     "qty": 500,
     "mv": 221034.8645,
+    "book": 69069.95,
+    "mvl": 161110,
+    "ugl": 92040.05,
+    "uglp": 1.33256285837763,
     "ind": "BANK"
    },
    {
@@ -1061,6 +1585,10 @@
     "name": "ALPHABET INC CLASS C CAPITAL STOCK",
     "qty": 800,
     "mv": 344414.328,
+    "book": 38387.06,
+    "mvl": 251040,
+    "ugl": 212652.94,
+    "uglp": 5.53970374391787,
     "ind": "TECH"
    },
    {
@@ -1069,6 +1597,10 @@
     "name": "MCDONALDS CORP",
     "qty": 250,
     "mv": 104827.269625,
+    "book": 55200.85,
+    "mvl": 76407.5,
+    "ugl": 21206.65,
+    "uglp": 0.384172526328851,
     "ind": "REST"
    },
    {
@@ -1077,6 +1609,10 @@
     "name": "FEDEX CORP",
     "qty": 150,
     "mv": 59445.22155,
+    "book": 36722.45,
+    "mvl": 43329,
+    "ugl": 6606.55,
+    "uglp": 0.179904935536708,
     "ind": "NBNK"
    },
    {
@@ -1085,6 +1621,10 @@
     "name": "APPLE INC",
     "qty": 540,
     "mv": 201408.29658,
+    "book": 20614.41,
+    "mvl": 146804.4,
+    "ugl": 126189.99,
+    "uglp": 6.12144562953778,
     "ind": "TECH"
    },
    {
@@ -1093,6 +1633,10 @@
     "name": "UNION PACIFIC CORP",
     "qty": 250,
     "mv": 79339.8685,
+    "book": 29602.66,
+    "mvl": 57830,
+    "ugl": 28227.34,
+    "uglp": 0.953540661548658,
     "ind": "TRANS"
    },
    {
@@ -1101,6 +1645,10 @@
     "name": "AMAZON.COM INC",
     "qty": 400,
     "mv": 126669.3996,
+    "book": 14016.99,
+    "mvl": 92328,
+    "ugl": 78311.01,
+    "uglp": 5.58686351349326,
     "ind": "RTLR"
    },
    {
@@ -1109,6 +1657,10 @@
     "name": "ABBVIE INC",
     "qty": 125,
     "mv": 39184.6069375,
+    "book": 12441.2,
+    "mvl": 28561.25,
+    "ugl": 16120.05,
+    "uglp": 1.29569896794521,
     "ind": "PHARM"
    },
    {
@@ -1117,6 +1669,10 @@
     "name": "LULULEMON ATHLETICA INC",
     "qty": 200,
     "mv": 57020.9859,
+    "book": 38113.89,
+    "mvl": 41562,
+    "ugl": 3448.11,
+    "uglp": 0.0904685929460362,
     "ind": "DISC"
    },
    {
@@ -1125,6 +1681,10 @@
     "name": "JOHNSON & JOHNSON COMMON STOCK",
     "qty": 200,
     "mv": 56785.0105,
+    "book": 18650.64,
+    "mvl": 41390,
+    "ugl": 22739.36,
+    "uglp": 1.21922679328966,
     "ind": "PHARM"
    },
    {
@@ -1133,6 +1693,10 @@
     "name": "EAGLE MATERIALS INC",
     "qty": 200,
     "mv": 56710.9252,
+    "book": 26999.95,
+    "mvl": 41336,
+    "ugl": 14336.05,
+    "uglp": 0.530965798084811,
     "ind": "MAT"
    },
    {
@@ -1141,6 +1705,10 @@
     "name": "HOWMET AEROSPACE INC COMMON STOCK",
     "qty": 370,
     "mv": 104072.55992999999,
+    "book": 10153.64,
+    "mvl": 75857.4,
+    "ugl": 65703.76,
+    "uglp": 6.47095622850524,
     "ind": "INDS"
    },
    {
@@ -1149,6 +1717,10 @@
     "name": "HONEYWELL INTL INC",
     "qty": 100,
     "mv": 26765.37255,
+    "book": 13411.95,
+    "mvl": 19509,
+    "ugl": 6097.05,
+    "uglp": 0.454598324628409,
     "ind": "TECH"
    },
    {
@@ -1157,6 +1729,10 @@
     "name": "MORGAN STANLEY",
     "qty": 320,
     "mv": 77939.93072,
+    "book": 53689.95,
+    "mvl": 56809.6,
+    "ugl": 3119.65,
+    "uglp": 0.058104915351942,
     "ind": "NBNK"
    },
    {
@@ -1165,6 +1741,10 @@
     "name": "AMERICAN TOWER CORPORATION REIT",
     "qty": 100,
     "mv": 24087.32615,
+    "book": 24144.95,
+    "mvl": 17557,
+    "ugl": -6587.95,
+    "uglp": -0.272850016255987,
     "ind": "TCOM"
    },
    {
@@ -1173,6 +1753,10 @@
     "name": "QUALCOMM INC",
     "qty": 130,
     "mv": 30507.366175,
+    "book": 9691.99,
+    "mvl": 22236.5,
+    "ugl": 12544.51,
+    "uglp": 1.29431726611356,
     "ind": "TECH"
    },
    {
@@ -1181,6 +1765,10 @@
     "name": "MARATHON PETE CORP COM",
     "qty": 300,
     "mv": 66936.06855,
+    "book": 15322.4,
+    "mvl": 48789,
+    "ugl": 33466.6,
+    "uglp": 2.18416175011747,
     "ind": "O&G"
    },
    {
@@ -1189,6 +1777,10 @@
     "name": "RAYMOND JAMES FINANCIAL INC",
     "qty": 751,
     "mv": 165461.4093255,
+    "book": 63450.31,
+    "mvl": 120603.09,
+    "ugl": 57152.78,
+    "uglp": 0.900748633064204,
     "ind": "NBNK"
    },
    {
@@ -1197,6 +1789,10 @@
     "name": "JOHNSON CONTROLS INTERNATIONAL PLC ORDINARY SHARES",
     "qty": 700,
     "mv": 115003.70875,
+    "book": 40280.24,
+    "mvl": 83825,
+    "ugl": 43544.76,
+    "uglp": 1.08104519734738,
     "ind": "INDS"
    },
    {
@@ -1205,6 +1801,10 @@
     "name": "WALMART INC COMMON STOCK",
     "qty": 1000,
     "mv": 152848.9495,
+    "book": 57886.22,
+    "mvl": 111410,
+    "ugl": 53523.78,
+    "uglp": 0.92463767715356,
     "ind": "RTLR"
    },
    {
@@ -1213,6 +1813,10 @@
     "name": "NEWMONT CORPORATION COMMON STOCK",
     "qty": 880,
     "mv": 120550.5026,
+    "book": 70249.43,
+    "mvl": 87868,
+    "ugl": 17618.57,
+    "uglp": 0.250800184428542,
     "ind": "MAT"
    },
    {
@@ -1221,6 +1825,10 @@
     "name": "COCA COLA COMPANY (THE)",
     "qty": 500,
     "mv": 47956.51225,
+    "book": 31054.95,
+    "mvl": 34955,
+    "ugl": 3900.05,
+    "uglp": 0.125585454170752,
     "ind": "DISC"
    },
    {
@@ -1229,6 +1837,10 @@
     "name": "DELTA AIR LINES INC DEL COM",
     "qty": 400,
     "mv": 38085.332,
+    "book": 20807.89,
+    "mvl": 27760,
+    "ugl": 6952.11,
+    "uglp": 0.334109321031589,
     "ind": "TRANS"
    },
    {
@@ -1237,6 +1849,10 @@
     "name": "FISERV INC COMMON STOCK",
     "qty": 200,
     "mv": 18430.7763,
+    "book": 23457.95,
+    "mvl": 13434,
+    "ugl": -10023.95,
+    "uglp": -0.427315686153308,
     "ind": "NBNK"
    },
    {
@@ -1245,6 +1861,10 @@
     "name": "NIKE INC CLASS B COM",
     "qty": 150,
     "mv": 13111.040175,
+    "book": 10172.16,
+    "mvl": 9556.5,
+    "ugl": -615.66,
+    "uglp": -0.0605240184975462,
     "ind": "RTLR"
    },
    {
@@ -1253,6 +1873,10 @@
     "name": "BANK OF AMERICA CORP",
     "qty": 630,
     "mv": 47538.0675,
+    "book": 18401.67,
+    "mvl": 34650,
+    "ugl": 16248.33,
+    "uglp": 0.88298127289534,
     "ind": "BANK"
    },
    {
@@ -1261,6 +1885,10 @@
     "name": "SOLSTICE ADVANCED MATERIALS INC COMMON STOCK",
     "qty": 25,
     "mv": 1666.233275,
+    "book": 1137,
+    "mvl": 1214.5,
+    "ugl": 77.5,
+    "uglp": 0.0681618293755496,
     "ind": "MAT"
    },
    {
@@ -1269,6 +1897,10 @@
     "name": "VERIZON COMMUNICATIONS",
     "qty": 400,
     "mv": 22351.8094,
+    "book": 20120.34,
+    "mvl": 16292,
+    "ugl": -3828.34,
+    "uglp": -0.190272132578276,
     "ind": "TCOM"
    },
    {
@@ -1277,6 +1909,10 @@
     "name": "FMC CORP NEW",
     "qty": 1182,
     "mv": 22492.214763,
+    "book": 49949.33,
+    "mvl": 16394.34,
+    "ugl": -33554.99,
+    "uglp": -0.671780582442247,
     "ind": "INDS"
    },
    {
@@ -1285,6 +1921,10 @@
     "name": "ALIBABA GROUP HOLDING LTD SPONSORED ADR",
     "qty": 100,
     "mv": 20110.0431,
+    "book": 9770.88,
+    "mvl": 14658,
+    "ugl": 4887.12,
+    "uglp": 0.500171939477304,
     "ind": "TECH"
    },
    {
@@ -1293,6 +1933,10 @@
     "name": "TENCENT HOLDINGS LIMITED UNSPONSORED ADR REPRESENTING B SHARES",
     "qty": 500,
     "mv": 52511.38625,
+    "book": 18562.8,
+    "mvl": 38275,
+    "ugl": 19712.2,
+    "uglp": 1.06191953800073,
     "ind": "DISC"
    },
    {
@@ -1301,6 +1945,10 @@
     "name": "TRIP.COM GROUP LIMITED AMERICAN DEPOSITARY SHARES",
     "qty": 675,
     "mv": 66593.4240375,
+    "book": 25253.87,
+    "mvl": 48539.25,
+    "ugl": 23285.38,
+    "uglp": 0.922051946889724,
     "ind": "DISC"
    },
    {
@@ -1309,6 +1957,10 @@
     "name": "AIRBUS SE AMERICAN DEPOSITARY RECEIPTS UNSPONSORED",
     "qty": 777,
     "mv": 61743.01828799999,
+    "book": 34628.4,
+    "mvl": 45003.84,
+    "ugl": 10375.44,
+    "uglp": 0.299622275357798,
     "ind": "INDS"
    },
    {
@@ -1317,6 +1969,10 @@
     "name": "LVMH MOET HENNESSY LOUIS VUITTON SA UNSPONSORED ADR",
     "qty": 425,
     "mv": 87974.9218,
+    "book": 28513.46,
+    "mvl": 64124,
+    "ugl": 35610.54,
+    "uglp": 1.24890279888866,
     "ind": "DISC"
    },
    {
@@ -1325,6 +1981,10 @@
     "name": "LYONDELLBASELL INDUSTRIES N V CL A",
     "qty": 200,
     "mv": 11881.087,
+    "book": 20757.27,
+    "mvl": 8660,
+    "ugl": -12097.27,
+    "uglp": -0.582796774334967,
     "ind": "INDS"
    },
    {
@@ -1333,6 +1993,10 @@
     "name": "HDFC BK LTD ADR REPSTG 3 SHS",
     "qty": 1176,
     "mv": 58954.118328000004,
+    "book": 35719.19,
+    "mvl": 42971.04,
+    "ugl": 7251.85,
+    "uglp": 0.203023920755201,
     "ind": "BANK"
    },
    {
@@ -1341,6 +2005,10 @@
     "name": "ICICI BANK LTD SPONSORED ADR",
     "qty": 1222,
     "mv": 49960.38242,
+    "book": 35202.69,
+    "mvl": 36415.6,
+    "ugl": 1212.91,
+    "uglp": 0.0344550373849271,
     "ind": "BANK"
    },
    {
@@ -1349,6 +2017,10 @@
     "name": "Embraer S A Adr Each Rep 4 Com Stk Shs",
     "qty": 602,
     "mv": 53164.077742999994,
+    "book": 30037.46,
+    "mvl": 38750.74,
+    "ugl": 8713.28,
+    "uglp": 0.29008045287451,
     "ind": "INDS"
    },
    {
@@ -1357,6 +2029,10 @@
     "name": "VALE S A SPONSORED ADR",
     "qty": 5550,
     "mv": 99214.622175,
+    "book": 67442.45,
+    "mvl": 72316.5,
+    "ugl": 4874.05,
+    "uglp": 0.0722697648142972,
     "ind": "MAT"
    },
    {
@@ -1365,6 +2041,10 @@
     "name": "Toyota Motor Corporation Ads",
     "qty": 80,
     "mv": 23494.36936,
+    "book": 9791.38,
+    "mvl": 17124.8,
+    "ugl": 7333.42,
+    "uglp": 0.748966948479172,
     "ind": "TRANS"
    },
    {
@@ -1373,6 +2053,10 @@
     "name": "Taiwan Semiconductor Mfg Co Ltd-Sponsored Adr Repstg 5 Com",
     "qty": 333,
     "mv": 138834.9878715,
+    "book": 60163.07,
+    "mvl": 101195.37,
+    "ugl": 41032.3,
+    "uglp": 0.68201805526214,
     "ind": "TECH"
    },
    {
@@ -1381,6 +2065,10 @@
     "name": "Wts Constellation Software Inc Exp 03/31/2040",
     "qty": 20,
     "mv": 0,
+    "book": 0.01,
+    "mvl": 0,
+    "ugl": -0.01,
+    "uglp": -1,
     "ind": "TECH"
    }
   ]
@@ -1394,6 +2082,10 @@
     "name": "Canadian Cash",
     "qty": 108695.15,
     "mv": 108695.15,
+    "book": 108695.15,
+    "mvl": 108695.15,
+    "ugl": null,
+    "uglp": null,
     "ind": "CASH"
    },
    {
@@ -1402,6 +2094,10 @@
     "name": "US Dollar Cash",
     "qty": 17422.68,
     "mv": 24258.468498,
+    "book": 17422.68,
+    "mvl": 17422.68,
+    "ugl": null,
+    "uglp": null,
     "ind": "CASH"
    },
    {
@@ -1410,6 +2106,10 @@
     "name": "Rbc Investment Savings Account Sr A (2010), $Cad Denominated",
     "qty": 107.177,
     "mv": 1071.77,
+    "book": 1071.77,
+    "mvl": 1071.77,
+    "ugl": 0,
+    "uglp": 0,
     "ind": "MMF"
    },
    {
@@ -1418,6 +2118,10 @@
     "name": "RBC U.S INVESTMENT SAVINGS ACCOUNT SR A U$ (2014)",
     "qty": 56.307,
     "mv": 783.9905145,
+    "book": 563.07,
+    "mvl": 563.07,
+    "ugl": 0,
+    "uglp": 0,
     "ind": "MMF"
    },
    {
@@ -1426,6 +2130,10 @@
     "name": "EQUITABLE BANK SR UNSECURED",
     "qty": 75000,
     "mv": 75284.25,
+    "book": 76420.08,
+    "mvl": 75284.25,
+    "ugl": -1135.83,
+    "uglp": -0.0148629784213782,
     "ind": "BOND"
    },
    {
@@ -1434,6 +2142,10 @@
     "name": "BROOKFIELD RENEWABLE PARTNR SR UNSECURED MTN",
     "qty": 102000,
     "mv": 100683.18,
+    "book": 99554.04,
+    "mvl": 100683.18,
+    "ugl": 1129.14,
+    "uglp": 0.0113419806971168,
     "ind": "BOND"
    },
    {
@@ -1442,6 +2154,10 @@
     "name": "PROVINCE OF SASKATCHEWAN MEDIUM TERM NOTE",
     "qty": 85000,
     "mv": 97076.8,
+    "book": 99848.95,
+    "mvl": 97076.8,
+    "ugl": -2772.15,
+    "uglp": -0.0277634366710916,
     "ind": "BOND"
    },
    {
@@ -1450,6 +2166,10 @@
     "name": "PROVINCE OF MANITOBA UNSECURED",
     "qty": 100000,
     "mv": 101966,
+    "book": 103867.92,
+    "mvl": 101966,
+    "ugl": -1901.92,
+    "uglp": -0.0183109472106498,
     "ind": "BOND"
    },
    {
@@ -1458,6 +2178,10 @@
     "name": "CU INC",
     "qty": 90000,
     "mv": 100008,
+    "book": 100318.73,
+    "mvl": 100008,
+    "ugl": -310.73,
+    "uglp": -0.00309742756910897,
     "ind": null
    },
    {
@@ -1466,6 +2190,10 @@
     "name": "General Mtrs Finl Co Inc Senior Unsecured",
     "qty": 45000,
     "mv": 63195.21600749999,
+    "book": 45187.5,
+    "mvl": 45387.45,
+    "ugl": 199.95,
+    "uglp": 0.00442489626556016,
     "ind": "BOND"
    },
    {
@@ -1474,6 +2202,10 @@
     "name": "Toronto Dominion Bank Sr Unsecured",
     "qty": 68000,
     "mv": 69951.329836,
+    "book": 50135.78,
+    "mvl": 50239.76,
+    "ugl": 103.98,
+    "uglp": 0.002073967932682,
     "ind": "BOND"
    },
    {
@@ -1482,6 +2214,10 @@
     "name": "United States Treasury Bond Stripped Int Pmt",
     "qty": 69685,
     "mv": 68722.4816168275,
+    "book": 45123.6,
+    "mvl": 49357.18865,
+    "ugl": 4233.58865,
+    "uglp": 0.0938220498807719,
     "ind": null
    },
    {
@@ -1490,6 +2226,10 @@
     "name": "SMARTCENTRES REAL ESTATE INVESTMENT TRUST VAR VTG UNIT",
     "qty": 2885,
     "mv": 79077.85,
+    "book": 78193.45,
+    "mvl": 79077.85,
+    "ugl": 884.4,
+    "uglp": 0.011310410270937,
     "ind": "REIT"
    },
    {
@@ -1498,6 +2238,10 @@
     "name": "DREAM INDL REAL ESTATE INVT TR TR UNIT",
     "qty": 3319,
     "mv": 43379.33,
+    "book": 38498.35,
+    "mvl": 43379.33,
+    "ugl": 4880.98,
+    "uglp": 0.126784134904482,
     "ind": "REIT"
    },
    {
@@ -1506,6 +2250,10 @@
     "name": "CONSTELLATION SOFTWARE INC",
     "qty": 20,
     "mv": 48825.4,
+    "book": 21809.95,
+    "mvl": 48825.4,
+    "ugl": 27015.45,
+    "uglp": 1.23867546693137,
     "ind": "TECH"
    },
    {
@@ -1514,6 +2262,10 @@
     "name": "ROYAL BANK OF CANADA",
     "qty": 1075,
     "mv": 244390.5,
+    "book": 172324.89,
+    "mvl": 244390.5,
+    "ugl": 72065.61,
+    "uglp": 0.418196175839717,
     "ind": "BANK"
    },
    {
@@ -1522,6 +2274,10 @@
     "name": "BANK OF MONTREAL",
     "qty": 600,
     "mv": 113784,
+    "book": 63947.23,
+    "mvl": 113784,
+    "ugl": 49836.77,
+    "uglp": 0.779342123185007,
     "ind": "BANK"
    },
    {
@@ -1530,6 +2286,10 @@
     "name": "CANADIAN NATIONAL RAILWAY CO",
     "qty": 400,
     "mv": 57972,
+    "book": 25612.68,
+    "mvl": 57972,
+    "ugl": 32359.32,
+    "uglp": 1.26341015465777,
     "ind": "TRANS"
    },
    {
@@ -1538,6 +2298,10 @@
     "name": "TORONTO-DOMINION BANK",
     "qty": 1000,
     "mv": 132510,
+    "book": 94243.72,
+    "mvl": 132510,
+    "ugl": 38266.28,
+    "uglp": 0.40603533052388,
     "ind": "BANK"
    },
    {
@@ -1546,6 +2310,10 @@
     "name": "NUTRIEN LTD COM",
     "qty": 750,
     "mv": 78840,
+    "book": 54860.62,
+    "mvl": 78840,
+    "ugl": 23979.38,
+    "uglp": 0.437096409045322,
     "ind": "MAT"
    },
    {
@@ -1554,6 +2322,10 @@
     "name": "WEST FRASER TIMBER CO LTD",
     "qty": 615,
     "mv": 55792.8,
+    "book": 31275.99,
+    "mvl": 55792.8,
+    "ugl": 24516.81,
+    "uglp": 0.783885977710058,
     "ind": "MAT"
    },
    {
@@ -1562,6 +2334,10 @@
     "name": "GROUPE DYNAMITE INC SUB VTG SH",
     "qty": 600,
     "mv": 48048,
+    "book": 44379.95,
+    "mvl": 48048,
+    "ugl": 3668.05,
+    "uglp": 0.0826510620223772,
     "ind": "RTLT"
    },
    {
@@ -1570,6 +2346,10 @@
     "name": "ALIMENTATION COUCHE-TARD INC COM",
     "qty": 600,
     "mv": 46980,
+    "book": 21852.95,
+    "mvl": 46980,
+    "ugl": 25127.05,
+    "uglp": 1.14982416561608,
     "ind": "RTLR"
    },
    {
@@ -1578,6 +2358,10 @@
     "name": "MAGNA INTERNATIONAL INC COM",
     "qty": 600,
     "mv": 46038,
+    "book": 39092.92,
+    "mvl": 46038,
+    "ugl": 6945.08,
+    "uglp": 0.177655698269661,
     "ind": "INDS"
    },
    {
@@ -1586,6 +2370,10 @@
     "name": "ENBRIDGE INC",
     "qty": 450,
     "mv": 33930,
+    "book": 19657.26,
+    "mvl": 33930,
+    "ugl": 14272.74,
+    "uglp": 0.726079830047524,
     "ind": "TRANS"
    },
    {
@@ -1594,6 +2382,10 @@
     "name": "EMERA INC",
     "qty": 400,
     "mv": 29328,
+    "book": 16089.9,
+    "mvl": 29328,
+    "ugl": 13238.1,
+    "uglp": 0.822758376372755,
     "ind": "UTIL"
    },
    {
@@ -1602,6 +2394,10 @@
     "name": "CAPITAL POWER CORPORATION",
     "qty": 1197,
     "mv": 79385.04,
+    "book": 73708.21,
+    "mvl": 79385.04,
+    "ugl": 5676.83,
+    "uglp": 0.0770176076721982,
     "ind": "UTIL"
    },
    {
@@ -1610,6 +2406,10 @@
     "name": "CANADIAN NATURAL RESOURCES LTD",
     "qty": 2000,
     "mv": 132300,
+    "book": 35112.31,
+    "mvl": 132300,
+    "ugl": 97187.69,
+    "uglp": 2.76790931727362,
     "ind": "O&G"
    },
    {
@@ -1618,6 +2418,10 @@
     "name": "TOURMALINE OIL CORP",
     "qty": 1450,
     "mv": 93264,
+    "book": 87439.9,
+    "mvl": 93264,
+    "ugl": 5824.1,
+    "uglp": 0.0666068922768667,
     "ind": "O&G"
    },
    {
@@ -1626,6 +2430,10 @@
     "name": "BARRICK MNG CORP COM",
     "qty": 500,
     "mv": 29020,
+    "book": 14340.38,
+    "mvl": 29020,
+    "ugl": 14679.62,
+    "uglp": 1.02365627689084,
     "ind": "MAT"
    },
    {
@@ -1634,6 +2442,10 @@
     "name": "CANADIAN UTILITIES LTD CL-A NON-VOTING SHARES",
     "qty": 821,
     "mv": 40762.65,
+    "book": 30169.55,
+    "mvl": 40762.65,
+    "ugl": 10593.1,
+    "uglp": 0.351118926202081,
     "ind": "UTIL"
    },
    {
@@ -1642,6 +2454,10 @@
     "name": "ROGERS COMMUNICATIONS INC CL B NON-VTG",
     "qty": 900,
     "mv": 43884,
+    "book": 52818.9,
+    "mvl": 43884,
+    "ugl": -8934.9,
+    "uglp": -0.169161038946286,
     "ind": "TCOM"
    },
    {
@@ -1650,6 +2466,10 @@
     "name": "MANULIFE FINANCIAL CORP",
     "qty": 1900,
     "mv": 92283,
+    "book": 43177.13,
+    "mvl": 92283,
+    "ugl": 49105.87,
+    "uglp": 1.13731204459397,
     "ind": "NBF"
    },
    {
@@ -1658,6 +2478,10 @@
     "name": "JAMIESON WELLNESS INC COMMON",
     "qty": 2268,
     "mv": 78518.16,
+    "book": 60729.35,
+    "mvl": 78518.16,
+    "ugl": 17788.81,
+    "uglp": 0.292919486212185,
     "ind": "DISC"
    },
    {
@@ -1666,6 +2490,10 @@
     "name": "ROCKPOINT GAS STORAGE INC CL A",
     "qty": 2450,
     "mv": 64753.5,
+    "book": 65963.95,
+    "mvl": 64753.5,
+    "ugl": -1210.45,
+    "uglp": -0.018350174602946,
     "ind": "O&G"
    },
    {
@@ -1674,6 +2502,10 @@
     "name": "COSTCO WHOLESALE CORP-NEW",
     "qty": 160,
     "mv": 226108.72896,
+    "book": 48713.59,
+    "mvl": 162393.6,
+    "ugl": 113680.01,
+    "uglp": 2.33364057134774,
     "ind": "RTLR"
    },
    {
@@ -1682,6 +2514,10 @@
     "name": "ELI LILLY & CO",
     "qty": 60,
     "mv": 78159.28878,
+    "book": 54159.95,
+    "mvl": 56134.8,
+    "ugl": 1974.85,
+    "uglp": 0.0364632906788134,
     "ind": "PHRM"
    },
    {
@@ -1690,6 +2526,10 @@
     "name": "NORTHROP GRUMMAN CORP",
     "qty": 50,
     "mv": 48906.29375,
+    "book": 15362.45,
+    "mvl": 35125,
+    "ugl": 19762.55,
+    "uglp": 1.28641915840246,
     "ind": "INDS"
    },
    {
@@ -1698,6 +2538,10 @@
     "name": "LOCKHEED MARTIN CORP",
     "qty": 50,
     "mv": 43357.082825,
+    "book": 15637.45,
+    "mvl": 31139.5,
+    "ugl": 15502.05,
+    "uglp": 0.991341299252755,
     "ind": "INDS"
    },
    {
@@ -1706,6 +2550,10 @@
     "name": "DEERE & CO",
     "qty": 200,
     "mv": 160317.9637,
+    "book": 21481.9,
+    "mvl": 115142,
+    "ugl": 93660.1,
+    "uglp": 4.35995419399587,
     "ind": "INDS"
    },
    {
@@ -1714,6 +2562,10 @@
     "name": "META PLATFORMS INC CLASS A COMMON STOCK",
     "qty": 270,
     "mv": 215959.33287,
+    "book": 58151.22,
+    "mvl": 155104.2,
+    "ugl": 96952.98,
+    "uglp": 1.66725616418709,
     "ind": "TECH"
    },
    {
@@ -1722,6 +2574,10 @@
     "name": "MASTERCARD INCORPORATED",
     "qty": 245,
     "mv": 168325.09008,
+    "book": 66379.71,
+    "mvl": 120892.8,
+    "ugl": 54513.09,
+    "uglp": 0.821231216587116,
     "ind": "NBF"
    },
    {
@@ -1730,6 +2586,10 @@
     "name": "BERKSHIRE HATHAWAY INC DEL CL B",
     "qty": 100,
     "mv": 66463.82725,
+    "book": 32086.28,
+    "mvl": 47735,
+    "ugl": 15648.72,
+    "uglp": 0.487707518602966,
     "ind": "NBF"
    },
    {
@@ -1738,6 +2598,10 @@
     "name": "MICROSOFT CORP",
     "qty": 450,
     "mv": 233994.16395,
+    "book": 60763.9,
+    "mvl": 168057,
+    "ugl": 107293.1,
+    "uglp": 1.76573755140799,
     "ind": "TECH"
    },
    {
@@ -1746,6 +2610,10 @@
     "name": "HOME DEPOT INC",
     "qty": 100,
     "mv": 44782.15305,
+    "book": 16267.95,
+    "mvl": 32163,
+    "ugl": 15895.05,
+    "uglp": 0.977077628096963,
     "ind": "RTLR"
    },
    {
@@ -1754,6 +2622,10 @@
     "name": "MCDONALDS CORP",
     "qty": 250,
     "mv": 106911.59475,
+    "book": 55200.85,
+    "mvl": 76785,
+    "ugl": 21584.15,
+    "uglp": 0.391011189139297,
     "ind": "REST"
    },
    {
@@ -1762,6 +2634,10 @@
     "name": "VISA INC CL A COMMON STOCK",
     "qty": 300,
     "mv": 125645.664,
+    "book": 16588.97,
+    "mvl": 90240,
+    "ugl": 73651.03,
+    "uglp": 4.43975906882705,
     "ind": "NBF"
    },
    {
@@ -1770,6 +2646,10 @@
     "name": "JPMORGAN CHASE & CO",
     "qty": 500,
     "mv": 205093.155,
+    "book": 69069.95,
+    "mvl": 147300,
+    "ugl": 78230.05,
+    "uglp": 1.13262062590171,
     "ind": "BANK"
    },
    {
@@ -1778,6 +2658,10 @@
     "name": "ALPHABET INC CLASS C CAPITAL STOCK",
     "qty": 800,
     "mv": 327993.1048,
+    "book": 38387.06,
+    "mvl": 235568,
+    "ugl": 197180.94,
+    "uglp": 5.13665125696002,
     "ind": "TECH"
    },
    {
@@ -1786,6 +2670,10 @@
     "name": "APPLE INC",
     "qty": 270,
     "mv": 96209.15723999999,
+    "book": 10307.2,
+    "mvl": 69098.4,
+    "ugl": 58791.2,
+    "uglp": 5.70389630549518,
     "ind": "TECH"
    },
    {
@@ -1794,6 +2682,10 @@
     "name": "UNION PACIFIC CORP",
     "qty": 250,
     "mv": 85180.492125,
+    "book": 29602.66,
+    "mvl": 61177.5,
+    "ugl": 31574.84,
+    "uglp": 1.06662171575121,
     "ind": "TRANS"
    },
    {
@@ -1802,6 +2694,10 @@
     "name": "JOHNSON & JOHNSON COMMON STOCK",
     "qty": 200,
     "mv": 67679.34879999999,
+    "book": 18650.64,
+    "mvl": 48608,
+    "ugl": 29957.36,
+    "uglp": 1.60623764117478,
     "ind": "PHRM"
    },
    {
@@ -1810,6 +2706,10 @@
     "name": "HOWMET AEROSPACE INC COMMON STOCK",
     "qty": 370,
     "mv": 119869.63926000001,
+    "book": 10153.64,
+    "mvl": 86091.6,
+    "ugl": 75937.96,
+    "uglp": 7.47889032898546,
     "ind": "INDS"
    },
    {
@@ -1818,6 +2718,10 @@
     "name": "HONEYWELL INTL INC",
     "qty": 100,
     "mv": 31947.47075,
+    "book": 13411.95,
+    "mvl": 22945,
+    "ugl": 9533.05,
+    "uglp": 0.71078776762514,
     "ind": "TECH"
    },
    {
@@ -1826,6 +2730,10 @@
     "name": "AMAZON.COM INC",
     "qty": 400,
     "mv": 116829.3038,
+    "book": 14016.99,
+    "mvl": 83908,
+    "ugl": 69891.01,
+    "uglp": 4.98616393391163,
     "ind": "RTLR"
    },
    {
@@ -1834,6 +2742,10 @@
     "name": "ABBVIE INC",
     "qty": 125,
     "mv": 36347.29675,
+    "book": 12441.2,
+    "mvl": 26105,
+    "ugl": 13663.8,
+    "uglp": 1.09827026331865,
     "ind": "PHRM"
    },
    {
@@ -1842,6 +2754,10 @@
     "name": "EAGLE MATERIALS INC",
     "qty": 200,
     "mv": 52341.2212,
+    "book": 26999.95,
+    "mvl": 37592,
+    "ugl": 10592.05,
+    "uglp": 0.392298874627545,
     "ind": "MAT"
    },
    {
@@ -1850,6 +2766,10 @@
     "name": "NVIDIA CORP",
     "qty": 375,
     "mv": 92620.86243749999,
+    "book": 71822.45,
+    "mvl": 66521.25,
+    "ugl": -5301.2,
+    "uglp": -0.0738097906713012,
     "ind": "TECH"
    },
    {
@@ -1858,6 +2778,10 @@
     "name": "MORGAN STANLEY",
     "qty": 320,
     "mv": 73876.97712,
+    "book": 53689.95,
+    "mvl": 53059.2,
+    "ugl": -630.75,
+    "uglp": -0.0117480087055398,
     "ind": "BANK"
    },
    {
@@ -1866,6 +2790,10 @@
     "name": "TJX COMPANIES INC NEW",
     "qty": 300,
     "mv": 67371.63945,
+    "book": 46905.95,
+    "mvl": 48387,
+    "ugl": 1481.05,
+    "uglp": 0.0315748854889411,
     "ind": "RTLR"
    },
    {
@@ -1874,6 +2802,10 @@
     "name": "EXXON MOBIL CORP",
     "qty": 760,
     "mv": 170039.90834,
+    "book": 115149.95,
+    "mvl": 122124.4,
+    "ugl": 6974.45,
+    "uglp": 0.0605684153575403,
     "ind": "O&G"
    },
    {
@@ -1882,6 +2814,10 @@
     "name": "LULULEMON ATHLETICA INC",
     "qty": 200,
     "mv": 43363.3484,
+    "book": 38113.89,
+    "mvl": 31144,
+    "ugl": -6969.89,
+    "uglp": -0.182870077024412,
     "ind": "DISC"
    },
    {
@@ -1890,6 +2826,10 @@
     "name": "RAYMOND JAMES FINANCIAL INC",
     "qty": 751,
     "mv": 148692.11967,
+    "book": 63450.31,
+    "mvl": 106792.2,
+    "ugl": 43341.89,
+    "uglp": 0.683083975476242,
     "ind": "NBF"
    },
    {
@@ -1898,6 +2838,10 @@
     "name": "NEWMONT CORPORATION COMMON STOCK",
     "qty": 880,
     "mv": 139741.8154,
+    "book": 70249.43,
+    "mvl": 100364,
+    "ugl": 30114.57,
+    "uglp": 0.428680631287684,
     "ind": "MAT"
    },
    {
@@ -1906,6 +2850,10 @@
     "name": "COCA COLA COMPANY (THE)",
     "qty": 500,
     "mv": 53410.546,
+    "book": 31054.95,
+    "mvl": 38360,
+    "ugl": 7305.05,
+    "uglp": 0.235229810384495,
     "ind": "DISC"
    },
    {
@@ -1914,6 +2862,10 @@
     "name": "SOLSTICE ADVANCED MATERIALS INC COMMON STOCK",
     "qty": 25,
     "mv": 2660.084675,
+    "book": 1137,
+    "mvl": 1910.5,
+    "ugl": 773.5,
+    "uglp": 0.680299032541776,
     "ind": "INDS"
    },
    {
@@ -1922,6 +2874,10 @@
     "name": "DELTA AIR LINES INC DEL COM",
     "qty": 400,
     "mv": 37181.3144,
+    "book": 20807.89,
+    "mvl": 26704,
+    "ugl": 5896.11,
+    "uglp": 0.283359341096093,
     "ind": "TRANS"
    },
    {
@@ -1930,6 +2886,10 @@
     "name": "VERIZON COMMUNICATIONS",
     "qty": 400,
     "mv": 27512.836,
+    "book": 20120.34,
+    "mvl": 19760,
+    "ugl": -360.34,
+    "uglp": -0.0179092401023044,
     "ind": "TCOM"
    },
    {
@@ -1938,6 +2898,10 @@
     "name": "BANK OF AMERICA CORP",
     "qty": 630,
     "mv": 43315.173090000004,
+    "book": 18401.67,
+    "mvl": 31109.4,
+    "ugl": 12707.73,
+    "uglp": 0.69057482282858,
     "ind": "BANK"
    },
    {
@@ -1946,6 +2910,10 @@
     "name": "NIKE INC CLASS B COM",
     "qty": 150,
     "mv": 9229.191975,
+    "book": 10172.16,
+    "mvl": 6628.5,
+    "ugl": -3543.66,
+    "uglp": -0.34836848810872,
     "ind": "RTLR"
    },
    {
@@ -1954,6 +2922,10 @@
     "name": "FMC CORP NEW",
     "qty": 1182,
     "mv": 29212.199174999998,
+    "book": 49949.33,
+    "mvl": 20980.5,
+    "ugl": -28968.83,
+    "uglp": -0.579964335857958,
     "ind": "INDS"
    },
    {
@@ -1962,6 +2934,10 @@
     "name": "ALIBABA GROUP HOLDING LTD SPONSORED ADR",
     "qty": 100,
     "mv": 16993.63175,
+    "book": 9770.88,
+    "mvl": 12205,
+    "ugl": 2434.12,
+    "uglp": 0.249119833628086,
     "ind": "TECH"
    },
    {
@@ -1970,6 +2946,10 @@
     "name": "TENCENT HOLDINGS LIMITED UNSPONSORED ADR REPRESENTING B SHARES",
     "qty": 500,
     "mv": 43350.81725,
+    "book": 18562.8,
+    "mvl": 31135,
+    "ugl": 12572.2,
+    "uglp": 0.67727928976232,
     "ind": "DISC"
    },
    {
@@ -1978,6 +2958,10 @@
     "name": "TRIP.COM GROUP LIMITED AMERICAN DEPOSITARY SHARES",
     "qty": 675,
     "mv": 47442.933899999996,
+    "book": 25253.87,
+    "mvl": 34074,
+    "ugl": 8820.13,
+    "uglp": 0.349258549283733,
     "ind": "DISC"
    },
    {
@@ -1986,6 +2970,10 @@
     "name": "AIRBUS SE AMERICAN DEPOSITARY RECEIPTS UNSPONSORED",
     "qty": 777,
     "mv": 51669.440171999995,
+    "book": 34628.4,
+    "mvl": 37109.52,
+    "ugl": 2481.12,
+    "uglp": 0.0716498596527705,
     "ind": "INDS"
    },
    {
@@ -1994,6 +2982,10 @@
     "name": "LVMH MOET HENNESSY LOUIS VUITTON SA UNSPONSORED ADR",
     "qty": 425,
     "mv": 64376.3465125,
+    "book": 28513.46,
+    "mvl": 46235.75,
+    "ugl": 17722.29,
+    "uglp": 0.621541194930394,
     "ind": "DISC"
    },
    {
@@ -2002,6 +2994,10 @@
     "name": "ICICI BANK LTD SPONSORED ADR",
     "qty": 1222,
     "mv": 43574.178037,
+    "book": 35202.69,
+    "mvl": 31295.42,
+    "ugl": -3907.27,
+    "uglp": -0.110993506462148,
     "ind": "BANK"
    },
    {
@@ -2010,6 +3006,10 @@
     "name": "HDFC BK LTD ADR REPSTG 3 SHS",
     "qty": 300,
     "mv": 10371.61515,
+    "book": 9112.04,
+    "mvl": 7449,
+    "ugl": -1663.04,
+    "uglp": -0.182510173353058,
     "ind": "BANK"
    },
    {
@@ -2018,6 +3018,10 @@
     "name": "EMBRAER S A ADR EACH REP 4 COM STK SHS",
     "qty": 1882,
     "mv": 164456.473452,
+    "book": 102687.41,
+    "mvl": 118114.32,
+    "ugl": 15426.91,
+    "uglp": 0.150231756746031,
     "ind": "INDS"
    },
    {
@@ -2026,6 +3030,10 @@
     "name": "VALE S A SPONSORED ADR",
     "qty": 5550,
     "mv": 125108.913075,
+    "book": 67442.45,
+    "mvl": 89854.5,
+    "ugl": 22412.05,
+    "uglp": 0.332313698568186,
     "ind": "INDS"
    },
    {
@@ -2034,6 +3042,10 @@
     "name": "Toyota Motor Corporation Ads",
     "qty": 80,
     "mv": 23058.42988,
+    "book": 9791.38,
+    "mvl": 16560.8,
+    "ugl": 6769.42,
+    "uglp": 0.691365262097886,
     "ind": "TRANS"
    },
    {
@@ -2042,6 +3054,10 @@
     "name": "Taiwan Semiconductor Mfg Co Ltd-Sponsored Adr Repstg 5 Com",
     "qty": 333,
     "mv": 157196.76055200002,
+    "book": 60163.07,
+    "mvl": 112900.32,
+    "ugl": 52737.25,
+    "uglp": 0.876571790635019,
     "ind": "TECH"
    },
    {
@@ -2050,6 +3066,10 @@
     "name": "KT CORP SPONSORED ADR",
     "qty": 1500,
     "mv": 44903.2875,
+    "book": 35000.4,
+    "mvl": 32250,
+    "ugl": -2750.4,
+    "uglp": -0.0785819590633249,
     "ind": "TCOM"
    },
    {
@@ -2058,6 +3078,10 @@
     "name": "Wts Constellation Software Inc Exp 03/31/2040",
     "qty": 20,
     "mv": 0,
+    "book": 0.01,
+    "mvl": 0,
+    "ugl": -0.01,
+    "uglp": -1,
     "ind": "TECH"
    }
   ]
@@ -2071,6 +3095,10 @@
     "name": "Canadian Cash",
     "qty": 18907.24,
     "mv": 18907.24,
+    "book": 18907.24,
+    "mvl": 18907.24,
+    "ugl": null,
+    "uglp": null,
     "ind": "CASH"
    },
    {
@@ -2079,6 +3107,10 @@
     "name": "US Dollar Cash",
     "qty": 41255.04,
     "mv": 57173.297184,
+    "book": 41255.04,
+    "mvl": 41255.04,
+    "ugl": null,
+    "uglp": null,
     "ind": "CASH"
    },
    {
@@ -2087,6 +3119,10 @@
     "name": "Rbc Investment Savings Account Sr A (2010)",
     "qty": 3818.796,
     "mv": 38187.96,
+    "book": 38187.96,
+    "mvl": 38187.96,
+    "ugl": 0,
+    "uglp": 0,
     "ind": "MMF"
    },
    {
@@ -2095,6 +3131,10 @@
     "name": "Rbc U.S Investment Savings Account Sr A U$ (2014)",
     "qty": 419.47,
     "mv": 5813.224995000001,
+    "book": 4194.700000000001,
+    "mvl": 4194.700000000001,
+    "ugl": 0,
+    "uglp": 0,
     "ind": "MMF"
    },
    {
@@ -2103,6 +3143,10 @@
     "name": "Province Of Saskatchewan Medium Term Note",
     "qty": 85000,
     "mv": 95844.3,
+    "book": 99848.95,
+    "mvl": 95844.3,
+    "ugl": -4004.65,
+    "uglp": -0.0401070817469788,
     "ind": "BOND"
    },
    {
@@ -2111,6 +3155,10 @@
     "name": "Cu Inc",
     "qty": 90000,
     "mv": 98587.8,
+    "book": 100318.73,
+    "mvl": 98587.8,
+    "ugl": -1730.93,
+    "uglp": -0.0172543053525498,
     "ind": null
    },
    {
@@ -2119,6 +3167,10 @@
     "name": "Province Of Manitoba Unsecured",
     "qty": 100000,
     "mv": 101058,
+    "book": 103867.92,
+    "mvl": 101058,
+    "ugl": -2809.92,
+    "uglp": -0.0270528186181065,
     "ind": "BOND"
    },
    {
@@ -2127,6 +3179,10 @@
     "name": "Equitable Bank Sr Unsecured",
     "qty": 75000,
     "mv": 75286.5,
+    "book": 76420.08,
+    "mvl": 75286.5,
+    "ugl": -1133.58,
+    "uglp": -0.0148335358978948,
     "ind": "BOND"
    },
    {
@@ -2135,6 +3191,10 @@
     "name": "Brookfield Renewable Partnr Sr Unsecured Mtn",
     "qty": 102000,
     "mv": 100473.06,
+    "book": 99554.04,
+    "mvl": 100473.06,
+    "ugl": 919.02,
+    "uglp": 0.00923136820966783,
     "ind": "BOND"
    },
    {
@@ -2143,6 +3203,10 @@
     "name": "General Mtrs Finl Co Inc Senior Unsecured",
     "qty": 45000,
     "mv": 62705.6242425,
+    "book": 45187.5,
+    "mvl": 45247.05,
+    "ugl": 59.55,
+    "uglp": 0.00131784232365145,
     "ind": "BOND"
    },
    {
@@ -2151,6 +3215,10 @@
     "name": "Toronto Dominion Bank Sr Unsecured",
     "qty": 68000,
     "mv": 69602.154324,
+    "book": 50135.78,
+    "mvl": 50223.44,
+    "ugl": 87.66,
+    "uglp": 0.00174845190400947,
     "ind": "BOND"
    },
    {
@@ -2159,6 +3227,10 @@
     "name": "United States Treasury Bond Stripped Int Pmt",
     "qty": 69685,
     "mv": 67067.0216214075,
+    "book": 45123.6,
+    "mvl": 48394.14195,
+    "ugl": 3270.54195,
+    "uglp": 0.0724796326091003,
     "ind": null
    },
    {
@@ -2167,6 +3239,10 @@
     "name": "Smartcentres Real Estate Investment Trust Var Vtg Unit",
     "qty": 2885,
     "mv": 79279.8,
+    "book": 78193.45,
+    "mvl": 79279.8,
+    "ugl": 1086.35,
+    "uglp": 0.0138931074150072,
     "ind": "REIT"
    },
    {
@@ -2175,6 +3251,10 @@
     "name": "Dream Indl Real Estate Invt Tr Tr Unit",
     "qty": 3319,
     "mv": 45105.21,
+    "book": 37815.25,
+    "mvl": 45105.21,
+    "ugl": 7289.96,
+    "uglp": 0.19277831033776,
     "ind": "REIT"
    },
    {
@@ -2183,6 +3263,10 @@
     "name": "Royal Bank Of Canada",
     "qty": 1075,
     "mv": 304655,
+    "book": 172324.89,
+    "mvl": 304655,
+    "ugl": 132330.11,
+    "uglp": 0.767910601886935,
     "ind": "BANK"
    },
    {
@@ -2191,6 +3275,10 @@
     "name": "Bank Of Montreal",
     "qty": 600,
     "mv": 141744,
+    "book": 63947.23,
+    "mvl": 141744,
+    "ugl": 77796.77,
+    "uglp": 1.21657763753019,
     "ind": "BANK"
    },
    {
@@ -2199,6 +3287,10 @@
     "name": "Canadian National Railway Co",
     "qty": 400,
     "mv": 69220,
+    "book": 25612.68,
+    "mvl": 69220,
+    "ugl": 43607.32,
+    "uglp": 1.70256763446855,
     "ind": "TRANS"
    },
    {
@@ -2207,6 +3299,10 @@
     "name": "Toronto-Dominion Bank",
     "qty": 1000,
     "mv": 167670,
+    "book": 94243.72,
+    "mvl": 167670,
+    "ugl": 73426.28,
+    "uglp": 0.779110586891094,
     "ind": "BANK"
    },
    {
@@ -2215,6 +3311,10 @@
     "name": "Nutrien Ltd Com",
     "qty": 750,
     "mv": 78405,
+    "book": 54860.62,
+    "mvl": 78405,
+    "ugl": 23544.38,
+    "uglp": 0.429167224140011,
     "ind": "MAT"
    },
    {
@@ -2223,6 +3323,10 @@
     "name": "West Fraser Timber Co Ltd",
     "qty": 615,
     "mv": 58080.6,
+    "book": 31275.99,
+    "mvl": 58080.6,
+    "ugl": 26804.61,
+    "uglp": 0.857034741346317,
     "ind": "MAT"
    },
    {
@@ -2231,6 +3335,10 @@
     "name": "Magna International Inc Com",
     "qty": 600,
     "mv": 54600,
+    "book": 39092.92,
+    "mvl": 54600,
+    "ugl": 15507.08,
+    "uglp": 0.396672338622952,
     "ind": "INDS"
    },
    {
@@ -2239,6 +3347,10 @@
     "name": "Alimentation Couche-Tard Inc Com",
     "qty": 600,
     "mv": 50082,
+    "book": 21852.95,
+    "mvl": 50082,
+    "ugl": 28229.05,
+    "uglp": 1.29177296429086,
     "ind": "RTLR"
    },
    {
@@ -2247,6 +3359,10 @@
     "name": "Enbridge Inc",
     "qty": 450,
     "mv": 31599,
+    "book": 19657.26,
+    "mvl": 31599,
+    "ugl": 11941.74,
+    "uglp": 0.60749768787715,
     "ind": "O&G"
    },
    {
@@ -2255,6 +3371,10 @@
     "name": "Emera Inc",
     "qty": 400,
     "mv": 27804,
+    "book": 16089.9,
+    "mvl": 27804,
+    "ugl": 11714.1,
+    "uglp": 0.728040572035873,
     "ind": "UTIL"
    },
    {
@@ -2263,6 +3383,10 @@
     "name": "Canadian Natural Resources Ltd",
     "qty": 2000,
     "mv": 138980,
+    "book": 35112.31,
+    "mvl": 138980,
+    "ugl": 103867.69,
+    "uglp": 2.95815598574972,
     "ind": "O&G"
    },
    {
@@ -2271,6 +3395,10 @@
     "name": "Capital Power Corporation",
     "qty": 1197,
     "mv": 76404.51,
+    "book": 73708.21,
+    "mvl": 76404.51,
+    "ugl": 2696.3,
+    "uglp": 0.03658072825266,
     "ind": "UTIL"
    },
    {
@@ -2279,6 +3407,10 @@
     "name": "Groupe Dynamite Inc Sub Vtg Sh",
     "qty": 1000,
     "mv": 63270,
+    "book": 79019.9,
+    "mvl": 63270,
+    "ugl": -15749.9,
+    "uglp": -0.19931561543358,
     "ind": "RTLR"
    },
    {
@@ -2287,6 +3419,10 @@
     "name": "Tourmaline Oil Corp",
     "qty": 1450,
     "mv": 91553,
+    "book": 87439.9,
+    "mvl": 91553,
+    "ugl": 4113.1,
+    "uglp": 0.0470391663302451,
     "ind": "O&G"
    },
    {
@@ -2295,6 +3431,10 @@
     "name": "Barrick Mng Corp Com",
     "qty": 500,
     "mv": 31080,
+    "book": 14340.38,
+    "mvl": 31080,
+    "ugl": 16739.62,
+    "uglp": 1.16730658462328,
     "ind": "MAT"
    },
    {
@@ -2303,6 +3443,10 @@
     "name": "Manulife Financial Corp",
     "qty": 1900,
     "mv": 111701,
+    "book": 43177.13,
+    "mvl": 111701,
+    "ugl": 68523.87,
+    "uglp": 1.58704087094255,
     "ind": "NBF"
    },
    {
@@ -2311,6 +3455,10 @@
     "name": "Canadian Utilities Ltd Cl-A Non-Voting Shares",
     "qty": 821,
     "mv": 42609.9,
+    "book": 30169.55,
+    "mvl": 42609.9,
+    "ugl": 12440.35,
+    "uglp": 0.412347880561692,
     "ind": "UTIL"
    },
    {
@@ -2319,6 +3467,10 @@
     "name": "Rogers Communications Inc Cl B Non-Vtg",
     "qty": 900,
     "mv": 46017,
+    "book": 52818.9,
+    "mvl": 46017,
+    "ugl": -6801.9,
+    "uglp": -0.128777767049294,
     "ind": "TCOM"
    },
    {
@@ -2327,6 +3479,10 @@
     "name": "Jamieson Wellness Inc Common",
     "qty": 2268,
     "mv": 103670.28,
+    "book": 60729.35,
+    "mvl": 103670.28,
+    "ugl": 42940.93,
+    "uglp": 0.70708693572383,
     "ind": "DISC"
    },
    {
@@ -2335,6 +3491,10 @@
     "name": "Rockpoint Gas Storage Inc Cl A",
     "qty": 2450,
     "mv": 63112,
+    "book": 65963.95,
+    "mvl": 63112,
+    "ugl": -2851.95,
+    "uglp": -0.0432349791060116,
     "ind": "O&G"
    },
    {
@@ -2343,6 +3503,10 @@
     "name": "Denison Mines Corp",
     "qty": 10000,
     "mv": 47100,
+    "book": 45835.9,
+    "mvl": 47100,
+    "ugl": 1264.1,
+    "uglp": 0.0275788192224871,
     "ind": "MAT"
    },
    {
@@ -2351,6 +3515,10 @@
     "name": "Asml Holding N V N Y Registry Shs 2012",
     "qty": 26,
     "mv": 61110.801921000006,
+    "book": 35254.45,
+    "mvl": 44096.26,
+    "ugl": 8841.81,
+    "uglp": 0.250799828106806,
     "ind": "TECH"
    },
    {
@@ -2359,6 +3527,10 @@
     "name": "Eli Lilly & Co",
     "qty": 60,
     "mv": 96183.25623,
+    "book": 54159.95,
+    "mvl": 69403.8,
+    "ugl": 15243.85,
+    "uglp": 0.28145982409511,
     "ind": "PHRM"
    },
    {
@@ -2367,6 +3539,10 @@
     "name": "Costco Wholesale Corp-New",
     "qty": 160,
     "mv": 209294.39304,
+    "book": 48713.59,
+    "mvl": 151022.4,
+    "ugl": 102308.81,
+    "uglp": 2.10021084465341,
     "ind": "RTLR"
    },
    {
@@ -2375,6 +3551,10 @@
     "name": "Deere & Co",
     "qty": 200,
     "mv": 181521.4047,
+    "book": 21481.9,
+    "mvl": 130982,
+    "ugl": 109500.1,
+    "uglp": 5.09731913843747,
     "ind": "INDS"
    },
    {
@@ -2383,6 +3563,10 @@
     "name": "Mastercard Incorporated",
     "qty": 245,
     "mv": 200090.33955750003,
+    "book": 66379.71,
+    "mvl": 144380.95,
+    "ugl": 78001.24,
+    "uglp": 1.17507654070799,
     "ind": "NBF"
    },
    {
@@ -2391,6 +3575,10 @@
     "name": "Meta Platforms Inc Class A Common Stock",
     "qty": 270,
     "mv": 214157.89502999999,
+    "book": 58151.22,
+    "mvl": 154531.8,
+    "ugl": 96380.58,
+    "uglp": 1.65741286253323,
     "ind": "TECH"
    },
    {
@@ -2399,6 +3587,10 @@
     "name": "Lockheed Martin Corp",
     "qty": 50,
     "mv": 38889.029775,
+    "book": 15637.45,
+    "mvl": 28061.5,
+    "ugl": 12424.05,
+    "uglp": 0.794506137509632,
     "ind": "INDS"
    },
    {
@@ -2407,6 +3599,10 @@
     "name": "Northrop Grumman Corp",
     "qty": 50,
     "mv": 37397.16225,
+    "book": 15362.45,
+    "mvl": 26985,
+    "ugl": 11622.55,
+    "uglp": 0.756555757707917,
     "ind": "INDS"
    },
    {
@@ -2415,6 +3611,10 @@
     "name": "Microsoft Corp",
     "qty": 450,
     "mv": 316362.530925,
+    "book": 60763.9,
+    "mvl": 228280.5,
+    "ugl": 167516.6,
+    "uglp": 2.75684411303421,
     "ind": "TECH"
    },
    {
@@ -2423,6 +3623,10 @@
     "name": "Berkshire Hathaway Inc Del Cl B",
     "qty": 100,
     "mv": 69850.99755,
+    "book": 32086.28,
+    "mvl": 50403,
+    "ugl": 18316.72,
+    "uglp": 0.570858323245948,
     "ind": "NBF"
    },
    {
@@ -2431,6 +3635,10 @@
     "name": "Visa Inc Cl A Common Stock",
     "qty": 300,
     "mv": 157724.97435,
+    "book": 16588.97,
+    "mvl": 113811,
+    "ugl": 97222.03,
+    "uglp": 5.86064294528231,
     "ind": "NBF"
    },
    {
@@ -2439,6 +3647,10 @@
     "name": "Jpmorgan Chase & Co",
     "qty": 500,
     "mv": 246695.1585,
+    "book": 69069.95,
+    "mvl": 178010,
+    "ugl": 108940.05,
+    "uglp": 1.57724234634598,
     "ind": "BANK"
    },
    {
@@ -2447,6 +3659,10 @@
     "name": "Alphabet Inc Class C Capital Stock",
     "qty": 800,
     "mv": 371862.3588,
+    "book": 38387.06,
+    "mvl": 268328,
+    "ugl": 229940.94,
+    "uglp": 5.99006383922082,
     "ind": "TECH"
    },
    {
@@ -2455,6 +3671,10 @@
     "name": "Home Depot Inc",
     "qty": 100,
     "mv": 45432.320550000004,
+    "book": 16267.95,
+    "mvl": 32783,
+    "ugl": 16515.05,
+    "uglp": 1.01518937542837,
     "ind": "RTLR"
    },
    {
@@ -2463,6 +3683,10 @@
     "name": "Apple Inc",
     "qty": 270,
     "mv": 118558.774575,
+    "book": 10307.2,
+    "mvl": 85549.5,
+    "ugl": 75242.3,
+    "uglp": 7.29997477491462,
     "ind": "TECH"
    },
    {
@@ -2471,6 +3695,10 @@
     "name": "Lam Research Corporation Common Stock",
     "qty": 163,
     "mv": 68104.6463895,
+    "book": 39845,
+    "mvl": 49142.87,
+    "ugl": 9297.87,
+    "uglp": 0.233350985067135,
     "ind": "TECH"
    },
    {
@@ -2479,6 +3707,10 @@
     "name": "Union Pacific Corp",
     "qty": 250,
     "mv": 104170.879875,
+    "book": 29602.66,
+    "mvl": 75167.5,
+    "ugl": 45564.84,
+    "uglp": 1.53921438141031,
     "ind": "TRANS"
    },
    {
@@ -2487,6 +3719,10 @@
     "name": "Johnson & Johnson Common Stock",
     "qty": 200,
     "mv": 73685.6445,
+    "book": 18650.64,
+    "mvl": 53170,
+    "ugl": 34519.36,
+    "uglp": 1.85084050734988,
     "ind": "PHRM"
    },
    {
@@ -2495,6 +3731,10 @@
     "name": "Mcdonalds Corp",
     "qty": 250,
     "mv": 91306.72725,
+    "book": 55200.85,
+    "mvl": 65885,
+    "ugl": 10684.15,
+    "uglp": 0.193550461632384,
     "ind": "REST"
    },
    {
@@ -2503,6 +3743,10 @@
     "name": "Amazon.Com Inc",
     "qty": 400,
     "mv": 144000.9018,
+    "book": 14016.99,
+    "mvl": 103908,
+    "ugl": 89891.01,
+    "uglp": 6.41300379040007,
     "ind": "RTLR"
    },
    {
@@ -2511,6 +3755,10 @@
     "name": "Abbvie Inc",
     "qty": 125,
     "mv": 44419.957125,
+    "book": 12441.2,
+    "mvl": 32052.5,
+    "ugl": 19611.3,
+    "uglp": 1.57631900459762,
     "ind": "PHRM"
    },
    {
@@ -2519,6 +3767,10 @@
     "name": "Howmet Aerospace Inc Common Stock",
     "qty": 370,
     "mv": 125601.664275,
+    "book": 10153.64,
+    "mvl": 90631.5,
+    "ugl": 80477.86,
+    "uglp": 7.9260107705216996,
     "ind": "INDS"
    },
    {
@@ -2527,6 +3779,10 @@
     "name": "Nvidia Corp",
     "qty": 375,
     "mv": 114737.986125,
+    "book": 71822.45,
+    "mvl": 82792.5,
+    "ugl": 10970.05,
+    "uglp": 0.152738454341226,
     "ind": "TECH"
    },
    {
@@ -2535,6 +3791,10 @@
     "name": "Honeywell International Inc Common Stock",
     "qty": 50,
     "mv": 14796.027525,
+    "book": 13411.95,
+    "mvl": 10676.5,
+    "ugl": -2735.45,
+    "uglp": -0.203956173412516,
     "ind": "INDS"
    },
    {
@@ -2543,6 +3803,10 @@
     "name": "Morgan Stanley",
     "qty": 320,
     "mv": 94601.44704,
+    "book": 53689.95,
+    "mvl": 68262.4,
+    "ugl": 14572.45,
+    "uglp": 0.271418580199832,
     "ind": "BANK"
    },
    {
@@ -2551,6 +3815,10 @@
     "name": "Eagle Materials Inc",
     "qty": 200,
     "mv": 53843.044200000004,
+    "book": 26999.95,
+    "mvl": 38852,
+    "ugl": 11852.05,
+    "uglp": 0.438965627714125,
     "ind": "MAT"
    },
    {
@@ -2559,6 +3827,10 @@
     "name": "Raymond James Financial Inc",
     "qty": 751,
     "mv": 185434.5877695,
+    "book": 63450.31,
+    "mvl": 133805.67,
+    "ugl": 70355.36,
+    "uglp": 1.10882610345008,
     "ind": "NBF"
    },
    {
@@ -2567,6 +3839,10 @@
     "name": "Exxonmobil Holdings Corporation Common Stock",
     "qty": 760,
     "mv": 169519.9437,
+    "book": 115149.95,
+    "mvl": 122322,
+    "ugl": 7172.05,
+    "uglp": 0.0622844386819099,
     "ind": "O&G"
    },
    {
@@ -2575,6 +3851,10 @@
     "name": "Honeywell Aerospace Inc Common Stock",
     "qty": 50,
     "mv": 10955.837175,
+    "book": 11870.48,
+    "mvl": 7905.5,
+    "ugl": -3964.98,
+    "uglp": -0.33402019126438,
     "ind": "INDS"
    },
    {
@@ -2583,6 +3863,10 @@
     "name": "Tjx Companies Inc New",
     "qty": 300,
     "mv": 55673.75205,
+    "book": 46905.95,
+    "mvl": 40173,
+    "ugl": -6732.95,
+    "uglp": -0.143541491004872,
     "ind": "RTLR"
    },
    {
@@ -2591,6 +3875,10 @@
     "name": "Newmont Corporation Common Stock",
     "qty": 880,
     "mv": 153736.22088,
+    "book": 70249.43,
+    "mvl": 110932.8,
+    "ugl": 40683.37,
+    "uglp": 0.579127403596014,
     "ind": "O&G"
    },
    {
@@ -2599,6 +3887,10 @@
     "name": "Lululemon Athletica Inc",
     "qty": 200,
     "mv": 33332.4642,
+    "book": 38113.89,
+    "mvl": 24052,
+    "ugl": -14061.89,
+    "uglp": -0.368943972919059,
     "ind": "DISC"
    },
    {
@@ -2607,6 +3899,10 @@
     "name": "Coca Cola Company (The)",
     "qty": 500,
     "mv": 61441.65975,
+    "book": 31054.95,
+    "mvl": 44335,
+    "ugl": 13280.05,
+    "uglp": 0.42763069977572,
     "ind": "DISC"
    },
    {
@@ -2615,6 +3911,10 @@
     "name": "Delta Air Lines Inc Del Com",
     "qty": 400,
     "mv": 43238.520000000004,
+    "book": 20807.89,
+    "mvl": 31200,
+    "ugl": 10392.11,
+    "uglp": 0.499431225366916,
     "ind": "TRANS"
    },
    {
@@ -2623,6 +3923,10 @@
     "name": "Solstice Advanced Materials Inc Common Stock",
     "qty": 25,
     "mv": 2196.2257875,
+    "book": 1137,
+    "mvl": 1584.75,
+    "ugl": 447.75,
+    "uglp": 0.393799472295514,
     "ind": "INDS"
    },
    {
@@ -2631,6 +3935,10 @@
     "name": "Bank Of America Corp",
     "qty": 630,
     "mv": 54078.91587,
+    "book": 18401.67,
+    "mvl": 39022.2,
+    "ugl": 20620.53,
+    "uglp": 1.12057927351158,
     "ind": "BANK"
    },
    {
@@ -2639,6 +3947,10 @@
     "name": "Verizon Communications",
     "qty": 400,
     "mv": 27728.0868,
+    "book": 20120.34,
+    "mvl": 20008,
+    "ugl": -112.34,
+    "uglp": -0.0055834046541957,
     "ind": "TCOM"
    },
    {
@@ -2647,6 +3959,10 @@
     "name": "Fmc Corp New",
     "qty": 1182,
     "mv": 18887.001291,
+    "book": 49949.33,
+    "mvl": 13628.46,
+    "ugl": -36320.87,
+    "uglp": -0.727154298165761,
     "ind": "INDS"
    },
    {
@@ -2655,6 +3971,10 @@
     "name": "Alibaba Group Holding Ltd Sponsored Adr",
     "qty": 100,
     "mv": 15801.4617,
+    "book": 9770.88,
+    "mvl": 11402,
+    "ugl": 1631.12,
+    "uglp": 0.166936857273858,
     "ind": "TECH"
    },
    {
@@ -2663,6 +3983,10 @@
     "name": "Tencent Holdings Limited Unsponsored Adr Rprsnting B Shares",
     "qty": 500,
     "mv": 39642.23925,
+    "book": 18562.8,
+    "mvl": 28605,
+    "ugl": 10042.2,
+    "uglp": 0.540985196198849,
     "ind": "DISC"
    },
    {
@@ -2671,6 +3995,10 @@
     "name": "Airbus Se American Depositary Receipts Unsponsored",
     "qty": 777,
     "mv": 61302.5342685,
+    "book": 34628.4,
+    "mvl": 44234.61,
+    "ugl": 9606.21,
+    "uglp": 0.277408427764493,
     "ind": "INDS"
    },
    {
@@ -2679,6 +4007,10 @@
     "name": "Lvmh Moet Hennessy Louis Vuitton Sa Unsponsored Adr",
     "qty": 425,
     "mv": 61819.9968,
+    "book": 28513.46,
+    "mvl": 44608,
+    "ugl": 16094.54,
+    "uglp": 0.564454120966027,
     "ind": "DISC"
    },
    {
@@ -2687,6 +4019,10 @@
     "name": "Embraer S A Adr Each Rep 4 Com Stk Shs",
     "qty": 1882,
     "mv": 186640.623732,
+    "book": 102687.41,
+    "mvl": 134675.92,
+    "ugl": 31988.51,
+    "uglp": 0.311513456226035,
     "ind": "INDS"
    },
    {
@@ -2695,6 +4031,10 @@
     "name": "Vale S A Sponsored Adr",
     "qty": 5550,
     "mv": 116064.244575,
+    "book": 67442.45,
+    "mvl": 83749.5,
+    "ugl": 16307.05,
+    "uglp": 0.241792076058921,
     "ind": "MAT"
    },
    {
@@ -2703,6 +4043,10 @@
     "name": "Toyota Motor Corporation Ads",
     "qty": 80,
     "mv": 21789.996720000003,
+    "book": 9791.38,
+    "mvl": 15723.2,
+    "ugl": 5931.82,
+    "uglp": 0.605820629982699,
     "ind": "TRANS"
    },
    {
@@ -2711,6 +4055,10 @@
     "name": "Taiwan Semiconductor Mfg Co Ltd-Sponsored Adr Repstg 5 Com",
     "qty": 333,
     "mv": 191665.216926,
+    "book": 60163.07,
+    "mvl": 138301.56,
+    "ugl": 78138.49,
+    "uglp": 1.29877830370026,
     "ind": "TECH"
    },
    {
@@ -2719,6 +4067,10 @@
     "name": "Kt Corp Sponsored Adr",
     "qty": 1500,
     "mv": 40910.292,
+    "book": 35000.4,
+    "mvl": 29520,
+    "ugl": -5480.4,
+    "uglp": -0.156581067644941,
     "ind": "TCOM"
    },
    {
@@ -2727,6 +4079,10 @@
     "name": "Wts Constellation Software Inc Exp 03/31/2040",
     "qty": 20,
     "mv": null,
+    "book": 0.01,
+    "mvl": 0,
+    "ugl": -0.01,
+    "uglp": -1,
     "ind": "WRNTS"
    }
   ]

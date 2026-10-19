@@ -65,8 +65,15 @@ for date, snap in holdings.items():
     for h in snap['hold']:
         name = h['name'].title() if h['name'].isupper() else h['name']
         cls = asset_class(h['sec'])
+        # unrealized gain/loss: RBC reports it in the listing currency (no FX effect); u converts the amount
+        # to CAD at the snapshot's rate (mv / mvl), up is the percentage as reported;
+        # book cost b likewise, so b + u = v
+        fx = (h['mv'] or 0) / h['mvl'] if h.get('mvl') else 1
+        u = None if h.get('ugl') is None else h['ugl'] * fx
+        b = None if h.get('book') is None else h['book'] * fx
         rows.append(dict(t=RENAME.get(h['sym'], h['sym']), n=name, c=cls, i=industry(h.get('ind'), cls),
-                         q=h['qty'], v=round(h['mv'] or 0, 2)))
+                         q=h['qty'], v=round(h['mv'] or 0, 2), u=None if u is None else round(u, 2), b=None if b is None else round(b, 2),
+                         up=None if h.get('uglp') is None else round(h['uglp'], 4)))
     total = sum(r['v'] for r in rows)
     if abs(total - snap['total']) > 1:
         print(f'WARNING {date}: rows sum to {total:,.2f} but the workbook total is {snap["total"]:,.2f}')

@@ -4,6 +4,8 @@ Usage: python build/parse_holdings.py <folder with the holdings workbooks>
 Writes data/holdings.json. Any file named "YYYY MM DD Portfolio Holdings*.xlsx"
 in the folder becomes one snapshot; sheet 1 must be the "01 Holdings" sheet.
 Industry codes (`ind`) come from the sheet whose title contains "Industries".
+Book cost, market value and unrealized gain/loss are in the listing currency (book, mvl,
+ugl, uglp), as RBC reports them; mv is in CAD.
 """
 import glob
 import json
@@ -46,6 +48,11 @@ def parse(path):
     hi = next(i for i, r in enumerate(rows) if 'Symbol' in [str(c).strip() if c else '' for c in r])
     hdr = [str(c).strip() if c else '' for c in rows[hi]]
     sc, qc, mc = hdr.index('Symbol'), hdr.index('Quantity'), hdr.index('CAD Dollars')
+    # the row above the header names the market value and gain/loss columns
+    top = [str(c).strip() if c else '' for c in rows[hi - 1]]
+    col = lambda above, below: next((k for k, (a, b) in enumerate(zip(top, hdr)) if a == above and b.lower() == below), None)
+    bc, lc, gc, pc = hdr.index('Total Book Cost'), col('Market Value', 'listing currency'), col('Gain/Loss $', 'listing currency'), col('Gain/Loss %', 'listing currency')
+    num = lambda r, k: r[k] if k is not None and isinstance(r[k], (int, float)) else None
     sec, hold, total = None, [], None
     for r in rows[hi + 1:]:
         if isinstance(r[0], str) and re.match(r'^[IVX]+\.', r[0].strip()):
@@ -55,7 +62,8 @@ def parse(path):
             total = [c for c in r if isinstance(c, (int, float))][-1]
             break
         if r[sc] is not None and isinstance(r[qc], (int, float)):
-            hold.append(dict(sec=sec, sym=str(r[sc]).strip(), name=str(r[sc + 1]).strip(), qty=r[qc], mv=r[mc]))
+            hold.append(dict(sec=sec, sym=str(r[sc]).strip(), name=str(r[sc + 1]).strip(), qty=r[qc], mv=r[mc],
+                             book=num(r, bc), mvl=num(r, lc), ugl=num(r, gc), uglp=num(r, pc)))
     ind = industries(wb, {h['sym'] for h in hold})
     for h in hold:
         h['ind'] = ind.get(h['sym'])
