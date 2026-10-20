@@ -32,4 +32,6 @@ python build/fetch_analysts.py      # 更新 data/analysts.json：分析师目�
 python build/build_site.py                                   # 重新生成 index.html
 ```
 
+股价、财报、分析师目标价由 GitHub Actions（`.github/workflows/update-data.yml`）每个工作日收盘后自动更新并推送；也可以在 GitHub 的 Actions 页面手动运行。持仓快照和 Morningstar 报告仍需在本地手动更新。
+
 原始 Excel 和提案 PDF 不放进这个仓库，因为里面有账户号码和同学姓名。
