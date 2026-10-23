@@ -394,7 +394,7 @@ const I18N = {
     month:(y,m)=>`${y} 年 ${m} 月`, yearN:(yr,n)=>`${yr} 学年 · ${n} 条`,
     proposed:'提案', actual:'实际', noTrades:'没有符合条件的交易。',
     close:'关闭', notHeld:'不在任何快照中', bySnap:'各快照持仓', date:'日期', related:'相关交易',
-    notHeldRow:'未持有', noRelated:'文件夹里没有与它相关的提案，应是在 2022-11 之前就已持有。',
+    notHeldRow:'未持有', noRelated:'文件夹里没有与它相关的提案，应是在 2022-11 之前就已持有。', noRelatedNH:'没有与它相关的提案。',
     tabAna:'分析', win:'时间窗口', winInc:'自成立', win5:'近 5 年', win3:'近 3 年',
     perfTitle:'与基准指数比较', perfSub:(a,b)=>`${a} 至 ${b}，每投入 $1,000 的增长。指数均为含股息的全收益指数。`,
     annRet:'年化收益', cumRet:c=>`累计 ${c}`, vsB:(n,d)=>`较 ${n} ${d}/年`, idxNote:'全收益指数',
@@ -434,7 +434,7 @@ const I18N = {
     eB0:'期初净资产', eRoe:'ROE', eNi:'净利润', ePo:'派息率', eDiv:'股利', eBbr:'回购 / 净利润', eBb:'回购', eDist:'分配给股东', eB1:'期末净资产', eRi:'超额收益 RI', ePvD:'现值 · 分配', ePvR:'现值 · RI',
     eHint:'默认 ROE（净利润 / 期初净资产）、派息率和回购率都取最近三年的平均，之后保持不变。净资产按“期初 + 净利润 − 股利 − 回购”滚动。改净利润会覆盖 ROE，反过来也一样；回购率改成 0 就是纯股利模型。黄色格子是手动输入。',
     eSensSub:c=>`主要结果的每股价值（${c}）随股权成本和永续增长率的变化，预测期的利润和分配不变。绿色高于现价，红色低于现价。`,
-    dHorHG:'高增长公司（前两年增长率都 ≥ 10%，能源和原材料除外），默认预测 10 年。', dGrpSec:'行业（GICS）', dGrpNone:'不分组', grpOurs:v=>`我们 ${v}`, grpAn:v=>`机构 ${v}`, watchGrp:'观察名单', watchSub:'正在研究、尚未持有，不计入组合数字', rsTitle:'独立研究机构的公允价值', rsSub:'从研究报告（如 Morningstar）中手工摘录的少量关键数字，只用于对比，不含报告内容。公允价值是机构对当前内在价值的估计，和我们的模型口径相同。标 (Quant) 的是 Morningstar 量化模型自动生成的估值，不是分析师给出的。',
+    dHorHG:'高增长公司（前两年增长率都 ≥ 10%，能源和原材料除外），默认预测 10 年。', dGrpSec:'行业（GICS）', dGrpNone:'不分组', grpOurs:v=>`我们 ${v}`, grpAn:v=>`机构 ${v}`, watchGrp:'观察名单', dDetail:'持仓与交易 →', dDrugs:'药物与专利 →', watchSub:'正在研究、尚未持有，不计入组合数字', rsTitle:'独立研究机构的公允价值', rsSub:'从研究报告（如 Morningstar）中手工摘录的少量关键数字，只用于对比，不含报告内容。公允价值是机构对当前内在价值的估计，和我们的模型口径相同。标 (Quant) 的是 Morningstar 量化模型自动生成的估值，不是分析师给出的。',
     colSrc:'来源', colFv:c=>`公允价值 ${c}`, colStars:'星级', colMoat:'护城河', colUnc:'不确定性', colTheirRate:n=>`机构的 ${n}`, colOurs:'我们的',
     moatL:{Wide:'宽',Narrow:'窄',None:'无'}, uncL:{Low:'低',Medium:'中',High:'高','Very High':'很高',Extreme:'极高'}, dPortRs:'股票组合隐含涨幅 · 研究机构公允价值',
     anTitle:'机构目标价', anSub:(n,d,m)=>`Yahoo Finance 汇总的 ${n} 位卖方分析师 12 个月目标价，数据日期 ${d}。下表是每家机构最近 ${m} 个月内最新一次给出的目标价。`,
@@ -482,7 +482,7 @@ const I18N = {
     phLost:'已到期', phSoon2:'两年内', phGen:n=>`${n} 个仿制药 / 生物类似药获批`,
     phSrc:{sub:'化合物专利', pat:'最晚专利', excl:'监管独占期', bla:'生物药 12 年独占期'},
     phNoRev:f=>`${f} 年报没有按产品披露收入，下面只列上市药和独占期。`,
-    phOther:n=>`其余 ${n} 个上市药`, phNoDrug:'openFDA 里没有这家公司的上市药（疫苗由 FDA 的另一部门审批，不在这个数据库里）。',
+    phOther:n=>`其余 ${n} 个上市药`, phNoDrug:'openFDA 里没有这家公司的上市药：可能还没有药上市，也可能只有疫苗（疫苗由 FDA 的另一部门审批，不在这个数据库里）。', phNoPipe:'ClinicalTrials.gov 上目前没有它主导的、正在进行的试验（已结束的不算）。',
     phDrug:'药物', phArea:'领域', phAppr:'获批', phNewT:'新适应症试验', phPipe:(a,b)=>`在研管线：三期 ${a} 个、二期 ${b} 个`, phP2:n=>`二期 ${n} 个`, phTrials:n=>`${n} 个试验`,
     phNote:'独占期到期是估计值：小分子药取化合物专利和监管独占期中较晚的一个，后续的用法或剂型专利常被挑战，没有算进去；生物药取上市后 12 年的法定独占期，Purple Book 不列专利，实际专利可能更晚（例如 Keytruda 的美国专利到 2028 年）。仿制药获批不等于已经上市，实际时间还取决于诉讼和和解。只看美国。',
     phDcf:(p,y,n)=>`${p} 的收入来自已经或将在 ${y} 年前失去美国独占期的药（${n}；到期日是估计值，见证券详情里的“药物与专利”）。默认增长率没有考虑专利悬崖，可以在预测表里手动调低。`,
@@ -504,7 +504,7 @@ const I18N = {
     month:(y,m)=>`${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1]} ${y}`, yearN:(yr,n)=>`${yr} year · ${n} ${n===1?'entry':'entries'}`,
     proposed:'Proposed', actual:'Actual', noTrades:'No trades match these filters.',
     close:'Close', notHeld:'Not in any snapshot', bySnap:'Holdings by snapshot', date:'Date', related:'Related trades',
-    notHeldRow:'Not held', noRelated:'No proposal in the folder mentions it, so it was probably held before Nov 2022.',
+    notHeldRow:'Not held', noRelated:'No proposal in the folder mentions it, so it was probably held before Nov 2022.', noRelatedNH:'No proposal mentions it.',
     tabAna:'Analysis', win:'Window', winInc:'Since inception', win5:'5 years', win3:'3 years',
     perfTitle:'Versus benchmark indices', perfSub:(a,b)=>`Growth of $1,000 from ${a} to ${b}. Both indices are total-return (dividends included).`,
     annRet:'Annualized return', cumRet:c=>`${c} cumulative`, vsB:(n,d)=>`${d}/yr vs ${n}`, idxNote:'Total-return index',
@@ -544,7 +544,7 @@ const I18N = {
     eB0:'Opening book equity', eRoe:'ROE', eNi:'Net income', ePo:'Payout ratio', eDiv:'Dividends', eBbr:'Buybacks / net income', eBb:'Buybacks', eDist:'Paid to shareholders', eB1:'Closing book equity', eRi:'Residual income', ePvD:'PV · payouts', ePvR:'PV · RI',
     eHint:'ROE (net income / opening book equity), payout and buyback rates default to three-year averages and then stay flat. Book equity rolls forward as opening + net income − dividends − buybacks. Entering net income overrides ROE and the other way round; set the buyback rate to 0 for a pure dividend model. Yellow boxes are manual inputs.',
     eSensSub:c=>`Value per share (${c}) of the main result as the cost of equity and terminal growth change, holding forecast earnings and payouts fixed. Green is above the current price, red below.`,
-    dHorHG:'High-growth company (both of the first two years grow 10% or more, energy and materials excluded), so the forecast defaults to 10 years.', dGrpSec:'Sector (GICS)', dGrpNone:'None', grpOurs:v=>`ours ${v}`, grpAn:v=>`analysts ${v}`, watchGrp:'Watchlist', watchSub:'under research, not held; left out of the portfolio figures', rsTitle:'Fair values from independent research', rsSub:'A few key figures copied by hand from research reports (e.g. Morningstar), for comparison only; no report content. A fair value is the firm’s estimate of intrinsic value today, the same basis as our model. (Quant) marks Morningstar’s algorithmic Quantitative fair value rather than an analyst’s.',
+    dHorHG:'High-growth company (both of the first two years grow 10% or more, energy and materials excluded), so the forecast defaults to 10 years.', dGrpSec:'Sector (GICS)', dGrpNone:'None', grpOurs:v=>`ours ${v}`, grpAn:v=>`analysts ${v}`, watchGrp:'Watchlist', dDetail:'Holdings & trades →', dDrugs:'Drugs and patents →', watchSub:'under research, not held; left out of the portfolio figures', rsTitle:'Fair values from independent research', rsSub:'A few key figures copied by hand from research reports (e.g. Morningstar), for comparison only; no report content. A fair value is the firm’s estimate of intrinsic value today, the same basis as our model. (Quant) marks Morningstar’s algorithmic Quantitative fair value rather than an analyst’s.',
     colSrc:'Source', colFv:c=>`Fair value ${c}`, colStars:'Rating', colMoat:'Moat', colUnc:'Uncertainty', colTheirRate:n=>`Their ${n}`, colOurs:'Ours',
     moatL:{Wide:'Wide',Narrow:'Narrow',None:'None'}, uncL:{Low:'Low',Medium:'Medium',High:'High','Very High':'Very high',Extreme:'Extreme'}, dPortRs:'Implied equity upside · research fair values',
     anTitle:'Analyst price targets', anSub:(n,d,m)=>`12-month price targets from ${n} sell-side analysts as compiled by Yahoo Finance, as of ${d}. The table lists each firm’s latest target within the last ${m} months.`,
@@ -592,7 +592,7 @@ const I18N = {
     phLost:'Expired', phSoon2:'Within 2 yrs', phGen:n=>`${n} generic or biosimilar approval${n===1?'':'s'}`,
     phSrc:{sub:'compound patent', pat:'latest patent', excl:'regulatory exclusivity', bla:'12-year biologic exclusivity'},
     phNoRev:f=>`The ${f} annual report does not break revenue out by product, so only approved drugs and exclusivity are listed.`,
-    phOther:n=>`${n} more approved drug${n===1?'':'s'}`, phNoDrug:'openFDA lists no approved drugs for this company (vaccines are approved by a different FDA center and are not in this database).',
+    phOther:n=>`${n} more approved drug${n===1?'':'s'}`, phNoDrug:'openFDA lists no approved drugs for this company: it may have none on the market yet, or only vaccines (approved by a different FDA center and not in this database).', phNoPipe:'ClinicalTrials.gov lists no active trials it sponsors (completed ones are not counted).',
     phDrug:'Drug', phArea:'Area', phAppr:'Approved', phNewT:'Trials for new uses', phPipe:(a,b)=>`Pipeline: ${a} in phase 3, ${b} in phase 2`, phP2:n=>`${n} in phase 2`, phTrials:n=>`${n} trial${n===1?'':'s'}`,
     phNote:'Exclusivity end dates are estimates. Small molecules: the later of the compound patent and regulatory exclusivity; later method-of-use or formulation patents are often challenged and are not counted. Biologics: the statutory 12 years after approval; the Purple Book lists no patents, so actual patent protection can run later (Keytruda’s US patents run to 2028, for example). An approved generic is not necessarily on the market; timing also depends on litigation and settlements. US only.',
     phDcf:(p,y,n)=>`${p} of revenue comes from drugs that have lost or will lose US exclusivity by ${y} (${n}; the dates are estimates, see “Drugs and patents” in the security details). The default growth rates do not account for the patent cliff; lower them in the forecast table if needed.`,
@@ -1062,7 +1062,7 @@ function phBlock(t){
   const r=c.rev, soon2=addYears(PH.asof,2), byB=Object.fromEntries(c.drugs.map(d=>[d.b,d]));
   const loeCell=d=>!d?.loe?'<span class="muted">—</span>':`<span class="num" title="${esc(T('phSrc')[d.src]||'')}${d.gen?' · '+esc(T('phGen',d.gen)):''}">${d.loe}</span>${d.loe<PH.asof?` <span class="pill p-sell">${T('phLost')}</span>`:d.loe<=soon2?` <span class="pill p-warn">${T('phSoon2')}</span>`:''}`;
   const drugCell=(name,d,a)=>`<div style="font-weight:500">${esc(name)}</div><div class="nm" style="font-size:11.5px">${esc(AREA(a))}${d?.g&&d.g.toLowerCase()!==name.toLowerCase()?' · '+esc(d.g):''}</div>`;
-  let html=`<div><h3>${T('phTitle')}</h3><p class="nm" style="font-size:12px;margin:2px 0 8px">${r?T('phSub',esc(PH.asof),esc(r.form||'')):T('phSub2',esc(PH.asof))}</p>`;
+  let html=`<div id="phb"><h3>${T('phTitle')}</h3><p class="nm" style="font-size:12px;margin:2px 0 8px">${r?T('phSub',esc(PH.asof),esc(r.form||'')):T('phSub2',esc(PH.asof))}</p>`;
   const shown=new Set();
   if(r){
     const Y=r.fy.slice(-3), off=r.fy.length-Y.length, tot=r.tot.at(-1), ly=r.fy.at(-1);
@@ -1084,13 +1084,14 @@ function phBlock(t){
   const dTable=list=>`<div class="tblx"><table class="pht"><thead><tr><th>${T('phDrug')}</th><th>${T('phAppr')}</th><th class="r">${T('phNewT')}</th><th>${T('phLoe')}</th></tr></thead><tbody>
     ${list.map(d=>`<tr><td>${drugCell(d.b,d,d.a)}</td><td class="num">${esc(d.y||'—')}</td><td class="r num">${d.tr||'—'}</td><td style="white-space:nowrap">${loeCell(d)}</td></tr>`).join('')}</tbody></table></div>`;
   const lead=r?0:15;
-  if(lead) html+=dTable(others.slice(0,lead));
+  if(lead&&others.length) html+=dTable(others.slice(0,lead));
   if(others.length>lead) html+=`<details class="tv"><summary>${T('phOther',others.length-lead)}</summary>${dTable(others.slice(lead))}</details>`;
   const p3=c.pipe.filter(p=>p.ph===3), p2=c.pipe.filter(p=>p.ph===2);
   const pRow=p=>`<div style="padding:7px 0;border-bottom:1px solid var(--rule-2)"><div style="font-weight:500">${esc(p.n)}</div><div class="nm" style="font-size:12px">${esc(AREA(p.a))} · ${T('phTrials',p.k)}${p.c.length?' · '+esc(p.c.join('; ')):''}</div></div>`;
   if(c.pipe.length) html+=`<h3 style="margin-top:16px">${T('phPipe',p3.length,p2.length)}</h3>
     ${p3.map(pRow).join('')}
     ${p2.length?`<details class="tv"><summary>${T('phP2',p2.length)}</summary>${p2.map(pRow).join('')}</details>`:''}`;
+  else if(!c.nT) html+=`<p class="nm">${T('phNoPipe')}</p>`;
   return html+`<p class="nm" style="font-size:11.5px;margin-top:10px">${T('phNote')}</p></div>`;
 }
 
@@ -1376,7 +1377,8 @@ function renderDCF(){
     ${sx.ys.map((y,i)=>`<tr><td class="num">${pct(y,1)}</td>${sx.xs.map((x,j)=>{ const z=sx.val(y,x); return `<td class="r num${i===2&&j===2?' c':''}${okN(z)?(z>=s.px?' delta-up':' delta-dn'):''}">${okN(z)?fmt(z,2):'—'}</td>`; }).join('')}</tr>`).join('')}</tbody></table>`;
   $('#dcf').innerHTML=`<div style="margin:6px 0 8px"><div class="eyebrow">${esc(h?CN()[h.c]:c.watch?T('watchGrp'):'')}${c.ind?' · '+esc(c.ind):''}</div>
       <h3 style="font-size:20px;margin-top:4px"><span class="num">${esc(dT)}</span> <span class="nm" style="font-size:15px;font-family:var(--sans)">${esc(c.name||h?.n||'')}</span></h3>
-      <div class="nm" style="font-size:12px">${T('dMeta',esc(c.yf),esc(F),esc(C),esc(c.fye))}</div></div>
+      <div class="nm" style="font-size:12px">${T('dMeta',esc(c.yf),esc(F),esc(C),esc(c.fye))}</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px"><button type="button" class="btn" id="ddet">${T('dDetail')}</button>${PH?.co[dT]?`<button type="button" class="btn" id="dph">${T('dDrugs')}</button>`:''}</div></div>
     ${info.map(w=>`<div class="warnbox infobox">${esc(w)}</div>`).join('')}${warn.map(w=>`<div class="warnbox">${esc(w)}</div>`).join('')}
     <div class="tiles">${tiles}</div>
     <div class="dgrid"><div class="dside">${side}</div>
@@ -1397,6 +1399,8 @@ function renderDCF(){
   $('#dcf').querySelectorAll('#dtm button').forEach(b=>b.onclick=()=>dEdit(o=>{ if(b.dataset.m==='x') o.tm='x'; else delete o.tm; }));
   // store the horizon only when it differs from this stock's default
   $('#dcf').querySelectorAll('#dn button').forEach(b=>b.onclick=()=>dEdit(o=>{ const n=+b.dataset.n; if(n===r.N0) delete o.n; else o.n=n; }));
+  $('#ddet').onclick=()=>openTk(dT);
+  if($('#dph')) $('#dph').onclick=()=>{ openTk(dT); $('#phb')?.scrollIntoView({block:'start'}); };
   $('#dreset').onclick=()=>{ if(DStore.get(dT) && confirm(T('dResetQ',dT))){ DStore.set(dT,null); renderDCF(); } };
   $('#dexp').onclick=()=>{
     const a=document.createElement('a');
@@ -1483,7 +1487,7 @@ function openTk(t){
     ${phBlock(t)}
     <div><h3>${T('related')}</h3>${rel.length?rel.map(x=>{const [a,ac]=actOf(x.act);const [,el,ec]=exOf(x);return `<div style="padding:10px 0;border-bottom:1px solid var(--rule-2);display:flex;flex-direction:column;gap:3px">
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="num" style="color:var(--muted);font-size:12px">${esc(x.date)}</span><span class="pill ${ac}">${a}</span><span class="pill ${ec}">${el}</span></div>
-      <div style="font-size:13px">${esc(x.rep)}</div><div class="nm">${T('proposed')}: ${esc(x.prop)}<br>${T('actual')}: ${esc(x.act_)}</div>${ppLine(x,t)}${x.note?`<div class="nm" style="font-style:italic">${esc(x.note)}</div>`:''}${rpBlock(x)}</div>`;}).join(''):`<p class="nm">${T('noRelated')}</p>`}</div>`;
+      <div style="font-size:13px">${esc(x.rep)}</div><div class="nm">${T('proposed')}: ${esc(x.prop)}<br>${T('actual')}: ${esc(x.act_)}</div>${ppLine(x,t)}${x.note?`<div class="nm" style="font-style:italic">${esc(x.note)}</div>`:''}${rpBlock(x)}</div>`;}).join(''):`<p class="nm">${T(any?'noRelated':'noRelatedNH')}</p>`}</div>`;
   d.hidden=false; $('#scrim').hidden=false; $('#dx').focus();
   if($('#dpx')) drawPx($('#dpx'),t,rel);
   $('#dx').onclick=closeTk;

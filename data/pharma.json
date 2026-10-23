@@ -1109,6 +1109,1181 @@
    ],
    "nT": 181
   },
+  "AMGN": {
+   "rev": {
+    "ccy": "USD",
+    "form": "10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000010/amgn-20251231.htm",
+    "fy": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "tot": [
+     25979.0,
+     26323.0,
+     28190.0,
+     33424.0,
+     36751.0
+    ],
+    "p": [
+     {
+      "n": "Prolia",
+      "a": "oncology",
+      "b": "Prolia",
+      "v": [
+       3248.0,
+       3628.0,
+       4048.0,
+       4374.0,
+       4414.0
+      ]
+     },
+     {
+      "n": "Repatha",
+      "a": "other",
+      "b": "Repatha",
+      "v": [
+       null,
+       null,
+       1635.0,
+       2222.0,
+       3016.0
+      ]
+     },
+     {
+      "n": "Otezla",
+      "a": "cardio",
+      "b": "Otezla",
+      "v": [
+       2249.0,
+       2288.0,
+       2188.0,
+       2126.0,
+       2265.0
+      ]
+     },
+     {
+      "n": "Enbrel",
+      "a": "oncology",
+      "b": null,
+      "v": [
+       4465.0,
+       4117.0,
+       3697.0,
+       3316.0,
+       2226.0
+      ]
+     },
+     {
+      "n": "EVENITY",
+      "a": "musculo",
+      "b": "Evenity",
+      "v": [
+       null,
+       null,
+       1160.0,
+       1563.0,
+       2100.0
+      ]
+     },
+     {
+      "n": "Xgeva",
+      "a": "oncology",
+      "b": "Xgeva",
+      "v": [
+       2018.0,
+       2014.0,
+       2112.0,
+       2225.0,
+       2084.0
+      ]
+     },
+     {
+      "n": "TEPEZZA",
+      "a": "immunology",
+      "b": "Tepezza",
+      "v": [
+       0.0,
+       0.0,
+       448.0,
+       1851.0,
+       1903.0
+      ]
+     },
+     {
+      "n": "BLINCYTO",
+      "a": "oncology",
+      "b": "Blincyto",
+      "v": [
+       472.0,
+       583.0,
+       861.0,
+       1216.0,
+       1559.0
+      ]
+     },
+     {
+      "n": "Nplate",
+      "a": "hematology",
+      "b": "Nplate",
+      "v": [
+       1027.0,
+       1307.0,
+       1477.0,
+       1456.0,
+       1524.0
+      ]
+     },
+     {
+      "n": "TEZSPIRE",
+      "a": "respiratory",
+      "b": "Tezspire",
+      "v": [
+       null,
+       null,
+       567.0,
+       972.0,
+       1478.0
+      ]
+     },
+     {
+      "n": "KYPROLIS",
+      "a": "oncology",
+      "b": null,
+      "v": [
+       null,
+       null,
+       1403.0,
+       1503.0,
+       1412.0
+      ]
+     },
+     {
+      "n": "Aranesp",
+      "a": "hematology",
+      "b": "Aranesp",
+      "v": [
+       1480.0,
+       1421.0,
+       1362.0,
+       1342.0,
+       1389.0
+      ]
+     },
+     {
+      "n": "KRYSTEXXA",
+      "a": "other",
+      "b": "Krystexxa",
+      "v": [
+       0.0,
+       0.0,
+       272.0,
+       1185.0,
+       1340.0
+      ]
+     },
+     {
+      "n": "Vectibix",
+      "a": "oncology",
+      "b": "Vectibix",
+      "v": [
+       873.0,
+       893.0,
+       984.0,
+       1045.0,
+       1175.0
+      ]
+     }
+    ]
+   },
+   "drugs": [
+    {
+     "b": "Prolia",
+     "g": "Denosumab",
+     "a": "oncology",
+     "y": "2010",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2022-06-01",
+     "src": "bla",
+     "gen": 10
+    },
+    {
+     "b": "Repatha",
+     "g": "Evolocumab",
+     "a": null,
+     "y": "2015",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2027-08-27",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Otezla",
+     "g": "Apremilast",
+     "a": "cardio",
+     "y": "2014",
+     "tr": 3,
+     "k": "nda",
+     "loe": "2028-02-16",
+     "src": "sub",
+     "gen": 5
+    },
+    {
+     "b": "Evenity",
+     "g": "Romosozumab-Aqqg",
+     "a": "musculo",
+     "y": "2019",
+     "tr": 2,
+     "k": "bla",
+     "loe": "2031-04-09",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Xgeva",
+     "g": "Denosumab",
+     "a": "oncology",
+     "y": "2010",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2022-06-01",
+     "src": "bla",
+     "gen": 10
+    },
+    {
+     "b": "Tepezza",
+     "g": "Teprotumumab-Trbw",
+     "a": "immunology",
+     "y": "2020",
+     "tr": 1,
+     "k": "bla",
+     "loe": "2032-01-21",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Blincyto",
+     "g": "Blinatumomab",
+     "a": "oncology",
+     "y": "2014",
+     "tr": 6,
+     "k": "bla",
+     "loe": "2026-12-03",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Nplate",
+     "g": "Romiplostim",
+     "a": "hematology",
+     "y": "2008",
+     "tr": 2,
+     "k": "bla",
+     "loe": "2020-08-22",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Tezspire",
+     "g": "Tezepelumab-Ekko",
+     "a": "respiratory",
+     "y": "2021",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2033-12-17",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Aranesp",
+     "g": "Darbepoetin Alfa",
+     "a": "hematology",
+     "y": "2001",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2013-09-17",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Krystexxa",
+     "g": "Pegloticase",
+     "a": null,
+     "y": "2010",
+     "tr": 1,
+     "k": "bla",
+     "loe": "2022-09-14",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Vectibix",
+     "g": "Panitumumab",
+     "a": "oncology",
+     "y": "2006",
+     "tr": 4,
+     "k": "bla",
+     "loe": "2018-09-27",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Otezla Xr",
+     "g": "Apremilast",
+     "a": null,
+     "y": "2025",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2028-02-16",
+     "src": "sub",
+     "gen": 5
+    },
+    {
+     "b": "Pavblu",
+     "g": "Aflibercept-Ayyh",
+     "a": null,
+     "y": "2024",
+     "tr": 0
+    },
+    {
+     "b": "Bkemv",
+     "g": "Eculizumab-Aeeb",
+     "a": "hematology",
+     "y": "2024",
+     "tr": 0
+    },
+    {
+     "b": "Imdelltra",
+     "g": "Tarlatamab-Dlle",
+     "a": "oncology",
+     "y": "2024",
+     "tr": 14,
+     "k": "bla",
+     "loe": "2036-05-16",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Wezlana",
+     "g": "Ustekinumab-Auub",
+     "a": "immunology",
+     "y": "2023",
+     "tr": 0
+    },
+    {
+     "b": "Tavneos",
+     "g": "Avacopan",
+     "a": "cardio",
+     "y": "2021",
+     "tr": 1,
+     "k": "nda",
+     "loe": "2039-11-27",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Lumakras",
+     "g": "Sotorasib",
+     "a": "oncology",
+     "y": "2021",
+     "tr": 5,
+     "k": "nda",
+     "loe": "2040-05-20",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Riabni",
+     "g": "Rituximab-Arrx",
+     "a": null,
+     "y": "2020",
+     "tr": 0
+    },
+    {
+     "b": "Avsola",
+     "g": "Infliximab-Axxq",
+     "a": "immunology",
+     "y": "2019",
+     "tr": 0
+    },
+    {
+     "b": "Kanjinti",
+     "g": "Trastuzumab-Anns",
+     "a": "oncology",
+     "y": "2019",
+     "tr": 0
+    },
+    {
+     "b": "Aimovig",
+     "g": "Erenumab-Aooe",
+     "a": "neuro",
+     "y": "2018",
+     "tr": 3,
+     "k": "bla",
+     "loe": "2030-05-17",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Mvasi",
+     "g": "Bevacizumab-Awwb",
+     "a": null,
+     "y": "2017",
+     "tr": 0
+    },
+    {
+     "b": "Parsabiv",
+     "g": "Etelcalcetide",
+     "a": "renal",
+     "y": "2017",
+     "tr": 2,
+     "k": "nda",
+     "loe": "2031-02-07",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Amjevita",
+     "g": "Adalimumab-Atto",
+     "a": "immunology",
+     "y": "2016",
+     "tr": 0
+    },
+    {
+     "b": "Procysbi",
+     "g": "Cysteamine Bitartrate",
+     "a": null,
+     "y": "2013",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2027-01-26",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Ravicti",
+     "g": "Glycerol Phenylbutyrate",
+     "a": null,
+     "y": "2013",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2030-09-22",
+     "src": "pat",
+     "gen": 7
+    },
+    {
+     "b": "Neulasta",
+     "g": "Pegfilgrastim",
+     "a": null,
+     "y": "2002",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2014-01-31",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Actimmune",
+     "g": "Interferon Gamma-1B",
+     "a": null,
+     "y": "1999",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2011-02-25",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Neupogen",
+     "g": "Filgrastim",
+     "a": null,
+     "y": "1991",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2003-02-20",
+     "src": "bla",
+     "gen": 5
+    },
+    {
+     "b": "Epogen/Procrit",
+     "g": "Epoetin Alfa",
+     "a": null,
+     "y": "1989",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2001-06-01",
+     "src": "bla",
+     "gen": 1
+    }
+   ],
+   "pipe": [
+    {
+     "n": "Maridebart cafraglutide",
+     "ph": 3,
+     "a": "metabolic",
+     "c": [
+      "Obesity",
+      "Overweight",
+      "Obstructive Sleep Apnea"
+     ],
+     "k": 17
+    },
+    {
+     "n": "Xaluritamig",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Prostate Cancer",
+      "Metastatic Castration-resistant Prostate Cancer",
+      "Metastatic Castration-resistant Prostate Cancer (mCRPC)"
+     ],
+     "k": 8
+    },
+    {
+     "n": "Inebilizumab",
+     "ph": 3,
+     "a": "immunology",
+     "c": [
+      "Glomerulonephritis, Membranous",
+      "Myasthenia Gravis",
+      "Systemic Lupus Erythematosus"
+     ],
+     "k": 8
+    },
+    {
+     "n": "Olpasiran",
+     "ph": 3,
+     "a": "cardio",
+     "c": [
+      "Cardiovascular Disease",
+      "Atherosclerotic Cardiovascular Disease"
+     ],
+     "k": 3
+    },
+    {
+     "n": "Dazodalibep",
+     "ph": 3,
+     "a": "immunology",
+     "c": [
+      "Sjögren's Syndrome",
+      "Sjögren's Syndrome (SS)"
+     ],
+     "k": 2
+    },
+    {
+     "n": "ABP 234",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Advanced or Metastatic Non-squamous Non-Small Cell Lung Cancer",
+      "Early-stage Non-squamous Non-small Cell Lung Cancer (NSCLC)"
+     ],
+     "k": 2
+    },
+    {
+     "n": "ABP 206",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Melanoma"
+     ],
+     "k": 1
+    },
+    {
+     "n": "ABP 938 8 mg",
+     "ph": 3,
+     "a": "ophthalmo",
+     "c": [
+      "Neovascular Age-related Macular Degeneration",
+      "nAMD"
+     ],
+     "k": 1
+    },
+    {
+     "n": "ABP 692",
+     "ph": 3,
+     "a": "neuro",
+     "c": [
+      "Relapsing-remitting Multiple Sclerosis (RRMS)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "Anvumetostat",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Thoracic Tumors",
+      "Non-small Cell Lung Cancer",
+      "Advanced MTAP-null Solid Tumors"
+     ],
+     "k": 4
+    },
+    {
+     "n": "AMG 732",
+     "ph": 2,
+     "a": "immunology",
+     "c": [
+      "Thyroid Eye Disease"
+     ],
+     "k": 2
+    }
+   ],
+   "nT": 91
+  },
+  "GILD": {
+   "rev": {
+    "ccy": "USD",
+    "form": "10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/gild-20251231.htm",
+    "fy": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "tot": [
+     27305.0,
+     27281.0,
+     27116.0,
+     28754.0,
+     29443.0
+    ],
+    "p": [
+     {
+      "n": "HIV Products Biktarvy",
+      "a": "infectious",
+      "b": "Biktarvy",
+      "v": [
+       8624.0,
+       10390.0,
+       11850.0,
+       13423.0,
+       14334.0
+      ]
+     },
+     {
+      "n": "HIV Products Descovy",
+      "a": "infectious",
+      "b": "Descovy",
+      "v": [
+       1700.0,
+       1872.0,
+       1985.0,
+       2113.0,
+       2758.0
+      ]
+     },
+     {
+      "n": "HIV Products Genvoya",
+      "a": "infectious",
+      "b": "Genvoya",
+      "v": [
+       2879.0,
+       2404.0,
+       2060.0,
+       1762.0,
+       1498.0
+      ]
+     },
+     {
+      "n": "Trodelvy",
+      "a": "oncology",
+      "b": "Trodelvy",
+      "v": [
+       380.0,
+       680.0,
+       1063.0,
+       1315.0,
+       1397.0
+      ]
+     },
+     {
+      "n": "Liver Disease Products Sofosbuvir Velpatasvir",
+      "a": "infectious",
+      "b": "Vosevi",
+      "v": [
+       null,
+       null,
+       1537.0,
+       1596.0,
+       1272.0
+      ]
+     },
+     {
+      "n": "HIV Products Odefsey",
+      "a": "infectious",
+      "b": "Odefsey",
+      "v": [
+       1568.0,
+       1469.0,
+       1350.0,
+       1288.0,
+       1167.0
+      ]
+     },
+     {
+      "n": "Liver Disease Products Vemlidy",
+      "a": "infectious",
+      "b": "Vemlidy",
+      "v": [
+       null,
+       null,
+       862.0,
+       959.0,
+       1070.0
+      ]
+     },
+     {
+      "n": "Veklury",
+      "a": "infectious",
+      "b": "Veklury",
+      "v": [
+       5565.0,
+       3905.0,
+       2184.0,
+       1799.0,
+       911.0
+      ]
+     },
+     {
+      "n": "HIV Products Symtuza Revenue Share",
+      "a": "infectious",
+      "b": null,
+      "v": [
+       null,
+       null,
+       529.0,
+       592.0,
+       495.0
+      ]
+     }
+    ]
+   },
+   "drugs": [
+    {
+     "b": "Biktarvy",
+     "g": "Bictegravir Sodium, Emtricitabine, Tenofovir Alafenamide Fumarate",
+     "a": "infectious",
+     "y": "2018",
+     "tr": 11,
+     "k": "nda",
+     "loe": "2035-06-19",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Descovy",
+     "g": "Emtricitabine, Tenofovir Alafenamide Fumarate",
+     "a": "infectious",
+     "y": "2016",
+     "tr": 4,
+     "k": "nda",
+     "loe": "2032-08-15",
+     "src": "sub",
+     "gen": 2
+    },
+    {
+     "b": "Genvoya",
+     "g": "Cobicistat, Elvitegravir, Emtricitabine, Tenofovir Alafenamide Fumarate",
+     "a": "infectious",
+     "y": "2015",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2032-08-15",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Trodelvy",
+     "g": "Sacituzumab Govitecan-Hziy",
+     "a": "oncology",
+     "y": "2020",
+     "tr": 18,
+     "k": "bla",
+     "loe": "2032-04-22",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Vosevi",
+     "g": "Sofosbuvir, Velpatasvir, Voxilaprevir",
+     "a": "infectious",
+     "y": "2017",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2034-07-17",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Odefsey",
+     "g": "Emtricitabine, Rilpivirine Hydrochloride, Tenofovir Alafenamide Fumarate",
+     "a": "infectious",
+     "y": "2016",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2032-08-15",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Vemlidy",
+     "g": "Tenofovir Alafenamide Fumarate",
+     "a": "infectious",
+     "y": "2016",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2032-08-15",
+     "src": "sub",
+     "gen": 1
+    },
+    {
+     "b": "Veklury",
+     "g": "Remdesivir",
+     "a": "infectious",
+     "y": "2020",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2035-10-29",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Bixlenvo",
+     "g": "Bictegravir Sodium, Lenacapavir Sodium",
+     "a": "infectious",
+     "y": "2026",
+     "tr": 2,
+     "k": "nda",
+     "loe": "2038-08-16",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Bixlenvo Sunlenca Starter Pack (Copackaged)",
+     "g": "Bictegravir Sodium, Lenacapavir Sodium, Lenacapavir Sodium",
+     "a": null,
+     "y": "2026",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2038-08-16",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Hepcludex",
+     "g": "Bulevirtide-Gmod",
+     "a": null,
+     "y": "2026",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2038-05-22",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Yeztugo",
+     "g": "Lenacapavir Sodium, Lenacapavir",
+     "a": null,
+     "y": "2025",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2038-08-16",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Livdelzi",
+     "g": "Seladelpar Lysine",
+     "a": "digestive",
+     "y": "2024",
+     "tr": 4,
+     "k": "nda",
+     "loe": "2031-08-14",
+     "src": "excl",
+     "gen": 0
+    },
+    {
+     "b": "Sunlenca",
+     "g": "Lenacapavir Sodium",
+     "a": "infectious",
+     "y": "2022",
+     "tr": 33,
+     "k": "nda",
+     "loe": "2038-08-16",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Epclusa",
+     "g": "Sofosbuvir, Velpatasvir",
+     "a": null,
+     "y": "2016",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2032-11-16",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Harvoni",
+     "g": "Ledipasvir, Sofosbuvir",
+     "a": null,
+     "y": "2014",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2030-12-11",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Zydelig",
+     "g": "Idelalisib",
+     "a": null,
+     "y": "2014",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2033-09-02",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Sovaldi",
+     "g": "Sofosbuvir",
+     "a": null,
+     "y": "2013",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2030-12-11",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Stribild",
+     "g": "Cobicistat, Elvitegravir, Emtricitabine, Tenofovir Disoproxil Fumarate",
+     "a": "infectious",
+     "y": "2012",
+     "tr": 2,
+     "k": "nda",
+     "loe": "2029-09-03",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Complera",
+     "g": "Emtricitabine, Rilpivirine Hydrochloride, Tenofovir Disoproxil Fumarate",
+     "a": "infectious",
+     "y": "2011",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2033-01-14",
+     "src": "pat",
+     "gen": 2
+    },
+    {
+     "b": "Cayston",
+     "g": "Aztreonam",
+     "a": null,
+     "y": "2010",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 2
+    },
+    {
+     "b": "Letairis",
+     "g": "Ambrisentan",
+     "a": "cardio",
+     "y": "2007",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2031-10-14",
+     "src": "pat",
+     "gen": 7
+    },
+    {
+     "b": "Truvada",
+     "g": "Emtricitabine, Tenofovir Disoproxil Fumarate",
+     "a": "infectious",
+     "y": "2004",
+     "tr": 5,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 9
+    },
+    {
+     "b": "Emtriva",
+     "g": "Emtricitabine",
+     "a": "infectious",
+     "y": "2003",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 2
+    },
+    {
+     "b": "Viread",
+     "g": "Tenofovir Disoproxil Fumarate",
+     "a": "infectious",
+     "y": "2001",
+     "tr": 1,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 11
+    }
+   ],
+   "pipe": [
+    {
+     "n": "GS-3242 Tablet",
+     "ph": 3,
+     "a": "infectious",
+     "c": [
+      "HIV-1-infection",
+      "HIV-1 Infection"
+     ],
+     "k": 5
+    },
+    {
+     "n": "Anitocabtagene Autoleucel",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Multiple Myeloma",
+      "Muscular Diseases",
+      "Neuromuscular Manifestations"
+     ],
+     "k": 5
+    },
+    {
+     "n": "ISL/LEN",
+     "ph": 3,
+     "a": "infectious",
+     "c": [
+      "HIV-1-infection",
+      "HIV-1-Infection"
+     ],
+     "k": 2
+    },
+    {
+     "n": "KITE-753",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Relapsed and/or Refractory B-cell Lymphoma",
+      "Relapsed or Refractory Large B-cell Lymphoma"
+     ],
+     "k": 2
+    },
+    {
+     "n": "KITE-363",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Systemic Lupus Erythematosus",
+      "Lupus Nephritis",
+      "Systemic Sclerosis"
+     ],
+     "k": 3
+    },
+    {
+     "n": "TUB-040",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "NSCLC",
+      "Non Small Cell Lung Cancer",
+      "Ovarian Cancer"
+     ],
+     "k": 2
+    },
+    {
+     "n": "Tilpisertib Fosmecarbil",
+     "ph": 2,
+     "a": "immunology",
+     "c": [
+      "Ulcerative Colitis"
+     ],
+     "k": 1
+    },
+    {
+     "n": "TUB-030",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Advanced Solid Tumors",
+      "HNSCC",
+      "SCLC"
+     ],
+     "k": 1
+    },
+    {
+     "n": "GS-4321",
+     "ph": 2,
+     "a": "infectious",
+     "c": [
+      "Chronic Hepatitis Delta"
+     ],
+     "k": 1
+    },
+    {
+     "n": "TUB-040 + Carbo + BEV",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Ovarian Cancer"
+     ],
+     "k": 1
+    },
+    {
+     "n": "TAF",
+     "ph": 2,
+     "a": "infectious",
+     "c": [
+      "Chronic Hepatitis B"
+     ],
+     "k": 1
+    },
+    {
+     "n": "emvistegrast",
+     "ph": 2,
+     "a": "immunology",
+     "c": [
+      "Ulcerative Colitis"
+     ],
+     "k": 1
+    },
+    {
+     "n": "TUB-040 - Dose escalation",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Uterine Endometrial Cancer"
+     ],
+     "k": 1
+    },
+    {
+     "n": "TUB-040 - RP2D",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Uterine Endometrial Cancer"
+     ],
+     "k": 1
+    }
+   ],
+   "nT": 85
+  },
   "JNJ": {
    "rev": {
     "ccy": "USD",
@@ -4896,6 +6071,239 @@
     }
    ],
    "nT": 109
+  },
+  "SION": {
+   "rev": null,
+   "drugs": [],
+   "pipe": [],
+   "nT": 0
+  },
+  "VRTX": {
+   "rev": {
+    "ccy": "USD",
+    "form": "10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000056/vrtx-20251231.htm",
+    "fy": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "tot": [
+     7574.4,
+     8930.7,
+     9869.2,
+     11020.1,
+     12001.3
+    ],
+    "p": [
+     {
+      "n": "TRIKAFTAKAFTRIO",
+      "a": "respiratory",
+      "b": "Trikafta (Copackaged)",
+      "v": [
+       5697.2,
+       7686.8,
+       8944.7,
+       10238.6,
+       10312.7
+      ]
+     },
+     {
+      "n": "ALYFTREK",
+      "a": "respiratory",
+      "b": "Alyftrek",
+      "v": [
+       null,
+       null,
+       0.0,
+       0.0,
+       837.8
+      ]
+     },
+     {
+      "n": "CASGEVY",
+      "a": "hematology",
+      "b": null,
+      "v": [
+       null,
+       null,
+       null,
+       10.0,
+       115.8
+      ]
+     },
+     {
+      "n": "JOURNAVX",
+      "a": "other",
+      "b": null,
+      "v": [
+       null,
+       null,
+       null,
+       0.0,
+       59.6
+      ]
+     }
+    ]
+   },
+   "drugs": [
+    {
+     "b": "Trikafta (Copackaged)",
+     "g": "Elexacaftor, Ivacaftor, Tezacaftor, Ivacaftor",
+     "a": "respiratory",
+     "y": "2019",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2037-12-08",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Alyftrek",
+     "g": "Deutivacaftor, Tezacaftor, Vanzacaftor Calcium",
+     "a": "respiratory",
+     "y": "2024",
+     "tr": 2,
+     "k": "nda",
+     "loe": "2040-08-13",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Symdeko (Copackaged)",
+     "g": "Ivacaftor, Ivacaftor, Tezacaftor",
+     "a": "respiratory",
+     "y": "2018",
+     "tr": 2,
+     "k": "nda",
+     "loe": "2031-07-10",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Orkambi",
+     "g": "Ivacaftor, Lumacaftor",
+     "a": "respiratory",
+     "y": "2015",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2030-09-20",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Kalydeco",
+     "g": "Ivacaftor",
+     "a": "respiratory",
+     "y": "2012",
+     "tr": 3,
+     "k": "nda",
+     "loe": "2030-11-03",
+     "src": "excl",
+     "gen": 0
+    }
+   ],
+   "pipe": [
+    {
+     "n": "Povetacicept",
+     "ph": 3,
+     "a": "immunology",
+     "c": [
+      "Immunoglobulin A Nephropathy",
+      "Myasthenia Gravis, Generalized",
+      "Primary Membranous Nephropathy"
+     ],
+     "k": 6
+    },
+    {
+     "n": "Exa-Cel (CTX001)",
+     "ph": 3,
+     "a": "hematology",
+     "c": [
+      "Beta-Thalassemia",
+      "Thalassemia",
+      "Sickle Cell Disease"
+     ],
+     "k": 4
+    },
+    {
+     "n": "VNZ/TEZ/D-IVA",
+     "ph": 3,
+     "a": "respiratory",
+     "c": [
+      "Cystic Fibrosis"
+     ],
+     "k": 3
+    },
+    {
+     "n": "Suzetrigine",
+     "ph": 3,
+     "a": "neuro",
+     "c": [
+      "Diabetic Peripheral Neuropathic Pain"
+     ],
+     "k": 3
+    },
+    {
+     "n": "VX-017",
+     "ph": 3,
+     "a": "metabolic",
+     "c": [
+      "Diabetes Mellitus, Type 1",
+      "Impaired Hypoglycemic Awareness",
+      "Severe Hypoglycemia"
+     ],
+     "k": 1
+    },
+    {
+     "n": "VX-147",
+     "ph": 3,
+     "a": "renal",
+     "c": [
+      "Proteinuric Kidney Disease"
+     ],
+     "k": 1
+    },
+    {
+     "n": "VX-407",
+     "ph": 2,
+     "a": "renal",
+     "c": [
+      "Autosomal Dominant Polycystic Kidney Disease (ADPKD)"
+     ],
+     "k": 2
+    },
+    {
+     "n": "VX-670",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Myotonic Dystrophy Type 1 (DM1)"
+     ],
+     "k": 2
+    },
+    {
+     "n": "VX-264",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Type 1 Diabetes"
+     ],
+     "k": 1
+    },
+    {
+     "n": "VX-993",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Diabetic Peripheral Neuropathic Pain"
+     ],
+     "k": 1
+    }
+   ],
+   "nT": 32
   }
  },
  "missing": []

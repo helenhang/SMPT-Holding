@@ -46,5 +46,21 @@
  {
   "t": "VRT",
   "yf": "VRT"
+ },
+ {
+  "t": "VRTX",
+  "yf": "VRTX"
+ },
+ {
+  "t": "SION",
+  "yf": "SION"
+ },
+ {
+  "t": "GILD",
+  "yf": "GILD"
+ },
+ {
+  "t": "AMGN",
+  "yf": "AMGN"
  }
 ]
