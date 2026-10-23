@@ -221,6 +221,13 @@ if os.path.exists(rs_path):
                 print(f'WARNING: research.json {t}: neither held in the latest snapshot nor in watchlist.json')
         site_rs[t] = sorted(rows, key=lambda r: r.get('date', ''), reverse=True)
 
+# Drug makers' approved drugs, revenue by product, exclusivity expiry and pipeline (see fetch_pharma.py).
+ph_path = os.path.join(ROOT, 'data', 'pharma.json')
+site_ph = None
+if os.path.exists(ph_path):
+    ph = json.load(open(ph_path))
+    site_ph = dict(asof=ph['asof'], co=ph['co'])
+
 # Short summaries of each proposal report (data/reports.json, written by hand from the PDFs,
 # no names), keyed by the report name in trades.json.
 rp_path = os.path.join(ROOT, 'data', 'reports.json')
@@ -258,7 +265,7 @@ if LOCAL:
     print('report links:', sum(1 for t in site_trades if t.get('f')), 'of', len(site_trades), 'trades;',
           'none for:', sorted({t['rep'] for t in site_trades if not t.get('f')}))
 
-data = json.dumps(dict(snaps=snaps, trades=site_trades, classes=ORDER, tind=tick_ind, perf=site_perf, px=site_px, sec=site_sec, fd=site_fd, an=site_an, rs=site_rs, rp=site_rp), separators=(',', ':'), ensure_ascii=False)
+data = json.dumps(dict(snaps=snaps, trades=site_trades, classes=ORDER, tind=tick_ind, perf=site_perf, px=site_px, sec=site_sec, fd=site_fd, an=site_an, rs=site_rs, rp=site_rp, ph=site_ph), separators=(',', ':'), ensure_ascii=False)
 html = open(os.path.join(ROOT, 'build', 'template.html')).read().replace('__DATA__', data)
 out = 'index.local.html' if LOCAL else 'index.html'
 open(os.path.join(ROOT, out), 'w').write(html)

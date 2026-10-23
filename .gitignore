@@ -7,3 +7,5 @@
 __pycache__/
 # local build with links to the proposal PDFs (see build_site.py --local)
 index.local.html
+# raw API responses cached by fetch_pharma.py
+build/.cache/

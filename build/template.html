@@ -162,6 +162,8 @@ a.rpdf{font-size:12px;color:var(--accent);text-decoration:underline;text-underli
 .drawer .unr2 .muted{display:block;font-size:12px}
 .drawer .tblx th{white-space:normal;vertical-align:bottom}
 .drawer h3{font-size:14px;color:var(--ink-2)}
+.drawer table.pht th,.drawer table.pht td{padding-inline:7px}
+.drawer table.pht td:first-child{white-space:normal;overflow-wrap:anywhere;min-width:130px}
 
 .foot{font-size:12px;color:var(--muted);border-top:1px solid var(--rule);padding-top:14px;display:flex;flex-direction:column;gap:4px}
 /* analysis */
@@ -472,7 +474,19 @@ const I18N = {
     dNoFd:'没有财报数据。运行 build/fetch_fundamentals.py 后重新构建。', dOpen:'估值 →',
     colInd:'行业', grpBy:'分组', grpCls:'资产类别', grpInd:'行业', allInd:'全部行业',
     cls:{'Cash':'现金','Money Market':'货币基金','Bonds':'债券','REITs':'REITs','Canadian Equity':'加拿大股票','US Equity':'美国股票','ADRs (Intl)':'ADR（国际）'},
-    ind:{BANK:'银行',NBF:'非银金融',TECH:'科技',TCOM:'电信',DISC:'消费',RTLR:'零售',REST:'餐饮',PHRM:'医药',INDS:'工业',MAT:'原材料','O&G':'油气',TRANS:'运输',UTIL:'公用事业',REIT:'房地产信托',BOND:'债券',MMF:'货币基金',CASH:'现金',WRNTS:'认股权证',ETF:'指数 ETF',OTHER:'其他'}
+    ind:{BANK:'银行',NBF:'非银金融',TECH:'科技',TCOM:'电信',DISC:'消费',RTLR:'零售',REST:'餐饮',PHRM:'医药',INDS:'工业',MAT:'原材料','O&G':'油气',TRANS:'运输',UTIL:'公用事业',REIT:'房地产信托',BOND:'债券',MMF:'货币基金',CASH:'现金',WRNTS:'认股权证',ETF:'指数 ETF',OTHER:'其他'},
+    phTitle:'药物与专利', phSub:(d,f)=>`各产品收入来自 ${f} 年报（XBRL），上市药来自 openFDA，独占期来自 FDA Orange Book / Purple Book，管线来自 ClinicalTrials.gov。数据日期 ${d}。`,
+    phSub2:d=>`上市药来自 openFDA，独占期来自 FDA Orange Book / Purple Book，管线来自 ClinicalTrials.gov。数据日期 ${d}。`,
+    phTop:'最大产品', phPast:'已失去独占期', phSoon:y=>`${y} 年前失去独占期`, phOfRev:y=>`占 FY${y} 收入`,
+    phProd:'产品', phShare:'占收入', phLoe:'独占期到期', phRest:'未单列的其他收入', phTotal:'总收入', phMn:c=>`百万 ${c}`,
+    phLost:'已到期', phSoon2:'两年内', phGen:n=>`${n} 个仿制药 / 生物类似药获批`,
+    phSrc:{sub:'化合物专利', pat:'最晚专利', excl:'监管独占期', bla:'生物药 12 年独占期'},
+    phNoRev:f=>`${f} 年报没有按产品披露收入，下面只列上市药和独占期。`,
+    phOther:n=>`其余 ${n} 个上市药`, phNoDrug:'openFDA 里没有这家公司的上市药（疫苗由 FDA 的另一部门审批，不在这个数据库里）。',
+    phDrug:'药物', phArea:'领域', phAppr:'获批', phNewT:'新适应症试验', phPipe:(a,b)=>`在研管线：三期 ${a} 个、二期 ${b} 个`, phP2:n=>`二期 ${n} 个`, phTrials:n=>`${n} 个试验`,
+    phNote:'独占期到期是估计值：小分子药取化合物专利和监管独占期中较晚的一个，后续的用法或剂型专利常被挑战，没有算进去；生物药取上市后 12 年的法定独占期，Purple Book 不列专利，实际专利可能更晚（例如 Keytruda 的美国专利到 2028 年）。仿制药获批不等于已经上市，实际时间还取决于诉讼和和解。只看美国。',
+    phDcf:(p,y,n)=>`${p} 的收入来自已经或将在 ${y} 年前失去美国独占期的药（${n}；到期日是估计值，见证券详情里的“药物与专利”）。默认增长率没有考虑专利悬崖，可以在预测表里手动调低。`,
+    area:{oncology:'肿瘤',metabolic:'代谢 / 肥胖 / 糖尿病',cardio:'心血管',neuro:'神经',psych:'精神 / 成瘾',infectious:'感染 / 疫苗',immunology:'免疫 / 炎症',respiratory:'呼吸',hematology:'血液',ophthalmo:'眼科',renal:'肾脏 / 泌尿',digestive:'消化 / 肝病',rare:'罕见病 / 遗传病',musculo:'骨骼肌肉',women:'女性健康',derm:'皮肤',other:'其他 / 未分类'}
   },
   en: {
     intro:'Four holdings snapshots from the RBC account, plus the trade proposals from Nov 2022 to Apr 2026. Pick a date to switch snapshots; click a ticker or name to see its history and five-year price chart.',
@@ -570,7 +584,19 @@ const I18N = {
     dNoFd:'No financial statements. Run build/fetch_fundamentals.py and rebuild.', dOpen:'Valuation →',
     colInd:'Industry', grpBy:'Group by', grpCls:'Asset class', grpInd:'Industry', allInd:'All industries',
     cls:{'Cash':'Cash','Money Market':'Money market','Bonds':'Bonds','REITs':'REITs','Canadian Equity':'Canadian equity','US Equity':'US equity','ADRs (Intl)':'ADRs (intl)'},
-    ind:{BANK:'Banks',NBF:'Non-bank financials',TECH:'Technology',TCOM:'Telecom',DISC:'Consumer',RTLR:'Retail',REST:'Restaurants',PHRM:'Pharma',INDS:'Industrials',MAT:'Materials','O&G':'Oil & gas',TRANS:'Transportation',UTIL:'Utilities',REIT:'REITs',BOND:'Bonds',MMF:'Money market',CASH:'Cash',WRNTS:'Warrants',ETF:'Index ETFs',OTHER:'Other'}
+    ind:{BANK:'Banks',NBF:'Non-bank financials',TECH:'Technology',TCOM:'Telecom',DISC:'Consumer',RTLR:'Retail',REST:'Restaurants',PHRM:'Pharma',INDS:'Industrials',MAT:'Materials','O&G':'Oil & gas',TRANS:'Transportation',UTIL:'Utilities',REIT:'REITs',BOND:'Bonds',MMF:'Money market',CASH:'Cash',WRNTS:'Warrants',ETF:'Index ETFs',OTHER:'Other'},
+    phTitle:'Drugs and patents', phSub:(d,f)=>`Revenue by product from the ${f} annual report (XBRL), approved drugs from openFDA, exclusivity from the FDA Orange Book / Purple Book, pipeline from ClinicalTrials.gov. Data as of ${d}.`,
+    phSub2:d=>`Approved drugs from openFDA, exclusivity from the FDA Orange Book / Purple Book, pipeline from ClinicalTrials.gov. Data as of ${d}.`,
+    phTop:'Largest product', phPast:'Already lost exclusivity', phSoon:y=>`Loses exclusivity by ${y}`, phOfRev:y=>`of FY${y} revenue`,
+    phProd:'Product', phShare:'Share', phLoe:'Exclusivity ends', phRest:'Other revenue not broken out', phTotal:'Total revenue', phMn:c=>`${c} millions`,
+    phLost:'Expired', phSoon2:'Within 2 yrs', phGen:n=>`${n} generic or biosimilar approval${n===1?'':'s'}`,
+    phSrc:{sub:'compound patent', pat:'latest patent', excl:'regulatory exclusivity', bla:'12-year biologic exclusivity'},
+    phNoRev:f=>`The ${f} annual report does not break revenue out by product, so only approved drugs and exclusivity are listed.`,
+    phOther:n=>`${n} more approved drug${n===1?'':'s'}`, phNoDrug:'openFDA lists no approved drugs for this company (vaccines are approved by a different FDA center and are not in this database).',
+    phDrug:'Drug', phArea:'Area', phAppr:'Approved', phNewT:'Trials for new uses', phPipe:(a,b)=>`Pipeline: ${a} in phase 3, ${b} in phase 2`, phP2:n=>`${n} in phase 2`, phTrials:n=>`${n} trial${n===1?'':'s'}`,
+    phNote:'Exclusivity end dates are estimates. Small molecules: the later of the compound patent and regulatory exclusivity; later method-of-use or formulation patents are often challenged and are not counted. Biologics: the statutory 12 years after approval; the Purple Book lists no patents, so actual patent protection can run later (Keytruda’s US patents run to 2028, for example). An approved generic is not necessarily on the market; timing also depends on litigation and settlements. US only.',
+    phDcf:(p,y,n)=>`${p} of revenue comes from drugs that have lost or will lose US exclusivity by ${y} (${n}; the dates are estimates, see “Drugs and patents” in the security details). The default growth rates do not account for the patent cliff; lower them in the forecast table if needed.`,
+    area:{oncology:'Oncology',metabolic:'Metabolic / obesity / diabetes',cardio:'Cardiovascular',neuro:'Neurology',psych:'Psychiatry / addiction',infectious:'Infectious disease / vaccines',immunology:'Immunology / inflammation',respiratory:'Respiratory',hematology:'Hematology',ophthalmo:'Ophthalmology',renal:'Renal / urology',digestive:'Digestive / liver',rare:'Rare / genetic',musculo:'Musculoskeletal',women:'Women’s health',derm:'Dermatology',other:'Other / unclassified'}
   }
 };
 let LANG = (()=>{ try{ const v=localStorage.getItem('smpt-lang'); if(v==='zh'||v==='en') return v; }catch(e){} return /^zh/i.test(navigator.language||'')?'zh':'en'; })();
@@ -1012,6 +1038,62 @@ function ppLine(x,t){
     return `<span style="margin-right:10px">${T('h'+h)} <b style="font-weight:500;color:${d>=0?'var(--buy)':'var(--sell)'}">${spp(d,0)}</b></span>`; }).join('')}</div>`;
 }
 
+/* ---------- drugs (data/pharma.json) ---------- */
+const PH = DATA.ph;
+const AREA = a => I18N[LANG].area[a||'other'] || a;
+const addYears = (d,n) => String(+d.slice(0,4)+n)+d.slice(4);
+const PH_RISK_Y = 5;
+// Latest-year revenue of the drugs that have lost, or will lose within PH_RISK_Y years, US exclusivity.
+function phRisk(t){
+  const c=PH?.co[t], r=c?.rev, tot=r?.tot.at(-1);
+  if(!r||!tot) return null;
+  const end=addYears(PH.asof,PH_RISK_Y), out={tot, past:0, soon:0, names:[], y:+end.slice(0,4)};
+  r.p.forEach(p=>{
+    const d=p.b&&c.drugs.find(x=>x.b===p.b), v=p.v.at(-1)||0;
+    if(!d?.loe||d.loe>end||!v) return;
+    if(d.loe<PH.asof) out.past+=v; else out.soon+=v;
+    out.names.push([p.b,v]);
+  });
+  out.names=out.names.sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
+  return out;
+}
+function phBlock(t){
+  const c=PH?.co[t]; if(!c) return '';
+  const r=c.rev, soon2=addYears(PH.asof,2), byB=Object.fromEntries(c.drugs.map(d=>[d.b,d]));
+  const loeCell=d=>!d?.loe?'<span class="muted">—</span>':`<span class="num" title="${esc(T('phSrc')[d.src]||'')}${d.gen?' · '+esc(T('phGen',d.gen)):''}">${d.loe}</span>${d.loe<PH.asof?` <span class="pill p-sell">${T('phLost')}</span>`:d.loe<=soon2?` <span class="pill p-warn">${T('phSoon2')}</span>`:''}`;
+  const drugCell=(name,d,a)=>`<div style="font-weight:500">${esc(name)}</div><div class="nm" style="font-size:11.5px">${esc(AREA(a))}${d?.g&&d.g.toLowerCase()!==name.toLowerCase()?' · '+esc(d.g):''}</div>`;
+  let html=`<div><h3>${T('phTitle')}</h3><p class="nm" style="font-size:12px;margin:2px 0 8px">${r?T('phSub',esc(PH.asof),esc(r.form||'')):T('phSub2',esc(PH.asof))}</p>`;
+  const shown=new Set();
+  if(r){
+    const Y=r.fy.slice(-3), off=r.fy.length-Y.length, tot=r.tot.at(-1), ly=r.fy.at(-1);
+    const top=[...r.p].sort((a,b)=>(b.v.at(-1)||0)-(a.v.at(-1)||0))[0], risk=phRisk(t);
+    html+=`<div class="tiles" style="margin-bottom:10px">
+      ${top&&tot?`<div class="tile"><span class="l">${T('phTop')}</span><span class="v">${pct((top.v.at(-1)||0)/tot,0)}</span><span class="s">${esc(top.b||top.n)} · ${T('phOfRev',ly)}</span></div>`:''}
+      ${risk?`<div class="tile"><span class="l">${T('phPast')}</span><span class="v">${pct(risk.past/tot,0)}</span><span class="s">${T('phOfRev',ly)}</span></div>
+      <div class="tile"><span class="l">${T('phSoon',risk.y)}</span><span class="v">${pct(risk.soon/tot,0)}</span><span class="s">${T('phOfRev',ly)}</span></div>`:''}</div>`;
+    const rest=tot-sum(r.p.map(p=>p.v.at(-1)||0));
+    html+=`<div class="tblx"><table class="pht"><thead><tr><th>${T('phProd')}</th>${Y.map(y=>`<th class="r">FY${y}</th>`).join('')}<th class="r">${T('phShare')}</th><th>${T('phLoe')}</th></tr></thead><tbody>
+      ${r.p.map(p=>{ const d=p.b?byB[p.b]:null; if(d) shown.add(d.b); const v=p.v.at(-1);
+        return `<tr><td>${drugCell(p.b||p.n,d,p.a)}</td>${Y.map((_,i)=>`<td class="r num">${mny(p.v[off+i])}</td>`).join('')}<td class="r num">${okN(v)&&tot?pct(v/tot,1):'—'}</td><td style="white-space:nowrap">${loeCell(d)}</td></tr>`; }).join('')}
+      ${rest>0.005*tot?`<tr><td class="nm">${T('phRest')}</td>${Y.map(()=>'<td></td>').join('')}<td class="r num">${pct(rest/tot,1)}</td><td></td></tr>`:''}
+      <tr><td style="font-weight:600">${T('phTotal')}</td>${Y.map((_,i)=>`<td class="r num" style="font-weight:600">${mny(r.tot[off+i])}</td>`).join('')}<td class="r num">100%</td><td></td></tr>
+    </tbody></table></div><p class="nm" style="font-size:11.5px;margin:4px 0 0">${T('phMn',esc(r.ccy))}${r.url?` · <a href="${esc(r.url)}" target="_blank" rel="noopener" style="color:var(--accent)">${esc(r.form||'10-K')} ↗</a>`:''}</p>`;
+  } else html+=`<p class="nm">${c.drugs.length?T('phNoRev',esc(FD?.co[t]?.name||t)):T('phNoDrug')}</p>`;
+  // approved drugs without a revenue line: most trials for new uses first (a proxy for importance), then soonest exclusivity end
+  const others=c.drugs.filter(d=>!shown.has(d.b)).sort((a,b)=>(b.tr||0)-(a.tr||0)||(a.loe||'9').localeCompare(b.loe||'9'));
+  const dTable=list=>`<div class="tblx"><table class="pht"><thead><tr><th>${T('phDrug')}</th><th>${T('phAppr')}</th><th class="r">${T('phNewT')}</th><th>${T('phLoe')}</th></tr></thead><tbody>
+    ${list.map(d=>`<tr><td>${drugCell(d.b,d,d.a)}</td><td class="num">${esc(d.y||'—')}</td><td class="r num">${d.tr||'—'}</td><td style="white-space:nowrap">${loeCell(d)}</td></tr>`).join('')}</tbody></table></div>`;
+  const lead=r?0:15;
+  if(lead) html+=dTable(others.slice(0,lead));
+  if(others.length>lead) html+=`<details class="tv"><summary>${T('phOther',others.length-lead)}</summary>${dTable(others.slice(lead))}</details>`;
+  const p3=c.pipe.filter(p=>p.ph===3), p2=c.pipe.filter(p=>p.ph===2);
+  const pRow=p=>`<div style="padding:7px 0;border-bottom:1px solid var(--rule-2)"><div style="font-weight:500">${esc(p.n)}</div><div class="nm" style="font-size:12px">${esc(AREA(p.a))} · ${T('phTrials',p.k)}${p.c.length?' · '+esc(p.c.join('; ')):''}</div></div>`;
+  if(c.pipe.length) html+=`<h3 style="margin-top:16px">${T('phPipe',p3.length,p2.length)}</h3>
+    ${p3.map(pRow).join('')}
+    ${p2.length?`<details class="tv"><summary>${T('phP2',p2.length)}</summary>${p2.map(pRow).join('')}</details>`:''}`;
+  return html+`<p class="nm" style="font-size:11.5px;margin-top:10px">${T('phNote')}</p></div>`;
+}
+
 /* ---------- DCF ---------- */
 const FD = DATA.fd;
 // Manual inputs, one object per ticker holding only what differs from the defaults.
@@ -1263,6 +1345,8 @@ function renderDCF(){
     if(v?.bad) warn.push(T('dWarnWG'));
     if(v?.tvs>.8) warn.push(T('dWarnTv',pct(v.tvs,0)));
     if(!['USD','CAD'].includes(F)) warn.push(T('dWarnCcy',F,C));
+    const pr=phRisk(dT);
+    if(pr&&(pr.past+pr.soon)/pr.tot>=.1) info.push(T('phDcf',pct((pr.past+pr.soon)/pr.tot,0),pr.y,pr.names.join(', ')));
     tiles=[tile(T('dVps'), ok?fmt(v.vps,2):'—', esc(C)), tile(T('dPx'), fmt(s.px,2), `${esc(C)} · ${esc(FD.asof)}`), upTile(''),
       tile('WACC', pct(r.wacc,2), T('dKeSub',pct(r.ke,1),pct(r.wd,0))),
       tile(T('dEv'), mny(v?.ev), (okN(v?.eq)?T('dEq',mny(v.eq))+' · ':'')+T('dMn',esc(F))),
@@ -1396,6 +1480,7 @@ function openTk(t){
       ${hist.map(x=>`<tr><td class="num">${x.d}</td>${x.h?`<td class="r num">${fmt(x.h.q,x.h.q%1?2:0)}</td><td class="r num">${x.h.b==null?'—':money(x.h.b)}</td><td class="r num">${money(x.h.v)}</td><td class="r num">${pct(x.h.v/x.tot,2)}</td><td class="r num unr2" style="white-space:nowrap">${unr(x.h)}</td>`:'<td class="r" colspan="5" style="color:var(--muted)">'+T('notHeldRow')+'</td>'}</tr>`).join('')}
     </tbody></table></div></div>
     ${DATA.px.w[t]?`<div><h3>${T('pxTitle')}</h3><p class="nm" style="font-size:12px;margin:2px 0 6px">${T('pxSub',esc(DATA.px.bench[DATA.px.w[t].mkt]))}</p><div class="chart" id="dpx"></div></div>`:''}
+    ${phBlock(t)}
     <div><h3>${T('related')}</h3>${rel.length?rel.map(x=>{const [a,ac]=actOf(x.act);const [,el,ec]=exOf(x);return `<div style="padding:10px 0;border-bottom:1px solid var(--rule-2);display:flex;flex-direction:column;gap:3px">
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="num" style="color:var(--muted);font-size:12px">${esc(x.date)}</span><span class="pill ${ac}">${a}</span><span class="pill ${ec}">${el}</span></div>
       <div style="font-size:13px">${esc(x.rep)}</div><div class="nm">${T('proposed')}: ${esc(x.prop)}<br>${T('actual')}: ${esc(x.act_)}</div>${ppLine(x,t)}${x.note?`<div class="nm" style="font-style:italic">${esc(x.note)}</div>`:''}${rpBlock(x)}</div>`;}).join(''):`<p class="nm">${T('noRelated')}</p>`}</div>`;

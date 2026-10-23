@@ -1,0 +1,4902 @@
+{
+ "asof": "2026-10-23",
+ "co": {
+  "ABBV": {
+   "rev": null,
+   "drugs": [
+    {
+     "b": "Juvmo",
+     "g": "Tavapadon",
+     "a": null,
+     "y": "2026",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 0
+    },
+    {
+     "b": "Decnupaz",
+     "g": "Pivekimab Sunirine-Pvzy",
+     "a": "oncology",
+     "y": "2026",
+     "tr": 2,
+     "k": "bla",
+     "loe": "2038-05-27",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Emrelis",
+     "g": "Telisotuzumab Vedotin-Tllv",
+     "a": "oncology",
+     "y": "2025",
+     "tr": 4,
+     "k": "bla",
+     "loe": "2037-05-14",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Emblaveo",
+     "g": "Avibactam Sodium, Aztreonam",
+     "a": "infectious",
+     "y": "2025",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2033-02-07",
+     "src": "excl",
+     "gen": 0
+    },
+    {
+     "b": "Vyalev",
+     "g": "Foscarbidopa, Foslevodopa",
+     "a": null,
+     "y": "2024",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2035-10-21",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Rinvoq Lq",
+     "g": "Upadacitinib",
+     "a": "immunology",
+     "y": "2024",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2036-10-17",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Elahere",
+     "g": "Mirvetuximab Soravtansine-Gynx",
+     "a": "oncology",
+     "y": "2022",
+     "tr": 6,
+     "k": "bla",
+     "loe": "2034-11-14",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Qulipta",
+     "g": "Atogepant",
+     "a": "neuro",
+     "y": "2021",
+     "tr": 4,
+     "k": "nda",
+     "loe": "2035-09-28",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Oriahnn (Copackaged)",
+     "g": "Elagolix Sodium, Elagolix Sodium,Estradiol,Norethindrone Acetate",
+     "a": null,
+     "y": "2020",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2039-07-23",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Durysta",
+     "g": "Bimatoprost",
+     "a": null,
+     "y": "2020",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2031-07-15",
+     "src": "sub",
+     "gen": 9
+    },
+    {
+     "b": "Ubrelvy",
+     "g": "Ubrogepant",
+     "a": "neuro",
+     "y": "2019",
+     "tr": 4,
+     "k": "nda",
+     "loe": "2033-12-23",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Rinvoq",
+     "g": "Upadacitinib",
+     "a": "immunology",
+     "y": "2019",
+     "tr": 20,
+     "k": "nda",
+     "loe": "2036-10-17",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Skyrizi",
+     "g": "Risankizumab-Rzaa",
+     "a": "immunology",
+     "y": "2019",
+     "tr": 17,
+     "k": "bla",
+     "loe": "2031-04-23",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Orilissa",
+     "g": "Elagolix Sodium",
+     "a": "renal",
+     "y": "2018",
+     "tr": 1,
+     "k": "nda",
+     "loe": "2039-07-23",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Mavyret",
+     "g": "Glecaprevir, Pibrentasvir",
+     "a": "infectious",
+     "y": "2017",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2035-06-05",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Venclexta",
+     "g": "Venetoclax",
+     "a": "oncology",
+     "y": "2016",
+     "tr": 13,
+     "k": "nda",
+     "loe": "2032-01-29",
+     "src": "sub",
+     "gen": 1
+    },
+    {
+     "b": "Vraylar",
+     "g": "Cariprazine Hydrochloride",
+     "a": "psych",
+     "y": "2015",
+     "tr": 1,
+     "k": "nda",
+     "loe": "2029-09-17",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Viberzi",
+     "g": "Eluxadoline",
+     "a": null,
+     "y": "2015",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-05-27",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Kybella",
+     "g": "Deoxycholic Acid",
+     "a": null,
+     "y": "2015",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2028-05-16",
+     "src": "sub",
+     "gen": 1
+    },
+    {
+     "b": "Liletta",
+     "g": "Levonorgestrel",
+     "a": null,
+     "y": "2015",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2033-10-06",
+     "src": "sub",
+     "gen": 12
+    },
+    {
+     "b": "Avycaz",
+     "g": "Avibactam Sodium, Ceftazidime",
+     "a": null,
+     "y": "2015",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2032-06-15",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Duopa",
+     "g": "Carbidopa, Levodopa",
+     "a": null,
+     "y": "2015",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 13
+    },
+    {
+     "b": "Namzaric",
+     "g": "Donepezil Hydrochloride, Memantine Hydrochloride",
+     "a": null,
+     "y": "2014",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-12-05",
+     "src": "pat",
+     "gen": 4
+    },
+    {
+     "b": "Dalvance",
+     "g": "Dalbavancin Hydrochloride",
+     "a": null,
+     "y": "2014",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2028-05-23",
+     "src": "pat",
+     "gen": 5
+    },
+    {
+     "b": "Imbruvica",
+     "g": "Ibrutinib",
+     "a": "oncology",
+     "y": "2013",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2033-10-30",
+     "src": "sub",
+     "gen": 1
+    },
+    {
+     "b": "Fetzima",
+     "g": "Levomilnacipran Hydrochloride",
+     "a": null,
+     "y": "2013",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2032-05-23",
+     "src": "sub",
+     "gen": 1
+    },
+    {
+     "b": "Taytulla",
+     "g": "Ethinyl Estradiol, Norethindrone Acetate",
+     "a": null,
+     "y": "2013",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 13
+    },
+    {
+     "b": "Linzess",
+     "g": "Linaclotide",
+     "a": null,
+     "y": "2012",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-05-21",
+     "src": "excl",
+     "gen": 1
+    },
+    {
+     "b": "Viibryd",
+     "g": "Vilazodone Hydrochloride",
+     "a": null,
+     "y": "2011",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 5
+    },
+    {
+     "b": "Teflaro",
+     "g": "Ceftaroline Fosamil",
+     "a": null,
+     "y": "2010",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2031-02-10",
+     "src": "pat",
+     "gen": 1
+    },
+    {
+     "b": "Lo Loestrin Fe",
+     "g": "Ethinyl Estradiol, Norethindrone Acetate",
+     "a": null,
+     "y": "2010",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-02-02",
+     "src": "pat",
+     "gen": 13
+    },
+    {
+     "b": "Atelvia",
+     "g": "Risedronate Sodium",
+     "a": null,
+     "y": "2010",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2028-01-09",
+     "src": "pat",
+     "gen": 6
+    },
+    {
+     "b": "Lumigan",
+     "g": "Bimatoprost",
+     "a": null,
+     "y": "2010",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2027-06-13",
+     "src": "sub",
+     "gen": 9
+    },
+    {
+     "b": "Zymaxid",
+     "g": "Gatifloxacin",
+     "a": null,
+     "y": "2010",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 2
+    },
+    {
+     "b": "Norvir",
+     "g": "Ritonavir",
+     "a": "infectious",
+     "y": "2010",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 4
+    },
+    {
+     "b": "Saphris",
+     "g": "Asenapine Maleate",
+     "a": null,
+     "y": "2009",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2026-04-06",
+     "src": "sub",
+     "gen": 3
+    },
+    {
+     "b": "Acuvail",
+     "g": "Ketorolac Tromethamine",
+     "a": null,
+     "y": "2009",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-08-15",
+     "src": "sub",
+     "gen": 23
+    },
+    {
+     "b": "Ozurdex",
+     "g": "Dexamethasone",
+     "a": null,
+     "y": "2009",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 14
+    },
+    {
+     "b": "Creon",
+     "g": "Lipase, Pancrelipase (Amylase, Protease)",
+     "a": "digestive",
+     "y": "2009",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2021-04-30",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Savella",
+     "g": "Milnacipran Hydrochloride",
+     "a": null,
+     "y": "2009",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-09-19",
+     "src": "pat",
+     "gen": 5
+    },
+    {
+     "b": "Latisse",
+     "g": "Bimatoprost",
+     "a": null,
+     "y": "2008",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 9
+    },
+    {
+     "b": "Bystolic",
+     "g": "Nebivolol Hydrochloride",
+     "a": null,
+     "y": "2007",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 13
+    },
+    {
+     "b": "Combigan",
+     "g": "Brimonidine Tartrate, Timolol Maleate",
+     "a": null,
+     "y": "2007",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 11
+    },
+    {
+     "b": "Acular Ls",
+     "g": "Ketorolac Tromethamine",
+     "a": null,
+     "y": "2003",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2027-05-24",
+     "src": "sub",
+     "gen": 23
+    },
+    {
+     "b": "Oxytrol",
+     "g": "Oxybutynin",
+     "a": null,
+     "y": "2003",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 0
+    },
+    {
+     "b": "Humira",
+     "g": "Adalimumab",
+     "a": "immunology",
+     "y": "2002",
+     "tr": 3,
+     "k": "bla",
+     "loe": "2014-12-31",
+     "src": "bla",
+     "gen": 10
+    },
+    {
+     "b": "Restasis Multidose",
+     "g": "Cyclosporine",
+     "a": "immunology",
+     "y": "2002",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 15
+    },
+    {
+     "b": "Restasis",
+     "g": "Cyclosporine",
+     "a": "immunology",
+     "y": "2002",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 15
+    },
+    {
+     "b": "Lexapro",
+     "g": "Escitalopram Oxalate",
+     "a": null,
+     "y": "2002",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2026-05-12",
+     "src": "excl",
+     "gen": 14
+    },
+    {
+     "b": "Synthroid",
+     "g": "Levothyroxine Sodium",
+     "a": null,
+     "y": "2002",
+     "tr": 1,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 11
+    },
+    {
+     "b": "Alphagan P",
+     "g": "Brimonidine Tartrate",
+     "a": null,
+     "y": "2001",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 14
+    },
+    {
+     "b": "Canasa",
+     "g": "Mesalamine",
+     "a": null,
+     "y": "2001",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2028-06-06",
+     "src": "pat",
+     "gen": 23
+    },
+    {
+     "b": "Kaletra",
+     "g": "Lopinavir, Ritonavir",
+     "a": "infectious",
+     "y": "2000",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 5
+    },
+    {
+     "b": "Depakote Er",
+     "g": "Divalproex Sodium",
+     "a": null,
+     "y": "2000",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 21
+    },
+    {
+     "b": "Gengraf",
+     "g": "Cyclosporine",
+     "a": "immunology",
+     "y": "2000",
+     "tr": 0
+    },
+    {
+     "b": "Celexa",
+     "g": "Citalopram Hydrobromide",
+     "a": null,
+     "y": "1998",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 9
+    },
+    {
+     "b": "Zemplar",
+     "g": "Paricalcitol",
+     "a": null,
+     "y": "1998",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 9
+    },
+    {
+     "b": "Actonel",
+     "g": "Risedronate Sodium",
+     "a": null,
+     "y": "1998",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 6
+    },
+    {
+     "b": "Crinone",
+     "g": "Progesterone",
+     "a": null,
+     "y": "1997",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 10
+    },
+    {
+     "b": "Timolol Maleate",
+     "g": "Timolol Maleate",
+     "a": null,
+     "y": "1997",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 17
+    },
+    {
+     "b": "Ultane",
+     "g": "Sevoflurane",
+     "a": null,
+     "y": "1995",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 5
+    },
+    {
+     "b": "Ocuflox",
+     "g": "Ofloxacin",
+     "a": null,
+     "y": "1993",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 14
+    },
+    {
+     "b": "Lupron Depot-Ped Kit",
+     "g": "Leuprolide Acetate",
+     "a": null,
+     "y": "1993",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2031-02-05",
+     "src": "pat",
+     "gen": 8
+    },
+    {
+     "b": "Acular",
+     "g": "Ketorolac Tromethamine",
+     "a": null,
+     "y": "1992",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 23
+    },
+    {
+     "b": "Botox Cosmetic",
+     "g": "Onabotulinumtoxina",
+     "a": null,
+     "y": "1991",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2003-12-09",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Botox",
+     "g": "Onabotulinumtoxina",
+     "a": null,
+     "y": "1991",
+     "tr": 1,
+     "k": "bla",
+     "loe": "2003-12-09",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Survanta",
+     "g": "Beractant",
+     "a": null,
+     "y": "1991",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2003-07-01",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Lupron Depot",
+     "g": "Leuprolide Acetate",
+     "a": null,
+     "y": "1989",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 8
+    },
+    {
+     "b": "Fml Forte",
+     "g": "Fluorometholone",
+     "a": null,
+     "y": "1986",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 2
+    },
+    {
+     "b": "Betagan",
+     "g": "Levobunolol Hydrochloride",
+     "a": null,
+     "y": "1985",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 1
+    },
+    {
+     "b": "Estrace",
+     "g": "Estradiol",
+     "a": null,
+     "y": "1984",
+     "tr": 0
+    },
+    {
+     "b": "Depakote",
+     "g": "Divalproex Sodium",
+     "a": null,
+     "y": "1983",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 21
+    },
+    {
+     "b": "Carafate",
+     "g": "Sucralfate",
+     "a": null,
+     "y": "1981",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 11
+    },
+    {
+     "b": "Infed",
+     "g": "Iron Dextran",
+     "a": null,
+     "y": "1974",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 0
+    },
+    {
+     "b": "Pred Forte",
+     "g": "Prednisolone Acetate",
+     "a": null,
+     "y": "1973",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 3
+    },
+    {
+     "b": "Pred Mild",
+     "g": "Prednisolone Acetate",
+     "a": null,
+     "y": "1972",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 3
+    },
+    {
+     "b": "Fml",
+     "g": "Fluorometholone",
+     "a": null,
+     "y": "1972",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 2
+    }
+   ],
+   "pipe": [
+    {
+     "n": "Telisotuzumab Adizutecan",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "c-MET",
+      "Colorectal Cancer",
+      "Non-Small Cell Lung Cancer"
+     ],
+     "k": 18
+    },
+    {
+     "n": "ABBV-RGX-314 Dose 1",
+     "ph": 3,
+     "a": "ophthalmo",
+     "c": [
+      "Neovascular Age-Related Macular Degeneration (nAMD)",
+      "Diabetic Retinopathy (DR)",
+      "Center-Involved Diabetic Macular Edema (CI-DME)"
+     ],
+     "k": 14
+    },
+    {
+     "n": "Etentamig (ABBV-383)",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Multiple Myeloma",
+      "Relapsed/Refractory Multiple Myeloma",
+      "Immunoglobulin Light Chain (AL) Amyloidosis"
+     ],
+     "k": 13
+    },
+    {
+     "n": "Lutikizumab",
+     "ph": 3,
+     "a": "immunology",
+     "c": [
+      "Hidradenitis Suppurativa",
+      "Atopic Dermatitis",
+      "Rheumatoid Arthritis"
+     ],
+     "k": 8
+    },
+    {
+     "n": "ABBV-706",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Small Cell Lung Cancer",
+      "Advanced Solid Tumors"
+     ],
+     "k": 3
+    },
+    {
+     "n": "ABBV-1480",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Non-Small Cell Lung Cancer"
+     ],
+     "k": 1
+    },
+    {
+     "n": "NOA LIFT",
+     "ph": 3,
+     "a": "other",
+     "c": [
+      "Nasolabial Folds"
+     ],
+     "k": 1
+    },
+    {
+     "n": "ABBV-932",
+     "ph": 2,
+     "a": "psych",
+     "c": [
+      "Bipolar Disorder",
+      "Bipolar I or II Disorder",
+      "Generalized Anxiety Disorder (GAD)"
+     ],
+     "k": 3
+    },
+    {
+     "n": "ABBV-295",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Obesity",
+      "Healthy Volunteer",
+      "Overweight"
+     ],
+     "k": 3
+    },
+    {
+     "n": "AGN-151586",
+     "ph": 2,
+     "a": "other",
+     "c": [
+      "Forehead Lines",
+      "Glabellar Lines"
+     ],
+     "k": 2
+    },
+    {
+     "n": "ABBV-701",
+     "ph": 2,
+     "a": "other",
+     "c": [
+      "Healthy Volunteer",
+      "Crohn's Disease",
+      "Ulcerative Colitis"
+     ],
+     "k": 2
+    },
+    {
+     "n": "IMGN151",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Gynecologic Cancers",
+      "Platinum-Sensitive Ovarian Cancer",
+      "Fallopian Tube Cancer"
+     ],
+     "k": 2
+    },
+    {
+     "n": "Icalcaprant",
+     "ph": 2,
+     "a": "psych",
+     "c": [
+      "Major Depressive Disorder",
+      "Bipolar I Disorder",
+      "Bipolar II Disorder"
+     ],
+     "k": 2
+    },
+    {
+     "n": "Emraclidine",
+     "ph": 2,
+     "a": "psych",
+     "c": [
+      "Schizophrenia",
+      "Healthy Volunteer"
+     ],
+     "k": 2
+    },
+    {
+     "n": "IMGN632",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Blastic Plasmacytoid Dendritic Cell Neoplasm",
+      "Myeloproliferative Neoplasm",
+      "Acute Myeloid Leukemia"
+     ],
+     "k": 2
+    },
+    {
+     "n": "AGN-151607-DP",
+     "ph": 2,
+     "a": "other",
+     "c": [
+      "Upper Limb Essential Tremor",
+      "Ventral Hernia"
+     ],
+     "k": 2
+    },
+    {
+     "n": "AGN-193408 SR",
+     "ph": 2,
+     "a": "cardio",
+     "c": [
+      "Open-angle Glaucoma",
+      "Ocular Hypertension"
+     ],
+     "k": 1
+    },
+    {
+     "n": "Aflibercept",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Diabetic Retinopathy, DR"
+     ],
+     "k": 1
+    },
+    {
+     "n": "ABBV-2001",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Multiple Myeloma"
+     ],
+     "k": 1
+    },
+    {
+     "n": "ABBV-6628",
+     "ph": 2,
+     "a": "ophthalmo",
+     "c": [
+      "Geographic Atrophy",
+      "Age-Related Macular Degeneration"
+     ],
+     "k": 1
+    },
+    {
+     "n": "TrenibotulinumtoxinE and OnabotulinumtoxinA",
+     "ph": 2,
+     "a": "other",
+     "c": [
+      "Upper Facial Lines",
+      "Glabellar Lines"
+     ],
+     "k": 1
+    },
+    {
+     "n": "ABBV-1758",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Alzheimer's Disease"
+     ],
+     "k": 1
+    },
+    {
+     "n": "ABBV-142",
+     "ph": 2,
+     "a": "respiratory",
+     "c": [
+      "Idiopathic Pulmonary Fibrosis"
+     ],
+     "k": 1
+    },
+    {
+     "n": "ABBV-8736",
+     "ph": 2,
+     "a": "immunology",
+     "c": [
+      "Crohn's Disease"
+     ],
+     "k": 1
+    },
+    {
+     "n": "Ranibizumab",
+     "ph": 2,
+     "a": "ophthalmo",
+     "c": [
+      "Neovascular Age-Related Macular Degeneration (nAMD)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "MEDI0618",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Migraine"
+     ],
+     "k": 1
+    }
+   ],
+   "nT": 181
+  },
+  "JNJ": {
+   "rev": {
+    "ccy": "USD",
+    "form": "10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000016/jnj-20251228.htm",
+    "fy": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "tot": [
+     78740.0,
+     79990.0,
+     85159.0,
+     88821.0,
+     94193.0
+    ],
+    "p": [
+     {
+      "n": "DARZALEX",
+      "a": "oncology",
+      "b": "Darzalex",
+      "v": [
+       6023.0,
+       7977.0,
+       9744.0,
+       11670.0,
+       14351.0
+      ]
+     },
+     {
+      "n": "Stelara",
+      "a": "immunology",
+      "b": "Stelara",
+      "v": [
+       9134.0,
+       9723.0,
+       10858.0,
+       10361.0,
+       6078.0
+      ]
+     },
+     {
+      "n": "ELECTROPHYSIOLOGY",
+      "a": "other",
+      "b": null,
+      "v": [
+       3623.0,
+       3937.0,
+       4688.0,
+       5267.0,
+       5634.0
+      ]
+     },
+     {
+      "n": "GENERAL",
+      "a": "other",
+      "b": null,
+      "v": [
+       5190.0,
+       5121.0,
+       5366.0,
+       5358.0,
+       5560.0
+      ]
+     },
+     {
+      "n": "Tremfya",
+      "a": "immunology",
+      "b": "Tremfya",
+      "v": [
+       2127.0,
+       2668.0,
+       3147.0,
+       3670.0,
+       5155.0
+      ]
+     },
+     {
+      "n": "ADVANCED",
+      "a": "other",
+      "b": null,
+      "v": [
+       4622.0,
+       4569.0,
+       4671.0,
+       4488.0,
+       4577.0
+      ]
+     },
+     {
+      "n": "CONTACTLENSESOTHER",
+      "a": "other",
+      "b": null,
+      "v": [
+       3440.0,
+       3543.0,
+       3702.0,
+       3733.0,
+       3910.0
+      ]
+     },
+     {
+      "n": "INVEGASUSTENNAXEPLIONTRINZATREVICTA",
+      "a": "psych",
+      "b": "Invega Sustenna",
+      "v": [
+       4022.0,
+       4140.0,
+       4115.0,
+       4222.0,
+       3810.0
+      ]
+     },
+     {
+      "n": "Erleada",
+      "a": "oncology",
+      "b": "Erleada",
+      "v": [
+       1291.0,
+       1881.0,
+       2387.0,
+       2999.0,
+       3574.0
+      ]
+     },
+     {
+      "n": "TRAUMA",
+      "a": "other",
+      "b": null,
+      "v": [
+       2885.0,
+       2871.0,
+       2979.0,
+       3049.0,
+       3146.0
+      ]
+     },
+     {
+      "n": "SPINESPORTSOTHER",
+      "a": "other",
+      "b": null,
+      "v": [
+       2898.0,
+       2843.0,
+       2947.0,
+       2926.0,
+       2852.0
+      ]
+     },
+     {
+      "n": "IMBRUVICA",
+      "a": "oncology",
+      "b": null,
+      "v": [
+       4369.0,
+       3784.0,
+       3264.0,
+       3038.0,
+       2823.0
+      ]
+     },
+     {
+      "n": "Simponi Simponi Aria",
+      "a": "immunology",
+      "b": "Simponi Aria",
+      "v": [
+       2276.0,
+       2184.0,
+       2197.0,
+       2190.0,
+       2668.0
+      ]
+     },
+     {
+      "n": "Xarelto",
+      "a": "cardio",
+      "b": "Xarelto",
+      "v": [
+       2438.0,
+       2473.0,
+       2365.0,
+       2373.0,
+       2633.0
+      ]
+     },
+     {
+      "n": "OPSUMIT",
+      "a": "cardio",
+      "b": "Opsumit",
+      "v": [
+       1819.0,
+       1783.0,
+       1973.0,
+       2225.0,
+       2325.0
+      ]
+     },
+     {
+      "n": "UPTRAVI",
+      "a": "cardio",
+      "b": "Uptravi",
+      "v": [
+       1237.0,
+       1322.0,
+       1582.0,
+       1817.0,
+       1902.0
+      ]
+     },
+     {
+      "n": "CARVYKTI",
+      "a": "oncology",
+      "b": null,
+      "v": [
+       0.0,
+       133.0,
+       500.0,
+       963.0,
+       1887.0
+      ]
+     },
+     {
+      "n": "Remicade",
+      "a": "immunology",
+      "b": "Remicade",
+      "v": [
+       3190.0,
+       2343.0,
+       1839.0,
+       1605.0,
+       1768.0
+      ]
+     },
+     {
+      "n": "Abiomed",
+      "a": "other",
+      "b": null,
+      "v": [
+       0.0,
+       31.0,
+       1306.0,
+       1496.0,
+       1751.0
+      ]
+     },
+     {
+      "n": "SPRAVATO",
+      "a": "psych",
+      "b": "Spravato",
+      "v": [
+       null,
+       null,
+       689.0,
+       1077.0,
+       1696.0
+      ]
+     },
+     {
+      "n": "HIPS",
+      "a": "other",
+      "b": null,
+      "v": [
+       1480.0,
+       1514.0,
+       1560.0,
+       1638.0,
+       1674.0
+      ]
+     },
+     {
+      "n": "KNEES",
+      "a": "other",
+      "b": null,
+      "v": [
+       1325.0,
+       1359.0,
+       1456.0,
+       1545.0,
+       1587.0
+      ]
+     },
+     {
+      "n": "PREZISTAPREZCOBIXREZOLSTASYMTUZA",
+      "a": "infectious",
+      "b": "Symtuza",
+      "v": [
+       2083.0,
+       1943.0,
+       1854.0,
+       1712.0,
+       1579.0
+      ]
+     },
+     {
+      "n": "SURGICAL",
+      "a": "other",
+      "b": null,
+      "v": [
+       1248.0,
+       1306.0,
+       1370.0,
+       1413.0,
+       1558.0
+      ]
+     },
+     {
+      "n": "EDURAN Trilpivirine",
+      "a": "infectious",
+      "b": "Edurant",
+      "v": [
+       994.0,
+       1008.0,
+       1150.0,
+       1272.0,
+       1486.0
+      ]
+     },
+     {
+      "n": "Shockwave Medical Inc.",
+      "a": "other",
+      "b": null,
+      "v": [
+       null,
+       null,
+       0.0,
+       564.0,
+       1146.0
+      ]
+     },
+     {
+      "n": "OTHERNEUROSCIENCE",
+      "a": "neuro",
+      "b": null,
+      "v": [
+       2074.0,
+       1734.0,
+       1553.0,
+       1175.0,
+       1048.0
+      ]
+     },
+     {
+      "n": "RYBREVANTLAZCLUZE",
+      "a": "oncology",
+      "b": "Lazcluze",
+      "v": [
+       null,
+       null,
+       93.0,
+       327.0,
+       734.0
+      ]
+     },
+     {
+      "n": "CAPLYTA",
+      "a": "psych",
+      "b": "Caplyta",
+      "v": [
+       null,
+       null,
+       0.0,
+       0.0,
+       700.0
+      ]
+     },
+     {
+      "n": "TECVAYLI",
+      "a": "oncology",
+      "b": "Tecvayli",
+      "v": [
+       null,
+       null,
+       395.0,
+       549.0,
+       670.0
+      ]
+     },
+     {
+      "n": "CONCERTA Methylphenidate",
+      "a": "metabolic",
+      "b": "Concerta",
+      "v": [
+       667.0,
+       644.0,
+       783.0,
+       641.0,
+       584.0
+      ]
+     },
+     {
+      "n": "ZYTIGA",
+      "a": "oncology",
+      "b": "Zytiga",
+      "v": [
+       2297.0,
+       1770.0,
+       887.0,
+       631.0,
+       502.0
+      ]
+     },
+     {
+      "n": "TALVEY",
+      "a": "oncology",
+      "b": "Talvey",
+      "v": [
+       null,
+       null,
+       63.0,
+       287.0,
+       463.0
+      ]
+     },
+     {
+      "n": "Other Cardiovascular",
+      "a": "cardio",
+      "b": null,
+      "v": [
+       null,
+       null,
+       356.0,
+       380.0,
+       397.0
+      ]
+     },
+     {
+      "n": "Other Oncology",
+      "a": "oncology",
+      "b": null,
+      "v": [
+       568.0,
+       438.0,
+       328.0,
+       317.0,
+       376.0
+      ]
+     },
+     {
+      "n": "Other Pulmonary Hypertension",
+      "a": "cardio",
+      "b": null,
+      "v": [
+       null,
+       null,
+       260.0,
+       240.0,
+       209.0
+      ]
+     },
+     {
+      "n": "Other Infectious Diseases",
+      "a": "infectious",
+      "b": null,
+      "v": [
+       363.0,
+       318.0,
+       1414.0,
+       412.0,
+       175.0
+      ]
+     },
+     {
+      "n": "Other Immunology",
+      "a": "immunology",
+      "b": null,
+      "v": [
+       24.0,
+       17.0,
+       11.0,
+       3.0,
+       61.0
+      ]
+     }
+    ]
+   },
+   "drugs": [
+    {
+     "b": "Darzalex",
+     "g": "Daratumumab",
+     "a": "oncology",
+     "y": "2015",
+     "tr": 13,
+     "k": "bla",
+     "loe": "2027-11-16",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Stelara",
+     "g": "Ustekinumab",
+     "a": "immunology",
+     "y": "2009",
+     "tr": 2,
+     "k": "bla",
+     "loe": "2021-09-25",
+     "src": "bla",
+     "gen": 10
+    },
+    {
+     "b": "Tremfya",
+     "g": "Guselkumab",
+     "a": "immunology",
+     "y": "2017",
+     "tr": 13,
+     "k": "bla",
+     "loe": "2029-07-13",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Invega Sustenna",
+     "g": "Paliperidone Palmitate",
+     "a": "psych",
+     "y": "2009",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2031-01-26",
+     "src": "pat",
+     "gen": 0
+    },
+    {
+     "b": "Erleada",
+     "g": "Apalutamide",
+     "a": "oncology",
+     "y": "2018",
+     "tr": 8,
+     "k": "nda",
+     "loe": "2033-06-04",
+     "src": "sub",
+     "gen": 1
+    },
+    {
+     "b": "Simponi Aria",
+     "g": "Golimumab",
+     "a": "immunology",
+     "y": "2013",
+     "tr": 3,
+     "k": "bla",
+     "loe": "2025-07-18",
+     "src": "bla",
+     "gen": 1
+    },
+    {
+     "b": "Xarelto",
+     "g": "Rivaroxaban",
+     "a": "cardio",
+     "y": "2011",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 20
+    },
+    {
+     "b": "Opsumit",
+     "g": "Macitentan",
+     "a": "cardio",
+     "y": "2013",
+     "tr": 4,
+     "k": "nda",
+     "loe": "2028-08-28",
+     "src": "excl",
+     "gen": 12
+    },
+    {
+     "b": "Uptravi",
+     "g": "Selexipag",
+     "a": "cardio",
+     "y": "2015",
+     "tr": 3,
+     "k": "nda",
+     "loe": "2030-08-01",
+     "src": "sub",
+     "gen": 2
+    },
+    {
+     "b": "Remicade",
+     "g": "Infliximab",
+     "a": "immunology",
+     "y": "1998",
+     "tr": 1,
+     "k": "bla",
+     "loe": "2010-08-24",
+     "src": "bla",
+     "gen": 4
+    },
+    {
+     "b": "Spravato",
+     "g": "Esketamine Hydrochloride",
+     "a": "psych",
+     "y": "2019",
+     "tr": 3,
+     "k": "nda",
+     "loe": "2040-02-18",
+     "src": "pat",
+     "gen": 0
+    },
+    {
+     "b": "Symtuza",
+     "g": "Cobicistat, Darunavir, Emtricitabine, Tenofovir Alafenamide Fumarate",
+     "a": "infectious",
+     "y": "2018",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2032-08-15",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Edurant",
+     "g": "Rilpivirine Hydrochloride",
+     "a": "infectious",
+     "y": "2011",
+     "tr": 1,
+     "k": "nda",
+     "loe": "2027-09-15",
+     "src": "excl",
+     "gen": 2
+    },
+    {
+     "b": "Lazcluze",
+     "g": "Lazertinib Mesylate",
+     "a": "oncology",
+     "y": "2024",
+     "tr": 10,
+     "k": "nda",
+     "loe": "2038-04-18",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Caplyta",
+     "g": "Lumateperone Tosylate",
+     "a": "psych",
+     "y": "2019",
+     "tr": 8,
+     "k": "nda",
+     "loe": "2029-12-01",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Tecvayli",
+     "g": "Teclistamab-Cqyv",
+     "a": "oncology",
+     "y": "2022",
+     "tr": 13,
+     "k": "bla",
+     "loe": "2034-10-25",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Concerta",
+     "g": "Methylphenidate Hydrochloride",
+     "a": "metabolic",
+     "y": "2000",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 28
+    },
+    {
+     "b": "Zytiga",
+     "g": "Abiraterone Acetate",
+     "a": "oncology",
+     "y": "2011",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 12
+    },
+    {
+     "b": "Talvey",
+     "g": "Talquetamab-Tgvs",
+     "a": "oncology",
+     "y": "2023",
+     "tr": 12,
+     "k": "bla",
+     "loe": "2035-08-09",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Icotyde",
+     "g": "Icotrokinra Hydrochloride",
+     "a": "immunology",
+     "y": "2026",
+     "tr": 10,
+     "k": "nda",
+     "loe": "2041-01-14",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Prezcobix Ped",
+     "g": "Cobicistat, Darunavir Ethanolate",
+     "a": null,
+     "y": "2026",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 0
+    },
+    {
+     "b": "Rybrevant Faspro",
+     "g": "Amivantamab And Hyaluronidase-Lpuj",
+     "a": null,
+     "y": "2025",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2038-02-13",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Inlexzo",
+     "g": "Gemcitabine Hydrochloride",
+     "a": "oncology",
+     "y": "2025",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2038-11-07",
+     "src": "pat",
+     "gen": 13
+    },
+    {
+     "b": "Imaavy",
+     "g": "Nipocalimab-Aahu",
+     "a": "immunology",
+     "y": "2025",
+     "tr": 12,
+     "k": "bla",
+     "loe": "2037-04-29",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Opsynvi",
+     "g": "Macitentan, Tadalafil",
+     "a": "cardio",
+     "y": "2024",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2031-09-22",
+     "src": "excl",
+     "gen": 0
+    },
+    {
+     "b": "Edurant Ped",
+     "g": "Rilpivirine Hydrochloride",
+     "a": null,
+     "y": "2024",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2037-10-23",
+     "src": "pat",
+     "gen": 2
+    },
+    {
+     "b": "Akeega",
+     "g": "Abiraterone Acetate, Niraparib Tosylate",
+     "a": "oncology",
+     "y": "2023",
+     "tr": 3,
+     "k": "nda",
+     "loe": "2038-03-27",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Rybrevant",
+     "g": "Amivantamab-Vmjw",
+     "a": "oncology",
+     "y": "2021",
+     "tr": 22,
+     "k": "bla",
+     "loe": "2033-05-21",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Ponvory",
+     "g": "Ponesimod",
+     "a": null,
+     "y": "2021",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2032-05-06",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Darzalex Faspro",
+     "g": "Daratumumab And Hyaluronidase-Fihj",
+     "a": null,
+     "y": "2020",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2032-05-01",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Balversa",
+     "g": "Erdafitinib",
+     "a": "oncology",
+     "y": "2019",
+     "tr": 7,
+     "k": "nda",
+     "loe": "2033-04-12",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Invokamet Xr",
+     "g": "Canagliflozin, Metformin Hydrochloride",
+     "a": null,
+     "y": "2016",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-02-26",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Yondelis",
+     "g": "Trabectedin",
+     "a": "oncology",
+     "y": "2015",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2028-07-07",
+     "src": "pat",
+     "gen": 0
+    },
+    {
+     "b": "Invega Hafyera",
+     "g": "Paliperidone Palmitate",
+     "a": null,
+     "y": "2015",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2041-11-24",
+     "src": "pat",
+     "gen": 0
+    },
+    {
+     "b": "Invega Trinza",
+     "g": "Paliperidone Palmitate",
+     "a": null,
+     "y": "2015",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2041-11-24",
+     "src": "pat",
+     "gen": 0
+    },
+    {
+     "b": "Prezcobix",
+     "g": "Cobicistat, Darunavir Ethanolate, Darunavir And Cobicistat",
+     "a": null,
+     "y": "2015",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-09-03",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Invokamet",
+     "g": "Canagliflozin, Metformin Hydrochloride",
+     "a": null,
+     "y": "2014",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-02-26",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Invokana",
+     "g": "Canagliflozin",
+     "a": null,
+     "y": "2013",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-02-26",
+     "src": "sub",
+     "gen": 1
+    },
+    {
+     "b": "Sirturo",
+     "g": "Bedaquiline Fumarate",
+     "a": null,
+     "y": "2012",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-03-19",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Veletri",
+     "g": "Epoprostenol Sodium",
+     "a": null,
+     "y": "2008",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2027-03-15",
+     "src": "pat",
+     "gen": 3
+    },
+    {
+     "b": "Intelence",
+     "g": "Etravirine",
+     "a": "infectious",
+     "y": "2008",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 3
+    },
+    {
+     "b": "Invega",
+     "g": "Paliperidone",
+     "a": "psych",
+     "y": "2006",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 10
+    },
+    {
+     "b": "Prezista",
+     "g": "Darunavir",
+     "a": null,
+     "y": "2006",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2026-12-26",
+     "src": "sub",
+     "gen": 10
+    },
+    {
+     "b": "Risperdal Consta",
+     "g": "Risperidone",
+     "a": null,
+     "y": "2003",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 23
+    },
+    {
+     "b": "Zavesca",
+     "g": "Miglustat",
+     "a": null,
+     "y": "2003",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 3
+    },
+    {
+     "b": "Tracleer",
+     "g": "Bosentan",
+     "a": null,
+     "y": "2001",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2027-12-28",
+     "src": "pat",
+     "gen": 4
+    },
+    {
+     "b": "Topamax",
+     "g": "Topiramate",
+     "a": null,
+     "y": "1996",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 24
+    },
+    {
+     "b": "Elmiron",
+     "g": "Pentosan Polysulfate Sodium",
+     "a": null,
+     "y": "1996",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 0
+    },
+    {
+     "b": "Risperdal",
+     "g": "Risperidone",
+     "a": "psych",
+     "y": "1993",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 23
+    },
+    {
+     "b": "Sporanox",
+     "g": "Itraconazole",
+     "a": "infectious",
+     "y": "1992",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 8
+    },
+    {
+     "b": "Epogen/Procrit",
+     "g": "Epoetin Alfa",
+     "a": null,
+     "y": "1989",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2001-06-01",
+     "src": "bla",
+     "gen": 1
+    }
+   ],
+   "pipe": [
+    {
+     "n": "Cetrelimab (JNJ-63723283)",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Neoplasms",
+      "Urinary Bladder Neoplasms",
+      "Prostatic Neoplasms, Castration-Resistant"
+     ],
+     "k": 12
+    },
+    {
+     "n": "ITI-1284 10 mg",
+     "ph": 3,
+     "a": "psych",
+     "c": [
+      "Generalized Anxiety Disorder",
+      "Agitation Associated With Alzheimer's Dementia",
+      "Psychotic Disorders"
+     ],
+     "k": 8
+    },
+    {
+     "n": "Pasritamig",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Prostatic Neoplasms",
+      "Prostatic Neoplasms, Castration-Resistant",
+      "Metastatic Castration-resistant Prostatic Neoplasms"
+     ],
+     "k": 8
+    },
+    {
+     "n": "Ramantamig",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Multiple Myeloma",
+      "Relapsed or Refractory Multiple Myeloma",
+      "Previously Treated Amyloid Light-chain (AL) Amyloidosis"
+     ],
+     "k": 8
+    },
+    {
+     "n": "JNJ-78934804",
+     "ph": 3,
+     "a": "immunology",
+     "c": [
+      "Colitis, Ulcerative",
+      "Crohn's Disease",
+      "Crohn Disease"
+     ],
+     "k": 4
+    },
+    {
+     "n": "Ibrutinib",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Leukemia, Lymphocytic, Chronic, B-Cell",
+      "Small Lymphocytic Lymphoma",
+      "Chronic Lymphocytic Leukemia"
+     ],
+     "k": 4
+    },
+    {
+     "n": "TAR-200",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Urinary Bladder Neoplasms",
+      "Bladder Cancer",
+      "Non-Muscle Invasive Bladder Neoplasms"
+     ],
+     "k": 4
+    },
+    {
+     "n": "JNJ-90301900",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Carcinoma, Non-Small-Cell Lung",
+      "Carcinoma, Squamous Cell",
+      "Squamous Cell Carcinoma of Head and Neck"
+     ],
+     "k": 3
+    },
+    {
+     "n": "Bleximenib",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Leukemia, Myeloid, Acute",
+      "Acute Leukemia"
+     ],
+     "k": 3
+    },
+    {
+     "n": "JNJ-87189401",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Prostatic Neoplasms",
+      "Metastatic Castration-resistant Prostatic Neoplasms"
+     ],
+     "k": 3
+    },
+    {
+     "n": "Seltorexant",
+     "ph": 3,
+     "a": "psych",
+     "c": [
+      "Depressive Disorder, Major"
+     ],
+     "k": 2
+    },
+    {
+     "n": "Milvexian",
+     "ph": 3,
+     "a": "cardio",
+     "c": [
+      "Atrial Fibrillation",
+      "Ischemic Stroke; Ischemic Attack, Transient"
+     ],
+     "k": 2
+    },
+    {
+     "n": "Niraparib+ Abiraterone acetate fixed dose combination (FDC)",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Prostatic Neoplasms"
+     ],
+     "k": 1
+    },
+    {
+     "n": "JNJ-81201887",
+     "ph": 3,
+     "a": "ophthalmo",
+     "c": [
+      "Geographic Atrophy",
+      "Macular Degeneration"
+     ],
+     "k": 1
+    },
+    {
+     "n": "JNJ-101556143",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Prostatic Neoplasms",
+      "Metastatic Castration-resistant Prostate Neoplasms",
+      "Metastatic Hormone-sensitive Prostate Cancer"
+     ],
+     "k": 3
+    },
+    {
+     "n": "JNJ-95597528",
+     "ph": 2,
+     "a": "immunology",
+     "c": [
+      "Asthma",
+      "Dermatitis, Atopic"
+     ],
+     "k": 2
+    },
+    {
+     "n": "JNJ-90014496",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Lymphoma, Non-Hodgkin",
+      "Lymphoma, B-Cell",
+      "Lymphoma, Large B-Cell, Diffuse"
+     ],
+     "k": 1
+    },
+    {
+     "n": "JNJ-64042056",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Alzheimer Disease"
+     ],
+     "k": 1
+    },
+    {
+     "n": "JNJ-88545223",
+     "ph": 2,
+     "a": "immunology",
+     "c": [
+      "Arthritis, Psoriatic"
+     ],
+     "k": 1
+    },
+    {
+     "n": "JNJ-101556143 Formulation 1",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Metastatic Prostate Cancer"
+     ],
+     "k": 1
+    },
+    {
+     "n": "JNJ-101556143 Formulation 2",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Metastatic Prostate Cancer"
+     ],
+     "k": 1
+    },
+    {
+     "n": "JNJ-101556143 Formulation 3",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Metastatic Prostate Cancer"
+     ],
+     "k": 1
+    }
+   ],
+   "nT": 183
+  },
+  "LLY": {
+   "rev": {
+    "ccy": "USD",
+    "form": "10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+    "fy": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "tot": [
+     28318.4,
+     28541.4,
+     34124.0,
+     45043.0,
+     65179.0
+    ],
+    "p": [
+     {
+      "n": "Mounjaro",
+      "a": "metabolic",
+      "b": "Mounjaro",
+      "v": [
+       0.0,
+       482.5,
+       5163.0,
+       11540.0,
+       22966.0
+      ]
+     },
+     {
+      "n": "Zepbound",
+      "a": "metabolic",
+      "b": "Zepbound",
+      "v": [
+       0.0,
+       0.0,
+       176.0,
+       4926.0,
+       13542.0
+      ]
+     },
+     {
+      "n": "Verzenio",
+      "a": "oncology",
+      "b": "Verzenio",
+      "v": [
+       1349.9,
+       2483.5,
+       3863.0,
+       5307.0,
+       5723.0
+      ]
+     },
+     {
+      "n": "Trulicity",
+      "a": "metabolic",
+      "b": "Trulicity",
+      "v": [
+       null,
+       null,
+       7132.0,
+       5254.0,
+       4276.0
+      ]
+     },
+     {
+      "n": "Other Cardiometabolic Health",
+      "a": "metabolic",
+      "b": null,
+      "v": [
+       null,
+       null,
+       4453.0,
+       4460.0,
+       4006.0
+      ]
+     },
+     {
+      "n": "Other Oncology",
+      "a": "oncology",
+      "b": null,
+      "v": [
+       330.8,
+       423.8,
+       2795.0,
+       3446.0,
+       3653.0
+      ]
+     },
+     {
+      "n": "Taltz",
+      "a": "immunology",
+      "b": "Taltz",
+      "v": [
+       2212.8,
+       2482.0,
+       2760.0,
+       3260.0,
+       3563.0
+      ]
+     },
+     {
+      "n": "Jardiance",
+      "a": "metabolic",
+      "b": null,
+      "v": [
+       1490.8,
+       2066.0,
+       2745.0,
+       3341.0,
+       3432.0
+      ]
+     },
+     {
+      "n": "Other Immunology",
+      "a": "immunology",
+      "b": null,
+      "v": [
+       32.9,
+       32.1,
+       1038.0,
+       1133.0,
+       1684.0
+      ]
+     }
+    ]
+   },
+   "drugs": [
+    {
+     "b": "Mounjaro",
+     "g": "Tirzepatide",
+     "a": "metabolic",
+     "y": "2022",
+     "tr": 16,
+     "k": "nda",
+     "loe": "2039-06-14",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Zepbound",
+     "g": "Tirzepatide",
+     "a": "metabolic",
+     "y": "2023",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2036-05-13",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Verzenio",
+     "g": "Abemaciclib",
+     "a": "oncology",
+     "y": "2017",
+     "tr": 18,
+     "k": "nda",
+     "loe": "2031-09-28",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Trulicity",
+     "g": "Dulaglutide",
+     "a": "metabolic",
+     "y": "2014",
+     "tr": 1,
+     "k": "bla",
+     "loe": "2026-09-18",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Taltz",
+     "g": "Ixekizumab",
+     "a": "immunology",
+     "y": "2016",
+     "tr": 1,
+     "k": "bla",
+     "loe": "2028-03-22",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Onswik",
+     "g": "Insulin Efsitora Alfa-Gobe",
+     "a": null,
+     "y": "2026",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2038-09-23",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Foundayo",
+     "g": "Orforglipron Calcium",
+     "a": "metabolic",
+     "y": "2026",
+     "tr": 17,
+     "k": "nda",
+     "loe": "2037-09-26",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Inluriyo",
+     "g": "Imlunestrant Tosylate",
+     "a": "oncology",
+     "y": "2025",
+     "tr": 7,
+     "k": "nda",
+     "loe": "2039-07-11",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Ebglyss",
+     "g": "Lebrikizumab-Lbkz",
+     "a": "immunology",
+     "y": "2024",
+     "tr": 4,
+     "k": "bla",
+     "loe": "2036-09-13",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Kisunla",
+     "g": "Donanemab-Azbt",
+     "a": "neuro",
+     "y": "2024",
+     "tr": 7,
+     "k": "bla",
+     "loe": "2036-07-02",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Omvoh",
+     "g": "Mirikizumab-Mrkz",
+     "a": "immunology",
+     "y": "2023",
+     "tr": 13,
+     "k": "bla",
+     "loe": "2035-10-26",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Rezvoglar",
+     "g": "Insulin Glargine-Aglr",
+     "a": "metabolic",
+     "y": "2021",
+     "tr": 0
+    },
+    {
+     "b": "Lyumjev",
+     "g": "Insulin Lispro-Aabc",
+     "a": "metabolic",
+     "y": "2020",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2032-06-15",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Tauvid",
+     "g": "Flortaucipir F-18",
+     "a": "neuro",
+     "y": "2020",
+     "tr": 1,
+     "k": "nda",
+     "loe": "2032-05-26",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Retevmo",
+     "g": "Selpercatinib",
+     "a": "oncology",
+     "y": "2020",
+     "tr": 6,
+     "k": "nda",
+     "loe": "2038-10-10",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Vitrakvi",
+     "g": "Larotrectinib Sulfate",
+     "a": "oncology",
+     "y": "2018",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2036-08-15",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Emgality",
+     "g": "Galcanezumab-Gnlm",
+     "a": "neuro",
+     "y": "2018",
+     "tr": 2,
+     "k": "bla",
+     "loe": "2030-09-27",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Olumiant",
+     "g": "Baricitinib",
+     "a": "metabolic",
+     "y": "2018",
+     "tr": 6,
+     "k": "nda",
+     "loe": "2032-05-31",
+     "src": "sub",
+     "gen": 1
+    },
+    {
+     "b": "Basaglar",
+     "g": "Insulin Glargine",
+     "a": "metabolic",
+     "y": "2015",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2027-12-16",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Portrazza",
+     "g": "Necitumumab",
+     "a": null,
+     "y": "2015",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2027-11-24",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Cyramza",
+     "g": "Ramucirumab",
+     "a": "oncology",
+     "y": "2014",
+     "tr": 3,
+     "k": "bla",
+     "loe": "2026-04-21",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Amyvid",
+     "g": "Florbetapir F-18",
+     "a": null,
+     "y": "2012",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2027-04-30",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Adcirca",
+     "g": "Tadalafil",
+     "a": null,
+     "y": "2009",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 29
+    },
+    {
+     "b": "Cymbalta",
+     "g": "Duloxetine Hydrochloride",
+     "a": null,
+     "y": "2004",
+     "tr": 0
+    },
+    {
+     "b": "Alimta",
+     "g": "Pemetrexed Disodium, Pemetrexed",
+     "a": null,
+     "y": "2004",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 13
+    },
+    {
+     "b": "Cialis",
+     "g": "Tadalafil",
+     "a": null,
+     "y": "2003",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 29
+    },
+    {
+     "b": "Forteo",
+     "g": "Teriparatide",
+     "a": null,
+     "y": "2002",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 3
+    },
+    {
+     "b": "Evista",
+     "g": "Raloxifene Hydrochloride",
+     "a": null,
+     "y": "1997",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 8
+    },
+    {
+     "b": "Humalog",
+     "g": "Insulin Lispro Recombinant, Insulin Lispro Protamine Recombinant",
+     "a": "metabolic",
+     "y": "1996",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2008-06-14",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Humatrope",
+     "g": "Somatropin",
+     "a": null,
+     "y": "1986",
+     "tr": 0,
+     "k": "bla",
+     "loe": "1998-10-16",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Humulin R",
+     "g": "Insulin Human",
+     "a": "metabolic",
+     "y": "1982",
+     "tr": 0,
+     "k": "bla",
+     "loe": "1994-10-28",
+     "src": "bla",
+     "gen": 0
+    }
+   ],
+   "pipe": [
+    {
+     "n": "Eloralintide",
+     "ph": 3,
+     "a": "metabolic",
+     "c": [
+      "Obesity",
+      "Overweight",
+      "Diabetes Mellitus, Type 2"
+     ],
+     "k": 16
+    },
+    {
+     "n": "Brenipatide",
+     "ph": 3,
+     "a": "psych",
+     "c": [
+      "Obesity",
+      "Overweight",
+      "Alcohol Use Disorder"
+     ],
+     "k": 15
+    },
+    {
+     "n": "Retatrutide",
+     "ph": 3,
+     "a": "metabolic",
+     "c": [
+      "Obesity",
+      "Overweight",
+      "Atherosclerotic Cardiovascular Disease (ASCVD)"
+     ],
+     "k": 10
+    },
+    {
+     "n": "Pirtobrutinib",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Chronic Lymphocytic Leukemia",
+      "Small Lymphocytic Lymphoma",
+      "Lymphoma, Non-Hodgkin"
+     ],
+     "k": 8
+    },
+    {
+     "n": "Olomorasib",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Carcinoma, Non-Small-Cell Lung",
+      "Colorectal Neoplasms",
+      "Healthy Volunteers"
+     ],
+     "k": 6
+    },
+    {
+     "n": "Vepugratinib",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Urinary Bladder Neoplasms",
+      "Neoplasm Metastasis",
+      "Urologic Neoplasms"
+     ],
+     "k": 3
+    },
+    {
+     "n": "Sofe-M",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Ovarian Neoplasms",
+      "Endometrial Neoplasms",
+      "Uterine Cervical Neoplasms"
+     ],
+     "k": 2
+    },
+    {
+     "n": "Lepodisiran",
+     "ph": 3,
+     "a": "cardio",
+     "c": [
+      "Atherosclerosis",
+      "Cardiovascular Diseases",
+      "Lipoprotein(a)"
+     ],
+     "k": 2
+    },
+    {
+     "n": "[Lu-177]-PNT2002",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Metastatic Castration-Resistant Prostate Cancer"
+     ],
+     "k": 1
+    },
+    {
+     "n": "Muvalaplin",
+     "ph": 3,
+     "a": "cardio",
+     "c": [
+      "Elevated Lp(a)",
+      "Atherosclerotic Cardiovascular Disease (ASCVD)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "AAVAnc80-hOTOF via Akouos Delivery Device",
+     "ph": 3,
+     "a": "neuro",
+     "c": [
+      "Sensorineural Hearing Loss, Bilateral"
+     ],
+     "k": 1
+    },
+    {
+     "n": "AAVAnc80-hOTOF via Akouos Delivery Device and Precision Delivery Mechanism",
+     "ph": 3,
+     "a": "neuro",
+     "c": [
+      "Sensorineural Hearing Loss, Bilateral"
+     ],
+     "k": 1
+    },
+    {
+     "n": "Remternetug",
+     "ph": 3,
+     "a": "neuro",
+     "c": [
+      "Alzheimer's Disease"
+     ],
+     "k": 1
+    },
+    {
+     "n": "Zotemtegrast (LY4268989)",
+     "ph": 2,
+     "a": "immunology",
+     "c": [
+      "Healthy",
+      "Ulcerative Colitis",
+      "Inflammatory Bowel Diseases"
+     ],
+     "k": 4
+    },
+    {
+     "n": "LY3884961",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Parkinson Disease",
+      "Gaucher Disease, Type 2",
+      "Gaucher Disease"
+     ],
+     "k": 3
+    },
+    {
+     "n": "LY4515100",
+     "ph": 2,
+     "a": "other",
+     "c": [
+      "Healthy",
+      "Acute Pain",
+      "Molar"
+     ],
+     "k": 3
+    },
+    {
+     "n": "LY4065967",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Chronic Pain",
+      "Diabetic Peripheral Neuropathic Pain",
+      "Low Back Pain"
+     ],
+     "k": 3
+    },
+    {
+     "n": "VERVE-102",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Heterozygous Familial Hypercholesterolemia",
+      "Premature Coronary Heart Disease",
+      "Atherosclerosis"
+     ],
+     "k": 2
+    },
+    {
+     "n": "LY4395089",
+     "ph": 2,
+     "a": "immunology",
+     "c": [
+      "Crohn Disease",
+      "Colitis, Ulcerative"
+     ],
+     "k": 2
+    },
+    {
+     "n": "LY4005130",
+     "ph": 2,
+     "a": "derm",
+     "c": [
+      "Vitiligo",
+      "Non-Segmental Vitiligo (NSV)",
+      "Alopecia Areata"
+     ],
+     "k": 2
+    },
+    {
+     "n": "LY3305677",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Obesity",
+      "Overweight"
+     ],
+     "k": 1
+    },
+    {
+     "n": "LY3549492",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Obesity",
+      "Overweight"
+     ],
+     "k": 1
+    },
+    {
+     "n": "LY3016859 ISA",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Osteoarthritis, Knee",
+      "Diabetic Neuropathic Pain",
+      "Chronic Low-back Pain"
+     ],
+     "k": 1
+    },
+    {
+     "n": "LY3556050 ISA",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Osteoarthritis, Knee",
+      "Diabetic Neuropathic Pain",
+      "Chronic Low-back Pain"
+     ],
+     "k": 1
+    },
+    {
+     "n": "LY3526318 ISA",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Osteoarthritis, Knee",
+      "Diabetic Neuropathic Pain",
+      "Chronic Low-back Pain"
+     ],
+     "k": 1
+    },
+    {
+     "n": "LY3857210 ISA",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Osteoarthritis, Knee",
+      "Diabetic Neuropathic Pain",
+      "Chronic Low-back Pain"
+     ],
+     "k": 1
+    },
+    {
+     "n": "LY4065967 ISA",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Osteoarthritis, Knee",
+      "Diabetic Neuropathic Pain",
+      "Chronic Low-back Pain"
+     ],
+     "k": 1
+    },
+    {
+     "n": "Solbinsiran",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Severe Hypertriglyceridemia"
+     ],
+     "k": 1
+    },
+    {
+     "n": "LY3457263",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Type 2 Diabetes"
+     ],
+     "k": 1
+    },
+    {
+     "n": "LY3537021",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Nausea",
+      "Vomiting",
+      "Drug-Related Side Effects and Adverse Reactions"
+     ],
+     "k": 1
+    },
+    {
+     "n": "Clazakizumab",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Atherosclerosis",
+      "Cardiovascular Disease",
+      "Obesity"
+     ],
+     "k": 1
+    },
+    {
+     "n": "LY3884963",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Frontotemporal Dementia"
+     ],
+     "k": 1
+    },
+    {
+     "n": "LY3938577",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Diabetes Mellitus, Type 2"
+     ],
+     "k": 1
+    }
+   ],
+   "nT": 229
+  },
+  "MRK": {
+   "rev": {
+    "ccy": "USD",
+    "form": "10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+    "fy": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "tot": [
+     48704.0,
+     59283.0,
+     60115.0,
+     64168.0,
+     65011.0
+    ],
+    "p": [
+     {
+      "n": "Keytruda",
+      "a": "oncology",
+      "b": "Keytruda",
+      "v": [
+       17186.0,
+       20937.0,
+       25011.0,
+       29482.0,
+       31641.0
+      ]
+     },
+     {
+      "n": "Gardasil Gardasil9",
+      "a": "infectious",
+      "b": null,
+      "v": [
+       5673.0,
+       6897.0,
+       8886.0,
+       8583.0,
+       5233.0
+      ]
+     },
+     {
+      "n": "Pro Quad MMRII Varivax",
+      "a": "infectious",
+      "b": null,
+      "v": [
+       2135.0,
+       2241.0,
+       2368.0,
+       2485.0,
+       2451.0
+      ]
+     },
+     {
+      "n": "Bridion",
+      "a": "neuro",
+      "b": "Bridion",
+      "v": [
+       1532.0,
+       1685.0,
+       1842.0,
+       1764.0,
+       1841.0
+      ]
+     },
+     {
+      "n": "Januvia",
+      "a": "metabolic",
+      "b": "Januvia",
+      "v": [
+       3324.0,
+       2813.0,
+       2189.0,
+       1334.0,
+       1604.0
+      ]
+     },
+     {
+      "n": "Alliancerevenue Lynparza",
+      "a": "other",
+      "b": null,
+      "v": [
+       989.0,
+       1116.0,
+       1199.0,
+       1311.0,
+       1450.0
+      ]
+     },
+     {
+      "n": "Winrevair",
+      "a": "other",
+      "b": null,
+      "v": [
+       null,
+       null,
+       0.0,
+       419.0,
+       1443.0
+      ]
+     },
+     {
+      "n": "Lenvima",
+      "a": "other",
+      "b": null,
+      "v": [
+       704.0,
+       876.0,
+       960.0,
+       1010.0,
+       1053.0
+      ]
+     },
+     {
+      "n": "Prevymis",
+      "a": "infectious",
+      "b": "Prevymis",
+      "v": [
+       370.0,
+       428.0,
+       605.0,
+       785.0,
+       978.0
+      ]
+     },
+     {
+      "n": "Janumet",
+      "a": "metabolic",
+      "b": "Janumet",
+      "v": [
+       1964.0,
+       1700.0,
+       1177.0,
+       935.0,
+       940.0
+      ]
+     },
+     {
+      "n": "Vaxneuvance",
+      "a": "infectious",
+      "b": null,
+      "v": [
+       3.0,
+       170.0,
+       665.0,
+       808.0,
+       825.0
+      ]
+     },
+     {
+      "n": "Capvaxive",
+      "a": "infectious",
+      "b": null,
+      "v": [
+       null,
+       null,
+       0.0,
+       97.0,
+       759.0
+      ]
+     },
+     {
+      "n": "Welireg",
+      "a": "other",
+      "b": null,
+      "v": [
+       13.0,
+       123.0,
+       218.0,
+       509.0,
+       716.0
+      ]
+     },
+     {
+      "n": "Rotateq",
+      "a": "infectious",
+      "b": null,
+      "v": [
+       807.0,
+       783.0,
+       769.0,
+       711.0,
+       673.0
+      ]
+     },
+     {
+      "n": "Alliance Revenue Reblozyl",
+      "a": "other",
+      "b": null,
+      "v": [
+       null,
+       null,
+       212.0,
+       371.0,
+       525.0
+      ]
+     },
+     {
+      "n": "Alliance Revenue Adempas Verquvo",
+      "a": "cardio",
+      "b": "Verquvo",
+      "v": [
+       342.0,
+       341.0,
+       367.0,
+       415.0,
+       470.0
+      ]
+     },
+     {
+      "n": "Lagevrio",
+      "a": "other",
+      "b": null,
+      "v": [
+       952.0,
+       5684.0,
+       1428.0,
+       964.0,
+       380.0
+      ]
+     },
+     {
+      "n": "Isentress Isentress HD",
+      "a": "infectious",
+      "b": "Isentress",
+      "v": [
+       769.0,
+       633.0,
+       483.0,
+       394.0,
+       325.0
+      ]
+     },
+     {
+      "n": "Adempas",
+      "a": "cardio",
+      "b": null,
+      "v": [
+       252.0,
+       238.0,
+       255.0,
+       287.0,
+       312.0
+      ]
+     },
+     {
+      "n": "Zerbaxa",
+      "a": "infectious",
+      "b": "Zerbaxa",
+      "v": [
+       0.0,
+       169.0,
+       218.0,
+       252.0,
+       312.0
+      ]
+     },
+     {
+      "n": "Delstrigo",
+      "a": "infectious",
+      "b": "Delstrigo",
+      "v": [
+       null,
+       null,
+       201.0,
+       249.0,
+       306.0
+      ]
+     },
+     {
+      "n": "Dificid",
+      "a": "other",
+      "b": null,
+      "v": [
+       175.0,
+       263.0,
+       302.0,
+       340.0,
+       247.0
+      ]
+     },
+     {
+      "n": "Belsomra",
+      "a": "neuro",
+      "b": "Belsomra",
+      "v": [
+       318.0,
+       258.0,
+       231.0,
+       222.0,
+       186.0
+      ]
+     },
+     {
+      "n": "Ohtuvayre",
+      "a": "respiratory",
+      "b": "Ohtuvayre",
+      "v": [
+       null,
+       null,
+       0.0,
+       0.0,
+       178.0
+      ]
+     },
+     {
+      "n": "Pifeltro",
+      "a": "infectious",
+      "b": "Pifeltro",
+      "v": [
+       null,
+       null,
+       142.0,
+       163.0,
+       171.0
+      ]
+     },
+     {
+      "n": "Pneumovax23",
+      "a": "infectious",
+      "b": null,
+      "v": [
+       893.0,
+       602.0,
+       412.0,
+       263.0,
+       166.0
+      ]
+     },
+     {
+      "n": "Keytruda Qlex",
+      "a": "oncology",
+      "b": "Keytruda Qlex",
+      "v": [
+       null,
+       null,
+       0.0,
+       0.0,
+       40.0
+      ]
+     }
+    ]
+   },
+   "drugs": [
+    {
+     "b": "Keytruda",
+     "g": "Pembrolizumab",
+     "a": "oncology",
+     "y": "2014",
+     "tr": 66,
+     "k": "bla",
+     "loe": "2026-09-04",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Bridion",
+     "g": "Sugammadex Sodium",
+     "a": "neuro",
+     "y": "2015",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2028-06-12",
+     "src": "excl",
+     "gen": 19
+    },
+    {
+     "b": "Januvia",
+     "g": "Sitagliptin Phosphate",
+     "a": "metabolic",
+     "y": "2006",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2026-11-24",
+     "src": "sub",
+     "gen": 3
+    },
+    {
+     "b": "Prevymis",
+     "g": "Letermovir",
+     "a": "infectious",
+     "y": "2017",
+     "tr": 1,
+     "k": "nda",
+     "loe": "2031-08-30",
+     "src": "excl",
+     "gen": 0
+    },
+    {
+     "b": "Janumet",
+     "g": "Metformin Hydrochloride, Sitagliptin Phosphate",
+     "a": "metabolic",
+     "y": "2007",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2026-11-24",
+     "src": "sub",
+     "gen": 3
+    },
+    {
+     "b": "Verquvo",
+     "g": "Vericiguat",
+     "a": "cardio",
+     "y": "2021",
+     "tr": 2,
+     "k": "nda",
+     "loe": "2032-11-26",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Isentress",
+     "g": "Raltegravir Potassium",
+     "a": "infectious",
+     "y": "2007",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-03-11",
+     "src": "sub",
+     "gen": 2
+    },
+    {
+     "b": "Zerbaxa",
+     "g": "Ceftolozane Sulfate, Tazobactam Sodium",
+     "a": "infectious",
+     "y": "2014",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2034-05-28",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Delstrigo",
+     "g": "Doravirine, Lamivudine, Tenofovir Disoproxil Fumarate",
+     "a": "infectious",
+     "y": "2018",
+     "tr": 1,
+     "k": "nda",
+     "loe": "2032-08-30",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Belsomra",
+     "g": "Suvorexant",
+     "a": "neuro",
+     "y": "2014",
+     "tr": 1,
+     "k": "nda",
+     "loe": "2029-11-20",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Ohtuvayre",
+     "g": "Ensifentrine",
+     "a": "respiratory",
+     "y": "2024",
+     "tr": 2,
+     "k": "nda",
+     "loe": "2031-08-21",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Pifeltro",
+     "g": "Doravirine",
+     "a": "infectious",
+     "y": "2018",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2032-08-30",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Keytruda Qlex",
+     "g": "Berahyaluronidase Alfa-Pmph, Pembrolizumab",
+     "a": "oncology",
+     "y": "2025",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2037-09-19",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Lipfendra",
+     "g": "Enlicitide Decanoate",
+     "a": "metabolic",
+     "y": "2026",
+     "tr": 8,
+     "k": "nda",
+     "loe": "2040-02-04",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Idvynso",
+     "g": "Doravirine, Islatravir",
+     "a": "infectious",
+     "y": "2026",
+     "tr": 2,
+     "k": "nda",
+     "loe": "2032-08-30",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Noxafil Powdermix Kit",
+     "g": "Posaconazole",
+     "a": "infectious",
+     "y": "2021",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2029-01-27",
+     "src": "excl",
+     "gen": 20
+    },
+    {
+     "b": "Steglatro",
+     "g": "Ertugliflozin",
+     "a": null,
+     "y": "2017",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2031-12-19",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Steglujan",
+     "g": "Ertugliflozin, Sitagliptin Phosphate",
+     "a": null,
+     "y": "2017",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2031-12-19",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Segluromet",
+     "g": "Ertugliflozin, Metformin Hydrochloride",
+     "a": null,
+     "y": "2017",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2031-12-19",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Zinplava",
+     "g": "Bezlotoxumab",
+     "a": null,
+     "y": "2016",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2028-10-21",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Sivextro",
+     "g": "Tedizolid Phosphate",
+     "a": null,
+     "y": "2014",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2030-12-31",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Janumet Xr",
+     "g": "Metformin Hydrochloride, Sitagliptin Phosphate",
+     "a": null,
+     "y": "2012",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2026-11-24",
+     "src": "sub",
+     "gen": 3
+    },
+    {
+     "b": "Temodar",
+     "g": "Temozolomide",
+     "a": "oncology",
+     "y": "2009",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 10
+    },
+    {
+     "b": "Isentress Hd",
+     "g": "Raltegravir Potassium",
+     "a": null,
+     "y": "2007",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2030-06-02",
+     "src": "sub",
+     "gen": 2
+    },
+    {
+     "b": "Zolinza",
+     "g": "Vorinostat",
+     "a": null,
+     "y": "2006",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2027-03-11",
+     "src": "sub",
+     "gen": 0
+    },
+    {
+     "b": "Noxafil",
+     "g": "Posaconazole",
+     "a": "infectious",
+     "y": "2006",
+     "tr": 2,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 20
+    },
+    {
+     "b": "Emend",
+     "g": "Aprepitant, Fosaprepitant Dimeglumine",
+     "a": null,
+     "y": "2003",
+     "tr": 0,
+     "k": "nda",
+     "loe": "2027-09-26",
+     "src": "pat",
+     "gen": 3
+    },
+    {
+     "b": "Invanz",
+     "g": "Ertapenem Sodium",
+     "a": null,
+     "y": "2001",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 5
+    },
+    {
+     "b": "Stromectol",
+     "g": "Ivermectin",
+     "a": null,
+     "y": "1996",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 11
+    },
+    {
+     "b": "Primaxin",
+     "g": "Cilastatin Sodium, Imipenem",
+     "a": null,
+     "y": "1985",
+     "tr": 0,
+     "k": "nda",
+     "loe": null,
+     "src": "pat",
+     "gen": 2
+    }
+   ],
+   "pipe": [
+    {
+     "n": "Sacituzumab tirumotecan",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Non-small Cell Lung Cancer (NSCLC)",
+      "Gastroesophageal Junction",
+      "Gastroesophageal Adenocarcinoma"
+     ],
+     "k": 30
+    },
+    {
+     "n": "Belzutifan",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Carcinoma, Renal Cell",
+      "Renal Cell Carcinoma",
+      "Von Hippel-Lindau Disease"
+     ],
+     "k": 21
+    },
+    {
+     "n": "Tulisokibart",
+     "ph": 3,
+     "a": "immunology",
+     "c": [
+      "Crohn's Disease",
+      "Ulcerative Colitis",
+      "Crohn Disease"
+     ],
+     "k": 12
+    },
+    {
+     "n": "Pembrolizumab (+) Berahyaluronidase alfa",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Non-small Cell Lung Cancer",
+      "Metastatic Non-small Cell Lung Cancer",
+      "Non-Small Cell Lung Cancer"
+     ],
+     "k": 11
+    },
+    {
+     "n": "I-DXD",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Carcinoma, Non-Small-Cell Lung",
+      "Lung Neoplasm",
+      "Castration-Resistant Prostatic Cancer"
+     ],
+     "k": 11
+    },
+    {
+     "n": "HER3-DXd",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Breast Neoplasms",
+      "Gastroesophageal Junction",
+      "Gastroesophageal Adenocarcinoma"
+     ],
+     "k": 10
+    },
+    {
+     "n": "Olaparib",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Breast Neoplasms",
+      "Metastatic Castration-Resistant Prostate Cancer",
+      "Breast Cancer"
+     ],
+     "k": 9
+    },
+    {
+     "n": "Nemtabrutinib",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Chronic Lymphocytic Leukemia",
+      "Small Lymphocytic Lymphoma",
+      "Hematologic Malignancies"
+     ],
+     "k": 8
+    },
+    {
+     "n": "R-DXd",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Ovarian Cancer",
+      "Peritoneal Cancer",
+      "Fallopian Tube Cancer"
+     ],
+     "k": 7
+    },
+    {
+     "n": "9vHPV vaccine",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Papillomavirus Infections",
+      "Genital Warts"
+     ],
+     "k": 7
+    },
+    {
+     "n": "Zilovertamab vedotin",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Diffuse Large B-Cell Lymphoma",
+      "Lymphoma, Large B-Cell, Diffuse",
+      "DLBCL"
+     ],
+     "k": 7
+    },
+    {
+     "n": "MK-1045",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Chronic Lymphocytic Leukaemia",
+      "Small Lymphocytic Lymphoma",
+      "Hematologic Malignancies"
+     ],
+     "k": 7
+    },
+    {
+     "n": "Sotatercept",
+     "ph": 3,
+     "a": "cardio",
+     "c": [
+      "Pulmonary Arterial Hypertension",
+      "Hypertension, Pulmonary",
+      "Pulmonary Hypertension"
+     ],
+     "k": 6
+    },
+    {
+     "n": "DOR/ISL",
+     "ph": 3,
+     "a": "infectious",
+     "c": [
+      "HIV-1 Infection",
+      "HIV Infection",
+      "HIV-1"
+     ],
+     "k": 6
+    },
+    {
+     "n": "Alimatravir",
+     "ph": 3,
+     "a": "infectious",
+     "c": [
+      "Human Immunodeficiency Virus (HIV)",
+      "HIV Pre-Exposure Prophylaxis",
+      "HIV"
+     ],
+     "k": 5
+    },
+    {
+     "n": "Ulonivirine",
+     "ph": 3,
+     "a": "infectious",
+     "c": [
+      "Human Immunodeficiency Virus Type 1 (HIV-1) Infection",
+      "Healthy",
+      "Hepatic Insufficiency"
+     ],
+     "k": 4
+    },
+    {
+     "n": "MK-1406",
+     "ph": 3,
+     "a": "infectious",
+     "c": [
+      "Healthy Participants",
+      "Influenza",
+      "Healthy"
+     ],
+     "k": 4
+    },
+    {
+     "n": "Bomedemstat",
+     "ph": 3,
+     "a": "cardio",
+     "c": [
+      "Essential Thrombocythemia",
+      "Polycythemia Vera",
+      "Thrombocythemia, Essential"
+     ],
+     "k": 4
+    },
+    {
+     "n": "Pembrolizumab/Vibostolimab",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Colorectal Cancer",
+      "Metastatic Urothelial Carcinoma",
+      "Urothelial Neoplasms"
+     ],
+     "k": 4
+    },
+    {
+     "n": "Tiespectus (MK-8748)",
+     "ph": 3,
+     "a": "metabolic",
+     "c": [
+      "Diabetic Retinopathy",
+      "Macular Edema"
+     ],
+     "k": 2
+    },
+    {
+     "n": "Molnupiravir",
+     "ph": 3,
+     "a": "infectious",
+     "c": [
+      "Coronavirus Disease (COVID-19)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "V181",
+     "ph": 3,
+     "a": "other",
+     "c": [
+      "Healthy"
+     ],
+     "k": 1
+    },
+    {
+     "n": "MK-4830",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Small Cell Lung Carcinoma",
+      "Colorectal Cancer",
+      "Esophageal Squamous Cell Carcinoma"
+     ],
+     "k": 4
+    },
+    {
+     "n": "MK-3120",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Bladder Cancer",
+      "Advanced Solid Tumors",
+      "Malignant Neoplasm"
+     ],
+     "k": 4
+    },
+    {
+     "n": "MK-2010",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Advanced Solid Tumors",
+      "Malignant Neoplasm",
+      "Ovarian Cancer Recurrent"
+     ],
+     "k": 3
+    },
+    {
+     "n": "MK-6916",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Pain Management",
+      "Healthy"
+     ],
+     "k": 2
+    },
+    {
+     "n": "MK-2750",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Advanced Solid Tumors",
+      "Malignant Neoplasm"
+     ],
+     "k": 1
+    },
+    {
+     "n": "MK-7262",
+     "ph": 2,
+     "a": "other",
+     "c": [
+      "Lipoprotein(a)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "MK-8690",
+     "ph": 2,
+     "a": "immunology",
+     "c": [
+      "Colitis Ulcerative",
+      "Ulcerative Colitis"
+     ],
+     "k": 1
+    },
+    {
+     "n": "Miransertib",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "PIK3CA-Related Overgrowth Spectrum (PROS)/Proteus Syndrome (PS)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "MK-4208",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Leukemia, Myelogenous, Chronic, BCR-ABL Positive",
+      "Chronic Myeloid Leukemia, Chronic Phase",
+      "Chronic Myeloid Leukemia"
+     ],
+     "k": 1
+    },
+    {
+     "n": "MK-2214",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Early Alzheimer's Disease"
+     ],
+     "k": 1
+    },
+    {
+     "n": "Nebulized Ensifentrine Suspension; 3 mg",
+     "ph": 2,
+     "a": "respiratory",
+     "c": [
+      "Non-cystic Fibrosis Bronchiectasis"
+     ],
+     "k": 1
+    },
+    {
+     "n": "MK-0482",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Carcinoma, Non-Small-Cell Lung"
+     ],
+     "k": 1
+    },
+    {
+     "n": "Frespaciguat",
+     "ph": 2,
+     "a": "cardio",
+     "c": [
+      "Pulmonary Hypertension",
+      "Chronic Obstructive Pulmonary Disease"
+     ],
+     "k": 1
+    }
+   ],
+   "nT": 239
+  },
+  "MRNA": {
+   "rev": {
+    "ccy": "USD",
+    "form": "10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000033/mrna-20251231.htm",
+    "fy": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "tot": [
+     18471.0,
+     19263.0,
+     6848.0,
+     3236.0,
+     1944.0
+    ],
+    "p": [
+     {
+      "n": "COVID19",
+      "a": "infectious",
+      "b": null,
+      "v": [
+       null,
+       null,
+       6671.0,
+       3084.0,
+       1810.0
+      ]
+     }
+    ]
+   },
+   "drugs": [],
+   "pipe": [
+    {
+     "n": "mRNA-1403",
+     "ph": 3,
+     "a": "infectious",
+     "c": [
+      "Norovirus Acute Gastroenteritis",
+      "Acute Gastroenteritis"
+     ],
+     "k": 2
+    },
+    {
+     "n": "mRNA-1018-H5",
+     "ph": 3,
+     "a": "infectious",
+     "c": [
+      "Influenza"
+     ],
+     "k": 1
+    },
+    {
+     "n": "mRNA-4157",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Solid Tumors",
+      "Melanoma"
+     ],
+     "k": 2
+    },
+    {
+     "n": "mRNA-3927",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Propionic Acidemia"
+     ],
+     "k": 2
+    },
+    {
+     "n": "mRNA-1195",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Epstein-Barr Virus Infection",
+      "Multiple Sclerosis"
+     ],
+     "k": 2
+    },
+    {
+     "n": "mRNA-1189",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Epstein-Barr Virus Infection",
+      "Epstein-Barr Virus"
+     ],
+     "k": 2
+    },
+    {
+     "n": "mRNA-2808",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Relapsed or Refractory Multiple Myeloma"
+     ],
+     "k": 1
+    },
+    {
+     "n": "mRNA-3745",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Glycogen Storage Disease"
+     ],
+     "k": 1
+    },
+    {
+     "n": "mRNA-3705",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Methylmalonic Acidemia"
+     ],
+     "k": 1
+    },
+    {
+     "n": "mRNA-4359",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Advanced Solid Tumors"
+     ],
+     "k": 1
+    },
+    {
+     "n": "mRNA-1283",
+     "ph": 2,
+     "a": "infectious",
+     "c": [
+      "SARS-CoV-2"
+     ],
+     "k": 1
+    },
+    {
+     "n": "mRNA-1647",
+     "ph": 2,
+     "a": "infectious",
+     "c": [
+      "Cytomegalovirus Infection"
+     ],
+     "k": 1
+    },
+    {
+     "n": "mRNA-1405",
+     "ph": 2,
+     "a": "infectious",
+     "c": [
+      "Norovirus Acute Gastroenteritis"
+     ],
+     "k": 1
+    },
+    {
+     "n": "mRNA-1982",
+     "ph": 2,
+     "a": "infectious",
+     "c": [
+      "Lyme Disease"
+     ],
+     "k": 1
+    }
+   ],
+   "nT": 24
+  },
+  "REGN": {
+   "rev": {
+    "ccy": "USD",
+    "form": "10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/872589/000087258926000008/regn-20251231.htm",
+    "fy": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "tot": [
+     16071.7,
+     12172.9,
+     13117.2,
+     14202.0,
+     14342.9
+    ],
+    "p": [
+     {
+      "n": "Eylea Net Product Sales",
+      "a": "ophthalmo",
+      "b": "Eylea",
+      "v": [
+       5792.3,
+       6264.6,
+       5719.6,
+       4767.1,
+       2747.8
+      ]
+     },
+     {
+      "n": "EYLEA HD",
+      "a": "ophthalmo",
+      "b": "Eylea Hd",
+      "v": [
+       0.0,
+       0.0,
+       165.8,
+       1201.1,
+       1636.9
+      ]
+     },
+     {
+      "n": "LIBTAYO Net Product Sales",
+      "a": "oncology",
+      "b": "Libtayo",
+      "v": [
+       306.3,
+       447.5,
+       863.1,
+       1216.8,
+       1452.2
+      ]
+     },
+     {
+      "n": "Praluent Net Product Sales",
+      "a": "metabolic",
+      "b": "Praluent",
+      "v": [
+       170.0,
+       130.0,
+       182.4,
+       241.7,
+       262.5
+      ]
+     },
+     {
+      "n": "Evkeeza",
+      "a": "metabolic",
+      "b": "Evkeeza",
+      "v": [
+       18.4,
+       48.6,
+       77.3,
+       125.7,
+       162.2
+      ]
+     },
+     {
+      "n": "Inmazeb",
+      "a": "infectious",
+      "b": "Inmazeb",
+      "v": [
+       0.0,
+       3.0,
+       69.8,
+       76.8,
+       37.4
+      ]
+     }
+    ]
+   },
+   "drugs": [
+    {
+     "b": "Eylea",
+     "g": "Aflibercept",
+     "a": "ophthalmo",
+     "y": "2011",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2024-05-18",
+     "src": "bla",
+     "gen": 6
+    },
+    {
+     "b": "Eylea Hd",
+     "g": "Aflibercept",
+     "a": "ophthalmo",
+     "y": "2023",
+     "tr": 1,
+     "k": "bla",
+     "loe": "2035-08-18",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Libtayo",
+     "g": "Cemiplimab-Rwlc",
+     "a": "oncology",
+     "y": "2018",
+     "tr": 41,
+     "k": "bla",
+     "loe": "2030-09-28",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Praluent",
+     "g": "Alirocumab",
+     "a": "metabolic",
+     "y": "2015",
+     "tr": 1,
+     "k": "bla",
+     "loe": "2027-07-24",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Evkeeza",
+     "g": "Evinacumab-Dgnb",
+     "a": "metabolic",
+     "y": "2021",
+     "tr": 1,
+     "k": "bla",
+     "loe": "2033-02-11",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Inmazeb",
+     "g": "Atoltivimab, Maftivimab, Odesivimab",
+     "a": "infectious",
+     "y": "2020",
+     "tr": 0,
+     "k": "bla",
+     "loe": "2032-10-14",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Pasatru",
+     "g": "Garetosmab-Grts",
+     "a": "metabolic",
+     "y": "2026",
+     "tr": 3,
+     "k": "bla",
+     "loe": "2038-08-19",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Veopoz",
+     "g": "Pozelimab-Bbfg",
+     "a": "hematology",
+     "y": "2023",
+     "tr": 6,
+     "k": "bla",
+     "loe": "2035-08-18",
+     "src": "bla",
+     "gen": 0
+    },
+    {
+     "b": "Dupixent",
+     "g": "Dupilumab",
+     "a": "immunology",
+     "y": "2017",
+     "tr": 4,
+     "k": "bla",
+     "loe": "2029-03-28",
+     "src": "bla",
+     "gen": 0
+    }
+   ],
+   "pipe": [
+    {
+     "n": "Cenvacibart",
+     "ph": 3,
+     "a": "cardio",
+     "c": [
+      "Venous Thromboembolism (VTE)",
+      "Atrial Fibrillation (AF)",
+      "Secondary Stroke"
+     ],
+     "k": 12
+    },
+    {
+     "n": "Linvoseltamab",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Multiple Myeloma",
+      "Smoldering Multiple Myeloma (SMM)",
+      "High Risk Smoldering Multiple Myeloma (HR-SMM)"
+     ],
+     "k": 11
+    },
+    {
+     "n": "Odronextamab",
+     "ph": 3,
+     "a": "oncology",
+     "c": [
+      "Follicular Lymphoma (FL)",
+      "Diffuse Large B-Cell Lymphoma (DLBCL)",
+      "B-cell Non-Hodgkin Lymphoma (B-NHL)"
+     ],
+     "k": 9
+    },
+    {
+     "n": "ALN-CIDEB",
+     "ph": 3,
+     "a": "metabolic",
+     "c": [
+      "Metabolic Dysfunction-Associated Steatotic Liver Disease",
+      "Metabolic Dysfunction-Associated Steatohepatitis (MASH)",
+      "MASLD"
+     ],
+     "k": 3
+    },
+    {
+     "n": "Mibavademab",
+     "ph": 3,
+     "a": "metabolic",
+     "c": [
+      "Monogenic Obesity",
+      "Functional Hypothalamic Amenorrhea",
+      "FHA"
+     ],
+     "k": 3
+    },
+    {
+     "n": "Olatorepatide",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Overweight or Obesity",
+      "Hidradenitis Suppurativa"
+     ],
+     "k": 3
+    },
+    {
+     "n": "REGN10597",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Ovarian Cancer",
+      "Fallopian Tube Cancer",
+      "Primary Peritoneal Cancer"
+     ],
+     "k": 2
+    },
+    {
+     "n": "Vonsetamig",
+     "ph": 2,
+     "a": "renal",
+     "c": [
+      "Chronic Kidney Disease (CKD)",
+      "Lupus Nephritis (LN)"
+     ],
+     "k": 2
+    },
+    {
+     "n": "ALN-SNCA",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Parkinsons Disease",
+      "Prion Disease"
+     ],
+     "k": 2
+    },
+    {
+     "n": "ALN-ANG3",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Healthy Volunteers With Hyperlipidemia",
+      "Diabetic Kidney Disease (DKD)"
+     ],
+     "k": 2
+    },
+    {
+     "n": "ALN-PNP",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD)",
+      "Healthy Volunteers"
+     ],
+     "k": 2
+    },
+    {
+     "n": "ALN-SOD",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Amyotrophic Lateral Sclerosis (ALS)",
+      "Mutation in the Superoxide Dismutase-1 (SOD1) Gene"
+     ],
+     "k": 1
+    },
+    {
+     "n": "REGN21353",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Metastatic Castration-Resistant Prostate Cancer",
+      "mCRPC"
+     ],
+     "k": 1
+    },
+    {
+     "n": "REGN9220",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Diffuse Large B-Cell Lymphoma (DLBCL)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "REGN17372+Linvoseltamab",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Relapsed Refractory Multiple Myeloma (RRMM)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "BNT116",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Advanced Non-Small Cell Lung Cancer"
+     ],
+     "k": 1
+    },
+    {
+     "n": "ALN-HSD",
+     "ph": 2,
+     "a": "metabolic",
+     "c": [
+      "Metabolic Dysfunction-Associated SteatoHepatitis (MASH)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "Davutamig (REGN5093)",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "NSCLC"
+     ],
+     "k": 1
+    },
+    {
+     "n": "REGN13335",
+     "ph": 2,
+     "a": "cardio",
+     "c": [
+      "Pulmonary Arterial Hypertension (PAH)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "REGN15505",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Metastatic Castration-Resistant Prostate Cancer (mCRPC)",
+      "Clear Cell Renal Cell Carcinoma (ccRCC)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "REGN15505+REGN4336",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Metastatic Castration-Resistant Prostate Cancer (mCRPC)",
+      "Clear Cell Renal Cell Carcinoma (ccRCC)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "ALN-CFB",
+     "ph": 2,
+     "a": "hematology",
+     "c": [
+      "Paroxysmal Nocturnal Hemoglobinuria (PNH)",
+      "Persistent Anemia"
+     ],
+     "k": 1
+    },
+    {
+     "n": "REGN4336",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Metastatic Castration-resistant Prostate Cancer"
+     ],
+     "k": 1
+    },
+    {
+     "n": "DB-OTO",
+     "ph": 2,
+     "a": "neuro",
+     "c": [
+      "Congenital Hearing Loss Secondary to Biallelic Mutations of the Otoferlin Gene (OTOF)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "REGN13089-M404-M2980",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Advanced Solid Tumors"
+     ],
+     "k": 1
+    },
+    {
+     "n": "REGN7945+Linvoseltamab",
+     "ph": 2,
+     "a": "oncology",
+     "c": [
+      "Relapsed/Refractory Multiple Myeloma"
+     ],
+     "k": 1
+    },
+    {
+     "n": "REGN22530",
+     "ph": 2,
+     "a": "cardio",
+     "c": [
+      "Primary Open Angle Glaucoma (POAG)",
+      "Ocular Hypertension (OHT)"
+     ],
+     "k": 1
+    },
+    {
+     "n": "REGV131",
+     "ph": 2,
+     "a": "hematology",
+     "c": [
+      "Hemophilia B"
+     ],
+     "k": 1
+    },
+    {
+     "n": "LNP1265",
+     "ph": 2,
+     "a": "hematology",
+     "c": [
+      "Hemophilia B"
+     ],
+     "k": 1
+    },
+    {
+     "n": "REGN7999",
+     "ph": 2,
+     "a": "hematology",
+     "c": [
+      "Non-Transfusion Dependent Beta-Thalassemia (NTDT)"
+     ],
+     "k": 1
+    }
+   ],
+   "nT": 109
+  }
+ },
+ "missing": []
+}

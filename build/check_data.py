@@ -29,7 +29,7 @@ def problems(path, old, new):
         return [f'{k} has {new["idx"].get(k, {}).get("n", 0)} companies, was {v["n"]}'
                 for k, v in old['idx'].items() if new['idx'].get(k, {}).get('n', 0) < 0.98 * v['n']] + \
                [f'{len(new["hold"])} holdings, was {len(old["hold"])}' for _ in [0] if len(new['hold']) < len(old['hold'])]
-    # fundamentals.json, analysts.json
+    # fundamentals.json, analysts.json, pharma.json
     return [m for m, bad in (
         (f'{len(new["co"])} companies, was {len(old["co"])}', len(new['co']) < len(old['co'])),
         (f'missing {sorted(set(new["missing"]) - set(old["missing"]))}', set(new['missing']) - set(old['missing'])),
@@ -37,7 +37,7 @@ def problems(path, old, new):
 
 
 restored = []
-for path in ('data/prices.json', 'data/fundamentals.json', 'data/analysts.json', 'data/sectors.json'):
+for path in ('data/prices.json', 'data/fundamentals.json', 'data/analysts.json', 'data/sectors.json', 'data/pharma.json'):
     old = committed(path)
     try:
         new = json.load(open(os.path.join(ROOT, path)))

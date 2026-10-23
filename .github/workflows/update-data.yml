@@ -44,6 +44,16 @@ jobs:
             python build/fetch_sectors.py || echo "::warning::fetch_sectors.py failed"
           fi
 
+      # Drug data changes slowly and openFDA allows 1000 requests a day without a key, so weekly is enough.
+      # SEC requires a contact e-mail in the User-Agent: it comes from the SEC_CONTACT repository secret.
+      - name: Refresh drug data (Mondays and manual runs)
+        env:
+          SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
+        run: |
+          if [ "${{ github.event_name }}" = workflow_dispatch ] || [ "$(date -u +%u)" = 1 ]; then
+            python build/fetch_pharma.py || echo "::warning::fetch_pharma.py failed"
+          fi
+
       - name: Keep the committed version of any file that came back incomplete
         run: python build/check_data.py
 
@@ -54,7 +64,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/prices.json data/fundamentals.json data/analysts.json data/sectors.json index.html
+          git add data/prices.json data/fundamentals.json data/analysts.json data/sectors.json data/pharma.json index.html
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
