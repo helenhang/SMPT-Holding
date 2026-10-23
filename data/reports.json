@@ -1,0 +1,254 @@
+{
+ "Apple Sell": {
+  "zh": "卖出 1,200 股中的 300 股，把苹果的权重从 6.28% 降低约 1.6 个百分点，并为已经没有现金的组合腾出约 6.2 万加元。报告仍看好苹果长期表现，所以保留 900 股。",
+  "en": "Sell 300 of 1,200 shares, cutting Apple's weight from 6.28% by about 1.6 pp and freeing about CAD 62k for a portfolio with no cash left. The report still rated Apple strong long term, so 900 shares were kept."
+ },
+ "Nutrien Sell": {
+  "zh": "以 110 加元限价卖出 1,000 股中的 250 股（成本 73.15 加元，锁定约 50% 收益）。理由：Bloomberg 估算的内在价值只有约 59 加元，股价明显高估；同时把该行业权重从约 18.5% 降到 13.8%，并腾出 2.75 万加元。",
+  "en": "Limit-sell 250 of 1,000 shares at CAD 110 (bought at 73.15, locking in about 50%). Bloomberg's intrinsic value of about CAD 59 suggested the stock was overvalued; the sale also cut the sector weight from about 18.5% to 13.8% and freed CAD 27.5k."
+ },
+ "Bond Purchase": {
+  "zh": "买入一只 RBC 债券，到期收益率 5.57%。选择大银行发行人是为了在衰退中更安全：RBC 对利息收入依赖较低，且在同类债券中可赎回日最晚。收益更高的 REIT 债券（违约风险）和 CIBC（房地产敞口）被排除。",
+  "en": "Buy an RBC bond yielding 5.57% to maturity. A big-bank issuer was chosen for safety in a recession: RBC relies less on interest income and offered the latest call date among peers. Higher-yielding REIT bonds (default risk) and CIBC (housing exposure) were rejected."
+ },
+ "XIU ETF Sell": {
+  "zh": "按市价卖出全部 880 股 XIU（约 2.75 万加元，亏损约 2,000 加元）。理由：这只 ETF 与组合里直接持有的加拿大股票重复、上涨空间更小，且预计加拿大经济今年会放缓；卖出后的现金用于分散投资。",
+  "en": "Sell all 880 XIU shares at market (about CAD 27.5k, a loss of about CAD 2k). The ETF duplicated the directly held Canadian stocks with less upside, and a Canadian slowdown was expected; the cash was to go to better diversification."
+ },
+ "IVV iShares S&P 500 Sell": {
+  "zh": "按市价卖出全部 62 股 IVV（均价 450 美元，现价约 401，亏损约 3,000）。理由：衰退风险下预计标普 500 全年持平（共识目标约 4,080 点），且与直接持有的美股重复；腾出约 2.5 万现金，并略微提高加拿大股票占比。",
+  "en": "Sell all 62 IVV shares at market (average cost USD 450 vs about 401, a loss of about 3k). With recession risk the S&P 500 was expected to be flat (consensus about 4,080) and the ETF overlapped the direct US holdings; frees about 25k and nudges up the Canadian share."
+ },
+ "Trip.com Buy": {
+  "zh": "以约 39.41 美元买入 609 股（约 2.4 万美元），把 ADR 权重从低于 5% 的下限提高到 5.19%。投资逻辑是中国重新开放后的出境游「报复性」需求，出境机票预订量大增。",
+  "en": "Buy 609 shares at about USD 39.41 (about USD 24k), lifting ADR weight from below the 5% minimum to 5.19%. The thesis was pent-up outbound travel demand after China's reopening, with outbound flight bookings surging."
+ },
+ "Fiserv Buy": {
+  "zh": "以约 115.64 美元买入 200 股，增加组合在金融科技方面的敞口。看好 Fiserv 的银行核心系统业务，以及 Clover 收银系统带动的收入增长。",
+  "en": "Buy 200 shares at about USD 115.64 to add fintech exposure to the financials portfolio, on Fiserv's bank-processing franchise and revenue growth from its Clover point-of-sale business."
+ },
+ "Rheinmetall Buy": {
+  "zh": "市价买入 400 股 Rheinmetall ADR（约 2.64 万加元）。虽然股价处于历史高位，但俄乌战争推动欧洲国防开支大增（德国向乌克兰提供豹式坦克，公司还拿到美军卡车合同），预计会持续增长。",
+  "en": "Market-buy 400 Rheinmetall ADR shares (about CAD 26.4k). Although at an all-time high, the stock was expected to keep growing on the jump in European defence spending after the invasion of Ukraine (Leopard tanks, a US Army truck contract)."
+ },
+ "XEG ETF Buy": {
+  "zh": "以 14.71 加元买入价值 3 万加元的 XEG（约 2,040 股），把暑假期间闲置的现金投入一只稳健、高股息的加拿大能源 ETF。",
+  "en": "Buy CAD 30k of XEG at 14.71 (about 2,040 shares), putting cash that would otherwise sit idle over the summer into a steady, high-dividend Canadian energy ETF."
+ },
+ "Rogers Comm Buy": {
+  "zh": "以约 57.10 加元加仓 600 股 RCI.B（从 300 股增至 900 股）。DCF 显示每股被低估约 16.56 加元；看好收购 Shaw 后的规模优势和更强的营业利润率，电信股也为组合提供防御性。",
+  "en": "Add 600 RCI.B shares at about CAD 57.10 (300 to 900). A DCF showed the stock undervalued by about CAD 16.56 a share; the case rested on scale after the Shaw acquisition and strong operating margins, with telecoms adding defence to the portfolio."
+ },
+ "Citigroup Sell": {
+  "zh": "卖出全部 450 股（约 2.04 万美元，亏损约 7,800 加元，−22%）。理由：自 2008 年以来持续跑输标普 500 和银行指数；退出了 14 个市场（包括组合欠配的印度和亚洲）；信贷损失拨备同比增加约 66%，成本控制长期不力。",
+  "en": "Sell all 450 shares (about USD 20.4k, a loss of about CAD 7.8k, −22%). Citi had lagged the S&P 500 and the bank index since 2008, exited 14 markets including under-owned India and Asia, raised credit-loss provisions about 66% year over year and struggled to control costs."
+ },
+ "Johnson Controls Buy": {
+  "zh": "建议买入 Johnson Controls（报告没有写明数量）。在 Bloomberg 同业比较中，JCI 的各项估值倍数都偏低（PEG 约 0.83），盈利预计年增约 18%；约 70% 的分析师给出买入、没有卖出评级；受益于减排政策和数据中心等高增长市场。",
+  "en": "Buy Johnson Controls (no amount stated). Against Bloomberg peers JCI looked cheap on every multiple (PEG about 0.83) with earnings forecast to grow about 18% a year; about 70% of analysts rated it a buy and none a sell; it benefits from emissions-reduction policy and fast-growing markets such as data centres."
+ },
+ "Tourmaline Buy": {
+  "zh": "以约 61.07 加元市价买入 900 股（约 5.5 万加元），为组合补上天然气敞口（此前没有以天然气为主的生产商），油气行业占股票的比重从 6.25% 提高到 7.58%。DCF（WACC 约 11%）得出每股 66.4–66.6 加元，略高于现价；完善的套期保值让收入更稳定，并有不错的股息。",
+  "en": "Market-buy 900 shares at about CAD 61.07 (about CAD 55k), adding natural-gas exposure the portfolio lacked and raising oil and gas from 6.25% to 7.58% of equities. A DCF at about 11% WACC gave CAD 66.4–66.6 a share, slightly above the price; a strong hedging programme steadies income and the dividend is attractive."
+ },
+ "Target Buy": {
+  "zh": "加仓 232 股 Target（增至 500 股）。看好它把门店和电商结合（75% 的美国人住在门店 10 英里内，提供免下车退货和当日送达），以及利润率恢复；同时认为加拿大零售商面临房贷续期和高家庭负债，未来 6–12 个月下行风险更大，所以选择美国零售。",
+  "en": "Add 232 Target shares (to 500), on its blend of stores and e-commerce (75% of Americans live within 10 miles of a store; drive-up returns and same-day delivery) and recovering margins. Canadian retailers were seen as riskier over 6–12 months given mortgage renewals and high household debt."
+ },
+ "Lumine & QQQ Sell & Trim Meta": {
+  "zh": "三笔交易：卖出全部 80 股 QQQ（当初只是为了在暑假无人管理时临时放置闲置现金）；卖出全部 60 股 Lumine（从 Constellation 分拆得到的小额持仓，只有一位分析师覆盖）；Meta 一年内上涨 162%，减持 400 股中的 130 股以锁定收益、把权重调回合理水平，但仍看好它的增长。",
+  "en": "Three trades: sell all 80 QQQ (bought only to park cash over the summer while no students managed the fund); sell all 60 Lumine (a small spin-off from Constellation covered by a single analyst); and, after Meta's 162% one-year rise, trim 130 of 400 shares to lock in gains and restore a healthier weight while staying positive on its growth."
+ },
+ "EQB Buy & CM Bank Sell": {
+  "zh": "卖出全部 576 股 CIBC，用卖出所得加 1.5 万加元买入 529 股 EQB（合计约 5 万加元）。理由：CIBC 的增长和回报与加拿大银行 ETF 差不多，分析师评级中性；EQB 是低成本、高利润率的「挑战者银行」，预计未来四个季度盈利增长约 18%，CIBC 约 5%。",
+  "en": "Sell all 576 CIBC shares and buy 529 EQB shares with the proceeds plus CAD 15k (about CAD 50k). CIBC offered little beyond a Canadian bank ETF and drew neutral ratings, while EQB, a low-cost, high-margin challenger bank, was forecast to grow earnings about 18% over four quarters versus about 5% for CIBC."
+ },
+ "Air Canada Sell": {
+  "zh": "卖出全部 300 股 Air Canada。疫情让航空公司陷入财务困境，预计还要几年才能完全恢复，持仓已经亏损；组合里已有规模更大的 Delta，足以把握航空业的复苏，而且美国市场预计表现更好。卖出也有助于减少持仓数量。",
+  "en": "Sell all 300 Air Canada shares. The pandemic left the airline in a financial crunch expected to take years to repair and the position was at a loss; the larger Delta holding already captured an airline recovery, with more exposure to the stronger US market, and the sale cut the number of holdings."
+ },
+ "3M & Rheinmetall Sell": {
+  "zh": "卖出全部 105 股 3M 和 250 股 Rheinmetall ADR，以响应减少持仓数量的新组合规则。3M：市盈率虽然低，但考虑增长后仍然偏贵，盈利停滞，「永久化学品」和耳塞诉讼成本高昂；报告认为分析师的「持有」评级偏乐观。Rheinmetall：一年前作为德国国防开支的短线投资买入，之后大涨并接近历史高点，趁现在兑现收益（组合约 8 个月后才会再被审视）。",
+  "en": "Sell all 105 3M and 250 Rheinmetall ADR shares under the new rule to hold fewer positions. 3M looked cheap on P/E but expensive for its growth, with stagnant earnings and heavy 'forever chemicals' and earplug litigation; the report judged analysts' hold ratings optimistic. Rheinmetall, bought a year earlier as a short-term bet on German defence spending, had surged to near all-time highs, so the gain was taken while it lasted (the fund would not be reviewed again for about 8 months)."
+ },
+ "XEG Sell & TOU Buy": {
+  "zh": "卖出全部 XEG（约 3.5 万加元），用所得再买入 550 股 Tourmaline。理由：各国淘汰煤电、转向天然气；管理层愿意在股价低于公允价值时回购，下行有限，天然气涨价时上行空间大；EV/EBITDA 约 5 倍，与历史均值相当，并不贵。DCF 已按第四季度业绩和较低的天然气价格更新。",
+  "en": "Sell all XEG (about CAD 35k) and buy 550 more Tourmaline shares with the proceeds. Coal-to-gas switching supports demand, management will buy back stock below fair value, so downside is limited with upside if gas prices rise; at about 5x EV/EBITDA the valuation sat at its average. The DCF was updated for Q4 results and lower gas prices."
+ },
+ "Foot Locker & Jamieson Wellness": {
+  "zh": "卖出全部 500 股 Foot Locker（约 1.35 万美元）：连续 7 个季度盈利很低甚至亏损，分析师评级不如同行，未来 12 个月前景暗淡。用 6 万加元买入 Jamieson Wellness：加拿大最大的维生素和保健品品牌，40% 以上收入来自海外，美国和中国业务快速增长，股息逐年提高；分析师 12 个月目标价约 35.67 加元。报告认为分析师覆盖少导致股价被低估。",
+  "en": "Sell all 500 Foot Locker shares (about USD 13.5k): seven quarters of weak or negative earnings, weaker ratings than peers and a poor 12-month outlook. Buy CAD 60k of Jamieson Wellness, Canada's leading vitamin brand, with over 40% of revenue abroad, fast US and China growth and rising dividends; the 12-month analyst target was about CAD 35.67, and thin coverage was thought to leave it undervalued."
+ },
+ "HDFC Sell & FLIN India Buy": {
+  "zh": "卖出全部 200 股 HDFC Bank ADR（约 1.52 万加元），加上 8.6 万加元买入 Franklin FTSE India ETF（FLIN）。看好印度的长期增长（预计 GDP 增速可能超过 10%），但小组难以挑选个股，所以改用低费率的被动 ETF；HDFC 已包含在 ETF 里，继续单独持有是重复的。主要风险是利率和汇率冲击。",
+  "en": "Sell all 200 HDFC Bank ADR shares (about CAD 15.2k) and buy the Franklin FTSE India ETF (FLIN) with the proceeds plus CAD 86k. India was seen as a strong long-term story (GDP growth possibly above 10%), but picking single stocks was impractical, so a low-fee passive ETF was preferred; HDFC is in the ETF, so holding it separately was redundant. Main risks: interest-rate and currency shocks."
+ },
+ "Bond Trade Proposal": {
+  "zh": "买入通用汽车金融 2027 年到期、票息 5.4% 的 BBB 级 3 年期债券，到期收益率约 5.22%。在锁定较高收益率的同时控制期限和下行风险，并持有至到期。",
+  "en": "Buy a 3-year GM 5.4% 2027 BBB bond with a yield to maturity of about 5.22%, held to maturity, locking in an attractive yield while keeping duration and downside risk limited."
+ },
+ "Brookfield Bond Buy": {
+  "zh": "买入 Brookfield Renewable Partners 2030 年到期、票息 3.38% 的 BBB+ 级债券（价格约 96.88，到期收益率 4.05%，2029 年 10 月后可赎回）。央行开始降息，趁收益率进一步下降前锁定；公用事业债券在经济下行时更稳定，同时把资金从 GIC 转向收益更高的债券。",
+  "en": "Buy a Brookfield Renewable Partners 3.38% 2030 BBB+ bond (price about 96.88, 4.05% yield to maturity, callable after October 2029). With central banks cutting, the aim was to lock in yield before it fell further, in a utility issuer that holds up in downturns, moving money from GICs into higher-yielding bonds."
+ },
+ "Canadian Utilities Bond Buy": {
+  "zh": "用几乎全部加元现金买入 Canadian Utilities 2034 年到期、票息 5.896% 的 10 年期债券，到期收益率约 4.51%。多只债券到期、股票上涨，使固定收益比例逼近投资政策规定的下限，需要补足；在比较的公用事业债券中，它的票息和收益率都最高，发行人财务稳健。",
+  "en": "Use nearly all CAD cash for a Canadian Utilities 5.896% 2034 10-year bond yielding about 4.51% to maturity. Maturing bonds and rising equities had pushed fixed income toward the policy minimum; among the utility bonds compared it had the highest coupon and yield, from a financially strong issuer."
+ },
+ "Target Sell": {
+  "zh": "以 140 美元限价卖出全部 268 股 Target，所得用于买入 Walmart。理由：与组合里其他零售股相比，Target 更容易受到冲击（定位夹在低价和高端客户之间）；分析师买入比例 58.5%，远低于 Walmart 的 93.5%。预计短期股价还会反弹，所以设限价卖出。",
+  "en": "Sell all 268 Target shares with a USD 140 limit, the proceeds going to Walmart. Target looked more exposed than the other retailers held (caught between price-sensitive and premium shoppers), and only 58.5% of analysts rated it a buy versus 93.5% for Walmart; a short-term rebound was expected, hence the limit."
+ },
+ "Apple Partial Sell": {
+  "zh": "卖出约三分之一的苹果持仓（300 股，约 10 万加元）。理由：降低组合对大型科技股的过度集中，在接近 52 周高点时锁定收益；估值偏高，未来增长大多已反映在股价中，而且面临关税、诉讼和区域风险。所得用于分散到组合欠配、与大型科技股相关性较低的行业。",
+  "en": "Sell about a third of the Apple position (300 shares, about CAD 100k) to cut over-concentration in big tech and lock in gains near the 52-week high. The stock looked expensive, with much growth priced in, and faced tariff, litigation and regional risks; the cash was to diversify into under-owned sectors less correlated with big tech."
+ },
+ "Franklin FTSE India ETF Sell": {
+  "zh": "卖出全部 2,054 股 FLIN（约 11.2 万加元）。仍然看好印度，但认为广泛分散的 ETF 不是最好的方式，改为精选直接受益于中产阶级消费增长的公司（预计 2047 年 60% 的印度人口进入中产）。之后用这笔钱买入了 HDFC Bank 和 ICICI Bank。",
+  "en": "Sell all 2,054 FLIN shares (about CAD 112k). India remained attractive, but rather than a broad ETF the plan was to pick companies tied to middle-class consumption (60% of Indians expected to be middle class by 2047); the money later went into HDFC Bank and ICICI Bank."
+ },
+ "Capital Power Buy": {
+  "zh": "买入约 7 万加元 Capital Power（1,197 股）。看好天然气发电需求和 AI 数据中心带来的用电增长；公司以天然气资产为基础并扩展可再生能源。报告认为它比 Brookfield Renewable 更平衡务实，增长潜力也高于更稳健的 Fortis。",
+  "en": "Buy about CAD 70k of Capital Power (1,197 shares), on gas-fired power demand and rising electricity use from AI data centres; its natural-gas base plus expansion into renewables looked more balanced than Brookfield Renewable and offered more growth than the steadier Fortis."
+ },
+ "Bell Canada Sell": {
+  "zh": "卖出全部 300 股 BCE（约 1 万加元）。理由：在加拿大电信公司中客户流失率最高，大规模裁员受到公众和政府审视，不利的收购又增加了债务，增长前景存疑；分析师大多给出持有或卖出评级（17 位中只有 2 位买入）。",
+  "en": "Sell all 300 BCE shares (about CAD 10k). Bell had the worst churn among Canadian telecoms, mass layoffs under public and government scrutiny, and an unfavourable acquisition adding debt, clouding its growth; only 2 of 17 analysts rated it a buy."
+ },
+ "Boeing Sell": {
+  "zh": "以约 170 美元市价卖出全部 72 股 Boeing（约 1.22 万美元）。理由：质量和安全问题频发（新飞机出现部件故障），公司可靠性存疑，难以把握航空航天与国防市场的增长；航空业本身也容易受燃油价格、恐袭和疫情冲击。",
+  "en": "Market-sell all 72 Boeing shares at about USD 170 (about USD 12.2k). Repeated quality and safety failures (parts failing on nearly new aircraft) made the company unreliable and poorly placed for aerospace and defence growth, in an airline market exposed to fuel prices, terrorism and epidemics."
+ },
+ "ICICI & HDFC Banks Buy": {
+  "zh": "用 10 万加元各半买入 HDFC Bank 和 ICICI Bank 的 ADR。在所有印度 ADR 中，这两家银行最能直接受益于印度中产阶级的成长和银行业需求；基本面强、市场地位领先，近几个月股价回落提供了较好的买点。其他候选（如 MakeMyTrip）因市盈率过高被排除。",
+  "en": "Buy HDFC Bank and ICICI Bank ADRs with CAD 100k split evenly. Of all Indian ADRs, these banks gave the most direct exposure to India's growing middle class and banking demand, with strong fundamentals and leading positions, and a recent pullback offered a better entry; alternatives such as MakeMyTrip were rejected for very high P/E ratios."
+ },
+ "Walmart Buy": {
+  "zh": "加仓 400 股 Walmart（约 3.95 万美元，增至 1,000 股）。2024 年股价上涨 72%，但看好它在电商、国际市场、自动化仓储（与 Symbotic 合作）和购物体验上的持续增长；「最低价」形象使它在经济变化中更稳健，91% 的分析师给出买入评级。",
+  "en": "Add 400 Walmart shares (about USD 39.5k, to 1,000). After a 72% rise in 2024, continued growth was expected from e-commerce, international markets, warehouse automation with Symbotic and a better store experience; its low-price image makes it resilient, and 91% of analysts rated it a buy."
+ },
+ "Costco Sell": {
+  "zh": "卖出 80 股 Costco（约 8.25 万美元，剩 160 股）。市盈率远高于历史均值，而且已占零售子组合的三分之一以上；分析师一年目标价只比现价高 2.4%（Home Depot 是 12.9%），规模庞大和市场饱和也让高增长难以持续，所以锁定部分收益。",
+  "en": "Sell 80 Costco shares (about USD 82.5k, leaving 160). The P/E was far above its history and Costco was over a third of the retail sub-portfolio; analysts' 1-year targets implied only 2.4% upside (Home Depot 12.9%), and size and saturation made past growth hard to repeat, so some gains were locked in."
+ },
+ "Airbus & Embraer Buy": {
+  "zh": "各用约 3.5 万美元买入 Airbus ADR（约 854 股）和 Embraer ADR（约 732 股），替代刚卖出的 Boeing。航空航天业未来几十年将大幅增长；Airbus 是行业龙头、表现优于 Boeing，Embraer 专注于支线客机，与 Airbus 产品重叠很少。",
+  "en": "Buy about USD 35k each of the Airbus ADR (about 854 shares) and the Embraer ADR (about 732 shares) in place of the Boeing just sold. Aerospace was set for decades of growth; Airbus leads the industry and was outperforming Boeing, and Embraer focuses on regional jets with little overlap with Airbus."
+ },
+ "South Bow & Brookfield Sell, CU Buy": {
+  "zh": "卖出 50 股 South Bow 和 300 份 Brookfield Renewable Partners，所得买入 320 股 Canadian Utilities。小组希望增加受监管公用事业的比重，在 Emera、Capital Power 和 CU 的比较中选择了 CU；预计现有的 Brookfield 持仓难有增长。",
+  "en": "Sell 50 South Bow shares and 300 Brookfield Renewable Partners units and buy 320 Canadian Utilities shares. The aim was more regulated-utility exposure; comparing Emera, Capital Power and CU, CU fit best, and little growth was expected from the Brookfield units."
+ },
+ "TSMC Buy": {
+  "zh": "市价买入约 6 万美元台积电 ADR（约 333 股）。直接投资半导体行业，减少对苹果、微软、谷歌等大型科技股的依赖；台积电在先进制程上领先，生产布局日益分散，估值相对 Nvidia 偏低。报告认为中国对台积电的依赖反而降低了两岸冲突的可能。",
+  "en": "Market-buy about USD 60k of the TSMC ADR (about 333 shares) for direct semiconductor exposure and less reliance on Apple, Microsoft and Alphabet. TSMC leads in advanced chipmaking, is diversifying production and was cheap relative to Nvidia; the report argued China's reliance on TSMC lowers the risk of conflict."
+ },
+ "RJF Sell / TD Bond Buy": {
+  "zh": "卖出约 7 万美元 Raymond James（当时是组合第四大持仓，约占 4.2%），其中 5 万美元买入 TD Bank 2029 年到期、票息 4.68% 的不可赎回债券（价格约 104.48，收益率约 3.46%），其余留给其他小组。目的是再平衡、满足投资政策要求，并在股市波动时增加可预测的现金流。",
+  "en": "Sell about USD 70k of Raymond James (then the fourth-largest holding, about 4.2%) and put USD 50k into a non-callable TD Bank 4.68% 2029 bond (price about 104.48, yield about 3.46%), leaving the rest for other groups, to rebalance, meet policy requirements and add predictable cash flow in a volatile market."
+ },
+ "REIT Consolidation": {
+  "zh": "把 REIT 持仓集中到一只：卖出全部 700 份 SmartCentres（约 1.76 万加元，亏损约 4,700）和 300 份 Granite（约 2.03 万加元，亏损约 9,500），买入约 3.79 万加元 Dream Industrial（约 3,313 份）。理由：REIT 普遍因房价滞后而被低估，预计会回归公允价值；Granite 和 Dream 的分析师目标涨幅都约 33%，Dream 的股息和收入增长更好，兼顾增长和收益。",
+  "en": "Consolidate REITs into one: sell all 700 SmartCentres units (about CAD 17.6k, a loss of about 4.7k) and 300 Granite units (about CAD 20.3k, a loss of about 9.5k), and buy about CAD 37.9k of Dream Industrial (about 3,313 units). REITs looked undervalued as real-estate prices lagged and were expected to revert to fair value; Granite and Dream both had about 33% analyst upside, and Dream had the better dividend and revenue growth."
+ },
+ "FMC Buy": {
+  "zh": "以约 41.51 美元买入 5 万美元 FMC。组合缺少农业科技敞口，FMC 是纯粹的作物保护（农药）公司，受益于无人机、精准喷洒等技术，以及巴西、印度的低成本生物制剂需求；分析师 12 个月目标价 48.70 美元（上涨约 17%），股价被压低，是较好的买点。",
+  "en": "Buy USD 50k of FMC at about 41.51 to add the agriculture-technology exposure the portfolio lacked. FMC is a pure-play crop-protection company benefiting from drones and precision spraying and demand for low-cost biologicals in Brazil and India; the 12-month analyst target was USD 48.70 (about 17% upside) and the depressed price offered a good entry."
+ },
+ "Provincial Bond Purchase Proposal": {
+  "zh": "计划在 2025 年 6 月 9 日 GIC 到期时，把约 20 万加元投入省政府债券，并按到期收益率、票息和久期排出十只候选债券。两种策略：长久期债券在降息中有升值空间（加拿大央行已降至 3.00%），或者用高票息、高收益的债券持有至到期，在股市波动时获得稳定现金流。实际可能没有执行，或被通用汽车债券和美国国债本金剥离债券取代。",
+  "en": "Plan to put about CAD 200k into provincial bonds when GICs matured on 9 June 2025, with ten candidates ranked by yield, coupon and duration. Two strategies: long-duration bonds that gain as rates fall (the Bank of Canada had cut to 3.00%), or high-coupon, high-yield bonds held to maturity for steady cash flow while equities were volatile. Possibly not executed, or replaced by a GM bond and a US Treasury strip."
+ },
+ "Bond Portfolio and Proposal (xlsx)": {
+  "zh": "债券组合方案（Excel 表格）：买入萨斯喀彻温省、曼尼托巴省和 Equitable Bank 的债券，合计市值约 32.5 万加元，使固定收益达到投资政策规定的 10% 最低比例。",
+  "en": "Bond portfolio plan (a spreadsheet): buy Province of Saskatchewan, Province of Manitoba and Equitable Bank bonds, about CAD 325k at market value, to meet the policy's 10% fixed-income minimum."
+ },
+ "Newmont Buy Proposal": {
+  "zh": "市价买入 10 万加元 Newmont。央行和投资者都在寻求实物资产，黄金是战略性资产；Newmont 是全球最大的金矿公司（标普 500 中唯一的金矿生产商），资产低成本、长寿命，今年还回购了 10 亿美元股票。估值：DCF 和 DDM 加权得出目标价约 120.5 美元，相比现价约 81 美元上涨约 49%；EV/EBITDA 的历史比较同样显示被低估。",
+  "en": "Market-buy CAD 100k of Newmont. Gold was seen as a strategic real asset that central banks and investors were seeking; Newmont is the world's largest gold miner (the only one in the S&P 500), with low-cost, long-life mines and USD 1bn of buybacks that year. A weighted DCF/DDM gave a target of about USD 120.5 versus about 81 (about 49% upside), and historical EV/EBITDA also pointed to undervaluation."
+ },
+ "Vale Buy Proposal": {
+  "zh": "买入 10 万加元（约 7.13 万美元）Vale。组合一直受益于资源类资产和地域分散，在北美市场紧张时更有价值；Vale 专注于铁矿石等工业资源，市盈率和市净率都偏低，行业正处于转型期而被低估，铁矿石价格可能已接近底部。风险是需求恢复较慢，上涨可能延后。",
+  "en": "Buy CAD 100k (about USD 71.3k) of Vale. Resource assets and geographic diversity had served the fund well and mattered more amid North American market tension; Vale is focused on iron ore and other industrial inputs, traded at low P/E and P/B in an industry discounted during a transition, with iron ore possibly near a floor. Risk: a slow demand recovery could delay the upside."
+ },
+ "Equitable Bank Sell Proposal": {
+  "zh": "卖出全部 929 股 EQB。与组合中的三家加拿大大银行相比，EQB 规模更小、风险更高；2025 年 5 月第二季度利润不及预期后股价下跌，连续的盈利不及预期暴露了它的信用风险和对市场波动的敏感。",
+  "en": "Sell all 929 EQB shares. Against the three big Canadian banks held, EQB was smaller and riskier; its shares fell after a Q2 profit miss in May 2025, and repeated misses exposed its credit risk and sensitivity to market swings."
+ },
+ "Netflix Sell Proposal": {
+  "zh": "卖出全部 60 股 Netflix（2021 年以每股 539.42 美元买入）。原来的投资逻辑（强劲的自由现金流和疫情后流媒体增长）已经兑现；但增长放缓、风险上升，EV/EBITDA 相对同行偏高，长期上涨空间有限，所以把资金转向增长和估值更好的机会。",
+  "en": "Sell all 60 Netflix shares (bought in 2021 at USD 539.42). The original thesis of strong free cash flow and post-pandemic streaming growth had played out; with slowing growth, rising risks and an EV/EBITDA above peers, long-term upside looked limited, so the money went to better growth and value."
+ },
+ "Morgan Stanley Proposal Report": {
+  "zh": "市价买入 7.5 万加元（约 5.33 万美元）Morgan Stanley，约 320 股。小组放弃了「先买后付」类公司，转而选择一家成熟、能长期稳定增长的金融公司；看好它的财富和资产管理业务（收购 Eaton Vance 后扩大），以及利率环境下固定收益交易收入的增长。",
+  "en": "Market-buy CAD 75k (about USD 53.3k) of Morgan Stanley, about 320 shares. Instead of a buy-now-pay-later firm, the group chose an established firm able to grow steadily, on its wealth and asset management (expanded by the Eaton Vance deal) and rising fixed-income trading revenue."
+ },
+ "Lululemon Buy Proposal": {
+  "zh": "以 190 美元限价买入 200 股 Lululemon。股价相对历史和同行都有折价，是一笔长期持有：若情绪持续低迷，下行有限；只要恢复两位数增长、保持利润率领先，估值倍数就有扩张空间。关键在国际扩张。报告承认分析师评级在四家同行中最差，但认为 12 个月评级不适合评估长期投资。",
+  "en": "Limit-buy 200 Lululemon shares at USD 190 as a long-term hold. The stock traded at a discount to its history and peers, so downside was limited if sentiment stayed weak, while a return to double-digit growth with leading margins could expand the multiple; international expansion was key. Analyst ratings were the worst of four peers, but 12-month ratings were judged ill-suited to a long-term case."
+ },
+ "Intel & Apple Proposal Sell": {
+  "zh": "卖出全部 400 股 Intel（约 2.4 万美元）和 60 股苹果（约 1.7 万美元），合计约 4.1 万美元，只卖出把科技行业权重压回 20% 上限所需的最低数量（阿里巴巴和腾讯也被重新归类到其他行业）。原计划卖出约 361 股苹果、把 10 万美元转向 AI 资产；报告认为苹果要等 AI 领域出现明确突破才会大举投入。",
+  "en": "Sell all 400 Intel shares (about USD 24k) and 60 Apple shares (about USD 17k), about USD 41k in total, the minimum needed to bring tech back under its 20% cap (Alibaba and Tencent were also reclassified). The original plan was to sell about 361 Apple shares and move USD 100k into AI names; the report expected Apple to commit to AI only after clear breakthroughs elsewhere."
+ },
+ "SIPP Amendments Proposal": {
+  "zh": "修改投资政策（SIPP）的提案，不涉及交易：（1）放宽单一行业 20% 的上限，因为科技股占标普 500 的 34% 以上，现行规定迫使组合卖出优质科技股、偏离基准，组合 Beta（0.75–0.82）也低于 0.85 的下限；（2）把固定收益最低比例从 10% 降到 5%，因为 RBC 平台上的债券选择有限、定价不具竞争力，每笔交易收费 165 加元；（3）作为补偿，新增至少 5% 的高质量派息股（股息率 ≥ 2.5%，派息率 < 70%，三年内没有减息）。",
+  "en": "Investment policy (SIPP) changes, no trade: (1) raise the 20% single-industry cap, since tech is over 34% of the S&P 500 and the rule forced sales of quality tech, pulled the fund away from its benchmarks and left beta (0.75–0.82) below the 0.85 floor; (2) cut the fixed-income minimum from 10% to 5%, given RBC's limited, poorly priced bond inventory and CAD 165 per trade; (3) in exchange, require at least 5% in quality dividend stocks (yield ≥ 2.5%, payout < 70%, no cuts in three years)."
+ },
+ "Smart Centres Buy Proposal": {
+  "zh": "以 27.49 加元买入 10 万加元 SmartCentres REIT（约 3,638 份，年分配约 6,730 加元）。出租率 98.6%，租户多元、覆盖多个省份，主力租户稳定；在同类零售 REIT 中股息率最高且杠杆不高；大量自有土地的开发潜力尚未反映在估值中，利率稳定或下降也有利于它。",
+  "en": "Buy CAD 100k of SmartCentres REIT at 27.49 (about 3,638 units, about CAD 6.7k a year in distributions). Occupancy was 98.6% across a diversified, multi-province tenant base with stable anchors; it had the highest yield among retail-REIT peers without excess leverage, development potential on its land not yet in the price, and stable or falling rates would help."
+ },
+ "Sell Apple and Buy Nvidia": {
+  "zh": "卖出全部 540 股苹果，所得全部买入 Nvidia。苹果在 AI 方面进展有限，近期上涨空间不如以 AI 为核心的公司（2026 年初股价从 278 美元跌到 248 美元）；Nvidia 的技术能力难以被复制。DCF 假设 2026 年收入增长约 64%（Bloomberg 预测）、之后逐步降到 5%、永续增长 2%，结论是相对 187.68 美元的股价被低估。",
+  "en": "Sell all 540 Apple shares and put the proceeds into Nvidia. Apple's limited AI progress capped near-term upside versus AI-focused companies (it fell from USD 278 to 248 in early 2026), while Nvidia's capabilities are hard to match. A DCF with about 64% revenue growth in 2026 (Bloomberg) fading to 5% and 2% terminal growth found the stock undervalued against USD 187.68."
+ },
+ "Fiserv Sell Proposal": {
+  "zh": "卖出全部 200 股 Fiserv。业绩不及预期后股价跌破 70 美元，持续跑输同行，问题出在公司自身；业务正转向低增长、低估值的稳定状态，分析师 37 位中只有 11 位买入，明显不如 Visa 和 Mastercard。DCF 在不同假设下得出 102–127 美元，但报告认为这依赖估值修复，12–24 个月内的上涨空间有限。",
+  "en": "Sell all 200 Fiserv shares. After an earnings miss sent it below USD 70 it kept lagging peers for company-specific reasons, and it was shifting to a lower-growth, lower-multiple steady state; only 11 of 37 analysts rated it a buy, far behind Visa and Mastercard. A DCF gave USD 102–127 under various assumptions, but that relied on the multiple recovering, so 12–24 month upside was judged limited."
+ },
+ "LyondellBasell Sell Proposal": {
+  "zh": "市价卖出全部 200 股 LyondellBasell。组合里有不少表现不佳、仓位很小的资产拖累收益；化工行业长期处于周期低谷，又出现结构性问题（产能持续关闭），上涨更多依赖宏观复苏而非公司自身；在上游化工同行中，它的分析师卖出评级最多。",
+  "en": "Market-sell all 200 LyondellBasell shares. Small, underperforming positions were dragging on returns; a prolonged chemicals downturn plus structural problems (ongoing capacity closures) meant upside hinged on a macro recovery rather than the company, and it drew the most sell ratings among upstream peers."
+ },
+ "Exxon Buy & Suncor Sell": {
+  "zh": "卖出全部 1,700 股 Suncor，所得买入 760 股 ExxonMobil。预计下一轮石油周期的最大增长来自美国公司；DCF（自由现金流预测到 2030 年）得出 Exxon 内在价值 155–208 美元，相对股价有明显上涨空间，兼顾下行保护和增长。",
+  "en": "Sell all 1,700 Suncor shares and buy 760 ExxonMobil shares. US companies were expected to lead growth in the next oil cycle; a DCF projecting free cash flow to 2030 valued Exxon at USD 155–208 a share, well above the market price, offering downside protection with growth."
+ },
+ "Nike Sell Proposal": {
+  "zh": "卖出全部 150 股 Nike。组合里有不少表现不佳、仓位很小的资产；Nike 规模大、核心市场成熟，目前的估值倍数隐含的增长很难实现，一旦盈利不及预期，估值可能下调，下行风险大于潜在回报；复苏的时间和幅度都不确定。",
+  "en": "Sell all 150 Nike shares. Among several small underperforming positions, Nike's size and mature core markets made the growth implied by its multiple hard to achieve; an earnings miss could compress the multiple, so downside outweighed upside, and the timing and size of any recovery were uncertain."
+ },
+ "Telus and AMT Sell & KT Corp Buy": {
+  "zh": "卖出全部 1,700 股 Telus 和 100 股 American Tower，所得买入韩国电信 KT。北美电信用户增长放缓、资本开支高：Telus 杠杆高，暂停了股息增长并缩减 DRIP，股息可持续性受质疑；American Tower 的长期现金流对利率很敏感，卫星直连手机等技术也给铁塔模式带来不确定性。KT 提供更快增长的亚洲数字基础设施和 AI 相关收入。",
+  "en": "Sell all 1,700 Telus and 100 American Tower shares and buy Korea's KT. North American telecoms faced slowing subscriber growth and heavy capex: Telus was highly levered and paused dividend growth and trimmed its DRIP, raising doubts about the dividend; American Tower's long-dated cash flows are rate-sensitive and satellite-to-device technology clouds the tower model. KT offered faster-growing Asian digital infrastructure and AI-driven revenue."
+ },
+ "FedEx Sell & MasterCard Buy": {
+  "zh": "卖出全部 150 股 FedEx（约 5.75 万美元），买入 100 股 Mastercard。FedEx 大涨后，运营改善已大多反映在股价中，又面临结构调整和竞争；基于 Bloomberg 预测的 DCF 基准情形显示 FedEx 平均下跌约 25%，而 Mastercard 平均上涨约 45%（永续增长法 677 美元、退出倍数法 819 美元）。",
+  "en": "Sell all 150 FedEx shares (about USD 57.5k) and buy 100 Mastercard shares. After a big run, FedEx's operational improvements were largely priced in, with a structural transition and rising competition ahead; base-case DCFs on Bloomberg forecasts showed about 25% average downside for FedEx and about 45% upside for Mastercard (USD 677 perpetuity, 819 exit multiple)."
+ },
+ "Trip.com Sell & P&G and TJX Buy": {
+  "zh": "卖出全部 675 股 Trip.com（约 6.66 万加元），平均买入约 158 股宝洁和 152 股 TJX（实际看起来全部买了 TJX）。高利率和通胀压缩消费预算，旅游等可选消费会转向必需品和折扣零售；宝洁的必需品组合和 TJX 的折扣零售模式更具防御性，延续了降低周期性和利率敏感风险的整体策略。",
+  "en": "Sell all 675 Trip.com shares (about CAD 66.6k) and split the proceeds between about 158 P&G and 152 TJX shares (it appears all went to TJX). With high rates and inflation squeezing budgets, spending shifts from travel toward essentials and value retail, favouring P&G's staples and TJX's off-price model; this continued the broader move away from cyclical, rate-sensitive risk."
+ },
+ "Buy Royal Bank & Sell HDB & IBN": {
+  "zh": "卖出全部 1,222 股 ICICI 和 1,176 股 HDFC Bank ADR，所得买入约 417 股 RBC。两家印度银行近期出现欺诈案，增加了运营风险；RBC 是加拿大最大的银行，盈利创纪录、资产负债表健康，模型估算内在价值 257.69 加元，相对 226.41 加元的股价有约 13.8% 上涨空间（Bloomberg 为 260.25）。",
+  "en": "Sell all 1,222 ICICI and 1,176 HDFC Bank ADRs and buy about 417 RBC shares. Recent fraud cases at both Indian banks raised operational risk; RBC, Canada's largest bank with record earnings and a clean balance sheet, was valued at CAD 257.69 a share against 226.41 (about 13.8% upside; Bloomberg 260.25)."
+ },
+ "QSR & WMT Sell - LLY & G Dynamite Buy": {
+  "zh": "卖出全部 200 股 Restaurant Brands（长期没有起色的小仓位）和 1,000 股 Walmart（估值偏高，趁机兑现收益），各用 7.5 万加元买入约 60 股礼来和约 1,175 股 Groupe Dynamite。礼来受益于不断扩大的 GLP-1 市场（还有 retatrutide 等在研药物），虽然估值不低；Groupe Dynamite 是 2024 年上市的加拿大服装零售商，ROIC 高且在提升，保守的 DCF 仍得出约 38% 的上涨空间。这笔交易也提高了组合 Beta 和加拿大股票占比。",
+  "en": "Sell all 200 Restaurant Brands shares (a small position going nowhere) and 1,000 Walmart shares (looking overvalued, a chance to take gains), and put CAD 75k each into about 60 Eli Lilly and about 1,175 Groupe Dynamite shares. Lilly offers the expanding GLP-1 market (with pipeline drugs such as retatrutide) despite a premium valuation; Groupe Dynamite, a Canadian apparel retailer listed in 2024, has a high and rising ROIC and a conservative DCF still showed about 38% upside. The trade also raised portfolio beta and Canadian exposure."
+ },
+ "Johnson Controls Sell & Embraer Buy": {
+  "zh": "卖出全部 700 股 Johnson Controls，加仓 1,280 股 Embraer。2024 年买入 JCI 时的投资逻辑（降息周期中的周期性受益）已经实现，市场现在只预期 2026 年再降息约 0.5%，剩余的上涨空间有限，正是兑现收益的时机；Embraer 的支线客机在座位效率上有优势，有望继续拿到航空公司订单。",
+  "en": "Sell all 700 Johnson Controls shares and add 1,280 Embraer shares. The 2024 thesis for JCI (a cyclical winner from rate cuts) had played out, with only about 0.5% of further cuts priced for 2026, so it was time to take gains; Embraer's seat-efficient regional jets were expected to keep winning airline orders."
+ },
+ "TRP & MPC Sale, RGSI & Denison Buy": {
+  "zh": "卖出全部 250 股 TC Energy（收益 64%）和 300 股 Marathon Petroleum（约 10.5 万加元，收益 393%），买入 2,450 股 Rockpoint Gas Storage 和 14,750 股 Denison Mines。Rockpoint 做天然气储存，比 TC Energy 更少依赖加拿大新建管道和 LNG，既降低风险又保留天然气需求增长的好处；Denison 押注核能：全球需要大量稳定的零碳电力，铀需求确定、供给受限、政策支持。这笔交易也增加了加拿大（萨省）股票占比和组合 Beta。",
+  "en": "Sell all 250 TC Energy (a 64% gain) and 300 Marathon Petroleum shares (about CAD 105k, a 393% gain), and buy 2,450 Rockpoint Gas Storage and 14,750 Denison Mines shares. Rockpoint stores natural gas and depends less than TC Energy on new Canadian pipelines and LNG, cutting risk while keeping gas-demand upside; Denison is a nuclear bet on the need for reliable carbon-free power, with certain uranium demand, tight supply and policy support. It also raised Canadian (Saskatchewan) exposure and beta."
+ },
+ "CSU & QCOM Sell - ASML & LRCX Buy": {
+  "zh": "卖出 20 股 Constellation Software 和 130 股 Qualcomm（约 2.33 万，收益约 74%），加上约 2.5 万现金，共约 9.71 万加元，买入约 26 股 ASML 和约 163 股 Lam Research，投资 AI 半导体供应链。ASML 在 EUV 光刻机上处于垄断地位，订单积压约 388 亿欧元，用 DCF 估值；Lam 是 NAND 刻蚀技术的龙头，AI 的耗电问题会带来对 NAND 的结构性需求，用 EV/EBITDA 倍数估值。",
+  "en": "Sell 20 Constellation Software and 130 Qualcomm shares (about 23.3k, about a 74% gain) and, with about CAD 25k of cash, put about CAD 97.1k into about 26 ASML and 163 Lam Research shares to own the AI chip supply chain. ASML holds an EUV monopoly with a backlog of about EUR 38.8bn (valued by DCF); Lam leads NAND etch, and AI's power demands create structural NAND demand (valued on forward EV/EBITDA)."
+ }
+}

@@ -1,12 +1,19 @@
 """Build index.html from data/holdings.json, data/trades.json and build/template.html.
 
-Usage: python build/build_site.py
+Usage: python build/build_site.py            -> index.html (committed, served by Pages)
+       python build/build_site.py --local    -> index.local.html (gitignored), the same page with
+                                                 links to the proposal PDFs in InvestoryReport/
+The proposal PDFs carry students' names, so they are never committed and the public page has no
+links to them; only the hand-written summaries in data/reports.json are published.
 """
 import bisect
 import json
 import os
 import re
+import sys
+import urllib.parse
 import datetime as dt
+from glob import glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RENAME = {'FI': 'FISV', 'ERJ': 'EMBJ'}  # ticker changes, merged into one row
@@ -214,12 +221,45 @@ if os.path.exists(rs_path):
                 print(f'WARNING: research.json {t}: neither held in the latest snapshot nor in watchlist.json')
         site_rs[t] = sorted(rows, key=lambda r: r.get('date', ''), reverse=True)
 
+# Short summaries of each proposal report (data/reports.json, written by hand from the PDFs,
+# no names), keyed by the report name in trades.json.
+rp_path = os.path.join(ROOT, 'data', 'reports.json')
+site_rp = json.load(open(rp_path)) if os.path.exists(rp_path) else {}
+LOCAL = '--local' in sys.argv
+PROPOSAL_ACTIONS = {'BUY', 'SELL', 'POLICY'}  # maturities, corporate actions and withdrawals have no report
+
+
+def report_file(rep, year, date):
+    """Relative link to the proposal file for a trade's report, for the local build only: the
+    file in InvestoryReport/<school year>/ sharing the most words with the report name, the
+    closest date breaking ties."""
+    words = lambda x: {w for w in re.findall(r'[a-z0-9]+', x.lower()) if len(w) > 1 and not w.isdigit()} - \
+        {'pdf', 'xlsx', 'proposal', 'proposals', 'porposal', 'report', 'and', 'the', 'buy', 'sell'}
+    day = lambda x: (m := re.match(r'(\d{4})[ -](\d{2})(?:[ -](\d{2}))?', x)) and dt.date(int(m[1]), min(12, int(m[2])) or 1, int(m[3] or 15))
+    want, d0 = words(rep), day(date)
+    best = None
+    for f in glob(os.path.join(ROOT, 'InvestoryReport', year, '*')):
+        name = os.path.basename(f)
+        score = len(want & words(name))
+        if not score:
+            continue
+        d1 = day(name)
+        gap = abs((d1 - d0).days) if d0 and d1 else 9999
+        if best is None or (score, -gap) > best[0]:
+            best = ((score, -gap), f)
+    return urllib.parse.quote(os.path.relpath(best[1], ROOT)) if best else None
+
+
 site_trades = [dict(date=t['date'], yr=t['year'], rep=t['report'], act=t['action'], tk=t['ticker'],
                     sec=t['security'], prop=t['proposed'], act_=t['actual'], ex=t['executed'], note=t['note'],
-                    pp=post_perf(t))
+                    pp=post_perf(t), **({'f': report_file(t['report'], t['year'], t['date'])} if LOCAL and t['action'] in PROPOSAL_ACTIONS else {}))
                for t in trades]
+if LOCAL:
+    print('report links:', sum(1 for t in site_trades if t.get('f')), 'of', len(site_trades), 'trades;',
+          'none for:', sorted({t['rep'] for t in site_trades if not t.get('f')}))
 
-data = json.dumps(dict(snaps=snaps, trades=site_trades, classes=ORDER, tind=tick_ind, perf=site_perf, px=site_px, sec=site_sec, fd=site_fd, an=site_an, rs=site_rs), separators=(',', ':'), ensure_ascii=False)
+data = json.dumps(dict(snaps=snaps, trades=site_trades, classes=ORDER, tind=tick_ind, perf=site_perf, px=site_px, sec=site_sec, fd=site_fd, an=site_an, rs=site_rs, rp=site_rp), separators=(',', ':'), ensure_ascii=False)
 html = open(os.path.join(ROOT, 'build', 'template.html')).read().replace('__DATA__', data)
-open(os.path.join(ROOT, 'index.html'), 'w').write(html)
-print(f'index.html: {len(snaps)} snapshots, {len(site_trades)} trades')
+out = 'index.local.html' if LOCAL else 'index.html'
+open(os.path.join(ROOT, out), 'w').write(html)
+print(f'{out}: {len(snaps)} snapshots, {len(site_trades)} trades')

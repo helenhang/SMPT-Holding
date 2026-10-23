@@ -11,6 +11,7 @@ COMM 371 Student Managed Portfolio Trust 的持仓与交易记录查看页面。
 - 分析：自成立以来与 S&P/TSX、S&P 500 的收益比较，各期与持仓分析表中综合基准的比较，波动率、Beta、最大回撤等风险指标，以及每个提案之后 3/6/12 个月和至今相对基准的表现（价格来自 Yahoo Finance）
 - GICS 行业配置：与 S&P 500、S&P/TSX 的行业权重比较（超配/低配），各行业市值前 15 名并标出已持有的公司，以及行业配置随快照的变化
 - 估值：最新快照每只股票的两阶段 DCF（FCFF）模型，金融股用股利折现模型（DDM，含回购）和超额收益模型对照；并列出卖方分析师目标价（Yahoo）和研究机构公允价值（手工维护的 data/research.json，只摘录关键数字），反推与机构目标价一致的折现率；观察名单（data/watchlist.json）里尚未持有的股票也可以估值，默认假设来自 Yahoo Finance 的财报和分析师预期，收入、成本、利润率、折现率等都可以手动修改，附敏感性分析和全部持仓的汇总（手动输入目前只保存在本地浏览器，可导出/导入）
+- 交易时间线里每份提案都有中英文摘要（`data/reports.json`，手工整理，不含姓名）；本地版还能直接打开当时的报告 PDF
 - 2022-11 至 2026-04 的买卖提案，以及根据前后快照推断的执行情况（2025-08 之前没有快照，较早的提案靠 2025-08-31 持仓和后续报告核对）
 
 交易日期是提案日期，不是成交日期。
@@ -30,6 +31,7 @@ python build/fetch_sectors.py     # 更新 data/sectors.json（需要联网、yf
 python build/fetch_fundamentals.py  # 更新 data/fundamentals.json（需要联网和 yfinance）
 python build/fetch_analysts.py      # 更新 data/analysts.json：分析师目标价和评级（需要联网和 yfinance）
 python build/build_site.py                                   # 重新生成 index.html
+python build/build_site.py --local   # 本地版 index.local.html：交易时间线可直接打开 InvestoryReport/ 里的提案报告（不提交）
 ```
 
 股价、财报、分析师目标价由 GitHub Actions（`.github/workflows/update-data.yml`）每个工作日收盘后自动更新并推送；也可以在 GitHub 的 Actions 页面手动运行。持仓快照和 Morningstar 报告仍需在本地手动更新。
