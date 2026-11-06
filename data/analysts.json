@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-05",
+ "asof": "2026-11-06",
  "months": 12,
  "co": {
   "SRU.UN": {
@@ -94,10 +94,10 @@
   },
   "NTR": {
    "n": 6,
-   "mean": 108.05,
-   "median": 110.13,
-   "high": 111.9,
-   "low": 97.43,
+   "mean": 108.58,
+   "median": 110.67,
+   "high": 112.45,
+   "low": 97.91,
    "rec": [
     7,
     7,
@@ -109,10 +109,10 @@
   },
   "WFG": {
    "n": 2,
-   "mean": 103.99,
-   "median": 103.99,
-   "high": 110.99,
-   "low": 96.99,
+   "mean": 104.52,
+   "median": 104.52,
+   "high": 111.56,
+   "low": 97.49,
    "rec": [
     3,
     2,
@@ -124,10 +124,10 @@
   },
   "MG": {
    "n": 7,
-   "mean": 93.3,
-   "median": 101.96,
-   "high": 111.99,
-   "low": 68.36,
+   "mean": 93.78,
+   "median": 102.48,
+   "high": 112.56,
+   "low": 68.71,
    "rec": [
     3,
     5,
@@ -139,10 +139,10 @@
   },
   "ATD": {
    "n": 19,
-   "mean": 100.84,
-   "median": 101.31,
-   "high": 108.72,
-   "low": 90.71,
+   "mean": 101.37,
+   "median": 101.84,
+   "high": 109.28,
+   "low": 91.19,
    "rec": [
     6,
     9,
@@ -244,10 +244,10 @@
   },
   "ABX": {
    "n": 12,
-   "mean": 65.02,
-   "median": 69.34,
-   "high": 82.85,
-   "low": 31.25,
+   "mean": 65.36,
+   "median": 69.7,
+   "high": 83.27,
+   "low": 31.41,
    "rec": [
     8,
     9,
@@ -319,10 +319,10 @@
   },
   "RGSI": {
    "n": 11,
-   "mean": 31.62,
-   "median": 32.42,
-   "high": 34.94,
-   "low": 24.65,
+   "mean": 31.79,
+   "median": 32.59,
+   "high": 35.13,
+   "low": 24.78,
    "rec": [
     5,
     3,
@@ -349,10 +349,10 @@
   },
   "ASML": {
    "n": 17,
-   "mean": 2158.9,
-   "median": 2312.17,
-   "high": 2860.61,
-   "low": 870.82,
+   "mean": 2150.67,
+   "median": 2303.35,
+   "high": 2849.7,
+   "low": 867.5,
    "rec": [
     7,
     31,
@@ -597,6 +597,13 @@
    ],
    "firms": [
     {
+     "f": "JP Morgan",
+     "d": "2026-11-05",
+     "g": "Overweight",
+     "pt": 1150.0,
+     "prev": 1015.0
+    },
+    {
      "f": "CICC",
      "d": "2026-10-21",
      "g": "Outperform",
@@ -651,13 +658,6 @@
      "g": "Sell",
      "pt": 781.0,
      "prev": 781.0
-    },
-    {
-     "f": "JP Morgan",
-     "d": "2026-09-25",
-     "g": "Overweight",
-     "pt": 1015.0,
-     "prev": 1100.0
     },
     {
      "f": "Truist Securities",
@@ -916,6 +916,20 @@
    ],
    "firms": [
     {
+     "f": "Freedom Broker",
+     "d": "2026-11-06",
+     "g": "Hold",
+     "pt": 725.0,
+     "prev": 620.0
+    },
+    {
+     "f": "Truist Securities",
+     "d": "2026-11-05",
+     "g": "Buy",
+     "pt": 735.0,
+     "prev": 674.0
+    },
+    {
      "f": "UBS",
      "d": "2026-10-31",
      "g": "Buy",
@@ -1007,13 +1021,6 @@
      "prev": 695.0
     },
     {
-     "f": "Truist Securities",
-     "d": "2026-10-23",
-     "g": "Buy",
-     "pt": 674.0,
-     "prev": 633.0
-    },
-    {
      "f": "Baird",
      "d": "2026-10-09",
      "g": "Outperform",
@@ -1068,13 +1075,6 @@
      "g": "Strong Buy",
      "pt": 735.0,
      "prev": 730.0
-    },
-    {
-     "f": "Freedom Broker",
-     "d": "2026-02-13",
-     "g": "Buy",
-     "pt": 675.0,
-     "prev": 655.0
     },
     {
      "f": "Raymond James",
@@ -1908,6 +1908,13 @@
    ],
    "firms": [
     {
+     "f": "Truist Securities",
+     "d": "2026-11-05",
+     "g": "Buy",
+     "pt": 470.0,
+     "prev": 443.0
+    },
+    {
      "f": "Cantor Fitzgerald",
      "d": "2026-10-30",
      "g": "Overweight",
@@ -1997,13 +2004,6 @@
      "g": "Positive",
      "pt": 480.0,
      "prev": 427.0
-    },
-    {
-     "f": "Truist Securities",
-     "d": "2026-10-23",
-     "g": "Buy",
-     "pt": 443.0,
-     "prev": 406.0
     },
     {
      "f": "Baird",
@@ -2448,6 +2448,13 @@
    ],
    "firms": [
     {
+     "f": "Bernstein",
+     "d": "2026-11-04",
+     "g": "Buy",
+     "pt": 380.0,
+     "prev": 370.0
+    },
+    {
      "f": "JP Morgan",
      "d": "2026-11-03",
      "g": "Overweight",
@@ -2586,13 +2593,6 @@
      "g": "Buy",
      "pt": 360.0,
      "prev": 370.0
-    },
-    {
-     "f": "Bernstein",
-     "d": "2026-07-15",
-     "g": "Buy",
-     "pt": 350.0,
-     "prev": 350.0
     },
     {
      "f": "Citigroup",
@@ -2830,6 +2830,13 @@
    ],
    "firms": [
     {
+     "f": "Baird",
+     "d": "2026-11-05",
+     "g": "Neutral",
+     "pt": 310.0,
+     "prev": 344.0
+    },
+    {
      "f": "Susquehanna",
      "d": "2026-10-27",
      "g": "Positive",
@@ -2877,13 +2884,6 @@
      "g": "Buy",
      "pt": 339.0,
      "prev": 310.0
-    },
-    {
-     "f": "Baird",
-     "d": "2026-07-27",
-     "g": "Outperform",
-     "pt": 344.0,
-     "prev": 311.0
     },
     {
      "f": "BMO Capital",
@@ -3114,6 +3114,62 @@
    ],
    "firms": [
     {
+     "f": "Freedom Broker",
+     "d": "2026-11-06",
+     "g": "Hold",
+     "pt": 298.0,
+     "prev": 305.0
+    },
+    {
+     "f": "JP Morgan",
+     "d": "2026-11-05",
+     "g": "Overweight",
+     "pt": 270.0,
+     "prev": 250.0
+    },
+    {
+     "f": "Citigroup",
+     "d": "2026-11-05",
+     "g": "Buy",
+     "pt": 315.0,
+     "prev": 295.0
+    },
+    {
+     "f": "RBC Capital",
+     "d": "2026-11-05",
+     "g": "Sector Perform",
+     "pt": 300.0,
+     "prev": 285.0
+    },
+    {
+     "f": "Bernstein",
+     "d": "2026-11-05",
+     "g": "Market Perform",
+     "pt": 280.0,
+     "prev": 250.0
+    },
+    {
+     "f": "Keybanc",
+     "d": "2026-11-05",
+     "g": "Overweight",
+     "pt": 307.0,
+     "prev": 280.0
+    },
+    {
+     "f": "Wells Fargo",
+     "d": "2026-11-05",
+     "g": "Overweight",
+     "pt": 300.0,
+     "prev": 270.0
+    },
+    {
+     "f": "BTIG",
+     "d": "2026-11-05",
+     "g": "Buy",
+     "pt": 305.0,
+     "prev": 295.0
+    },
+    {
      "f": "TD Cowen",
      "d": "2026-11-04",
      "g": "Hold",
@@ -3128,53 +3184,11 @@
      "prev": 290.0
     },
     {
-     "f": "BTIG",
-     "d": "2026-10-26",
-     "g": "Buy",
-     "pt": 295.0,
-     "prev": 295.0
-    },
-    {
-     "f": "Citigroup",
-     "d": "2026-10-20",
-     "g": "Buy",
-     "pt": 295.0,
-     "prev": 305.0
-    },
-    {
-     "f": "Bernstein",
-     "d": "2026-10-08",
-     "g": "Market Perform",
-     "pt": 250.0,
-     "prev": 295.0
-    },
-    {
-     "f": "Keybanc",
-     "d": "2026-10-06",
-     "g": "Overweight",
-     "pt": 280.0,
-     "prev": 305.0
-    },
-    {
-     "f": "Wells Fargo",
-     "d": "2026-10-05",
-     "g": "Overweight",
-     "pt": 270.0,
-     "prev": 300.0
-    },
-    {
      "f": "Guggenheim",
      "d": "2026-10-05",
      "g": "Neutral",
      "pt": 250.0,
      "prev": 290.0
-    },
-    {
-     "f": "JP Morgan",
-     "d": "2026-09-29",
-     "g": "Overweight",
-     "pt": 250.0,
-     "prev": 260.0
     },
     {
      "f": "Melius Research",
@@ -3203,13 +3217,6 @@
      "g": "Outperform",
      "pt": 300.0,
      "prev": 320.0
-    },
-    {
-     "f": "RBC Capital",
-     "d": "2026-09-24",
-     "g": "Sector Perform",
-     "pt": 285.0,
-     "prev": 290.0
     },
     {
      "f": "UBS",
@@ -4381,6 +4388,13 @@
    ],
    "firms": [
     {
+     "f": "Wells Fargo",
+     "d": "2026-11-05",
+     "g": "Equal-Weight",
+     "pt": 189.0,
+     "prev": 188.0
+    },
+    {
      "f": "Stifel",
      "d": "2026-10-28",
      "g": "Hold",
@@ -4407,13 +4421,6 @@
      "g": "Hold",
      "pt": 165.0,
      "prev": 210.0
-    },
-    {
-     "f": "Wells Fargo",
-     "d": "2026-10-05",
-     "g": "Equal-Weight",
-     "pt": 188.0,
-     "prev": 196.0
     },
     {
      "f": "Citigroup",
@@ -6183,6 +6190,13 @@
    ],
    "firms": [
     {
+     "f": "Bernstein",
+     "d": "2026-11-04",
+     "g": "Outperform",
+     "pt": 600.0,
+     "prev": 554.0
+    },
+    {
      "f": "Barclays",
      "d": "2026-10-16",
      "g": "Overweight",
@@ -6209,13 +6223,6 @@
      "g": "Buy",
      "pt": 515.0,
      "prev": null
-    },
-    {
-     "f": "Bernstein",
-     "d": "2026-08-11",
-     "g": "Outperform",
-     "pt": 554.0,
-     "prev": 430.0
     },
     {
      "f": "TD Cowen",
@@ -7141,32 +7148,60 @@
    ],
    "firms": [
     {
+     "f": "JP Morgan",
+     "d": "2026-11-05",
+     "g": "Overweight",
+     "pt": 100.0,
+     "prev": 110.0
+    },
+    {
+     "f": "TD Cowen",
+     "d": "2026-11-05",
+     "g": "Buy",
+     "pt": 87.0,
+     "prev": 92.0
+    },
+    {
+     "f": "Wells Fargo",
+     "d": "2026-11-05",
+     "g": "Overweight",
+     "pt": 101.0,
+     "prev": 115.0
+    },
+    {
+     "f": "Susquehanna",
+     "d": "2026-11-05",
+     "g": "Neutral",
+     "pt": 86.0,
+     "prev": 92.0
+    },
+    {
+     "f": "Keefe, Bruyette & Woods",
+     "d": "2026-11-05",
+     "g": "Market Perform",
+     "pt": 90.0,
+     "prev": 105.0
+    },
+    {
+     "f": "Needham",
+     "d": "2026-11-05",
+     "g": "Buy",
+     "pt": 103.0,
+     "prev": 134.0
+    },
+    {
+     "f": "HC Wainwright & Co.",
+     "d": "2026-11-05",
+     "g": "Buy",
+     "pt": 100.0,
+     "prev": 104.0
+    },
+    {
      "f": "Morgan Stanley",
      "d": "2026-11-02",
      "g": "Underweight",
      "pt": 34.0,
      "prev": 37.0
-    },
-    {
-     "f": "Needham",
-     "d": "2026-10-21",
-     "g": "Buy",
-     "pt": 134.0,
-     "prev": 130.0
-    },
-    {
-     "f": "TD Cowen",
-     "d": "2026-09-17",
-     "g": "Buy",
-     "pt": 92.0,
-     "prev": 87.0
-    },
-    {
-     "f": "Keefe, Bruyette & Woods",
-     "d": "2026-09-08",
-     "g": "Market Perform",
-     "pt": 105.0,
-     "prev": null
     },
     {
      "f": "Wolfe Research",
@@ -7176,25 +7211,11 @@
      "prev": 50.0
     },
     {
-     "f": "Susquehanna",
-     "d": "2026-08-24",
-     "g": "Neutral",
-     "pt": 92.0,
-     "prev": 69.0
-    },
-    {
      "f": "Canaccord Genuity",
      "d": "2026-08-06",
      "g": "Buy",
      "pt": 130.0,
      "prev": 160.0
-    },
-    {
-     "f": "HC Wainwright & Co.",
-     "d": "2026-08-06",
-     "g": "Buy",
-     "pt": 104.0,
-     "prev": 115.0
     },
     {
      "f": "Mizuho",
@@ -7225,25 +7246,11 @@
      "prev": 97.0
     },
     {
-     "f": "Wells Fargo",
-     "d": "2026-05-05",
-     "g": "Overweight",
-     "pt": 142.0,
-     "prev": 111.0
-    },
-    {
      "f": "Clear Street",
      "d": "2026-03-18",
      "g": "Buy",
      "pt": 152.0,
      "prev": 136.0
-    },
-    {
-     "f": "JP Morgan",
-     "d": "2026-02-10",
-     "g": "Overweight",
-     "pt": 90.0,
-     "prev": 100.0
     },
     {
      "f": "Deutsche Bank",
@@ -7276,6 +7283,41 @@
    ],
    "firms": [
     {
+     "f": "JP Morgan",
+     "d": "2026-11-05",
+     "g": "Neutral",
+     "pt": 800.0,
+     "prev": 900.0
+    },
+    {
+     "f": "Barclays",
+     "d": "2026-11-05",
+     "g": "Overweight",
+     "pt": 800.0,
+     "prev": 875.0
+    },
+    {
+     "f": "RBC Capital",
+     "d": "2026-11-05",
+     "g": "Sector Perform",
+     "pt": 770.0,
+     "prev": 1045.0
+    },
+    {
+     "f": "Wells Fargo",
+     "d": "2026-11-05",
+     "g": "Equal-Weight",
+     "pt": 650.0,
+     "prev": 735.0
+    },
+    {
+     "f": "Needham",
+     "d": "2026-11-05",
+     "g": "Buy",
+     "pt": 925.0,
+     "prev": 1100.0
+    },
+    {
      "f": "Jefferies",
      "d": "2026-11-02",
      "g": "Buy",
@@ -7297,20 +7339,6 @@
      "prev": 1150.0
     },
     {
-     "f": "JP Morgan",
-     "d": "2026-10-26",
-     "g": "Neutral",
-     "pt": 900.0,
-     "prev": 1530.0
-    },
-    {
-     "f": "Wells Fargo",
-     "d": "2026-10-26",
-     "g": "Equal-Weight",
-     "pt": 735.0,
-     "prev": 800.0
-    },
-    {
      "f": "Mizuho",
      "d": "2026-10-19",
      "g": "Outperform",
@@ -7318,32 +7346,11 @@
      "prev": 1344.0
     },
     {
-     "f": "RBC Capital",
-     "d": "2026-10-16",
-     "g": "Outperform",
-     "pt": 1045.0,
-     "prev": 1525.0
-    },
-    {
      "f": "Raymond James",
      "d": "2026-10-13",
      "g": "Outperform",
      "pt": 1230.0,
      "prev": 1750.0
-    },
-    {
-     "f": "Needham",
-     "d": "2026-10-13",
-     "g": "Buy",
-     "pt": 1100.0,
-     "prev": 1650.0
-    },
-    {
-     "f": "Barclays",
-     "d": "2026-10-02",
-     "g": "Overweight",
-     "pt": 875.0,
-     "prev": 935.0
     },
     {
      "f": "Baird",
@@ -8708,6 +8715,20 @@
    ],
    "firms": [
     {
+     "f": "Leerink Partners",
+     "d": "2026-11-05",
+     "g": "Market Perform",
+     "pt": 464.0,
+     "prev": 395.0
+    },
+    {
+     "f": "Guggenheim",
+     "d": "2026-11-05",
+     "g": "Neutral",
+     "pt": 435.0,
+     "prev": 378.0
+    },
+    {
      "f": "Canaccord Genuity",
      "d": "2026-11-04",
      "g": "Hold",
@@ -8792,6 +8813,13 @@
      "prev": 440.0
     },
     {
+     "f": "Bernstein",
+     "d": "2026-11-04",
+     "g": "Market Perform",
+     "pt": 400.0,
+     "prev": 345.0
+    },
+    {
      "f": "Oppenheimer",
      "d": "2026-10-23",
      "g": "Outperform",
@@ -8804,13 +8832,6 @@
      "g": "Equal-Weight",
      "pt": 400.0,
      "prev": 380.0
-    },
-    {
-     "f": "Guggenheim",
-     "d": "2026-10-13",
-     "g": "Neutral",
-     "pt": 378.0,
-     "prev": 388.0
     },
     {
      "f": "BMO Capital",
@@ -8848,13 +8869,6 @@
      "prev": 303.0
     },
     {
-     "f": "Bernstein",
-     "d": "2026-08-06",
-     "g": "Market Perform",
-     "pt": 345.0,
-     "prev": 335.0
-    },
-    {
      "f": "Baird",
      "d": "2026-08-05",
      "g": "Underperform",
@@ -8881,13 +8895,6 @@
      "g": "Hold",
      "pt": 375.0,
      "prev": 360.0
-    },
-    {
-     "f": "Leerink Partners",
-     "d": "2026-02-04",
-     "g": "Outperform",
-     "pt": 355.0,
-     "prev": 305.0
     }
    ]
   }
